@@ -1,0 +1,933 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		320A7BA70DCFA20F00FBB728 /* libwavpack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libwavpack.a */; };
+		323BA80F1075138D00B3CAA7 /* tags.c in Sources */ = {isa = PBXBuildFile; fileRef = 323BA80E1075138D00B3CAA7 /* tags.c */; };
+		326D04A60DD028C1001D08E9 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 326D048D0DD02848001D08E9 /* libiconv.dylib */; };
+		32CE92610F56253400AB328A /* bits.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92570F56253400AB328A /* bits.c */; };
+		32CE92620F56253400AB328A /* extra1.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92580F56253400AB328A /* extra1.c */; };
+		32CE92630F56253400AB328A /* extra2.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92590F56253400AB328A /* extra2.c */; };
+		32CE92640F56253400AB328A /* float.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925A0F56253400AB328A /* float.c */; };
+		32CE92650F56253400AB328A /* metadata.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925B0F56253400AB328A /* metadata.c */; };
+		32CE92660F56253400AB328A /* pack.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925C0F56253400AB328A /* pack.c */; };
+		32CE92670F56253400AB328A /* unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925D0F56253400AB328A /* unpack.c */; };
+		32CE92680F56253400AB328A /* unpack3.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925E0F56253400AB328A /* unpack3.c */; };
+		32CE92690F56253400AB328A /* words.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925F0F56253400AB328A /* words.c */; };
+		32CE926A0F56253400AB328A /* wputils.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92600F56253400AB328A /* wputils.c */; };
+		32CE928B0F562BE500AB328A /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92880F562BE500AB328A /* md5.c */; };
+		32CE928C0F562BE500AB328A /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92890F562BE500AB328A /* utils.c */; };
+		32CE928D0F562BE500AB328A /* wavpack.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE928A0F562BE500AB328A /* wavpack.c */; };
+		32CE92CC0F562D0700AB328A /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92880F562BE500AB328A /* md5.c */; };
+		32CE92CD0F562D0700AB328A /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92890F562BE500AB328A /* utils.c */; };
+		32CE92D00F562D0700AB328A /* libwavpack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libwavpack.a */; };
+		32CE92D10F562D0700AB328A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 326D048D0DD02848001D08E9 /* libiconv.dylib */; };
+		32CE92D80F562D2E00AB328A /* wvgain.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92D70F562D2E00AB328A /* wvgain.c */; };
+		32CE92E80F562D7800AB328A /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92880F562BE500AB328A /* md5.c */; };
+		32CE92E90F562D7800AB328A /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92890F562BE500AB328A /* utils.c */; };
+		32CE92EC0F562D7800AB328A /* libwavpack.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC046055464E500DB518D /* libwavpack.a */; };
+		32CE92ED0F562D7800AB328A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 326D048D0DD02848001D08E9 /* libiconv.dylib */; };
+		32CE92FD0F562D9200AB328A /* wvunpack.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92FC0F562D9200AB328A /* wvunpack.c */; };
+		32E7365D10B9045100094C8A /* bits.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92570F56253400AB328A /* bits.c */; };
+		32E7365E10B9045300094C8A /* float.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925A0F56253400AB328A /* float.c */; };
+		32E7365F10B9045700094C8A /* metadata.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925B0F56253400AB328A /* metadata.c */; };
+		32E7366010B9045900094C8A /* unpack.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925D0F56253400AB328A /* unpack.c */; };
+		32E7366110B9045B00094C8A /* unpack3.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925E0F56253400AB328A /* unpack3.c */; };
+		32E7366210B9046000094C8A /* wputils.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92600F56253400AB328A /* wputils.c */; };
+		32E7366310B9046400094C8A /* words.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925F0F56253400AB328A /* words.c */; };
+		32E7366410B9046600094C8A /* extra1.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92580F56253400AB328A /* extra1.c */; };
+		32E7366510B9046700094C8A /* extra2.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE92590F56253400AB328A /* extra2.c */; };
+		32E7366610B9046D00094C8A /* pack.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CE925C0F56253400AB328A /* pack.c */; };
+		32E7366710B9046E00094C8A /* tags.c in Sources */ = {isa = PBXBuildFile; fileRef = 323BA80E1075138D00B3CAA7 /* tags.c */; };
+		32E7366C10B9048C00094C8A /* unpack3.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7366910B9048C00094C8A /* unpack3.h */; };
+		32E7366D10B9048C00094C8A /* wavpack_local.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7366A10B9048C00094C8A /* wavpack_local.h */; };
+		32E7366E10B9048C00094C8A /* wavpack_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7366B10B9048C00094C8A /* wavpack_version.h */; };
+		32E7367010B904A200094C8A /* wavpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7366F10B904A200094C8A /* wavpack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32E736D310B9079500094C8A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 326D048D0DD02848001D08E9 /* libiconv.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		320A7B660DCFA12B00FBB728 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = libFLAC;
+		};
+		32CE92CA0F562D0700AB328A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = libFLAC;
+		};
+		32CE92E60F562D7800AB328A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = libFLAC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		320A7B620DCFA0F300FBB728 /* wavpack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wavpack; sourceTree = BUILT_PRODUCTS_DIR; };
+		323BA80E1075138D00B3CAA7 /* tags.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tags.c; path = "wavpack-src/src/tags.c"; sourceTree = "<group>"; };
+		32437FE210CE4E3B005A8B46 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
+		32437FE310CE4E3B005A8B46 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Configs/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		32437FE410CE4E3B005A8B46 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		326D048D0DD02848001D08E9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		32CE92570F56253400AB328A /* bits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bits.c; path = "wavpack-src/src/bits.c"; sourceTree = "<group>"; };
+		32CE92580F56253400AB328A /* extra1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = extra1.c; path = "wavpack-src/src/extra1.c"; sourceTree = "<group>"; };
+		32CE92590F56253400AB328A /* extra2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = extra2.c; path = "wavpack-src/src/extra2.c"; sourceTree = "<group>"; };
+		32CE925A0F56253400AB328A /* float.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = float.c; path = "wavpack-src/src/float.c"; sourceTree = "<group>"; };
+		32CE925B0F56253400AB328A /* metadata.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = metadata.c; path = "wavpack-src/src/metadata.c"; sourceTree = "<group>"; };
+		32CE925C0F56253400AB328A /* pack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = pack.c; path = "wavpack-src/src/pack.c"; sourceTree = "<group>"; };
+		32CE925D0F56253400AB328A /* unpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = unpack.c; path = "wavpack-src/src/unpack.c"; sourceTree = "<group>"; };
+		32CE925E0F56253400AB328A /* unpack3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = unpack3.c; path = "wavpack-src/src/unpack3.c"; sourceTree = "<group>"; };
+		32CE925F0F56253400AB328A /* words.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = words.c; path = "wavpack-src/src/words.c"; sourceTree = "<group>"; };
+		32CE92600F56253400AB328A /* wputils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wputils.c; path = "wavpack-src/src/wputils.c"; sourceTree = "<group>"; };
+		32CE92880F562BE500AB328A /* md5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = md5.c; path = "wavpack-src/cli/md5.c"; sourceTree = "<group>"; };
+		32CE92890F562BE500AB328A /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utils.c; path = "wavpack-src/cli/utils.c"; sourceTree = "<group>"; };
+		32CE928A0F562BE500AB328A /* wavpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wavpack.c; path = "wavpack-src/cli/wavpack.c"; sourceTree = "<group>"; };
+		32CE92D50F562D0700AB328A /* wvgain */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wvgain; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CE92D70F562D2E00AB328A /* wvgain.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wvgain.c; path = "wavpack-src/cli/wvgain.c"; sourceTree = "<group>"; };
+		32CE92F10F562D7800AB328A /* wvunpack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wvunpack; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CE92FC0F562D9200AB328A /* wvunpack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wvunpack.c; path = "wavpack-src/cli/wvunpack.c"; sourceTree = "<group>"; };
+		32E7363810B903D000094C8A /* wavpack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = wavpack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32E7363910B903D000094C8A /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
+		32E7366910B9048C00094C8A /* unpack3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unpack3.h; path = "wavpack-src/src/unpack3.h"; sourceTree = "<group>"; };
+		32E7366A10B9048C00094C8A /* wavpack_local.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wavpack_local.h; path = "wavpack-src/src/wavpack_local.h"; sourceTree = "<group>"; };
+		32E7366B10B9048C00094C8A /* wavpack_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wavpack_version.h; path = "wavpack-src/src/wavpack_version.h"; sourceTree = "<group>"; };
+		32E7366F10B904A200094C8A /* wavpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wavpack.h; path = "wavpack-src/include/wavpack.h"; sourceTree = "<group>"; };
+		D2AAC046055464E500DB518D /* libwavpack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libwavpack.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		320A7B600DCFA0F300FBB728 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				320A7BA70DCFA20F00FBB728 /* libwavpack.a in Frameworks */,
+				326D04A60DD028C1001D08E9 /* libiconv.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CE92CF0F562D0700AB328A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CE92D00F562D0700AB328A /* libwavpack.a in Frameworks */,
+				32CE92D10F562D0700AB328A /* libiconv.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CE92EB0F562D7800AB328A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CE92EC0F562D7800AB328A /* libwavpack.a in Frameworks */,
+				32CE92ED0F562D7800AB328A /* libiconv.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E7363610B903D000094C8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32E736D310B9079500094C8A /* libiconv.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D289987405E68DCB004EDB86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* flac */ = {
+			isa = PBXGroup;
+			children = (
+				08FB7795FE84155DC02AAC07 /* Source */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				32437FE110CE4E2F005A8B46 /* Configs */,
+				326D048D0DD02848001D08E9 /* libiconv.dylib */,
+				32E7363910B903D000094C8A /* Framework-Info.plist */,
+			);
+			name = flac;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				32E7366F10B904A200094C8A /* wavpack.h */,
+				32E7366910B9048C00094C8A /* unpack3.h */,
+				32E7366A10B9048C00094C8A /* wavpack_local.h */,
+				32E7366B10B9048C00094C8A /* wavpack_version.h */,
+				323BA80E1075138D00B3CAA7 /* tags.c */,
+				32CE92FC0F562D9200AB328A /* wvunpack.c */,
+				32CE92D70F562D2E00AB328A /* wvgain.c */,
+				32CE92880F562BE500AB328A /* md5.c */,
+				32CE92890F562BE500AB328A /* utils.c */,
+				32CE928A0F562BE500AB328A /* wavpack.c */,
+				32CE92570F56253400AB328A /* bits.c */,
+				32CE92580F56253400AB328A /* extra1.c */,
+				32CE92590F56253400AB328A /* extra2.c */,
+				32CE925A0F56253400AB328A /* float.c */,
+				32CE925B0F56253400AB328A /* metadata.c */,
+				32CE925C0F56253400AB328A /* pack.c */,
+				32CE925D0F56253400AB328A /* unpack.c */,
+				32CE925E0F56253400AB328A /* unpack3.c */,
+				32CE925F0F56253400AB328A /* words.c */,
+				32CE92600F56253400AB328A /* wputils.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC046055464E500DB518D /* libwavpack.a */,
+				320A7B620DCFA0F300FBB728 /* wavpack */,
+				32CE92D50F562D0700AB328A /* wvgain */,
+				32CE92F10F562D7800AB328A /* wvunpack */,
+				32E7363810B903D000094C8A /* wavpack.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32437FE110CE4E2F005A8B46 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				32437FE210CE4E3B005A8B46 /* Base.xcconfig */,
+				32437FE310CE4E3B005A8B46 /* Debug.xcconfig */,
+				32437FE410CE4E3B005A8B46 /* Release.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		32E7363310B903D000094C8A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32E7366C10B9048C00094C8A /* unpack3.h in Headers */,
+				32E7366D10B9048C00094C8A /* wavpack_local.h in Headers */,
+				32E7366E10B9048C00094C8A /* wavpack_version.h in Headers */,
+				32E7367010B904A200094C8A /* wavpack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC043055464E500DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		320A7B610DCFA0F300FBB728 /* wavpack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 320A7B880DCFA14E00FBB728 /* Build configuration list for PBXNativeTarget "wavpack" */;
+			buildPhases = (
+				320A7B5F0DCFA0F300FBB728 /* Sources */,
+				320A7B600DCFA0F300FBB728 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				320A7B670DCFA12B00FBB728 /* PBXTargetDependency */,
+			);
+			name = wavpack;
+			productName = flac;
+			productReference = 320A7B620DCFA0F300FBB728 /* wavpack */;
+			productType = "com.apple.product-type.tool";
+		};
+		32CE92C80F562D0700AB328A /* wvgain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32CE92D20F562D0700AB328A /* Build configuration list for PBXNativeTarget "wvgain" */;
+			buildPhases = (
+				32CE92CB0F562D0700AB328A /* Sources */,
+				32CE92CF0F562D0700AB328A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32CE92C90F562D0700AB328A /* PBXTargetDependency */,
+			);
+			name = wvgain;
+			productName = flac;
+			productReference = 32CE92D50F562D0700AB328A /* wvgain */;
+			productType = "com.apple.product-type.tool";
+		};
+		32CE92E40F562D7800AB328A /* wvunpack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32CE92EE0F562D7800AB328A /* Build configuration list for PBXNativeTarget "wvunpack" */;
+			buildPhases = (
+				32CE92E70F562D7800AB328A /* Sources */,
+				32CE92EB0F562D7800AB328A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32CE92E50F562D7800AB328A /* PBXTargetDependency */,
+			);
+			name = wvunpack;
+			productName = flac;
+			productReference = 32CE92F10F562D7800AB328A /* wvunpack */;
+			productType = "com.apple.product-type.tool";
+		};
+		32E7363710B903D000094C8A /* Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "Framework" */;
+			buildPhases = (
+				32E7363310B903D000094C8A /* Headers */,
+				32E7363410B903D000094C8A /* Resources */,
+				32E7363510B903D000094C8A /* Sources */,
+				32E7363610B903D000094C8A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Framework;
+			productName = Framework;
+			productReference = 32E7363810B903D000094C8A /* wavpack.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2AAC045055464E500DB518D /* libwavpack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libwavpack" */;
+			buildPhases = (
+				D2AAC043055464E500DB518D /* Headers */,
+				D2AAC044055464E500DB518D /* Sources */,
+				D289987405E68DCB004EDB86 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libwavpack;
+			productName = flac;
+			productReference = D2AAC046055464E500DB518D /* libwavpack.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = sbooth.org;
+			};
+			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "wavpack" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* flac */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC045055464E500DB518D /* libwavpack */,
+				320A7B610DCFA0F300FBB728 /* wavpack */,
+				32CE92C80F562D0700AB328A /* wvgain */,
+				32CE92E40F562D7800AB328A /* wvunpack */,
+				32E7363710B903D000094C8A /* Framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32E7363410B903D000094C8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		320A7B5F0DCFA0F300FBB728 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CE928B0F562BE500AB328A /* md5.c in Sources */,
+				32CE928C0F562BE500AB328A /* utils.c in Sources */,
+				32CE928D0F562BE500AB328A /* wavpack.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CE92CB0F562D0700AB328A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CE92CC0F562D0700AB328A /* md5.c in Sources */,
+				32CE92CD0F562D0700AB328A /* utils.c in Sources */,
+				32CE92D80F562D2E00AB328A /* wvgain.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32CE92E70F562D7800AB328A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CE92E80F562D7800AB328A /* md5.c in Sources */,
+				32CE92E90F562D7800AB328A /* utils.c in Sources */,
+				32CE92FD0F562D9200AB328A /* wvunpack.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E7363510B903D000094C8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32E7365D10B9045100094C8A /* bits.c in Sources */,
+				32E7365E10B9045300094C8A /* float.c in Sources */,
+				32E7365F10B9045700094C8A /* metadata.c in Sources */,
+				32E7366010B9045900094C8A /* unpack.c in Sources */,
+				32E7366110B9045B00094C8A /* unpack3.c in Sources */,
+				32E7366210B9046000094C8A /* wputils.c in Sources */,
+				32E7366310B9046400094C8A /* words.c in Sources */,
+				32E7366410B9046600094C8A /* extra1.c in Sources */,
+				32E7366510B9046700094C8A /* extra2.c in Sources */,
+				32E7366610B9046D00094C8A /* pack.c in Sources */,
+				32E7366710B9046E00094C8A /* tags.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2AAC044055464E500DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CE92610F56253400AB328A /* bits.c in Sources */,
+				32CE92620F56253400AB328A /* extra1.c in Sources */,
+				32CE92630F56253400AB328A /* extra2.c in Sources */,
+				32CE92640F56253400AB328A /* float.c in Sources */,
+				32CE92650F56253400AB328A /* metadata.c in Sources */,
+				32CE92660F56253400AB328A /* pack.c in Sources */,
+				32CE92670F56253400AB328A /* unpack.c in Sources */,
+				32CE92680F56253400AB328A /* unpack3.c in Sources */,
+				32CE92690F56253400AB328A /* words.c in Sources */,
+				32CE926A0F56253400AB328A /* wputils.c in Sources */,
+				323BA80F1075138D00B3CAA7 /* tags.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		320A7B670DCFA12B00FBB728 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* libwavpack */;
+			targetProxy = 320A7B660DCFA12B00FBB728 /* PBXContainerItemProxy */;
+		};
+		32CE92C90F562D0700AB328A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* libwavpack */;
+			targetProxy = 32CE92CA0F562D0700AB328A /* PBXContainerItemProxy */;
+		};
+		32CE92E50F562D7800AB328A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC045055464E500DB518D /* libwavpack */;
+			targetProxy = 32CE92E60F562D7800AB328A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91EC08733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MICRO=1",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = wavpack;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/src/libFLAC/include $(SRCROOT)/flac-src/include";
+			};
+			name = Debug;
+		};
+		1DEB91ED08733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MICRO=1",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = wavpack;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/src/libFLAC/include $(SRCROOT)/flac-src/include";
+			};
+			name = Release;
+		};
+		1DEB91F008733DB70010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32437FE310CE4E3B005A8B46 /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1DEB91F108733DB70010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32437FE410CE4E3B005A8B46 /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		320A7B640DCFA0F300FBB728 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=60",
+					"LIBWAVPACK_MICRO=0",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.60.0\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/wavpack-src/include",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = wavpack;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/include";
+			};
+			name = Debug;
+		};
+		320A7B650DCFA0F300FBB728 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=60",
+					"LIBWAVPACK_MICRO=0",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.60.0\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/wavpack-src/include",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = wavpack;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/include";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		32CE92D30F562D0700AB328A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MICRO=1",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/wavpack-src/include",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = wvgain;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/include";
+			};
+			name = Debug;
+		};
+		32CE92D40F562D0700AB328A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MICRO=1",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/wavpack-src/include",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = wvgain;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/include";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		32CE92EF0F562D7800AB328A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MICRO=1",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/wavpack-src/include",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = wvunpack;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/include";
+			};
+			name = Debug;
+		};
+		32CE92F00F562D7800AB328A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MICRO=1",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/wavpack-src/include",
+				);
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = wvunpack;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/include";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		32E7363B10B903D000094C8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MICRO=1",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				INFOPLIST_FILE = "Framework-Info.plist";
+				INSTALL_PATH = "@rpath";
+				PREBINDING = NO;
+				PRODUCT_NAME = wavpack;
+			};
+			name = Debug;
+		};
+		32E7363C10B903D000094C8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
+					"PACKAGE_NAME=\\\"wavpack\\\"",
+					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
+					"LIBWAVPACK_MAJOR=4",
+					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MICRO=1",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"VERSION_OS=\\\"Darwin\\\"",
+					"STDC_HEADERS=1",
+					"HAVE_SYS_TYPES_H=1",
+					"HAVE_SYS_STAT_H=1",
+					"HAVE_STDLIB_H=1",
+					"HAVE_STRING_H=1",
+					"HAVE_MEMORY_H=1",
+					"HAVE_STRINGS_H=1",
+					"HAVE_INTTYPES_H=1",
+					"HAVE_STDINT_H=1",
+					"HAVE_UNISTD_H=1",
+					"HAVE_DLFCN_H=1",
+					"STDC_HEADERS=1",
+				);
+				INFOPLIST_FILE = "Framework-Info.plist";
+				INSTALL_PATH = "@rpath";
+				PREBINDING = NO;
+				PRODUCT_NAME = wavpack;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91EB08733DB70010E9CD /* Build configuration list for PBXNativeTarget "libwavpack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91EC08733DB70010E9CD /* Debug */,
+				1DEB91ED08733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "wavpack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91F008733DB70010E9CD /* Debug */,
+				1DEB91F108733DB70010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		320A7B880DCFA14E00FBB728 /* Build configuration list for PBXNativeTarget "wavpack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				320A7B640DCFA0F300FBB728 /* Debug */,
+				320A7B650DCFA0F300FBB728 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32CE92D20F562D0700AB328A /* Build configuration list for PBXNativeTarget "wvgain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CE92D30F562D0700AB328A /* Debug */,
+				32CE92D40F562D0700AB328A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32CE92EE0F562D7800AB328A /* Build configuration list for PBXNativeTarget "wvunpack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CE92EF0F562D7800AB328A /* Debug */,
+				32CE92F00F562D7800AB328A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32E7363D10B903D000094C8A /* Build configuration list for PBXNativeTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32E7363B10B903D000094C8A /* Debug */,
+				32E7363C10B903D000094C8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
