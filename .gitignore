@@ -1,9 +1,9 @@
 ## Ignore the build directory
-/build/*
+build
 
 ## Ignore user-specific Xcode files
-/*.xcodeproj/*.mode1v3
-/*.xcodeproj/*.pbxuser
+*.mode1v3
+*.pbxuser
 
 ## Ignore incredibly annoying .DS_Store files
 .DS_Store
