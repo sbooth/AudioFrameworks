@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3215E72D0F8844F700F84429 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3215E72C0F8844F700F84429 /* config.h */; settings = {ATTRIBUTES = (); }; };
 		3215E73C0F88457E00F84429 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3215E73B0F88457E00F84429 /* libz.dylib */; };
-		324B3789105C754F00B1AA21 /* taglib_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 324B3788105C754F00B1AA21 /* taglib_config.h */; settings = {ATTRIBUTES = (); }; };
+		324B3789105C754F00B1AA21 /* taglib_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 324B3788105C754F00B1AA21 /* taglib_config.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3261F86911A9A0B800E08DCD /* apefooter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3261F6D711A9A0B700E08DCD /* apefooter.cpp */; };
 		3261F86A11A9A0B800E08DCD /* apefooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 3261F6D811A9A0B700E08DCD /* apefooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3261F86B11A9A0B800E08DCD /* apeitem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3261F6D911A9A0B700E08DCD /* apeitem.cpp */; };
@@ -154,6 +154,8 @@
 		3261F92711A9A0B800E08DCD /* wavpackfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3261F7A711A9A0B800E08DCD /* wavpackfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3261F92811A9A0B800E08DCD /* wavpackproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3261F7A811A9A0B800E08DCD /* wavpackproperties.cpp */; };
 		3261F92911A9A0B800E08DCD /* wavpackproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 3261F7A911A9A0B800E08DCD /* wavpackproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3261F99411A9A39B00E08DCD /* tlist.tcc in Headers */ = {isa = PBXBuildFile; fileRef = 3261F79311A9A0B800E08DCD /* tlist.tcc */; settings = {ATTRIBUTES = (Public, ); }; };
+		3261F99511A9A39B00E08DCD /* tmap.tcc in Headers */ = {isa = PBXBuildFile; fileRef = 3261F79511A9A0B800E08DCD /* tmap.tcc */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -1282,6 +1284,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3261F99411A9A39B00E08DCD /* tlist.tcc in Headers */,
+				3261F99511A9A39B00E08DCD /* tmap.tcc in Headers */,
 				3215E72D0F8844F700F84429 /* config.h in Headers */,
 				324B3789105C754F00B1AA21 /* taglib_config.h in Headers */,
 				3261F86A11A9A0B800E08DCD /* apefooter.h in Headers */,
