@@ -389,6 +389,7 @@
 				32009289105D71040055BE17 /* sha1.h */,
 			);
 			name = discid;
+			path = ../discid;
 			sourceTree = "<group>";
 		};
 		320092B3105D71C70055BE17 /* neon */ = {
@@ -700,7 +701,7 @@
 					"-lexpat",
 				);
 				PRODUCT_NAME = musicbrainz3;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/libdiscid-src/include";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../discid/libdiscid-src/include";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -731,7 +732,7 @@
 					"-lexpat",
 				);
 				PRODUCT_NAME = musicbrainz3;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/libdiscid-src/include";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../discid/libdiscid-src/include";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

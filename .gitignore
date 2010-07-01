@@ -12,3 +12,11 @@ cddb/libcddb-src
 discid/libdiscid-src
 ogg/libogg-src
 flac/flac-src
+mad/libmad-src
+mp4v2/mp4v2-src
+musepack/musepack-src
+musicbrainz3/libmusicbrainz-src
+musicbrainz3/neon-src
+taglib/taglib-src
+vorbis/libvorbis-src
+wavpack/wavpack-src
