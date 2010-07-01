@@ -186,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FADC24208B4156D00ABE55E /* Build configuration list for PBXNativeTarget "cddb" */;
 			buildPhases = (
+				3DC590CC11DC8FE60053EBAD /* ShellScript */,
 				8D07F2BD0486CC7A007CD1D0 /* Headers */,
 				8D07F2BF0486CC7A007CD1D0 /* Resources */,
 				8D07F2C10486CC7A007CD1D0 /* Sources */,
@@ -243,6 +244,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DC590CC11DC8FE60053EBAD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./prepare.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D07F2C10486CC7A007CD1D0 /* Sources */ = {
