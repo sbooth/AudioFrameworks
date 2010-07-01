@@ -9,3 +9,6 @@ build
 .DS_Store
 
 cddb/libcddb-src
+discid/libdiscid-src
+ogg/libogg-src
+flac/flac-src

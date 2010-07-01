@@ -1,5 +1,5 @@
 Audio Frameworks for Mac OS X
-=============================================
+=============================
 
 This repository contains Xcode projects that help building Mac OS X framework of various open-source audio libraries.
 
@@ -13,14 +13,62 @@ This repo doesn't contain the sources for the respective frameworks or libraries
 ./configure will be called as necessary, e.g. if config.h doesn't exist. You don't need to do this yourself.
 
 CDDB
------
+----
 
 [http://libcddb.sourceforge.net/download.html][1]
 
-Download
-Rename folder to "libcddb-src"
-Move the folder into into cddb/
-Build
+(tested version: libcddb-1.3.2.tar.bz2)
+
+1. Download
+2. Decompress
+3. Rename folder to "libcddb-src"
+2. Move the folder into into cddb/
+3. Build
+
+discid
+------
+
+[http://musicbrainz.org/doc/libdiscid][2]
+
+(tested version: libdiscid-0.2.2.tar.gz)
+
+1. Download
+2. Decompress
+3. Rename folder to "libdiscid-src"
+4. Move the folder into into discid/
+5. Build
+
+
+ogg
+----
+
+[http://xiph.org/downloads/][3]
+
+(tested version: libogg-1.2.0.tar.gz)
+
+1. Download
+2. Decompress
+3. Rename folder to "libogg-src"
+4. Move the folder into into ogg/
+5. Build
+
+
+flac
+----
+
+[http://xiph.org/downloads/][3]
+
+(tested version: flac-1.2.1.tar.gz)
+
+1. Prepare ogg first.
+2. Download
+3. Decompress
+4. Rename folder to "flac-src"
+5. Move the folder into into flac/
+6. Select the "Framework" build target
+7. Build
+
+
 
 License
 -------
@@ -29,3 +77,5 @@ The Xcode projects are licensed under the same license as Play itself.
 
 
   [1]: http://libcddb.sourceforge.net/download.html
+  [2]: http://musicbrainz.org/doc/libdiscid
+  [3]: http://xiph.org/downloads/
