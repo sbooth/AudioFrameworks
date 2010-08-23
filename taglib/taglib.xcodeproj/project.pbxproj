@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320412E61222C75E00E481BA /* flacpicture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320412E41222C75E00E481BA /* flacpicture.cpp */; };
+		320412E71222C75E00E481BA /* flacpicture.h in Headers */ = {isa = PBXBuildFile; fileRef = 320412E51222C75E00E481BA /* flacpicture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		320412F51222C7AE00E481BA /* apefile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320412F11222C7AE00E481BA /* apefile.cpp */; };
+		320412F61222C7AE00E481BA /* apefile.h in Headers */ = {isa = PBXBuildFile; fileRef = 320412F21222C7AE00E481BA /* apefile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		320412F71222C7AE00E481BA /* apeproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 320412F31222C7AE00E481BA /* apeproperties.cpp */; };
+		320412F81222C7AE00E481BA /* apeproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 320412F41222C7AE00E481BA /* apeproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3215E72D0F8844F700F84429 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3215E72C0F8844F700F84429 /* config.h */; settings = {ATTRIBUTES = (); }; };
 		3215E73C0F88457E00F84429 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3215E73B0F88457E00F84429 /* libz.dylib */; };
 		324B3789105C754F00B1AA21 /* taglib_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 324B3788105C754F00B1AA21 /* taglib_config.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -164,6 +170,12 @@
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		320412E41222C75E00E481BA /* flacpicture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flacpicture.cpp; sourceTree = "<group>"; };
+		320412E51222C75E00E481BA /* flacpicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flacpicture.h; sourceTree = "<group>"; };
+		320412F11222C7AE00E481BA /* apefile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apefile.cpp; sourceTree = "<group>"; };
+		320412F21222C7AE00E481BA /* apefile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apefile.h; sourceTree = "<group>"; };
+		320412F31222C7AE00E481BA /* apeproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = apeproperties.cpp; sourceTree = "<group>"; };
+		320412F41222C7AE00E481BA /* apeproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apeproperties.h; sourceTree = "<group>"; };
 		3215E72C0F8844F700F84429 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		3215E73B0F88457E00F84429 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		322D79DE113047F8006676FC /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -884,6 +896,10 @@
 		3261F6D511A9A0B700E08DCD /* ape */ = {
 			isa = PBXGroup;
 			children = (
+				320412F11222C7AE00E481BA /* apefile.cpp */,
+				320412F21222C7AE00E481BA /* apefile.h */,
+				320412F31222C7AE00E481BA /* apeproperties.cpp */,
+				320412F41222C7AE00E481BA /* apeproperties.h */,
 				3261F6D611A9A0B700E08DCD /* ape-tag-format.txt */,
 				3261F6D711A9A0B700E08DCD /* apefooter.cpp */,
 				3261F6D811A9A0B700E08DCD /* apefooter.h */,
@@ -917,6 +933,8 @@
 		3261F6EF11A9A0B700E08DCD /* flac */ = {
 			isa = PBXGroup;
 			children = (
+				320412E41222C75E00E481BA /* flacpicture.cpp */,
+				320412E51222C75E00E481BA /* flacpicture.h */,
 				3261F6F011A9A0B700E08DCD /* CMakeLists.txt */,
 				3261F6F111A9A0B700E08DCD /* flacfile.cpp */,
 				3261F6F211A9A0B700E08DCD /* flacfile.h */,
@@ -1362,6 +1380,9 @@
 				3261F92311A9A0B800E08DCD /* trueaudioproperties.h in Headers */,
 				3261F92711A9A0B800E08DCD /* wavpackfile.h in Headers */,
 				3261F92911A9A0B800E08DCD /* wavpackproperties.h in Headers */,
+				320412E71222C75E00E481BA /* flacpicture.h in Headers */,
+				320412F61222C7AE00E481BA /* apefile.h in Headers */,
+				320412F81222C7AE00E481BA /* apeproperties.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1494,6 +1515,9 @@
 				3261F92211A9A0B800E08DCD /* trueaudioproperties.cpp in Sources */,
 				3261F92611A9A0B800E08DCD /* wavpackfile.cpp in Sources */,
 				3261F92811A9A0B800E08DCD /* wavpackproperties.cpp in Sources */,
+				320412E61222C75E00E481BA /* flacpicture.cpp in Sources */,
+				320412F51222C7AE00E481BA /* apefile.cpp in Sources */,
+				320412F71222C7AE00E481BA /* apeproperties.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
