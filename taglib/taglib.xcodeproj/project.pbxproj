@@ -162,6 +162,10 @@
 		3261F92911A9A0B800E08DCD /* wavpackproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 3261F7A911A9A0B800E08DCD /* wavpackproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3261F99411A9A39B00E08DCD /* tlist.tcc in Headers */ = {isa = PBXBuildFile; fileRef = 3261F79311A9A0B800E08DCD /* tlist.tcc */; settings = {ATTRIBUTES = (Public, ); }; };
 		3261F99511A9A39B00E08DCD /* tmap.tcc in Headers */ = {isa = PBXBuildFile; fileRef = 3261F79511A9A0B800E08DCD /* tmap.tcc */; settings = {ATTRIBUTES = (Public, ); }; };
+		32BB850712D8C4C30066E3DF /* flacmetadatablock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BB850312D8C4C30066E3DF /* flacmetadatablock.cpp */; };
+		32BB850812D8C4C30066E3DF /* flacmetadatablock.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BB850412D8C4C30066E3DF /* flacmetadatablock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32BB850912D8C4C30066E3DF /* flacunknownmetadatablock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BB850512D8C4C30066E3DF /* flacunknownmetadatablock.cpp */; };
+		32BB850A12D8C4C30066E3DF /* flacunknownmetadatablock.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BB850612D8C4C30066E3DF /* flacunknownmetadatablock.h */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -564,6 +568,10 @@
 		3261F7DF11A9A0B800E08DCD /* test_trueaudio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_trueaudio.cpp; sourceTree = "<group>"; };
 		3261F7E011A9A0B800E08DCD /* test_xiphcomment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_xiphcomment.cpp; sourceTree = "<group>"; };
 		3261F7E111A9A0B800E08DCD /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		32BB850312D8C4C30066E3DF /* flacmetadatablock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flacmetadatablock.cpp; sourceTree = "<group>"; };
+		32BB850412D8C4C30066E3DF /* flacmetadatablock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flacmetadatablock.h; sourceTree = "<group>"; };
+		32BB850512D8C4C30066E3DF /* flacunknownmetadatablock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = flacunknownmetadatablock.cpp; sourceTree = "<group>"; };
+		32BB850612D8C4C30066E3DF /* flacunknownmetadatablock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flacunknownmetadatablock.h; sourceTree = "<group>"; };
 		32DBCF5E0370ADEE00C91783 /* taglib_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taglib_Prefix.pch; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* taglib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = taglib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -933,6 +941,10 @@
 		3261F6EF11A9A0B700E08DCD /* flac */ = {
 			isa = PBXGroup;
 			children = (
+				32BB850312D8C4C30066E3DF /* flacmetadatablock.cpp */,
+				32BB850412D8C4C30066E3DF /* flacmetadatablock.h */,
+				32BB850512D8C4C30066E3DF /* flacunknownmetadatablock.cpp */,
+				32BB850612D8C4C30066E3DF /* flacunknownmetadatablock.h */,
 				320412E41222C75E00E481BA /* flacpicture.cpp */,
 				320412E51222C75E00E481BA /* flacpicture.h */,
 				3261F6F011A9A0B700E08DCD /* CMakeLists.txt */,
@@ -1383,6 +1395,8 @@
 				320412E71222C75E00E481BA /* flacpicture.h in Headers */,
 				320412F61222C7AE00E481BA /* apefile.h in Headers */,
 				320412F81222C7AE00E481BA /* apeproperties.h in Headers */,
+				32BB850812D8C4C30066E3DF /* flacmetadatablock.h in Headers */,
+				32BB850A12D8C4C30066E3DF /* flacunknownmetadatablock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1418,7 +1432,14 @@
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "taglib" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* taglib */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -1518,6 +1539,8 @@
 				320412E61222C75E00E481BA /* flacpicture.cpp in Sources */,
 				320412F51222C7AE00E481BA /* apefile.cpp in Sources */,
 				320412F71222C7AE00E481BA /* apeproperties.cpp in Sources */,
+				32BB850712D8C4C30066E3DF /* flacmetadatablock.cpp in Sources */,
+				32BB850912D8C4C30066E3DF /* flacunknownmetadatablock.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
