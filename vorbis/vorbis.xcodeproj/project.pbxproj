@@ -52,7 +52,6 @@
 		32E73A9210B9D5E500094C8A /* setup_8.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73A4410B9D5E500094C8A /* setup_8.h */; };
 		32E73A9310B9D5E500094C8A /* setup_X.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73A4510B9D5E500094C8A /* setup_X.h */; };
 		32E73A9410B9D5E500094C8A /* os.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73A4610B9D5E500094C8A /* os.h */; };
-		32E73A9510B9D5E500094C8A /* psy_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73A4710B9D5E500094C8A /* psy_table.h */; };
 		32E73A9610B9D5E500094C8A /* psy.c in Sources */ = {isa = PBXBuildFile; fileRef = 32E73A4810B9D5E500094C8A /* psy.c */; };
 		32E73A9710B9D5E500094C8A /* psy.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73A4910B9D5E500094C8A /* psy.h */; };
 		32E73A9910B9D5E500094C8A /* registry.c in Sources */ = {isa = PBXBuildFile; fileRef = 32E73A4B10B9D5E500094C8A /* registry.c */; };
@@ -75,7 +74,6 @@
 		32E73AF310B9D83A00094C8A /* vorbisfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73AF010B9D83A00094C8A /* vorbisfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32E73B3C10B9D9E100094C8A /* ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32E73B3910B9D9CE00094C8A /* ogg.framework */; };
 		32E73B7710B9DB4F00094C8A /* ogg.framework in Copy Embedded Frameworks */ = {isa = PBXBuildFile; fileRef = 32E73B3910B9D9CE00094C8A /* ogg.framework */; };
-		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +108,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32E7398810B9D32D00094C8A /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398910B9D32D00094C8A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Configs/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398A10B9D32D00094C8A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -162,7 +159,6 @@
 		32E73A4410B9D5E500094C8A /* setup_8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setup_8.h; sourceTree = "<group>"; };
 		32E73A4510B9D5E500094C8A /* setup_X.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setup_X.h; sourceTree = "<group>"; };
 		32E73A4610B9D5E500094C8A /* os.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = os.h; path = "libvorbis-src/lib/os.h"; sourceTree = "<group>"; };
-		32E73A4710B9D5E500094C8A /* psy_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = psy_table.h; path = "libvorbis-src/lib/psy_table.h"; sourceTree = "<group>"; };
 		32E73A4810B9D5E500094C8A /* psy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = psy.c; path = "libvorbis-src/lib/psy.c"; sourceTree = "<group>"; };
 		32E73A4910B9D5E500094C8A /* psy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = psy.h; path = "libvorbis-src/lib/psy.h"; sourceTree = "<group>"; };
 		32E73A4A10B9D5E500094C8A /* psytune.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = psytune.c; path = "libvorbis-src/lib/psytune.c"; sourceTree = "<group>"; };
@@ -223,7 +219,6 @@
 			children = (
 				32E73B3110B9D9CD00094C8A /* ogg.xcodeproj */,
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
-				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -274,7 +269,6 @@
 				32E73A3110B9D5E500094C8A /* misc.h */,
 				32E73A3210B9D5E500094C8A /* modes */,
 				32E73A4610B9D5E500094C8A /* os.h */,
-				32E73A4710B9D5E500094C8A /* psy_table.h */,
 				32E73A4810B9D5E500094C8A /* psy.c */,
 				32E73A4910B9D5E500094C8A /* psy.h */,
 				32E73A4A10B9D5E500094C8A /* psytune.c */,
@@ -403,7 +397,6 @@
 				32E73A9210B9D5E500094C8A /* setup_8.h in Headers */,
 				32E73A9310B9D5E500094C8A /* setup_X.h in Headers */,
 				32E73A9410B9D5E500094C8A /* os.h in Headers */,
-				32E73A9510B9D5E500094C8A /* psy_table.h in Headers */,
 				32E73A9710B9D5E500094C8A /* psy.h in Headers */,
 				32E73A9A10B9D5E500094C8A /* registry.h in Headers */,
 				32E73A9C10B9D5E500094C8A /* scales.h in Headers */,
@@ -447,7 +440,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "vorbis" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* MAD */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -479,7 +479,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,17 +524,6 @@
 			targetProxy = 32E73B3A10B9D9D500094C8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C1667FE841158C02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
