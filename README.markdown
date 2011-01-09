@@ -133,7 +133,7 @@ taglib
 
 [http://developer.kde.org/~wheeler/taglib.html][9]
 
-(tested versions: taglib SVN rev. 1212918 and rev. 1213195)
+(tested version: taglib SVN rev. 1213268)
 
 1. svn co -r 1212918 svn://anonsvn.kde.org/home/kde/trunk/kdesupport/taglib
 2. Rename folder to "taglib-src"
@@ -146,7 +146,7 @@ vorbis
 
 [http://xiph.org/downloads/][3]
 
-(tested version: libvorbis-1.3.1.tar.bz2)
+(tested version: libvorbis-1.3.2.tar.bz2)
 
 1. Download
 2. Decompress
