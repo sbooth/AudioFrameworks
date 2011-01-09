@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32B7E37312DA7A23005B82C9 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E37212DA7A23005B82C9 /* config.h */; };
 		8CA35D090D2E764100F89E3B /* cddb.c in Sources */ = {isa = PBXBuildFile; fileRef = 8CA35CFD0D2E764100F89E3B /* cddb.c */; };
 		8CA35D0A0D2E764100F89E3B /* cddb_cmd.c in Sources */ = {isa = PBXBuildFile; fileRef = 8CA35CFE0D2E764100F89E3B /* cddb_cmd.c */; };
 		8CA35D0B0D2E764100F89E3B /* cddb_conn.c in Sources */ = {isa = PBXBuildFile; fileRef = 8CA35CFF0D2E764100F89E3B /* cddb_conn.c */; };
@@ -36,12 +37,10 @@
 		8CA35D370D2E767200F89E3B /* cddb_track.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA35D250D2E767200F89E3B /* cddb_track.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CA35D380D2E767200F89E3B /* ll.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA35D260D2E767200F89E3B /* ll.h */; };
 		8CA35D390D2E767200F89E3B /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA35D270D2E767200F89E3B /* version.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CA35D460D2E777900F89E3B /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA35D450D2E777900F89E3B /* config.h */; };
-		8D07F2C00486CC7A007CD1D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		32B7E37212DA7A23005B82C9 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		8CA35CFD0D2E764100F89E3B /* cddb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cddb.c; path = "libcddb-src/lib/cddb.c"; sourceTree = "<group>"; };
 		8CA35CFE0D2E764100F89E3B /* cddb_cmd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cddb_cmd.c; path = "libcddb-src/lib/cddb_cmd.c"; sourceTree = "<group>"; };
 		8CA35CFF0D2E764100F89E3B /* cddb_conn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cddb_conn.c; path = "libcddb-src/lib/cddb_conn.c"; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 		8CA35D250D2E767200F89E3B /* cddb_track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cddb_track.h; path = "libcddb-src/include/cddb/cddb_track.h"; sourceTree = "<group>"; };
 		8CA35D260D2E767200F89E3B /* ll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ll.h; path = "libcddb-src/include/cddb/ll.h"; sourceTree = "<group>"; };
 		8CA35D270D2E767200F89E3B /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = "libcddb-src/include/cddb/version.h"; sourceTree = "<group>"; };
-		8CA35D450D2E777900F89E3B /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = "libcddb-src/config.h"; sourceTree = "<group>"; };
 		8D07F2C70486CC7A007CD1D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D07F2C80486CC7A007CD1D0 /* cddb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = cddb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				8D07F2C70486CC7A007CD1D0 /* Info.plist */,
-				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -117,7 +114,7 @@
 		08FB77ACFE841707C02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				8CA35D450D2E777900F89E3B /* config.h */,
+				32B7E37212DA7A23005B82C9 /* config.h */,
 				8CA35D160D2E767200F89E3B /* cddb.h */,
 				8CA35D170D2E767200F89E3B /* cddb_cmd.h */,
 				8CA35D180D2E767200F89E3B /* cddb_cmd_ni.h */,
@@ -175,7 +172,7 @@
 				8CA35D370D2E767200F89E3B /* cddb_track.h in Headers */,
 				8CA35D380D2E767200F89E3B /* ll.h in Headers */,
 				8CA35D390D2E767200F89E3B /* version.h in Headers */,
-				8CA35D460D2E777900F89E3B /* config.h in Headers */,
+				32B7E37312DA7A23005B82C9 /* config.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,12 +183,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FADC24208B4156D00ABE55E /* Build configuration list for PBXNativeTarget "cddb" */;
 			buildPhases = (
-				3DC590CC11DC8FE60053EBAD /* ShellScript */,
 				8D07F2BD0486CC7A007CD1D0 /* Headers */,
 				8D07F2BF0486CC7A007CD1D0 /* Resources */,
 				8D07F2C10486CC7A007CD1D0 /* Sources */,
 				8D07F2C30486CC7A007CD1D0 /* Frameworks */,
-				8D07F2C50486CC7A007CD1D0 /* Rez */,
 			);
 			buildRules = (
 			);
@@ -213,7 +208,14 @@
 			};
 			buildConfigurationList = 4FADC24608B4156D00ABE55E /* Build configuration list for PBXProject "cddb" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* cddb */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
@@ -229,37 +231,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D07F2C00486CC7A007CD1D0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXRezBuildPhase section */
-		8D07F2C50486CC7A007CD1D0 /* Rez */ = {
-			isa = PBXRezBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXRezBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3DC590CC11DC8FE60053EBAD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = ./prepare.sh;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D07F2C10486CC7A007CD1D0 /* Sources */ = {
@@ -282,17 +257,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C1667FE841158C02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4FADC24308B4156D00ABE55E /* Debug */ = {
