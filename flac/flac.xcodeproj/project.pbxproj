@@ -294,7 +294,7 @@
 		32437F9C10CE4D5E005A8B46 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		326D048D0DD02848001D08E9 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		32D86509105306D4002E8E1A /* FLAC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLAC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		32D8650A105306D4002E8E1A /* framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "framework-Info.plist"; sourceTree = "<group>"; };
+		32D8650A105306D4002E8E1A /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		32D8659E10530AF0002E8E1A /* all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = all.h; path = "flac-src/include/FLAC/all.h"; sourceTree = "<group>"; };
 		32D8659F10530AF0002E8E1A /* assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = assert.h; path = "flac-src/include/FLAC/assert.h"; sourceTree = "<group>"; };
 		32D865A010530AF0002E8E1A /* callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = callback.h; path = "flac-src/include/FLAC/callback.h"; sourceTree = "<group>"; };
@@ -409,7 +409,7 @@
 				C6A0FF2B0290797F04C91782 /* Documentation */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 				326D048D0DD02848001D08E9 /* libiconv.dylib */,
-				32D8650A105306D4002E8E1A /* framework-Info.plist */,
+				32D8650A105306D4002E8E1A /* Framework-Info.plist */,
 			);
 			name = flac;
 			sourceTree = "<group>";
@@ -892,7 +892,14 @@
 			};
 			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "flac" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* flac */;
 			projectDirPath = "";
 			projectRoot = "";
