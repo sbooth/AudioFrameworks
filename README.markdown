@@ -3,7 +3,7 @@ Audio Frameworks for Mac OS X
 
 This repository contains Xcode projects that help building Mac OS X framework of various open-source audio libraries.
 
-Play itself can be found at http://sbooth.org/Play/
+Play itself can be found at [http://sbooth.org/Play/][11]
 
 Usage
 -----
@@ -187,3 +187,4 @@ The Xcode projects are licensed under the same license as Play itself.
   [8]: http://www.webdav.org/neon/
   [9]: http://developer.kde.org/~wheeler/taglib.html
   [10]: http://www.wavpack.com/downloads.html
+  [11]: http://sbooth.org/Play/
