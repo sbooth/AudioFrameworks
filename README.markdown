@@ -133,9 +133,9 @@ taglib
 
 [http://developer.kde.org/~wheeler/taglib.html][9]
 
-(tested version: taglib SVN rev. 1213195)
+(tested versions: taglib SVN rev. 1212918 and rev. 1213195)
 
-1. svn co svn://anonsvn.kde.org/home/kde/trunk/kdesupport/taglib
+1. svn co -r 1212918 svn://anonsvn.kde.org/home/kde/trunk/kdesupport/taglib
 2. Rename folder to "taglib-src"
 3. Move the folder into into taglib/
 4. Build
