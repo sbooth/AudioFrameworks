@@ -45,7 +45,7 @@ ogg
 
 [http://xiph.org/downloads/][3]
 
-(tested version: libogg-1.2.0.tar.gz)
+(tested version: libogg-1.2.2.tar.gz)
 
 1. Download
 2. Decompress
