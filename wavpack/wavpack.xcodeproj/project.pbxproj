@@ -335,7 +335,14 @@
 			};
 			buildConfigurationList = 1DEB91EF08733DB70010E9CD /* Build configuration list for PBXProject "wavpack" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* flac */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -804,11 +811,13 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"PACKAGE_NAME=\\\"wavpack\\\"",
 					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_VERSION=\\\"4.60.1\\\"",
+					"PACKAGE_STRING=\\\"wavpack\\ 4.60.1\\\"",
 					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
 					"LIBWAVPACK_MAJOR=4",
-					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MINOR=60",
 					"LIBWAVPACK_MICRO=1",
-					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.60.1\\\"",
 					"VERSION_OS=\\\"Darwin\\\"",
 					"STDC_HEADERS=1",
 					"HAVE_SYS_TYPES_H=1",
@@ -843,11 +852,13 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = (
 					"PACKAGE_NAME=\\\"wavpack\\\"",
 					"PACKAGE_TARNAME=\\\"wavpack\\\"",
+					"PACKAGE_VERSION=\\\"4.60.1\\\"",
+					"PACKAGE_STRING=\\\"wavpack\\ 4.60.1\\\"",
 					"PACKAGE_BUGREPORT=\\\"bryant@wavpack.com\\\"",
 					"LIBWAVPACK_MAJOR=4",
-					"LIBWAVPACK_MINOR=50",
+					"LIBWAVPACK_MINOR=60",
 					"LIBWAVPACK_MICRO=1",
-					"LIBWAVPACK_VERSION_STRING=\\\"4.50.1\\\"",
+					"LIBWAVPACK_VERSION_STRING=\\\"4.60.1\\\"",
 					"VERSION_OS=\\\"Darwin\\\"",
 					"STDC_HEADERS=1",
 					"HAVE_SYS_TYPES_H=1",
