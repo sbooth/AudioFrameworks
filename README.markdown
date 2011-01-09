@@ -133,13 +133,12 @@ taglib
 
 [http://developer.kde.org/~wheeler/taglib.html][9]
 
-(tested version: taglib-1.6.3.tar.gz)
+(tested version: taglib SVN rev. 1213195)
 
-1. Download
-2. Decompress
-3. Rename folder to "taglib-src"
-4. Move the folder into into taglib/
-5. Build
+1. svn co svn://anonsvn.kde.org/home/kde/trunk/kdesupport/taglib
+2. Rename folder to "taglib-src"
+3. Move the folder into into taglib/
+4. Build
 
 
 vorbis
