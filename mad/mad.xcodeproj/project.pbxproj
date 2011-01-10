@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32B7E3A912DA89EF005B82C9 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E3A812DA89EF005B82C9 /* config.h */; };
 		32E739AB10B9D39100094C8A /* bit.c in Sources */ = {isa = PBXBuildFile; fileRef = 32E7399210B9D39100094C8A /* bit.c */; };
 		32E739AC10B9D39100094C8A /* bit.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7399310B9D39100094C8A /* bit.h */; };
-		32E739AD10B9D39100094C8A /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7399410B9D39100094C8A /* config.h */; };
 		32E739AE10B9D39100094C8A /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 32E7399510B9D39100094C8A /* decoder.c */; };
 		32E739AF10B9D39100094C8A /* decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7399610B9D39100094C8A /* decoder.h */; };
 		32E739B010B9D39100094C8A /* fixed.c in Sources */ = {isa = PBXBuildFile; fileRef = 32E7399710B9D39100094C8A /* fixed.c */; };
@@ -32,17 +32,15 @@
 		32E739C110B9D39100094C8A /* timer.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E739A810B9D39100094C8A /* timer.h */; };
 		32E739C210B9D39100094C8A /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 32E739A910B9D39100094C8A /* version.c */; };
 		32E739C310B9D39100094C8A /* version.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E739AA10B9D39100094C8A /* version.h */; };
-		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		32B7E3A812DA89EF005B82C9 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		32E7398810B9D32D00094C8A /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398910B9D32D00094C8A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Configs/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398A10B9D32D00094C8A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7399210B9D39100094C8A /* bit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bit.c; path = "libmad-src/bit.c"; sourceTree = "<group>"; };
 		32E7399310B9D39100094C8A /* bit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bit.h; path = "libmad-src/bit.h"; sourceTree = "<group>"; };
-		32E7399410B9D39100094C8A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = "libmad-src/config.h"; sourceTree = "<group>"; };
 		32E7399510B9D39100094C8A /* decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = decoder.c; path = "libmad-src/decoder.c"; sourceTree = "<group>"; };
 		32E7399610B9D39100094C8A /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decoder.h; path = "libmad-src/decoder.h"; sourceTree = "<group>"; };
 		32E7399710B9D39100094C8A /* fixed.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fixed.c; path = "libmad-src/fixed.c"; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
-				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -111,9 +108,9 @@
 		08FB77AEFE84172EC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				32B7E3A812DA89EF005B82C9 /* config.h */,
 				32E7399210B9D39100094C8A /* bit.c */,
 				32E7399310B9D39100094C8A /* bit.h */,
-				32E7399410B9D39100094C8A /* config.h */,
 				32E7399510B9D39100094C8A /* decoder.c */,
 				32E7399610B9D39100094C8A /* decoder.h */,
 				32E7399710B9D39100094C8A /* fixed.c */,
@@ -158,7 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32E739AC10B9D39100094C8A /* bit.h in Headers */,
-				32E739AD10B9D39100094C8A /* config.h in Headers */,
 				32E739AF10B9D39100094C8A /* decoder.h in Headers */,
 				32E739B110B9D39100094C8A /* fixed.h in Headers */,
 				32E739B310B9D39100094C8A /* frame.h in Headers */,
@@ -171,6 +167,7 @@
 				32E739BF10B9D39100094C8A /* synth.h in Headers */,
 				32E739C110B9D39100094C8A /* timer.h in Headers */,
 				32E739C310B9D39100094C8A /* version.h in Headers */,
+				32B7E3A912DA89EF005B82C9 /* config.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +178,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "mad.framework" */;
 			buildPhases = (
-				3D6356E411DCA47600E5F6CA /* ShellScript */,
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
 				8DC2EF540486A6940098B216 /* Sources */,
@@ -204,7 +200,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "mad" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* MAD */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -220,27 +223,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3D6356E411DCA47600E5F6CA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = ./prepare.sh;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DC2EF540486A6940098B216 /* Sources */ = {
@@ -262,17 +248,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C1667FE841158C02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB91AE08733DA50010E9CD /* Debug */ = {

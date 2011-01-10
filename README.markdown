@@ -22,7 +22,7 @@ CDDB
 1. Download
 2. Decompress
 3. Rename folder to "libcddb-src"
-2. Move the folder into into cddb/
+2. Move the folder into cddb/
 3. Build
 
 
@@ -36,7 +36,7 @@ discid
 1. Download
 2. Decompress
 3. Rename folder to "libdiscid-src"
-4. Move the folder into into discid/
+4. Move the folder into discid/
 5. Build
 
 
@@ -50,7 +50,7 @@ ogg
 1. Download
 2. Decompress
 3. Rename folder to "libogg-src"
-4. Move the folder into into ogg/
+4. Move the folder into ogg/
 5. Build
 
 
@@ -65,7 +65,7 @@ flac
 2. Download
 3. Decompress
 4. Rename folder to "flac-src"
-5. Move the folder into into flac/
+5. Move the folder into flac/
 6. Select the "Framework" build target
 7. Build
 
@@ -77,7 +77,12 @@ mad
 
 (tested version: libmad-0.15.1b.tar.gz)
 
-**Currently not working**
+1. Download
+2. Decompress
+3. Rename folder to "libmad-src"
+4. Move the folder into mad/
+5. Apply the patch "mad.patch": 'patch < mad.patch' 
+6. Build
 
 
 mp4v2
@@ -92,7 +97,7 @@ mp4v2
 1. Download
 2. Decompress
 3. Rename folder to "mp4v2-src"
-4. Move the folder into into mp4v2/
+4. Move the folder into mp4v2/
 5. Build
 
 
@@ -108,7 +113,7 @@ musepack
 1. Download
 2. Decompress
 3. Rename folder to "musepack-src"
-4. Move the folder into into musepack/
+4. Move the folder into musepack/
 5. Build
 
 
@@ -124,7 +129,7 @@ musicbrainz3
 2. Download libmusicbrainz and neon
 3. Decompress
 4. Rename folders to "libmusicbrainz-src" and "neon-src"
-5. Move the folder into into musicbrainz3/
+5. Move the folder into musicbrainz3/
 6. Build
 
 
@@ -137,7 +142,7 @@ taglib
 
 1. svn co -r 1212918 svn://anonsvn.kde.org/home/kde/trunk/kdesupport/taglib
 2. Rename folder to "taglib-src"
-3. Move the folder into into taglib/
+3. Move the folder into taglib/
 4. Build
 
 
@@ -151,7 +156,7 @@ vorbis
 1. Download
 2. Decompress
 3. Rename folder to "libvorbis-src"
-4. Move the folder into into vorbis/
+4. Move the folder into vorbis/
 5. Build
 
 
@@ -165,7 +170,7 @@ wavpack
 1. Download
 2. Decompress
 3. Rename folder to "wavpack-src"
-4. Move the folder into into wavpack/
+4. Move the folder into wavpack/
 5. Select the "Framework" build target
 6. Build
 
