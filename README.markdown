@@ -136,10 +136,9 @@ taglib
 
 (tested version: taglib SVN rev. 1213268)
 
-1. svn co -r 1212918 svn://anonsvn.kde.org/home/kde/trunk/kdesupport/taglib
-2. Rename folder to "taglib-src"
-3. Move the folder into taglib/
-4. Build
+1. svn co -r 1213268 svn://anonsvn.kde.org/home/kde/trunk/kdesupport/taglib taglib-src
+2. Move the folder into taglib/
+3. Build
 
 
 vorbis
