@@ -179,6 +179,20 @@ LAME
 5. Build
 
 
+sndfile
+-------
+
+[http://www.mega-nerd.com/libsndfile/][12]
+
+(tested version: libsndfile-1.0.23.tar.gz)
+
+1. Download
+2. Decompress
+3. Rename folder to "libsndfile-src"
+4. Move the folder into sndfile/
+5. Build
+
+
 License
 -------
 
@@ -196,3 +210,4 @@ The Xcode projects are distributed under the modified BSD license.
   [9]: http://developer.kde.org/~wheeler/taglib.html
   [10]: http://www.wavpack.com/downloads.html
   [11]: http://lame.sourceforge.net/download.php
+  [12]: http://www.mega-nerd.com/libsndfile/
