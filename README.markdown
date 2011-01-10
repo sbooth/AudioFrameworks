@@ -206,6 +206,19 @@ ofa1
 6. Build
 
 
+mac
+---
+
+** Not usable at this time **
+
+
+shorten
+-------
+
+0. The original source was from inputSHORTEN, a lamip plugin.
+1. Build
+
+
 License
 -------
 

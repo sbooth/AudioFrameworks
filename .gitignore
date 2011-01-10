@@ -20,6 +20,7 @@ musepack/musepack-src
 musicbrainz3/libmusicbrainz-src
 musicbrainz3/neon-src
 ofa1/libofa-src
+shorten/shorten-src
 sndfile/libsndfile-src
 taglib/taglib-src
 vorbis/libvorbis-src
