@@ -81,7 +81,7 @@
 		32B7E63812DAB20E005B82C9 /* sfconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E5BB12DAB20E005B82C9 /* sfconfig.h */; };
 		32B7E63912DAB20E005B82C9 /* sfendian.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E5BC12DAB20E005B82C9 /* sfendian.h */; };
 		32B7E63A12DAB20E005B82C9 /* sndfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E5BD12DAB20E005B82C9 /* sndfile.c */; };
-		32B7E63C12DAB20E005B82C9 /* sndfile.hh in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E5BF12DAB20E005B82C9 /* sndfile.hh */; };
+		32B7E63C12DAB20E005B82C9 /* sndfile.hh in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E5BF12DAB20E005B82C9 /* sndfile.hh */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E63D12DAB20E005B82C9 /* strings.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E5C012DAB20E005B82C9 /* strings.c */; };
 		32B7E63E12DAB20E005B82C9 /* svx.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E5C112DAB20E005B82C9 /* svx.c */; };
 		32B7E65012DAB20E005B82C9 /* txw.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E5D312DAB20E005B82C9 /* txw.c */; };
@@ -95,7 +95,7 @@
 		32B7E65A12DAB20E005B82C9 /* windows.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E5DD12DAB20E005B82C9 /* windows.c */; };
 		32B7E65B12DAB20E005B82C9 /* wve.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E5DE12DAB20E005B82C9 /* wve.c */; };
 		32B7E65C12DAB20E005B82C9 /* xi.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E5DF12DAB20E005B82C9 /* xi.c */; };
-		32B7E66412DAB277005B82C9 /* sndfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E66312DAB277005B82C9 /* sndfile.h */; };
+		32B7E66412DAB277005B82C9 /* sndfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E66312DAB277005B82C9 /* sndfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -610,7 +610,6 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/musepack-src/include";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
 				PRODUCT_NAME = sndfile;
@@ -627,7 +626,6 @@
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_MODEL_TUNING = G5;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/musepack-src/include";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
 				PRODUCT_NAME = sndfile;
