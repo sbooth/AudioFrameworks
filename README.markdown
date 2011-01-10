@@ -242,6 +242,20 @@ cuetools
 5. Build
 
 
+speex
+-----
+
+[http://www.speex.org/][15]
+
+(tested version: speex-1.2rc1.tar.gz)
+
+1. Download
+2. Decompress
+3. Rename folder to speex-src
+4. Move the folder into speex/
+5. Build
+
+
 License
 -------
 
@@ -262,3 +276,4 @@ The Xcode projects are distributed under the modified BSD license.
   [12]: http://www.mega-nerd.com/libsndfile/
   [13]: http://code.google.com/p/musicip-libofa/
   [14]: http://developer.berlios.de/projects/cuetools/
+  [15]: http://www.speex.org/
