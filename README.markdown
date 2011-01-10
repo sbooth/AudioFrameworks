@@ -88,17 +88,13 @@ mad
 mp4v2
 -----
 
-[http://code.google.com/p/mp4v2/downloads/list][5]
+[http://code.google.com/p/mp4v2/source/checkout][5]
 
-(tested version: mp4v2-1.9.1.tar.bz2)
+(tested version: svn revision 426)
 
-**Currently not working**
-
-1. Download
-2. Decompress
-3. Rename folder to "mp4v2-src"
-4. Move the folder into mp4v2/
-5. Build
+1. svn co -r 426 http://mp4v2.googlecode.com/svn/trunk/ mp4v2-src
+2. Move the folder into mp4v2/
+3. Build
 
 
 musepack
@@ -185,7 +181,7 @@ The Xcode projects are licensed under the same license as Play itself.
   [2]: http://musicbrainz.org/doc/libdiscid
   [3]: http://xiph.org/downloads/
   [4]: http://sourceforge.net/projects/mad/files/
-  [5]: http://code.google.com/p/mp4v2/downloads/list
+  [5]: http://code.google.com/p/mp4v2/source/checkout
   [6]: http://www.musepack.net/index.php?pg=src
   [7]: http://musicbrainz.org/doc/libmusicbrainz
   [8]: http://www.webdav.org/neon/
