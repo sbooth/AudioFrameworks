@@ -9,6 +9,7 @@ build
 .DS_Store
 
 cddb/libcddb-src
+cdparanoia/cdparanoia-src
 discid/libdiscid-src
 ogg/libogg-src
 flac/flac-src

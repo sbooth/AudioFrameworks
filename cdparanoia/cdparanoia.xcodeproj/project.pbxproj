@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32B7EC4D12DAD488005B82C9 /* cdda_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC3612DAD488005B82C9 /* cdda_interface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32B7EC4E12DAD488005B82C9 /* common_interface.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC3712DAD488005B82C9 /* common_interface.c */; };
+		32B7EC4F12DAD488005B82C9 /* common_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC3812DAD488005B82C9 /* common_interface.h */; };
+		32B7EC5012DAD488005B82C9 /* interface.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC3912DAD488005B82C9 /* interface.c */; };
+		32B7EC5112DAD488005B82C9 /* low_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC3A12DAD488005B82C9 /* low_interface.h */; };
+		32B7EC5212DAD488005B82C9 /* osx_interface.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC3B12DAD488005B82C9 /* osx_interface.c */; };
+		32B7EC5312DAD488005B82C9 /* osx_interface.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC3C12DAD488005B82C9 /* osx_interface.h */; };
+		32B7EC5412DAD488005B82C9 /* scan_devices.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC3D12DAD488005B82C9 /* scan_devices.c */; };
+		32B7EC5512DAD488005B82C9 /* smallft.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC3E12DAD488005B82C9 /* smallft.c */; };
+		32B7EC5612DAD488005B82C9 /* smallft.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC3F12DAD488005B82C9 /* smallft.h */; };
+		32B7EC5712DAD488005B82C9 /* toc.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC4012DAD488005B82C9 /* toc.c */; };
+		32B7EC5812DAD488005B82C9 /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC4112DAD488005B82C9 /* utils.h */; };
+		32B7EC5912DAD488005B82C9 /* cdda_paranoia.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC4312DAD488005B82C9 /* cdda_paranoia.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32B7EC5A12DAD488005B82C9 /* gap.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC4412DAD488005B82C9 /* gap.c */; };
+		32B7EC5B12DAD488005B82C9 /* gap.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC4512DAD488005B82C9 /* gap.h */; };
+		32B7EC5C12DAD488005B82C9 /* isort.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC4612DAD488005B82C9 /* isort.c */; };
+		32B7EC5D12DAD488005B82C9 /* isort.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC4712DAD488005B82C9 /* isort.h */; };
+		32B7EC5E12DAD488005B82C9 /* overlap.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC4812DAD488005B82C9 /* overlap.c */; };
+		32B7EC5F12DAD488005B82C9 /* overlap.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC4912DAD488005B82C9 /* overlap.h */; };
+		32B7EC6012DAD488005B82C9 /* p_block.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC4A12DAD488005B82C9 /* p_block.c */; };
+		32B7EC6112DAD488005B82C9 /* p_block.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7EC4B12DAD488005B82C9 /* p_block.h */; };
+		32B7EC6212DAD488005B82C9 /* paranoia.c in Sources */ = {isa = PBXBuildFile; fileRef = 32B7EC4C12DAD488005B82C9 /* paranoia.c */; };
+		32B7EC7012DAD4E0005B82C9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B7EC6F12DAD4E0005B82C9 /* IOKit.framework */; };
+		32B7EC7612DAD4EA005B82C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B7EC7512DAD4EA005B82C9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		32B7EC3612DAD488005B82C9 /* cdda_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cdda_interface.h; sourceTree = "<group>"; };
+		32B7EC3712DAD488005B82C9 /* common_interface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = common_interface.c; sourceTree = "<group>"; };
+		32B7EC3812DAD488005B82C9 /* common_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_interface.h; sourceTree = "<group>"; };
+		32B7EC3912DAD488005B82C9 /* interface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = interface.c; sourceTree = "<group>"; };
+		32B7EC3A12DAD488005B82C9 /* low_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = low_interface.h; sourceTree = "<group>"; };
+		32B7EC3B12DAD488005B82C9 /* osx_interface.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = osx_interface.c; sourceTree = "<group>"; };
+		32B7EC3C12DAD488005B82C9 /* osx_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osx_interface.h; sourceTree = "<group>"; };
+		32B7EC3D12DAD488005B82C9 /* scan_devices.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = scan_devices.c; sourceTree = "<group>"; };
+		32B7EC3E12DAD488005B82C9 /* smallft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = smallft.c; sourceTree = "<group>"; };
+		32B7EC3F12DAD488005B82C9 /* smallft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smallft.h; sourceTree = "<group>"; };
+		32B7EC4012DAD488005B82C9 /* toc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = toc.c; sourceTree = "<group>"; };
+		32B7EC4112DAD488005B82C9 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		32B7EC4312DAD488005B82C9 /* cdda_paranoia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cdda_paranoia.h; sourceTree = "<group>"; };
+		32B7EC4412DAD488005B82C9 /* gap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = gap.c; sourceTree = "<group>"; };
+		32B7EC4512DAD488005B82C9 /* gap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gap.h; sourceTree = "<group>"; };
+		32B7EC4612DAD488005B82C9 /* isort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = isort.c; sourceTree = "<group>"; };
+		32B7EC4712DAD488005B82C9 /* isort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isort.h; sourceTree = "<group>"; };
+		32B7EC4812DAD488005B82C9 /* overlap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = overlap.c; sourceTree = "<group>"; };
+		32B7EC4912DAD488005B82C9 /* overlap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = overlap.h; sourceTree = "<group>"; };
+		32B7EC4A12DAD488005B82C9 /* p_block.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = p_block.c; sourceTree = "<group>"; };
+		32B7EC4B12DAD488005B82C9 /* p_block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = p_block.h; sourceTree = "<group>"; };
+		32B7EC4C12DAD488005B82C9 /* paranoia.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = paranoia.c; sourceTree = "<group>"; };
+		32B7EC6F12DAD4E0005B82C9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		32B7EC7512DAD4EA005B82C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		32E7398810B9D32D00094C8A /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
+		32E7398910B9D32D00094C8A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Configs/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
+		32E7398A10B9D32D00094C8A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* cdparanoia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = cdparanoia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32B7EC7012DAD4E0005B82C9 /* IOKit.framework in Frameworks */,
+				32B7EC7612DAD4EA005B82C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* cdparanoia.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* MAD */ = {
+			isa = PBXGroup;
+			children = (
+				32B7EC3412DAD464005B82C9 /* Source */,
+				32C88DFF0371C24200C91783 /* Configs */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = MAD;
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				32B7EC6F12DAD4E0005B82C9 /* IOKit.framework */,
+				32B7EC7512DAD4EA005B82C9 /* Foundation.framework */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		32B7EC3412DAD464005B82C9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				32B7EC3512DAD488005B82C9 /* interface */,
+				32B7EC4212DAD488005B82C9 /* paranoia */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		32B7EC3512DAD488005B82C9 /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				32B7EC3612DAD488005B82C9 /* cdda_interface.h */,
+				32B7EC3712DAD488005B82C9 /* common_interface.c */,
+				32B7EC3812DAD488005B82C9 /* common_interface.h */,
+				32B7EC3912DAD488005B82C9 /* interface.c */,
+				32B7EC3A12DAD488005B82C9 /* low_interface.h */,
+				32B7EC3B12DAD488005B82C9 /* osx_interface.c */,
+				32B7EC3C12DAD488005B82C9 /* osx_interface.h */,
+				32B7EC3D12DAD488005B82C9 /* scan_devices.c */,
+				32B7EC3E12DAD488005B82C9 /* smallft.c */,
+				32B7EC3F12DAD488005B82C9 /* smallft.h */,
+				32B7EC4012DAD488005B82C9 /* toc.c */,
+				32B7EC4112DAD488005B82C9 /* utils.h */,
+			);
+			name = interface;
+			path = "cdparanoia-src/interface";
+			sourceTree = "<group>";
+		};
+		32B7EC4212DAD488005B82C9 /* paranoia */ = {
+			isa = PBXGroup;
+			children = (
+				32B7EC4312DAD488005B82C9 /* cdda_paranoia.h */,
+				32B7EC4412DAD488005B82C9 /* gap.c */,
+				32B7EC4512DAD488005B82C9 /* gap.h */,
+				32B7EC4612DAD488005B82C9 /* isort.c */,
+				32B7EC4712DAD488005B82C9 /* isort.h */,
+				32B7EC4812DAD488005B82C9 /* overlap.c */,
+				32B7EC4912DAD488005B82C9 /* overlap.h */,
+				32B7EC4A12DAD488005B82C9 /* p_block.c */,
+				32B7EC4B12DAD488005B82C9 /* p_block.h */,
+				32B7EC4C12DAD488005B82C9 /* paranoia.c */,
+			);
+			name = paranoia;
+			path = "cdparanoia-src/paranoia";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				32E7398810B9D32D00094C8A /* Base.xcconfig */,
+				32E7398910B9D32D00094C8A /* Debug.xcconfig */,
+				32E7398A10B9D32D00094C8A /* Release.xcconfig */,
+			);
+			name = Configs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32B7EC4D12DAD488005B82C9 /* cdda_interface.h in Headers */,
+				32B7EC4F12DAD488005B82C9 /* common_interface.h in Headers */,
+				32B7EC5112DAD488005B82C9 /* low_interface.h in Headers */,
+				32B7EC5312DAD488005B82C9 /* osx_interface.h in Headers */,
+				32B7EC5612DAD488005B82C9 /* smallft.h in Headers */,
+				32B7EC5812DAD488005B82C9 /* utils.h in Headers */,
+				32B7EC5912DAD488005B82C9 /* cdda_paranoia.h in Headers */,
+				32B7EC5B12DAD488005B82C9 /* gap.h in Headers */,
+				32B7EC5D12DAD488005B82C9 /* isort.h in Headers */,
+				32B7EC5F12DAD488005B82C9 /* overlap.h in Headers */,
+				32B7EC6112DAD488005B82C9 /* p_block.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* cdparanoia.framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "cdparanoia.framework" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cdparanoia.framework;
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = MAD;
+			productReference = 8DC2EF5B0486A6940098B216 /* cdparanoia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "cdparanoia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* MAD */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* cdparanoia.framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32B7EC4E12DAD488005B82C9 /* common_interface.c in Sources */,
+				32B7EC5012DAD488005B82C9 /* interface.c in Sources */,
+				32B7EC5212DAD488005B82C9 /* osx_interface.c in Sources */,
+				32B7EC5412DAD488005B82C9 /* scan_devices.c in Sources */,
+				32B7EC5512DAD488005B82C9 /* smallft.c in Sources */,
+				32B7EC5712DAD488005B82C9 /* toc.c in Sources */,
+				32B7EC5A12DAD488005B82C9 /* gap.c in Sources */,
+				32B7EC5C12DAD488005B82C9 /* isort.c in Sources */,
+				32B7EC5E12DAD488005B82C9 /* overlap.c in Sources */,
+				32B7EC6012DAD488005B82C9 /* p_block.c in Sources */,
+				32B7EC6212DAD488005B82C9 /* paranoia.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@rpath";
+				PRODUCT_NAME = cdparanoia;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@rpath";
+				PRODUCT_NAME = cdparanoia;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32E7398910B9D32D00094C8A /* Debug.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32E7398A10B9D32D00094C8A /* Release.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "cdparanoia.framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "cdparanoia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
