@@ -18,6 +18,7 @@ mp4v2/mp4v2-src
 musepack/musepack-src
 musicbrainz3/libmusicbrainz-src
 musicbrainz3/neon-src
+ofa1/libofa-src
 sndfile/libsndfile-src
 taglib/taglib-src
 vorbis/libvorbis-src

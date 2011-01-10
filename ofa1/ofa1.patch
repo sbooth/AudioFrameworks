@@ -1,0 +1,62 @@
+diff -ru libofa-0.9.3/lib/fft_op.h libofa-src/lib/fft_op.h
+--- libofa-0.9.3/lib/fft_op.h	2006-05-10 11:01:24.000000000 -0700
++++ libofa-src/lib/fft_op.h	2011-01-09 19:43:36.000000000 -0800
+@@ -17,7 +17,7 @@
+ #ifdef WIN32
+ #include "../config_win32.h"
+ #else
+-#include "../config.h"
++#include "config.h"
+ #endif
+ #include "signal_op.h"
+ #include "fftlib_op.h"
+diff -ru libofa-0.9.3/lib/fftlib_op.h libofa-src/lib/fftlib_op.h
+--- libofa-0.9.3/lib/fftlib_op.h	2006-05-10 11:01:22.000000000 -0700
++++ libofa-src/lib/fftlib_op.h	2011-01-09 19:46:38.000000000 -0800
+@@ -15,6 +15,7 @@
+ #ifndef __FFTLIB_OP_H
+ #define __FFTLIB_OP_H 1
+ 
++#include "config.h"
+ 
+ #ifdef FFTW
+ #include "rfftw.h"
+diff -ru libofa-0.9.3/lib/fftlibvdsp_op.cpp libofa-src/lib/fftlibvdsp_op.cpp
+--- libofa-0.9.3/lib/fftlibvdsp_op.cpp	2006-05-10 11:00:57.000000000 -0700
++++ libofa-src/lib/fftlibvdsp_op.cpp	2011-01-09 19:47:50.000000000 -0800
+@@ -11,7 +11,7 @@
+ // AUTHOR: Frode Holm
+ // DATE CREATED: 1/12/06
+ 
+-#include "../config.h"
++#include "config.h"
+ #include "fftlib_op.h"
+ 
+ 
+@@ -23,12 +23,12 @@
+ 	{
+ 		delete[] A.realp;
+ 		delete[] A.imagp;
+-		destroy_fftsetupD(SetupReal);
++		vDSP_destroy_fftsetupD(SetupReal);
+ 	}
+ 		
+ 	A.realp = new double[ N/2];
+ 	A.imagp = new double[ N/2];
+-	SetupReal = create_fftsetupD(Exp, 0);
++	SetupReal = vDSP_create_fftsetupD(Exp, 0);
+ 	Init = true;
+ }
+ 
+@@ -46,9 +46,9 @@
+ void 
+ FFTLib_op::ComputeFrame(int N, double *in, double *out)
+ {
+-	ctozD ((DSPDoubleComplex*) in, 2, &A, 1, N/2 );
++	vDSP_ctozD ((DSPDoubleComplex*) in, 2, &A, 1, N/2 );
+ 	
+-	fft_zripD(SetupReal, &A, 1, Exp, FFT_FORWARD);
++	vDSP_fft_zripD(SetupReal, &A, 1, Exp, FFT_FORWARD);
+ 	
+ 	int i,j;
+ 	for (i=0; i<N/2; i++)

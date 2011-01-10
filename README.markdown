@@ -193,6 +193,19 @@ sndfile
 5. Build
 
 
+ofa1
+----
+
+[http://code.google.com/p/musicip-libofa/][13]
+
+1. Download
+2. Decompress
+3. Rename the folder to libofa-src
+4. Move the folder into ofa1
+5. Apply the patch "ofa1.patch": 'patch < ofa1.patch'
+6. Build
+
+
 License
 -------
 
@@ -211,3 +224,4 @@ The Xcode projects are distributed under the modified BSD license.
   [10]: http://www.wavpack.com/downloads.html
   [11]: http://lame.sourceforge.net/download.php
   [12]: http://www.mega-nerd.com/libsndfile/
+  [13]: http://code.google.com/p/musicip-libofa/
