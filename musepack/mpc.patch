@@ -1,0 +1,47 @@
+diff -ur musepack_src_r435/common/huffman-bcl.c musepack-src/common/huffman-bcl.c
+--- musepack_src_r435/common/huffman-bcl.c	2007-03-16 16:25:28.000000000 -0700
++++ musepack-src/common/huffman-bcl.c	2011-01-09 17:30:12.000000000 -0800
+@@ -32,6 +32,7 @@
+ 
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <math.h>
+ 
+ typedef struct {
+     int Symbol;
+@@ -265,9 +266,9 @@
+ 				total_cnt += sym[i].Count;
+ 				total_size += sym[i].Count * sym[i].Bits;
+ 				if (sym[i].Count != 0)
+-					optim_size += sym[i].Count * __builtin_log2(sym[i].Count);
++					optim_size += sym[i].Count * log2(sym[i].Count);
+ 			}
+-			optim_size = total_cnt * __builtin_log2(total_cnt) - optim_size;
++			optim_size = total_cnt * log2(total_cnt) - optim_size;
+ 			printf("\ncount : %u huff : %f bps ", total_cnt, (float)total_size / total_cnt);
+ 			printf("opt : %f bps ", (float)optim_size / total_cnt);
+ 			printf("loss : %f bps (%f %%)\n", (float)(total_size - optim_size) / total_cnt, (float)(total_size - optim_size) * 100 / optim_size);
+diff -ur musepack_src_r435/include/mpc/reader.h musepack-src/include/mpc/reader.h
+--- musepack_src_r435/include/mpc/reader.h	2009-02-23 10:44:04.000000000 -0800
++++ musepack-src/include/mpc/reader.h	2011-01-09 17:24:52.000000000 -0800
+@@ -38,7 +38,7 @@
+ #pragma once
+ #endif
+ 
+-#include <mpc/mpc_types.h>
++#include "mpc_types.h"
+ #include <stdio.h>
+ 
+ #ifdef __cplusplus
+diff -ur musepack_src_r435/include/mpc/streaminfo.h musepack-src/include/mpc/streaminfo.h
+--- musepack_src_r435/include/mpc/streaminfo.h	2009-02-23 10:44:04.000000000 -0800
++++ musepack-src/include/mpc/streaminfo.h	2011-01-09 17:24:57.000000000 -0800
+@@ -38,7 +38,7 @@
+ #pragma once
+ #endif
+ 
+-#include <mpc/mpc_types.h>
++#include "mpc_types.h"
+ 
+ #ifdef __cplusplus
+ extern "C" {

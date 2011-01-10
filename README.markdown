@@ -104,13 +104,12 @@ musepack
 
 (tested version: musepack_src_r435.tar.gz)
 
-**Currently not working**
-
 1. Download
 2. Decompress
 3. Rename folder to "musepack-src"
 4. Move the folder into musepack/
-5. Build
+5. Apply the patch "mpc.patch": 'patch < mpc.patch'
+6. Build
 
 
 musicbrainz3

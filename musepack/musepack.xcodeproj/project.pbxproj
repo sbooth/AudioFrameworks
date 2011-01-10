@@ -30,11 +30,9 @@
 		32CA90C210B9E0B7005A85DA /* mpcmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90BB10B9E0B7005A85DA /* mpcmath.h */; };
 		32CA90C310B9E0B7005A85DA /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90BC10B9E0B7005A85DA /* reader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32CA90C410B9E0B7005A85DA /* streaminfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90BD10B9E0B7005A85DA /* streaminfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32CA908D10B9E095005A85DA /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decoder.h; path = "musepack-src/libmpcdec/decoder.h"; sourceTree = "<group>"; };
 		32CA908E10B9E095005A85DA /* huffman.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = huffman.c; path = "musepack-src/libmpcdec/huffman.c"; sourceTree = "<group>"; };
 		32CA908F10B9E095005A85DA /* huffman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = huffman.h; path = "musepack-src/libmpcdec/huffman.h"; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
-				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -196,7 +193,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "musepack" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* MAD */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -212,7 +216,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,17 +240,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C1667FE841158C02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
