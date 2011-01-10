@@ -12,6 +12,7 @@ cddb/libcddb-src
 discid/libdiscid-src
 ogg/libogg-src
 flac/flac-src
+lame/lame-src
 mad/libmad-src
 mp4v2/mp4v2-src
 musepack/musepack-src
