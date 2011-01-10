@@ -118,7 +118,7 @@ musicbrainz3
 [http://musicbrainz.org/doc/libmusicbrainz][7]
 [http://www.webdav.org/neon/][8]
 
-(tested version: libmusicbrainz-3.0.2.tar.gz, http://www.webdav.org/neon/neon-0.29.3.tar.gz)
+(tested version: libmusicbrainz-3.0.3.tar.gz, http://www.webdav.org/neon/neon-0.29.5.tar.gz)
 
 1. Prepare discid first
 2. Download libmusicbrainz and neon

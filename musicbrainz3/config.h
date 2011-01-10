@@ -32,31 +32,35 @@
 #define HAVE_UNISTD_H 1
 
 /* Name of package */
-//#define PACKAGE "libdiscid"
+#define PACKAGE "libdiscid"
 
 /* Define to the address where bug reports for this package should be sent. */
-//#define PACKAGE_BUGREPORT ""
+#define PACKAGE_BUGREPORT ""
 
 /* Define to the full name of this package. */
-//#define PACKAGE_NAME "libdiscid"
+#define PACKAGE_NAME "libdiscid"
 
 /* Define to the full name and version of this package. */
-//#define PACKAGE_STRING "libdiscid 0.2.1"
+#define PACKAGE_STRING "libdiscid 0.2.2"
 
 /* Define to the one symbol short name of this package. */
-//#define PACKAGE_TARNAME "libdiscid"
+#define PACKAGE_TARNAME "libdiscid"
 
 /* Define to the version of this package. */
-//#define PACKAGE_VERSION "0.2.1"
+#define PACKAGE_VERSION "0.2.2"
 
 /* The size of `long', as computed by sizeof. */
-//#define SIZEOF_LONG 4
+#ifdef __LP64__
+#define SIZEOF_LONG 8
+#else
+#define SIZEOF_LONG 4
+#endif
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Version number of package */
-//#define VERSION "0.2.1"
+#define VERSION "0.2.2"
 
 /* Define to 1 if your processor stores words with the most significant byte
  first (like Motorola and SPARC, unlike Intel and VAX). */
@@ -123,6 +127,9 @@
 
 /* Define to 1 if you have the `gai_strerror' function. */
 #define HAVE_GAI_STRERROR 1
+
+/* Define to 1 if you have the `gethostname' function. */
+#define HAVE_GETHOSTNAME 1
 
 /* Define to 1 if you have the `getnameinfo' function. */
 #define HAVE_GETNAMEINFO 1
@@ -360,7 +367,7 @@
 #define NEON_IS_LIBRARY 1
 
 /* Define to be the neon version string */
-#define NEON_VERSION "0.29.0"
+#define NEON_VERSION "0.29.5"
 
 /* Define to enable debugging */
 #define NE_DEBUGGING 1
@@ -423,7 +430,7 @@
 #define NE_VERSION_MINOR (29)
 
 /* Define to be neon library patch version */
-#define NE_VERSION_PATCH (0)
+#define NE_VERSION_PATCH (5)
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT "neon@lists.manyfish.co.uk"
@@ -432,19 +439,23 @@
 #define PACKAGE_NAME "neon"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "neon 0.29.0"
+#define PACKAGE_STRING "neon 0.29.5"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "neon"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.29.0"
+#define PACKAGE_VERSION "0.29.5"
 
 /* The size of `int', as computed by sizeof. */
 #define SIZEOF_INT 4
 
 /* The size of `long', as computed by sizeof. */
-#define SIZEOF_LONG 8
+#ifdef __LP64__
+# define SIZEOF_LONG 8
+#else
+# define SIZEOF_LONG 4
+#endif
 
 /* The size of `long long', as computed by sizeof. */
 #define SIZEOF_LONG_LONG 8
@@ -477,7 +488,7 @@
 #define TIME_WITH_SYS_TIME 1
 
 /* Define if getaddrinfo supports AI_ADDRCONFIG */
-/* #undef USE_GAI_ADDRCONFIG */
+#define USE_GAI_ADDRCONFIG 1
 
 /* Define if getaddrinfo() should be used */
 #define USE_GETADDRINFO 1
@@ -512,9 +523,9 @@
 # endif
 #else
 # ifndef WORDS_BIGENDIAN
-#   if __BIG_ENDIAN__
-#    define WORDS_BIGENDIAN 1
-#   endif
+#  if defined __BIG_ENDIAN__
+#   define WORDS_BIGENDIAN 1
+#  endif
 # endif
 #endif
 
@@ -564,6 +575,7 @@
 #if defined(HAVE_STPCPY) && defined(HAVE_DECL_STPCPY) && !HAVE_DECL_STPCPY && !defined(stpcpy)
 char *stpcpy(char *, const char *);
 #endif
+
 
 
 

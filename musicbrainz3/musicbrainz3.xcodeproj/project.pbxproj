@@ -71,6 +71,8 @@
 		32009327105D71E90055BE17 /* ne_xmlreq.h in Headers */ = {isa = PBXBuildFile; fileRef = 320092ED105D71E90055BE17 /* ne_xmlreq.h */; };
 		3200937B105D744D0055BE17 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3200937A105D744D0055BE17 /* IOKit.framework */; };
 		3200942E105D746C0055BE17 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3200942D105D746C0055BE17 /* CoreFoundation.framework */; };
+		32B7E48612DA9F54005B82C9 /* releasegroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E48512DA9F54005B82C9 /* releasegroup.cpp */; };
+		32B7E48812DA9F6A005B82C9 /* releasegroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E48712DA9F6A005B82C9 /* releasegroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32E6FF1A0DCE6D88006F9032 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E6FF190DCE6D88006F9032 /* config.h */; };
 		32EF036810689B27008BAF8B /* discid.h in Headers */ = {isa = PBXBuildFile; fileRef = 32EF036610689B27008BAF8B /* discid.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CA360990D2F5D0F00F89E3B /* artist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CA3607F0D2F5D0F00F89E3B /* artist.cpp */; };
@@ -128,11 +130,9 @@
 		8CA360EA0D2F5D3200F89E3B /* user.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA360CF0D2F5D3200F89E3B /* user.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CA360EB0D2F5D3200F89E3B /* utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA360D00D2F5D3200F89E3B /* utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CA360EC0D2F5D3200F89E3B /* webservice.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CA360D10D2F5D3200F89E3B /* webservice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D07F2C00486CC7A007CD1D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		32009284105D71040055BE17 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = base64.c; path = "libdiscid-src/src/base64.c"; sourceTree = "<group>"; };
 		32009285105D71040055BE17 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = base64.h; path = "libdiscid-src/src/base64.h"; sourceTree = "<group>"; };
 		32009286105D71040055BE17 /* disc_darwin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = disc_darwin.c; path = "libdiscid-src/src/disc_darwin.c"; sourceTree = "<group>"; };
@@ -199,6 +199,8 @@
 		320092ED105D71E90055BE17 /* ne_xmlreq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ne_xmlreq.h; path = "neon-src/src/ne_xmlreq.h"; sourceTree = "<group>"; };
 		3200937A105D744D0055BE17 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		3200942D105D746C0055BE17 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		32B7E48512DA9F54005B82C9 /* releasegroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = releasegroup.cpp; path = "libmusicbrainz-src/src/releasegroup.cpp"; sourceTree = "<group>"; };
+		32B7E48712DA9F6A005B82C9 /* releasegroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = releasegroup.h; path = "libmusicbrainz-src/include/musicbrainz3/releasegroup.h"; sourceTree = "<group>"; };
 		32E6FF190DCE6D88006F9032 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		32EF036510689B27008BAF8B /* discid_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = discid_private.h; path = "libdiscid-src/include/discid/discid_private.h"; sourceTree = "<group>"; };
 		32EF036610689B27008BAF8B /* discid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = discid.h; path = "libdiscid-src/include/discid/discid.h"; sourceTree = "<group>"; };
@@ -309,7 +311,6 @@
 			children = (
 				32E6FF190DCE6D88006F9032 /* config.h */,
 				8D07F2C70486CC7A007CD1D0 /* Info.plist */,
-				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -317,6 +318,8 @@
 		08FB77ACFE841707C02AAC07 /* musicbrainz3 */ = {
 			isa = PBXGroup;
 			children = (
+				32B7E48712DA9F6A005B82C9 /* releasegroup.h */,
+				32B7E48512DA9F54005B82C9 /* releasegroup.cpp */,
 				8CA360B70D2F5D3200F89E3B /* artist.h */,
 				8CA360B80D2F5D3200F89E3B /* artistalias.h */,
 				8CA360B90D2F5D3200F89E3B /* defines.h */,
@@ -531,6 +534,7 @@
 				32009325105D71E90055BE17 /* ne_xml.h in Headers */,
 				32009327105D71E90055BE17 /* ne_xmlreq.h in Headers */,
 				32EF036810689B27008BAF8B /* discid.h in Headers */,
+				32B7E48812DA9F6A005B82C9 /* releasegroup.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +571,14 @@
 			};
 			buildConfigurationList = 4FADC24608B4156D00ABE55E /* Build configuration list for PBXProject "musicbrainz3" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* musicbrainz3 */;
 			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
 			projectDirPath = "";
@@ -583,7 +594,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D07F2C00486CC7A007CD1D0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,21 +666,11 @@
 				32009322105D71E90055BE17 /* ne_utils.c in Sources */,
 				32009324105D71E90055BE17 /* ne_xml.c in Sources */,
 				32009326105D71E90055BE17 /* ne_xmlreq.c in Sources */,
+				32B7E48612DA9F54005B82C9 /* releasegroup.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089C1667FE841158C02AAC07 /* English */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4FADC24308B4156D00ABE55E /* Debug */ = {
