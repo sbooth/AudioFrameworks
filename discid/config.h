@@ -41,13 +41,13 @@
 #define PACKAGE_NAME "libdiscid"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libdiscid 0.2.1"
+#define PACKAGE_STRING "libdiscid 0.2.2"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libdiscid"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "0.2.1"
+#define PACKAGE_VERSION "0.2.2"
 
 /* The size of `long', as computed by sizeof. */
 #ifdef __LP64__
@@ -60,7 +60,7 @@
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "0.2.1"
+#define VERSION "0.2.2"
 
 /* Define to 1 if your processor stores words with the most significant byte
    first (like Motorola and SPARC, unlike Intel and VAX). */
