@@ -3,14 +3,10 @@ Audio Frameworks for Mac OS X
 
 This repository contains Xcode projects that help building Mac OS X framework of various open-source audio libraries.
 
-Play itself can be found at [http://sbooth.org/Play/][11]
-
 Usage
 -----
 
 This repo doesn't contain the sources for the respective frameworks or libraries. You need to add those yourself. 
-
-./configure will be called as necessary, e.g. if config.h doesn't exist. You don't need to do this yourself.
 
 CDDB
 ----
@@ -172,7 +168,7 @@ wavpack
 License
 -------
 
-The Xcode projects are licensed under the same license as Play itself.
+The Xcode projects are distributed under the modified BSD license.
 
 
   [1]: http://libcddb.sourceforge.net/download.html
