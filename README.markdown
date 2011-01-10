@@ -165,6 +165,20 @@ wavpack
 6. Build
 
 
+LAME
+----
+
+[http://lame.sourceforge.net/download.php][11]
+
+(tested version: lame-3.98.4.tar.bz2)
+
+1. Download
+2. Decompress
+3. Rename folder to "lame-src"
+4. Move the folder into lame/
+5. Build
+
+
 License
 -------
 
@@ -181,4 +195,4 @@ The Xcode projects are distributed under the modified BSD license.
   [8]: http://www.webdav.org/neon/
   [9]: http://developer.kde.org/~wheeler/taglib.html
   [10]: http://www.wavpack.com/downloads.html
-  [11]: http://sbooth.org/Play/
+  [11]: http://lame.sourceforge.net/download.php
