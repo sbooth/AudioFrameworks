@@ -256,6 +256,21 @@ speex
 5. Build
 
 
+tta
+---
+
+[http://en.true-audio.com/Free_Downloads][16]
+
+(tested version: libtta-c-2.0.tar.gz)
+
+1. Download
+2. Decompress
+3. Rename the folder to libtta-c-src
+4. Move the folder into tta
+5. Apply the patch "tta.patch": 'patch < tta.patch'
+6. Build
+
+
 License
 -------
 
@@ -277,3 +292,4 @@ The Xcode projects are distributed under the modified BSD license.
   [13]: http://code.google.com/p/musicip-libofa/
   [14]: http://developer.berlios.de/projects/cuetools/
   [15]: http://www.speex.org/
+  [16]: http://en.true-audio.com/Free_Downloads
