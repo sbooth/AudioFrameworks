@@ -198,6 +198,8 @@ ofa1
 
 [http://code.google.com/p/musicip-libofa/][13]
 
+(tested version: libofa-0.9.3.tar.gz)
+
 1. Download
 2. Decompress
 3. Rename the folder to libofa-src
@@ -219,6 +221,27 @@ shorten
 1. Build
 
 
+cdparanoia
+----------
+
+0. The original source is [http://downloads.xiph.org/releases/cdparanoia/cdparanoia-III-alpha9.8.src.tgz]
+1. Build
+
+
+cuetools
+--------
+
+[http://developer.berlios.de/projects/cuetools/][14]
+
+(tested version: cuetools-1.3.1.tar.gz)
+
+1. Download
+2. Decompress
+3. Rename folder to "cuetools-src"
+4. Move the folder into cuetools/
+5. Build
+
+
 License
 -------
 
@@ -238,3 +261,4 @@ The Xcode projects are distributed under the modified BSD license.
   [11]: http://lame.sourceforge.net/download.php
   [12]: http://www.mega-nerd.com/libsndfile/
   [13]: http://code.google.com/p/musicip-libofa/
+  [14]: http://developer.berlios.de/projects/cuetools/

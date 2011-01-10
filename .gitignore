@@ -10,6 +10,7 @@ build
 
 cddb/libcddb-src
 cdparanoia/cdparanoia-src
+cuetools/cuetools-src
 discid/libdiscid-src
 ogg/libogg-src
 flac/flac-src
