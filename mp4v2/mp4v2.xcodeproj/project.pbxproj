@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32B7E3E812DA9243005B82C9 /* project.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E3E712DA9243005B82C9 /* project.h */; };
+		32B7E3E812DA9243005B82C9 /* project.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E3E712DA9243005B82C9 /* project.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E3EA12DA924D005B82C9 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E3E912DA924D005B82C9 /* config.h */; };
 		32F43C5E10628C370016D8F1 /* chapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F43BA010628C370016D8F1 /* chapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32F43C5F10628C370016D8F1 /* file.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F43BA110628C370016D8F1 /* file.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -701,7 +701,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "mp4v2" */;
 			buildPhases = (
-				32B7E3F412DA928A005B82C9 /* ShellScript */,
+				32B7E3F412DA928A005B82C9 /* Move config.h */,
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
 				8DC2EF540486A6940098B216 /* Sources */,
@@ -756,13 +756,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32B7E3F412DA928A005B82C9 /* ShellScript */ = {
+		32B7E3F412DA928A005B82C9 /* Move config.h */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Move config.h";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
