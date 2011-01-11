@@ -74,7 +74,7 @@
 		32B7E8DF12DABC8A005B82C9 /* GlobalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E88212DABC8A005B82C9 /* GlobalFunctions.cpp */; };
 		32B7E8E012DABC8A005B82C9 /* GlobalFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88312DABC8A005B82C9 /* GlobalFunctions.h */; };
 		32B7E8E112DABC8A005B82C9 /* ID3Genres.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88412DABC8A005B82C9 /* ID3Genres.h */; };
-		32B7E8E212DABC8A005B82C9 /* IO.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88512DABC8A005B82C9 /* IO.h */; };
+		32B7E8E212DABC8A005B82C9 /* IO.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88512DABC8A005B82C9 /* IO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E8E312DABC8A005B82C9 /* MACUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E88612DABC8A005B82C9 /* MACUtils.cpp */; };
 		32B7E8E412DABC8A005B82C9 /* MACUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88712DABC8A005B82C9 /* MACUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E8E512DABC8A005B82C9 /* Makefile.am in Resources */ = {isa = PBXBuildFile; fileRef = 32B7E88812DABC8A005B82C9 /* Makefile.am */; };
