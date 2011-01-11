@@ -13,6 +13,13 @@
 		329E559612DC34E100BF40EC /* CircleBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87F12DABC8A005B82C9 /* CircleBuffer.h */; };
 		329E55A012DC350300BF40EC /* MACUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E88612DABC8A005B82C9 /* MACUtils.cpp */; };
 		329E55B112DC355F00BF40EC /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84912DABC8A005B82C9 /* common.cpp */; };
+		329E55BD12DC36EE00BF40EC /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55BC12DC36EE00BF40EC /* config.h */; };
+		329E55C812DC371000BF40EC /* RollBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55C512DC371000BF40EC /* RollBuffer.h */; };
+		329E55C912DC371000BF40EC /* WAVInputSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329E55C612DC371000BF40EC /* WAVInputSource.cpp */; };
+		329E55CA12DC371000BF40EC /* WAVInputSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55C712DC371000BF40EC /* WAVInputSource.h */; };
+		329E55D112DC372B00BF40EC /* GlobalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329E55CF12DC372B00BF40EC /* GlobalFunctions.cpp */; };
+		329E55D212DC372B00BF40EC /* GlobalFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55D012DC372B00BF40EC /* GlobalFunctions.h */; };
+		329E55D812DC375900BF40EC /* Assembly.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55D712DC375900BF40EC /* Assembly.h */; };
 		32B7E89512DABC8A005B82C9 /* APECompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83512DABC89005B82C9 /* APECompress.cpp */; };
 		32B7E89612DABC8A005B82C9 /* APECompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83612DABC89005B82C9 /* APECompress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E89712DABC8A005B82C9 /* APECompressCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83712DABC89005B82C9 /* APECompressCore.cpp */; };
@@ -74,6 +81,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		329E55BC12DC36EE00BF40EC /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		329E55C512DC371000BF40EC /* RollBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollBuffer.h; sourceTree = "<group>"; };
+		329E55C612DC371000BF40EC /* WAVInputSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WAVInputSource.cpp; sourceTree = "<group>"; };
+		329E55C712DC371000BF40EC /* WAVInputSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVInputSource.h; sourceTree = "<group>"; };
+		329E55CF12DC372B00BF40EC /* GlobalFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlobalFunctions.cpp; sourceTree = "<group>"; };
+		329E55D012DC372B00BF40EC /* GlobalFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFunctions.h; sourceTree = "<group>"; };
+		329E55D712DC375900BF40EC /* Assembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
 		32B7E83512DABC89005B82C9 /* APECompress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APECompress.cpp; sourceTree = "<group>"; };
 		32B7E83612DABC89005B82C9 /* APECompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APECompress.h; sourceTree = "<group>"; };
 		32B7E83712DABC89005B82C9 /* APECompressCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APECompressCore.cpp; sourceTree = "<group>"; };
@@ -241,6 +255,7 @@
 		32B7E84612DABC8A005B82C9 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
+				329E55D712DC375900BF40EC /* Assembly.h */,
 				32B7E84912DABC8A005B82C9 /* common.cpp */,
 			);
 			path = Assembly;
@@ -270,6 +285,12 @@
 		32B7E87812DABC8A005B82C9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				329E55CF12DC372B00BF40EC /* GlobalFunctions.cpp */,
+				329E55D012DC372B00BF40EC /* GlobalFunctions.h */,
+				329E55C512DC371000BF40EC /* RollBuffer.h */,
+				329E55C612DC371000BF40EC /* WAVInputSource.cpp */,
+				329E55C712DC371000BF40EC /* WAVInputSource.h */,
+				329E55BC12DC36EE00BF40EC /* config.h */,
 				32B7E87912DABC8A005B82C9 /* All.h */,
 				32B7E87C12DABC8A005B82C9 /* CharacterHelper.cpp */,
 				32B7E87D12DABC8A005B82C9 /* CharacterHelper.h */,
@@ -339,6 +360,11 @@
 				32B7E8EB12DABC8A005B82C9 /* StdLibFileIO.h in Headers */,
 				324DB41812DC34340055AF3F /* APEDecompressOld.h in Headers */,
 				329E559612DC34E100BF40EC /* CircleBuffer.h in Headers */,
+				329E55BD12DC36EE00BF40EC /* config.h in Headers */,
+				329E55C812DC371000BF40EC /* RollBuffer.h in Headers */,
+				329E55CA12DC371000BF40EC /* WAVInputSource.h in Headers */,
+				329E55D212DC372B00BF40EC /* GlobalFunctions.h in Headers */,
+				329E55D812DC375900BF40EC /* Assembly.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +460,8 @@
 				329E559512DC34E100BF40EC /* CircleBuffer.cpp in Sources */,
 				329E55A012DC350300BF40EC /* MACUtils.cpp in Sources */,
 				329E55B112DC355F00BF40EC /* common.cpp in Sources */,
+				329E55C912DC371000BF40EC /* WAVInputSource.cpp in Sources */,
+				329E55D112DC372B00BF40EC /* GlobalFunctions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
