@@ -158,7 +158,9 @@
 #endif
 
 /* Enable SSE support */
-#define _USE_SSE 
+#ifndef __BIG_ENDIAN__
+# define _USE_SSE 
+#endif
 
 /* Define to empty if `const' does not conform to ANSI C. */
 /* #undef const */
