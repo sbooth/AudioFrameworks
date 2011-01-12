@@ -120,7 +120,7 @@ musicbrainz3
 2. Download libmusicbrainz and neon
 3. Decompress
 4. Rename folders to "libmusicbrainz-src" and "neon-src"
-5. Move the folder into musicbrainz3/
+5. Move the folders into musicbrainz3/
 6. Build
 
 
