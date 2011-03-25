@@ -271,6 +271,20 @@ tta
 6. Build
 
 
+mpg123
+------
+
+[http://www.mpg123.de/][17]
+
+(tested version: mpg123-1.13.2.tar.bz2)
+
+1. Download
+2. Decompress
+3. Rename the folder to mpg123-src
+4. Move the folder into mpg123
+5. Build
+
+
 License
 -------
 
@@ -293,3 +307,4 @@ The Xcode projects are distributed under the modified BSD license.
   [14]: http://developer.berlios.de/projects/cuetools/
   [15]: http://www.speex.org/
   [16]: http://en.true-audio.com/Free_Downloads
+  [16]: http://www.mpg123.de
