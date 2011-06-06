@@ -31,6 +31,10 @@
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
 
+/* Define to the sub-directory in which libtool stores uninstalled libraries.
+   */
+#define LT_OBJDIR ".libs/"
+
 /* Define to 1 if LFS should be activated */
 /* #undef NEED_LFS_ACTIVATION */
 
@@ -44,16 +48,16 @@
 #define PACKAGE_NAME "MP4v2"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "MP4v2 trunk-r399"
+#define PACKAGE_STRING "MP4v2 trunk-r471"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "mp4v2"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "trunk-r399"
+#define PACKAGE_VERSION "trunk-r471"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "trunk-r399"
+#define VERSION "trunk-r471"
