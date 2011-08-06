@@ -165,6 +165,27 @@
 		3270FB741322FD6100B661DB /* asfpicture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3270FB721322FD6100B661DB /* asfpicture.cpp */; };
 		3270FB751322FD6100B661DB /* asfpicture.h in Headers */ = {isa = PBXBuildFile; fileRef = 3270FB731322FD6100B661DB /* asfpicture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3270FB861322FFCA00B661DB /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3270FB851322FFCA00B661DB /* config.h */; };
+		32AEF5EB13EDD0E20062FEF7 /* itfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5D813EDD0E20062FEF7 /* itfile.cpp */; };
+		32AEF5EC13EDD0E20062FEF7 /* itfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5D913EDD0E20062FEF7 /* itfile.h */; };
+		32AEF5ED13EDD0E20062FEF7 /* itproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5DA13EDD0E20062FEF7 /* itproperties.cpp */; };
+		32AEF5EE13EDD0E20062FEF7 /* itproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5DB13EDD0E20062FEF7 /* itproperties.h */; };
+		32AEF5EF13EDD0E20062FEF7 /* modfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5DD13EDD0E20062FEF7 /* modfile.cpp */; };
+		32AEF5F013EDD0E20062FEF7 /* modfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5DE13EDD0E20062FEF7 /* modfile.h */; };
+		32AEF5F113EDD0E20062FEF7 /* modfilebase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5DF13EDD0E20062FEF7 /* modfilebase.cpp */; };
+		32AEF5F213EDD0E20062FEF7 /* modfilebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E013EDD0E20062FEF7 /* modfilebase.h */; };
+		32AEF5F313EDD0E20062FEF7 /* modfileprivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E113EDD0E20062FEF7 /* modfileprivate.h */; };
+		32AEF5F413EDD0E20062FEF7 /* modproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5E213EDD0E20062FEF7 /* modproperties.cpp */; };
+		32AEF5F513EDD0E20062FEF7 /* modproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E313EDD0E20062FEF7 /* modproperties.h */; };
+		32AEF5F613EDD0E20062FEF7 /* modtag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5E413EDD0E20062FEF7 /* modtag.cpp */; };
+		32AEF5F713EDD0E20062FEF7 /* modtag.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E513EDD0E20062FEF7 /* modtag.h */; };
+		32AEF5F813EDD0E20062FEF7 /* s3mfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5E713EDD0E20062FEF7 /* s3mfile.cpp */; };
+		32AEF5F913EDD0E20062FEF7 /* s3mfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E813EDD0E20062FEF7 /* s3mfile.h */; };
+		32AEF5FA13EDD0E20062FEF7 /* s3mproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5E913EDD0E20062FEF7 /* s3mproperties.cpp */; };
+		32AEF5FB13EDD0E20062FEF7 /* s3mproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5EA13EDD0E20062FEF7 /* s3mproperties.h */; };
+		32AEF60113EDD1090062FEF7 /* xmfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5FD13EDD1090062FEF7 /* xmfile.cpp */; };
+		32AEF60213EDD1090062FEF7 /* xmfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5FE13EDD1090062FEF7 /* xmfile.h */; };
+		32AEF60313EDD1090062FEF7 /* xmproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5FF13EDD1090062FEF7 /* xmproperties.cpp */; };
+		32AEF60413EDD1090062FEF7 /* xmproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF60013EDD1090062FEF7 /* xmproperties.h */; };
 		32B7987A138DB1AA00EBEF1B /* tbytevectorstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B79874138DB1AA00EBEF1B /* tbytevectorstream.cpp */; };
 		32B7987B138DB1AA00EBEF1B /* tbytevectorstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B79875138DB1AA00EBEF1B /* tbytevectorstream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7987C138DB1AA00EBEF1B /* tfilestream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B79876138DB1AA00EBEF1B /* tfilestream.cpp */; };
@@ -427,6 +448,27 @@
 		3270FB721322FD6100B661DB /* asfpicture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = asfpicture.cpp; sourceTree = "<group>"; };
 		3270FB731322FD6100B661DB /* asfpicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asfpicture.h; sourceTree = "<group>"; };
 		3270FB851322FFCA00B661DB /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		32AEF5D813EDD0E20062FEF7 /* itfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = itfile.cpp; sourceTree = "<group>"; };
+		32AEF5D913EDD0E20062FEF7 /* itfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itfile.h; sourceTree = "<group>"; };
+		32AEF5DA13EDD0E20062FEF7 /* itproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = itproperties.cpp; sourceTree = "<group>"; };
+		32AEF5DB13EDD0E20062FEF7 /* itproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itproperties.h; sourceTree = "<group>"; };
+		32AEF5DD13EDD0E20062FEF7 /* modfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = modfile.cpp; sourceTree = "<group>"; };
+		32AEF5DE13EDD0E20062FEF7 /* modfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modfile.h; sourceTree = "<group>"; };
+		32AEF5DF13EDD0E20062FEF7 /* modfilebase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = modfilebase.cpp; sourceTree = "<group>"; };
+		32AEF5E013EDD0E20062FEF7 /* modfilebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modfilebase.h; sourceTree = "<group>"; };
+		32AEF5E113EDD0E20062FEF7 /* modfileprivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modfileprivate.h; sourceTree = "<group>"; };
+		32AEF5E213EDD0E20062FEF7 /* modproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = modproperties.cpp; sourceTree = "<group>"; };
+		32AEF5E313EDD0E20062FEF7 /* modproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modproperties.h; sourceTree = "<group>"; };
+		32AEF5E413EDD0E20062FEF7 /* modtag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = modtag.cpp; sourceTree = "<group>"; };
+		32AEF5E513EDD0E20062FEF7 /* modtag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modtag.h; sourceTree = "<group>"; };
+		32AEF5E713EDD0E20062FEF7 /* s3mfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s3mfile.cpp; sourceTree = "<group>"; };
+		32AEF5E813EDD0E20062FEF7 /* s3mfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s3mfile.h; sourceTree = "<group>"; };
+		32AEF5E913EDD0E20062FEF7 /* s3mproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = s3mproperties.cpp; sourceTree = "<group>"; };
+		32AEF5EA13EDD0E20062FEF7 /* s3mproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s3mproperties.h; sourceTree = "<group>"; };
+		32AEF5FD13EDD1090062FEF7 /* xmfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmfile.cpp; sourceTree = "<group>"; };
+		32AEF5FE13EDD1090062FEF7 /* xmfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmfile.h; sourceTree = "<group>"; };
+		32AEF5FF13EDD1090062FEF7 /* xmproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xmproperties.cpp; sourceTree = "<group>"; };
+		32AEF60013EDD1090062FEF7 /* xmproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xmproperties.h; sourceTree = "<group>"; };
 		32B79874138DB1AA00EBEF1B /* tbytevectorstream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tbytevectorstream.cpp; sourceTree = "<group>"; };
 		32B79875138DB1AA00EBEF1B /* tbytevectorstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tbytevectorstream.h; sourceTree = "<group>"; };
 		32B79876138DB1AA00EBEF1B /* tfilestream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tfilestream.cpp; sourceTree = "<group>"; };
@@ -539,6 +581,10 @@
 		3261F64511A9A0B700E08DCD /* taglib-src */ = {
 			isa = PBXGroup;
 			children = (
+				32AEF5FC13EDD1090062FEF7 /* xm */,
+				32AEF5D713EDD0E20062FEF7 /* it */,
+				32AEF5DC13EDD0E20062FEF7 /* mod */,
+				32AEF5E613EDD0E20062FEF7 /* s3m */,
 				3261F65D11A9A0B700E08DCD /* AUTHORS */,
 				3261F65E11A9A0B700E08DCD /* bindings */,
 				3261F66A11A9A0B700E08DCD /* cmake */,
@@ -1032,6 +1078,59 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		32AEF5D713EDD0E20062FEF7 /* it */ = {
+			isa = PBXGroup;
+			children = (
+				32AEF5D813EDD0E20062FEF7 /* itfile.cpp */,
+				32AEF5D913EDD0E20062FEF7 /* itfile.h */,
+				32AEF5DA13EDD0E20062FEF7 /* itproperties.cpp */,
+				32AEF5DB13EDD0E20062FEF7 /* itproperties.h */,
+			);
+			name = it;
+			path = taglib/it;
+			sourceTree = "<group>";
+		};
+		32AEF5DC13EDD0E20062FEF7 /* mod */ = {
+			isa = PBXGroup;
+			children = (
+				32AEF5DD13EDD0E20062FEF7 /* modfile.cpp */,
+				32AEF5DE13EDD0E20062FEF7 /* modfile.h */,
+				32AEF5DF13EDD0E20062FEF7 /* modfilebase.cpp */,
+				32AEF5E013EDD0E20062FEF7 /* modfilebase.h */,
+				32AEF5E113EDD0E20062FEF7 /* modfileprivate.h */,
+				32AEF5E213EDD0E20062FEF7 /* modproperties.cpp */,
+				32AEF5E313EDD0E20062FEF7 /* modproperties.h */,
+				32AEF5E413EDD0E20062FEF7 /* modtag.cpp */,
+				32AEF5E513EDD0E20062FEF7 /* modtag.h */,
+			);
+			name = mod;
+			path = taglib/mod;
+			sourceTree = "<group>";
+		};
+		32AEF5E613EDD0E20062FEF7 /* s3m */ = {
+			isa = PBXGroup;
+			children = (
+				32AEF5E713EDD0E20062FEF7 /* s3mfile.cpp */,
+				32AEF5E813EDD0E20062FEF7 /* s3mfile.h */,
+				32AEF5E913EDD0E20062FEF7 /* s3mproperties.cpp */,
+				32AEF5EA13EDD0E20062FEF7 /* s3mproperties.h */,
+			);
+			name = s3m;
+			path = taglib/s3m;
+			sourceTree = "<group>";
+		};
+		32AEF5FC13EDD1090062FEF7 /* xm */ = {
+			isa = PBXGroup;
+			children = (
+				32AEF5FD13EDD1090062FEF7 /* xmfile.cpp */,
+				32AEF5FE13EDD1090062FEF7 /* xmfile.h */,
+				32AEF5FF13EDD1090062FEF7 /* xmproperties.cpp */,
+				32AEF60013EDD1090062FEF7 /* xmproperties.h */,
+			);
+			name = xm;
+			path = taglib/xm;
+			sourceTree = "<group>";
+		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1135,6 +1234,17 @@
 				32B7987B138DB1AA00EBEF1B /* tbytevectorstream.h in Headers */,
 				32B7987D138DB1AA00EBEF1B /* tfilestream.h in Headers */,
 				32B7987F138DB1AA00EBEF1B /* tiostream.h in Headers */,
+				32AEF5EC13EDD0E20062FEF7 /* itfile.h in Headers */,
+				32AEF5EE13EDD0E20062FEF7 /* itproperties.h in Headers */,
+				32AEF5F013EDD0E20062FEF7 /* modfile.h in Headers */,
+				32AEF5F213EDD0E20062FEF7 /* modfilebase.h in Headers */,
+				32AEF5F313EDD0E20062FEF7 /* modfileprivate.h in Headers */,
+				32AEF5F513EDD0E20062FEF7 /* modproperties.h in Headers */,
+				32AEF5F713EDD0E20062FEF7 /* modtag.h in Headers */,
+				32AEF5F913EDD0E20062FEF7 /* s3mfile.h in Headers */,
+				32AEF5FB13EDD0E20062FEF7 /* s3mproperties.h in Headers */,
+				32AEF60213EDD1090062FEF7 /* xmfile.h in Headers */,
+				32AEF60413EDD1090062FEF7 /* xmproperties.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1283,6 +1393,16 @@
 				32B7987A138DB1AA00EBEF1B /* tbytevectorstream.cpp in Sources */,
 				32B7987C138DB1AA00EBEF1B /* tfilestream.cpp in Sources */,
 				32B7987E138DB1AA00EBEF1B /* tiostream.cpp in Sources */,
+				32AEF5EB13EDD0E20062FEF7 /* itfile.cpp in Sources */,
+				32AEF5ED13EDD0E20062FEF7 /* itproperties.cpp in Sources */,
+				32AEF5EF13EDD0E20062FEF7 /* modfile.cpp in Sources */,
+				32AEF5F113EDD0E20062FEF7 /* modfilebase.cpp in Sources */,
+				32AEF5F413EDD0E20062FEF7 /* modproperties.cpp in Sources */,
+				32AEF5F613EDD0E20062FEF7 /* modtag.cpp in Sources */,
+				32AEF5F813EDD0E20062FEF7 /* s3mfile.cpp in Sources */,
+				32AEF5FA13EDD0E20062FEF7 /* s3mproperties.cpp in Sources */,
+				32AEF60113EDD1090062FEF7 /* xmfile.cpp in Sources */,
+				32AEF60313EDD1090062FEF7 /* xmproperties.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
