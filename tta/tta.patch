@@ -1,6 +1,6 @@
 diff -ur libtta-c-2.0/filter.h libtta-c-src/filter.h
---- libtta-c-2.0/filter.h	2010-12-23 23:06:14.000000000 -0800
-+++ libtta-c-src/filter.h	2011-01-10 15:29:02.000000000 -0800
+--- libtta-c-2.0/filter.h	2010-12-24 08:06:14.000000000 +0100
++++ libtta-c-src/filter.h	2011-01-12 15:43:13.000000000 +0100
 @@ -134,7 +134,7 @@
  ///////////////////////// hybrid_filter_compat_dec //////////////////////////
  /////////////////////////////////////////////////////////////////////////////
@@ -20,8 +20,8 @@ diff -ur libtta-c-2.0/filter.h libtta-c-src/filter.h
  	register TTAint32 *pB = fs->qm;
  	register TTAint32 *pM = fs->dx;
 diff -ur libtta-c-2.0/libtta.c libtta-c-src/libtta.c
---- libtta-c-2.0/libtta.c	2010-12-30 04:42:54.000000000 -0800
-+++ libtta-c-src/libtta.c	2011-01-10 15:29:08.000000000 -0800
+--- libtta-c-2.0/libtta.c	2010-12-30 13:42:54.000000000 +0100
++++ libtta-c-src/libtta.c	2011-01-12 15:44:13.000000000 +0100
 @@ -10,7 +10,7 @@
   */
  
@@ -32,13 +32,15 @@ diff -ur libtta-c-2.0/libtta.c libtta-c-src/libtta.c
  
  /////////////////////////////// portability /////////////////////////////////
 diff -ur libtta-c-2.0/libtta.h libtta-c-src/libtta.h
---- libtta-c-2.0/libtta.h	2010-12-24 00:28:09.000000000 -0800
-+++ libtta-c-src/libtta.h	2011-01-10 15:29:13.000000000 -0800
-@@ -18,7 +18,6 @@
+--- libtta-c-2.0/libtta.h	2010-12-24 09:28:09.000000000 +0100
++++ libtta-c-src/libtta.h	2011-01-12 15:45:30.000000000 +0100
+@@ -18,7 +18,9 @@
  #include <stdio.h>
  #include <string.h>
  #include <stdlib.h> 
--#include <malloc.h> 
++#ifdef HAVE_MALLOC_H
+ #include <malloc.h> 
++#endif
  
  #ifdef CARIBBEAN
  #define ALLOW_OS_CODE 1
