@@ -196,6 +196,10 @@
 		32BB850812D8C4C30066E3DF /* flacmetadatablock.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BB850412D8C4C30066E3DF /* flacmetadatablock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32BB850912D8C4C30066E3DF /* flacunknownmetadatablock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BB850512D8C4C30066E3DF /* flacunknownmetadatablock.cpp */; };
 		32BB850A12D8C4C30066E3DF /* flacunknownmetadatablock.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BB850612D8C4C30066E3DF /* flacunknownmetadatablock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32E92DC01613E46C00917F63 /* ownershipframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E92DBE1613E46C00917F63 /* ownershipframe.cpp */; };
+		32E92DC11613E46C00917F63 /* ownershipframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E92DBF1613E46C00917F63 /* ownershipframe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32E92DC41613E4A800917F63 /* tpropertymap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E92DC21613E4A800917F63 /* tpropertymap.cpp */; };
+		32E92DC51613E4A800917F63 /* tpropertymap.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E92DC31613E4A800917F63 /* tpropertymap.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -494,6 +498,10 @@
 		32E387D1136DC052003309F7 /* test_flacunknownmetadatablock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_flacunknownmetadatablock.cpp; sourceTree = "<group>"; };
 		32E387D2136DC052003309F7 /* test_wav.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_wav.cpp; sourceTree = "<group>"; };
 		32E387D3136DC052003309F7 /* test_wavpack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_wavpack.cpp; sourceTree = "<group>"; };
+		32E92DBE1613E46C00917F63 /* ownershipframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ownershipframe.cpp; sourceTree = "<group>"; };
+		32E92DBF1613E46C00917F63 /* ownershipframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ownershipframe.h; sourceTree = "<group>"; };
+		32E92DC21613E4A800917F63 /* tpropertymap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tpropertymap.cpp; sourceTree = "<group>"; };
+		32E92DC31613E4A800917F63 /* tpropertymap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tpropertymap.h; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* taglib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = taglib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -844,6 +852,8 @@
 				3261F71D11A9A0B700E08DCD /* commentsframe.h */,
 				3261F71E11A9A0B700E08DCD /* generalencapsulatedobjectframe.cpp */,
 				3261F71F11A9A0B700E08DCD /* generalencapsulatedobjectframe.h */,
+				32E92DBE1613E46C00917F63 /* ownershipframe.cpp */,
+				32E92DBF1613E46C00917F63 /* ownershipframe.h */,
 				3261F72111A9A0B700E08DCD /* popularimeterframe.cpp */,
 				3261F72211A9A0B700E08DCD /* popularimeterframe.h */,
 				3261F72311A9A0B700E08DCD /* privateframe.cpp */,
@@ -949,6 +959,8 @@
 		3261F78611A9A0B700E08DCD /* toolkit */ = {
 			isa = PBXGroup;
 			children = (
+				32E92DC21613E4A800917F63 /* tpropertymap.cpp */,
+				32E92DC31613E4A800917F63 /* tpropertymap.h */,
 				32B79874138DB1AA00EBEF1B /* tbytevectorstream.cpp */,
 				32B79875138DB1AA00EBEF1B /* tbytevectorstream.h */,
 				32B79876138DB1AA00EBEF1B /* tfilestream.cpp */,
@@ -1245,6 +1257,8 @@
 				32AEF5FB13EDD0E20062FEF7 /* s3mproperties.h in Headers */,
 				32AEF60213EDD1090062FEF7 /* xmfile.h in Headers */,
 				32AEF60413EDD1090062FEF7 /* xmproperties.h in Headers */,
+				32E92DC11613E46C00917F63 /* ownershipframe.h in Headers */,
+				32E92DC51613E4A800917F63 /* tpropertymap.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1403,6 +1417,8 @@
 				32AEF5FA13EDD0E20062FEF7 /* s3mproperties.cpp in Sources */,
 				32AEF60113EDD1090062FEF7 /* xmfile.cpp in Sources */,
 				32AEF60313EDD1090062FEF7 /* xmproperties.cpp in Sources */,
+				32E92DC01613E46C00917F63 /* ownershipframe.cpp in Sources */,
+				32E92DC41613E4A800917F63 /* tpropertymap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
