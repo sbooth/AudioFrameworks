@@ -264,6 +264,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					HAVE_CONFIG_H,
+					FPM_DEFAULT,
 				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
@@ -280,7 +281,10 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
-				GCC_PREPROCESSOR_DEFINITIONS = HAVE_CONFIG_H;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					HAVE_CONFIG_H,
+					FPM_DEFAULT,
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
 				PRODUCT_NAME = mad;
@@ -292,6 +296,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32E7398910B9D32D00094C8A /* Debug.xcconfig */;
 			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"FPM_DEFAULT=1",
+				);
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -299,6 +308,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32E7398A10B9D32D00094C8A /* Release.xcconfig */;
 			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = "FPM_DEFAULT=1";
+				SDKROOT = "";
 			};
 			name = Release;
 		};

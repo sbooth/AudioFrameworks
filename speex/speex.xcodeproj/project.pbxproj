@@ -628,6 +628,7 @@
 			baseConfigurationReference = 32E7398910B9D32D00094C8A /* Debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -636,6 +637,7 @@
 			baseConfigurationReference = 32E7398A10B9D32D00094C8A /* Release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				SDKROOT = "";
 			};
 			name = Release;
 		};

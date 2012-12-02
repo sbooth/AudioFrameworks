@@ -277,6 +277,7 @@
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "-liconv";
 				PRODUCT_NAME = cddb;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = YES;
 			};
@@ -297,6 +298,7 @@
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = "-liconv";
 				PRODUCT_NAME = cddb;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

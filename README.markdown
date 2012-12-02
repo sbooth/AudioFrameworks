@@ -41,7 +41,7 @@ ogg
 
 [http://xiph.org/downloads/][3]
 
-(tested version: libogg-1.2.2.tar.gz)
+(tested version: libogg-1.3.0.tar.gz)
 
 1. Download
 2. Decompress
@@ -86,9 +86,9 @@ mp4v2
 
 [http://code.google.com/p/mp4v2/source/checkout][5]
 
-(tested version: svn revision 426)
+(tested version: svn revision 500)
 
-1. svn co -r 426 http://mp4v2.googlecode.com/svn/trunk/ mp4v2-src
+1. svn co -r 500 http://mp4v2.googlecode.com/svn/trunk/ mp4v2-src
 2. Move the folder into mp4v2/
 3. Build
 
@@ -98,7 +98,7 @@ musepack
 
 [http://www.musepack.net/index.php?pg=src][6]
 
-(tested version: musepack_src_r435.tar.gz)
+(tested version: musepack_src_r475.tar.gz)
 
 1. Download
 2. Decompress
@@ -127,14 +127,15 @@ musicbrainz3
 taglib
 ------
 
-[http://developer.kde.org/~wheeler/taglib.html][9]
+[http://taglib.github.com][9]
 
-(tested version: taglib 6b063862c38dce47b5d2)
+(tested version: taglib 1.8)
 
-1. git clone https://github.com/taglib/taglib.git taglib-src
-2. git checkout 6b063862c38dce47b5d2
-3. Move the folder into taglib/
-4. Build
+1. Download
+2. Decompress
+3. Rename folder to "taglib-src"
+4. Move the folder into taglib/
+5. Build
 
 
 vorbis
@@ -142,7 +143,7 @@ vorbis
 
 [http://xiph.org/downloads/][3]
 
-(tested version: libvorbis-1.3.2.tar.bz2)
+(tested version: libvorbis-1.3.3.tar.gz)
 
 1. Download
 2. Decompress
@@ -257,16 +258,16 @@ speex
 5. Build
 
 
-tta
----
+tta, tta++
+----------
 
 [http://en.true-audio.com/Free_Downloads][16]
 
-(tested version: libtta-c-2.0.tar.gz)
+(tested version: libtta-2.1.tar.gz, libtta++-2.1.tar.gz)
 
 1. Download
 2. Decompress
-3. Rename the folder to libtta-c-src
+3. Rename the folder to (for tta use libtta-c-src, for tta++ use libtta++-src)
 4. Move the folder into tta
 5. Apply the patch "tta.patch": 'patch < tta.patch'
 6. Build

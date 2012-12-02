@@ -701,6 +701,7 @@
 					"-lexpat",
 				);
 				PRODUCT_NAME = musicbrainz3;
+				SDKROOT = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../discid/libdiscid-src/include";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -732,6 +733,7 @@
 					"-lexpat",
 				);
 				PRODUCT_NAME = musicbrainz3;
+				SDKROOT = "";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../discid/libdiscid-src/include";
 				WRAPPER_EXTENSION = framework;
 			};

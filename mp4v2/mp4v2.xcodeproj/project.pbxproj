@@ -930,6 +930,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 322D798F1130454E006676FC /* Debug.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -937,6 +939,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 322D79901130454E006676FC /* Release.xcconfig */;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				SDKROOT = "";
 			};
 			name = Release;
 		};
