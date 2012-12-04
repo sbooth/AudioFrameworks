@@ -1,0 +1,13 @@
+diff -ur libtta++-2.1/libtta.h libtta++-src/libtta.h
+--- libtta++-2.1/libtta.h	2011-11-27 20:26:14.000000000 -0500
++++ libtta++-src/libtta.h	2011-11-27 20:27:18.000000000 -0500
+@@ -18,7 +18,9 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <stdlib.h> 
++#if !defined(__APPLE__)
+ #include <malloc.h> 
++#endif
+ #include <stdexcept>
+ 
+ #ifdef CARIBBEAN
