@@ -203,6 +203,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32E7398910B9D32D00094C8A /* Debug.xcconfig */;
 			buildSettings = {
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -210,6 +211,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32E7398A10B9D32D00094C8A /* Release.xcconfig */;
 			buildSettings = {
+				SDKROOT = "";
 			};
 			name = Release;
 		};

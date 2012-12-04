@@ -166,26 +166,26 @@
 		3270FB751322FD6100B661DB /* asfpicture.h in Headers */ = {isa = PBXBuildFile; fileRef = 3270FB731322FD6100B661DB /* asfpicture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3270FB861322FFCA00B661DB /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 3270FB851322FFCA00B661DB /* config.h */; };
 		32AEF5EB13EDD0E20062FEF7 /* itfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5D813EDD0E20062FEF7 /* itfile.cpp */; };
-		32AEF5EC13EDD0E20062FEF7 /* itfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5D913EDD0E20062FEF7 /* itfile.h */; };
+		32AEF5EC13EDD0E20062FEF7 /* itfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5D913EDD0E20062FEF7 /* itfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AEF5ED13EDD0E20062FEF7 /* itproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5DA13EDD0E20062FEF7 /* itproperties.cpp */; };
-		32AEF5EE13EDD0E20062FEF7 /* itproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5DB13EDD0E20062FEF7 /* itproperties.h */; };
+		32AEF5EE13EDD0E20062FEF7 /* itproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5DB13EDD0E20062FEF7 /* itproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AEF5EF13EDD0E20062FEF7 /* modfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5DD13EDD0E20062FEF7 /* modfile.cpp */; };
-		32AEF5F013EDD0E20062FEF7 /* modfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5DE13EDD0E20062FEF7 /* modfile.h */; };
+		32AEF5F013EDD0E20062FEF7 /* modfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5DE13EDD0E20062FEF7 /* modfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AEF5F113EDD0E20062FEF7 /* modfilebase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5DF13EDD0E20062FEF7 /* modfilebase.cpp */; };
-		32AEF5F213EDD0E20062FEF7 /* modfilebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E013EDD0E20062FEF7 /* modfilebase.h */; };
-		32AEF5F313EDD0E20062FEF7 /* modfileprivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E113EDD0E20062FEF7 /* modfileprivate.h */; };
+		32AEF5F213EDD0E20062FEF7 /* modfilebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E013EDD0E20062FEF7 /* modfilebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32AEF5F313EDD0E20062FEF7 /* modfileprivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E113EDD0E20062FEF7 /* modfileprivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AEF5F413EDD0E20062FEF7 /* modproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5E213EDD0E20062FEF7 /* modproperties.cpp */; };
-		32AEF5F513EDD0E20062FEF7 /* modproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E313EDD0E20062FEF7 /* modproperties.h */; };
+		32AEF5F513EDD0E20062FEF7 /* modproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E313EDD0E20062FEF7 /* modproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AEF5F613EDD0E20062FEF7 /* modtag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5E413EDD0E20062FEF7 /* modtag.cpp */; };
-		32AEF5F713EDD0E20062FEF7 /* modtag.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E513EDD0E20062FEF7 /* modtag.h */; };
+		32AEF5F713EDD0E20062FEF7 /* modtag.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E513EDD0E20062FEF7 /* modtag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AEF5F813EDD0E20062FEF7 /* s3mfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5E713EDD0E20062FEF7 /* s3mfile.cpp */; };
-		32AEF5F913EDD0E20062FEF7 /* s3mfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E813EDD0E20062FEF7 /* s3mfile.h */; };
+		32AEF5F913EDD0E20062FEF7 /* s3mfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5E813EDD0E20062FEF7 /* s3mfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AEF5FA13EDD0E20062FEF7 /* s3mproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5E913EDD0E20062FEF7 /* s3mproperties.cpp */; };
-		32AEF5FB13EDD0E20062FEF7 /* s3mproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5EA13EDD0E20062FEF7 /* s3mproperties.h */; };
+		32AEF5FB13EDD0E20062FEF7 /* s3mproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5EA13EDD0E20062FEF7 /* s3mproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AEF60113EDD1090062FEF7 /* xmfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5FD13EDD1090062FEF7 /* xmfile.cpp */; };
-		32AEF60213EDD1090062FEF7 /* xmfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5FE13EDD1090062FEF7 /* xmfile.h */; };
+		32AEF60213EDD1090062FEF7 /* xmfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF5FE13EDD1090062FEF7 /* xmfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AEF60313EDD1090062FEF7 /* xmproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32AEF5FF13EDD1090062FEF7 /* xmproperties.cpp */; };
-		32AEF60413EDD1090062FEF7 /* xmproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF60013EDD1090062FEF7 /* xmproperties.h */; };
+		32AEF60413EDD1090062FEF7 /* xmproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AEF60013EDD1090062FEF7 /* xmproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7987A138DB1AA00EBEF1B /* tbytevectorstream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B79874138DB1AA00EBEF1B /* tbytevectorstream.cpp */; };
 		32B7987B138DB1AA00EBEF1B /* tbytevectorstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B79875138DB1AA00EBEF1B /* tbytevectorstream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7987C138DB1AA00EBEF1B /* tfilestream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B79876138DB1AA00EBEF1B /* tfilestream.cpp */; };
@@ -196,6 +196,10 @@
 		32BB850812D8C4C30066E3DF /* flacmetadatablock.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BB850412D8C4C30066E3DF /* flacmetadatablock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32BB850912D8C4C30066E3DF /* flacunknownmetadatablock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32BB850512D8C4C30066E3DF /* flacunknownmetadatablock.cpp */; };
 		32BB850A12D8C4C30066E3DF /* flacunknownmetadatablock.h in Headers */ = {isa = PBXBuildFile; fileRef = 32BB850612D8C4C30066E3DF /* flacunknownmetadatablock.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA151A64166B1B17000BA302 /* tpropertymap.h in Headers */ = {isa = PBXBuildFile; fileRef = CA151A63166B1B17000BA302 /* tpropertymap.h */; };
+		CA151A67166B1B36000BA302 /* tpropertymap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA151A66166B1B36000BA302 /* tpropertymap.cpp */; };
+		CA151A6A166B1BE8000BA302 /* ownershipframe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA151A68166B1BE8000BA302 /* ownershipframe.cpp */; };
+		CA151A6B166B1BE8000BA302 /* ownershipframe.h in Headers */ = {isa = PBXBuildFile; fileRef = CA151A69166B1BE8000BA302 /* ownershipframe.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -496,6 +500,10 @@
 		32E387D3136DC052003309F7 /* test_wavpack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_wavpack.cpp; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* taglib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = taglib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA151A63166B1B17000BA302 /* tpropertymap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tpropertymap.h; sourceTree = "<group>"; };
+		CA151A66166B1B36000BA302 /* tpropertymap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tpropertymap.cpp; sourceTree = "<group>"; };
+		CA151A68166B1BE8000BA302 /* ownershipframe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ownershipframe.cpp; sourceTree = "<group>"; };
+		CA151A69166B1BE8000BA302 /* ownershipframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ownershipframe.h; sourceTree = "<group>"; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -838,6 +846,8 @@
 		3261F71811A9A0B700E08DCD /* frames */ = {
 			isa = PBXGroup;
 			children = (
+				CA151A68166B1BE8000BA302 /* ownershipframe.cpp */,
+				CA151A69166B1BE8000BA302 /* ownershipframe.h */,
 				3261F71911A9A0B700E08DCD /* attachedpictureframe.cpp */,
 				3261F71A11A9A0B700E08DCD /* attachedpictureframe.h */,
 				3261F71C11A9A0B700E08DCD /* commentsframe.cpp */,
@@ -974,6 +984,8 @@
 				3261F79911A9A0B800E08DCD /* tstringlist.h */,
 				3261F79A11A9A0B800E08DCD /* unicode.cpp */,
 				3261F79B11A9A0B800E08DCD /* unicode.h */,
+				CA151A63166B1B17000BA302 /* tpropertymap.h */,
+				CA151A66166B1B36000BA302 /* tpropertymap.cpp */,
 			);
 			path = toolkit;
 			sourceTree = "<group>";
@@ -1147,6 +1159,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32AEF5F013EDD0E20062FEF7 /* modfile.h in Headers */,
+				32AEF5F213EDD0E20062FEF7 /* modfilebase.h in Headers */,
+				32AEF5F313EDD0E20062FEF7 /* modfileprivate.h in Headers */,
+				32AEF5F513EDD0E20062FEF7 /* modproperties.h in Headers */,
+				32AEF5F713EDD0E20062FEF7 /* modtag.h in Headers */,
 				3261F99411A9A39B00E08DCD /* tlist.tcc in Headers */,
 				3261F99511A9A39B00E08DCD /* tmap.tcc in Headers */,
 				324B3789105C754F00B1AA21 /* taglib_config.h in Headers */,
@@ -1216,6 +1233,7 @@
 				3261F91111A9A0B800E08DCD /* tdebug.h in Headers */,
 				3261F91311A9A0B800E08DCD /* tfile.h in Headers */,
 				3261F91411A9A0B800E08DCD /* tlist.h in Headers */,
+				32AEF5EC13EDD0E20062FEF7 /* itfile.h in Headers */,
 				3261F91611A9A0B800E08DCD /* tmap.h in Headers */,
 				3261F91911A9A0B800E08DCD /* tstring.h in Headers */,
 				3261F91B11A9A0B800E08DCD /* tstringlist.h in Headers */,
@@ -1233,18 +1251,14 @@
 				3270FB861322FFCA00B661DB /* config.h in Headers */,
 				32B7987B138DB1AA00EBEF1B /* tbytevectorstream.h in Headers */,
 				32B7987D138DB1AA00EBEF1B /* tfilestream.h in Headers */,
-				32B7987F138DB1AA00EBEF1B /* tiostream.h in Headers */,
-				32AEF5EC13EDD0E20062FEF7 /* itfile.h in Headers */,
 				32AEF5EE13EDD0E20062FEF7 /* itproperties.h in Headers */,
-				32AEF5F013EDD0E20062FEF7 /* modfile.h in Headers */,
-				32AEF5F213EDD0E20062FEF7 /* modfilebase.h in Headers */,
-				32AEF5F313EDD0E20062FEF7 /* modfileprivate.h in Headers */,
-				32AEF5F513EDD0E20062FEF7 /* modproperties.h in Headers */,
-				32AEF5F713EDD0E20062FEF7 /* modtag.h in Headers */,
+				32B7987F138DB1AA00EBEF1B /* tiostream.h in Headers */,
 				32AEF5F913EDD0E20062FEF7 /* s3mfile.h in Headers */,
 				32AEF5FB13EDD0E20062FEF7 /* s3mproperties.h in Headers */,
 				32AEF60213EDD1090062FEF7 /* xmfile.h in Headers */,
 				32AEF60413EDD1090062FEF7 /* xmproperties.h in Headers */,
+				CA151A64166B1B17000BA302 /* tpropertymap.h in Headers */,
+				CA151A6B166B1BE8000BA302 /* ownershipframe.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1403,6 +1417,8 @@
 				32AEF5FA13EDD0E20062FEF7 /* s3mproperties.cpp in Sources */,
 				32AEF60113EDD1090062FEF7 /* xmfile.cpp in Sources */,
 				32AEF60313EDD1090062FEF7 /* xmproperties.cpp in Sources */,
+				CA151A67166B1B36000BA302 /* tpropertymap.cpp in Sources */,
+				CA151A6A166B1BE8000BA302 /* ownershipframe.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1437,6 +1453,7 @@
 					"\"$(SRCROOT)/build/taglib.build/Release/taglib.build/Objects-normal/x86_64\"",
 				);
 				PRODUCT_NAME = taglib;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1466,6 +1483,7 @@
 					"\"$(SRCROOT)/build/taglib.build/Release/taglib.build/Objects-normal/x86_64\"",
 				);
 				PRODUCT_NAME = taglib;
+				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
