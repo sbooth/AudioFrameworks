@@ -8,6 +8,12 @@ Usage
 
 This repo doesn't contain the sources for the respective frameworks or libraries. You need to add those yourself. 
 
+You can use the included `build_sfbaudioengine_frameworks.sh` to build the dependencies for SFBAudioEngine. You can invoke it like this: 
+
+    /build_sfbaudioengine_frameworks.sh ../SFBAudioEngine/Frameworks`
+
+The path in the argument must exist already!
+
 CDDB
 ----
 
