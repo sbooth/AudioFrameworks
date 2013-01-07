@@ -11,7 +11,7 @@ This repo doesn't contain the sources for the respective frameworks or libraries
 CDDB
 ----
 
-[http://libcddb.sourceforge.net/download.html][1]
+<http://libcddb.sourceforge.net/download.html>
 
 (tested version: libcddb-1.3.2.tar.bz2)
 
@@ -25,7 +25,7 @@ CDDB
 discid
 ------
 
-[http://musicbrainz.org/doc/libdiscid][2]
+<http://musicbrainz.org/doc/libdiscid>
 
 (tested version: libdiscid-0.2.2.tar.gz)
 
@@ -39,7 +39,7 @@ discid
 DUMB (Dynamic Universal Music Bibliotheque)
 -------------------------------------------
 
-[http://dumb.sourceforge.net/][7]
+<http://dumb.sourceforge.net/>
 
 (tested version: dumb-0.9.3.tar.gz, http://prdownloads.sourceforge.net/dumb/dumb-0.9.3.tar.gz?download)
 
@@ -53,7 +53,7 @@ DUMB (Dynamic Universal Music Bibliotheque)
 ogg
 ---
 
-[http://xiph.org/downloads/][3]
+<http://xiph.org/downloads/>
 
 (tested version: libogg-1.3.0.tar.gz)
 
@@ -67,7 +67,7 @@ ogg
 flac
 ----
 
-[http://xiph.org/downloads/][3]
+<http://xiph.org/downloads/>
 
 (tested version: flac-1.2.1.tar.gz)
 
@@ -83,7 +83,7 @@ flac
 mad
 ---
 
-[http://sourceforge.net/projects/mad/files/][4]
+<http://sourceforge.net/projects/mad/files/>
 
 (tested version: libmad-0.15.1b.tar.gz)
 
@@ -98,7 +98,7 @@ mad
 mp4v2
 -----
 
-[http://code.google.com/p/mp4v2/source/checkout][5]
+<http://code.google.com/p/mp4v2/source/checkout>
 
 (tested version: svn revision 500)
 
@@ -110,7 +110,7 @@ mp4v2
 musepack
 --------
 
-[http://www.musepack.net/index.php?pg=src][6]
+<http://www.musepack.net/index.php?pg=src>
 
 (tested version: musepack_src_r475.tar.gz)
 
@@ -125,8 +125,8 @@ musepack
 musicbrainz3
 ------------
 
-[http://musicbrainz.org/doc/libmusicbrainz][7]
-[http://www.webdav.org/neon/][8]
+<http://musicbrainz.org/doc/libmusicbrainz>
+<http://www.webdav.org/neon/>
 
 (tested version: libmusicbrainz-3.0.3.tar.gz, http://www.webdav.org/neon/neon-0.29.5.tar.gz)
 
@@ -141,14 +141,7 @@ musicbrainz3
 taglib
 ------
 
-[http://taglib.github.com][9]
-
-(tested version: taglib 1.8)
-
-taglib
-------
-
-[http://taglib.github.com//][9]
+<http://taglib.github.com>
 
 (tested version: taglib 08863dec0b)
 
@@ -170,7 +163,7 @@ Alternatively, you can use release version 1.8, but you will have to remove “i
 vorbis
 ------
 
-[http://xiph.org/downloads/][3]
+<http://xiph.org/downloads/>
 
 (tested version: libvorbis-1.3.3.tar.gz)
 
@@ -184,7 +177,7 @@ vorbis
 wavpack
 -------
 
-[http://www.wavpack.com/downloads.html][10]
+<http://www.wavpack.com/downloads.html>
 
 (tested version: wavpack-4.60.1.tar.bz2)
 
@@ -199,7 +192,7 @@ wavpack
 LAME
 ----
 
-[http://lame.sourceforge.net/download.php][11]
+<http://lame.sourceforge.net/download.php>
 
 (tested version: lame-3.98.4.tar.bz2)
 
@@ -213,7 +206,7 @@ LAME
 sndfile
 -------
 
-[http://www.mega-nerd.com/libsndfile/][12]
+<http://www.mega-nerd.com/libsndfile/>
 
 (tested version: libsndfile-1.0.23.tar.gz)
 
@@ -227,7 +220,7 @@ sndfile
 ofa1
 ----
 
-[http://code.google.com/p/musicip-libofa/][13]
+<http://code.google.com/p/musicip-libofa/>
 
 (tested version: libofa-0.9.3.tar.gz)
 
@@ -262,7 +255,7 @@ cdparanoia
 cuetools
 --------
 
-[http://developer.berlios.de/projects/cuetools/][14]
+<http://developer.berlios.de/projects/cuetools/>
 
 (tested version: cuetools-1.3.1.tar.gz)
 
@@ -276,7 +269,7 @@ cuetools
 speex
 -----
 
-[http://www.speex.org/][15]
+<http://www.speex.org/>
 
 (tested version: speex-1.2rc1.tar.gz)
 
@@ -290,7 +283,7 @@ speex
 tta, tta++
 ----------
 
-[http://en.true-audio.com/Free_Downloads][16]
+<http://en.true-audio.com/Free_Downloads>
 
 (tested version: libtta-2.1.tar.gz, libtta++-2.1.tar.gz)
 
@@ -322,21 +315,3 @@ License
 
 The Xcode projects are distributed under the modified BSD license.
 
-
-  [1]: http://libcddb.sourceforge.net/download.html
-  [2]: http://musicbrainz.org/doc/libdiscid
-  [3]: http://xiph.org/downloads/
-  [4]: http://sourceforge.net/projects/mad/files/
-  [5]: http://code.google.com/p/mp4v2/source/checkout
-  [6]: http://www.musepack.net/index.php?pg=src
-  [7]: http://musicbrainz.org/doc/libmusicbrainz
-  [8]: http://www.webdav.org/neon/
-  [9]: http://developer.kde.org/~wheeler/taglib.html
-  [10]: http://www.wavpack.com/downloads.html
-  [11]: http://lame.sourceforge.net/download.php
-  [12]: http://www.mega-nerd.com/libsndfile/
-  [13]: http://code.google.com/p/musicip-libofa/
-  [14]: http://developer.berlios.de/projects/cuetools/
-  [15]: http://www.speex.org/
-  [16]: http://en.true-audio.com/Free_Downloads
-  [17]: http://www.mpg123.de
