@@ -28,3 +28,4 @@ taglib/taglib-src
 tta/libtta-c-src
 vorbis/libvorbis-src
 wavpack/wavpack-src
+id3tag/libid3tag-src
