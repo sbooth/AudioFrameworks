@@ -106,9 +106,9 @@ mp4v2
 
 <http://code.google.com/p/mp4v2/source/checkout>
 
-(tested version: svn revision 500)
+(tested version: svn revision 501)
 
-1. svn co -r 500 http://mp4v2.googlecode.com/svn/trunk/ mp4v2-src
+1. svn co -r 501 http://mp4v2.googlecode.com/svn/trunk/ mp4v2-src
 2. Move the folder into mp4v2/
 3. Build
 
