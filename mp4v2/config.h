@@ -48,16 +48,19 @@
 #define PACKAGE_NAME "MP4v2"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "MP4v2 trunk-r471"
+#define PACKAGE_STRING "MP4v2 trunk-r487"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "mp4v2"
 
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
+
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "trunk-r471"
+#define PACKAGE_VERSION "trunk-r487"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "trunk-r471"
+#define VERSION "trunk-r487"

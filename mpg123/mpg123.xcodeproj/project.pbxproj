@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		32161C1D133AF3BA008449C3 /* dct64_i386.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD019133AD89F003D9982 /* dct64_i386.c */; };
+		3284711015039D62008C0B79 /* synth_x86_64.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD075133AD89F003D9982 /* synth_x86_64.S */; };
+		3284711115039D62008C0B79 /* synth_x86_64_accurate.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD076133AD89F003D9982 /* synth_x86_64_accurate.S */; };
+		3284711215039D62008C0B79 /* synth_x86_64_float.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD077133AD89F003D9982 /* synth_x86_64_float.S */; };
+		3284711315039D62008C0B79 /* synth_x86_64_s32.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD078133AD89F003D9982 /* synth_x86_64_s32.S */; };
+		3284711415039D88008C0B79 /* synth_stereo_x86_64.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD071133AD89F003D9982 /* synth_stereo_x86_64.S */; };
+		3284711515039D88008C0B79 /* synth_stereo_x86_64_accurate.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD072133AD89F003D9982 /* synth_stereo_x86_64_accurate.S */; };
+		3284711615039D88008C0B79 /* synth_stereo_x86_64_float.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD073133AD89F003D9982 /* synth_stereo_x86_64_float.S */; };
+		3284711715039D88008C0B79 /* synth_stereo_x86_64_s32.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD074133AD89F003D9982 /* synth_stereo_x86_64_s32.S */; };
+		3284711815039DBA008C0B79 /* dct64_x86_64.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD020133AD89F003D9982 /* dct64_x86_64.S */; };
+		3284711915039DBA008C0B79 /* dct64_x86_64_float.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD021133AD89F003D9982 /* dct64_x86_64_float.S */; };
+		3284712215039E35008C0B79 /* synth_i586.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD05A133AD89F003D9982 /* synth_i586.S */; };
+		3284712315039E38008C0B79 /* synth_i586_dither.S in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD05B133AD89F003D9982 /* synth_i586_dither.S */; };
+		3284712815039EA2008C0B79 /* libmpg123-synth_i586.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3284711E15039DED008C0B79 /* libmpg123-synth_i586.a */; };
+		3284712915039EA5008C0B79 /* libmpg123-synth_x86_64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3284710C15039CCE008C0B79 /* libmpg123-synth_x86_64.a */; };
 		32AACD1C133AD69A003D9982 /* mpg123.h in Headers */ = {isa = PBXBuildFile; fileRef = 32AACD1B133AD69A003D9982 /* mpg123.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32AAD151133ADAB6003D9982 /* compat.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD011133AD89F003D9982 /* compat.c */; };
 		32AAD153133ADABC003D9982 /* parse.c in Sources */ = {isa = PBXBuildFile; fileRef = 32AAD04A133AD89F003D9982 /* parse.c */; };
@@ -38,7 +52,26 @@
 		32B7E3A912DA89EF005B82C9 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E3A812DA89EF005B82C9 /* config.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3284712415039E60008C0B79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3284710B15039CCE008C0B79;
+			remoteInfo = "mpg123-synth_x86_64";
+		};
+		3284712615039E63008C0B79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3284711D15039DED008C0B79;
+			remoteInfo = "mpg123-synth_i586";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		3284710C15039CCE008C0B79 /* libmpg123-synth_x86_64.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmpg123-synth_x86_64.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3284711E15039DED008C0B79 /* libmpg123-synth_i586.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmpg123-synth_i586.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AACD1B133AD69A003D9982 /* mpg123.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpg123.h; sourceTree = "<group>"; };
 		32AAD011133AD89F003D9982 /* compat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = compat.c; sourceTree = "<group>"; };
 		32AAD012133AD89F003D9982 /* compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compat.h; sourceTree = "<group>"; };
@@ -158,10 +191,26 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3284710915039CCE008C0B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3284711B15039DED008C0B79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3284712915039EA5008C0B79 /* libmpg123-synth_x86_64.a in Frameworks */,
+				3284712815039EA2008C0B79 /* libmpg123-synth_i586.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* mpg123.framework */,
+				3284710C15039CCE008C0B79 /* libmpg123-synth_x86_64.a */,
+				3284711E15039DED008C0B79 /* libmpg123-synth_i586.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,6 +386,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3284710A15039CCE008C0B79 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3284711C15039DED008C0B79 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF500486A6940098B216 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +412,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3284710B15039CCE008C0B79 /* mpg123-synth_x86_64 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3284710F15039CCF008C0B79 /* Build configuration list for PBXNativeTarget "mpg123-synth_x86_64" */;
+			buildPhases = (
+				3284710815039CCE008C0B79 /* Sources */,
+				3284710915039CCE008C0B79 /* Frameworks */,
+				3284710A15039CCE008C0B79 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mpg123-synth_x86_64";
+			productName = "mpg123-synth_x86_64";
+			productReference = 3284710C15039CCE008C0B79 /* libmpg123-synth_x86_64.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3284711D15039DED008C0B79 /* mpg123-synth_i586 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3284711F15039DED008C0B79 /* Build configuration list for PBXNativeTarget "mpg123-synth_i586" */;
+			buildPhases = (
+				3284711A15039DED008C0B79 /* Sources */,
+				3284711B15039DED008C0B79 /* Frameworks */,
+				3284711C15039DED008C0B79 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mpg123-synth_i586";
+			productName = "mpg123-synth_i586";
+			productReference = 3284711E15039DED008C0B79 /* libmpg123-synth_i586.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8DC2EF4F0486A6940098B216 /* mpg123.framework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "mpg123.framework" */;
@@ -359,6 +458,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				3284712715039E63008C0B79 /* PBXTargetDependency */,
+				3284712515039E60008C0B79 /* PBXTargetDependency */,
 			);
 			name = mpg123.framework;
 			productInstallPath = "$(HOME)/Library/Frameworks";
@@ -387,6 +488,8 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* mpg123.framework */,
+				3284710B15039CCE008C0B79 /* mpg123-synth_x86_64 */,
+				3284711D15039DED008C0B79 /* mpg123-synth_i586 */,
 			);
 		};
 /* End PBXProject section */
@@ -402,6 +505,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3284710815039CCE008C0B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3284711015039D62008C0B79 /* synth_x86_64.S in Sources */,
+				3284711115039D62008C0B79 /* synth_x86_64_accurate.S in Sources */,
+				3284711215039D62008C0B79 /* synth_x86_64_float.S in Sources */,
+				3284711315039D62008C0B79 /* synth_x86_64_s32.S in Sources */,
+				3284711415039D88008C0B79 /* synth_stereo_x86_64.S in Sources */,
+				3284711515039D88008C0B79 /* synth_stereo_x86_64_accurate.S in Sources */,
+				3284711615039D88008C0B79 /* synth_stereo_x86_64_float.S in Sources */,
+				3284711715039D88008C0B79 /* synth_stereo_x86_64_s32.S in Sources */,
+				3284711815039DBA008C0B79 /* dct64_x86_64.S in Sources */,
+				3284711915039DBA008C0B79 /* dct64_x86_64_float.S in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3284711A15039DED008C0B79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3284712215039E35008C0B79 /* synth_i586.S in Sources */,
+				3284712315039E38008C0B79 /* synth_i586_dither.S in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,6 +567,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3284712515039E60008C0B79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3284710B15039CCE008C0B79 /* mpg123-synth_x86_64 */;
+			targetProxy = 3284712415039E60008C0B79 /* PBXContainerItemProxy */;
+		};
+		3284712715039E63008C0B79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3284711D15039DED008C0B79 /* mpg123-synth_i586 */;
+			targetProxy = 3284712615039E63008C0B79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -448,12 +590,23 @@
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					HAVE_CONFIG_H,
 					OPT_GENERIC_DITHER,
+					REAL_IS_FLOAT,
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=i386]" = (
+					"DEBUG=1",
+					HAVE_CONFIG_H,
+					OPT_I586_DITHER,
+					REAL_IS_FLOAT,
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=x86_64]" = (
+					"DEBUG=1",
+					HAVE_CONFIG_H,
+					OPT_X86_64,
 					REAL_IS_FLOAT,
 				);
 				INFOPLIST_FILE = Info.plist;
@@ -470,10 +623,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_MODEL_TUNING = G5;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					HAVE_CONFIG_H,
 					OPT_GENERIC_DITHER,
+					REAL_IS_FLOAT,
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=i386]" = (
+					HAVE_CONFIG_H,
+					OPT_I586_DITHER,
+					REAL_IS_FLOAT,
+				);
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=x86_64]" = (
+					HAVE_CONFIG_H,
+					OPT_X86_64,
 					REAL_IS_FLOAT,
 				);
 				INFOPLIST_FILE = Info.plist;
@@ -499,6 +661,52 @@
 			};
 			name = Release;
 		};
+		3284710D15039CCF008C0B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3284710E15039CCF008C0B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3284712015039DED008C0B79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3284712115039DED008C0B79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -519,6 +727,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		3284710F15039CCF008C0B79 /* Build configuration list for PBXNativeTarget "mpg123-synth_x86_64" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3284710D15039CCF008C0B79 /* Debug */,
+				3284710E15039CCF008C0B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3284711F15039DED008C0B79 /* Build configuration list for PBXNativeTarget "mpg123-synth_i586" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3284712015039DED008C0B79 /* Debug */,
+				3284712115039DED008C0B79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
