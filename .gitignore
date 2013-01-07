@@ -12,11 +12,13 @@ cddb/libcddb-src
 cdparanoia/cdparanoia-src
 cuetools/cuetools-src
 discid/libdiscid-src
+dumb/dumb-src
 ogg/libogg-src
 flac/flac-src
 lame/lame-src
 mad/libmad-src
 mp4v2/mp4v2-src
+mpg123/mpg123-src
 musepack/musepack-src
 musicbrainz3/libmusicbrainz-src
 musicbrainz3/neon-src
@@ -26,5 +28,7 @@ sndfile/libsndfile-src
 speex/speex-src
 taglib/taglib-src
 tta/libtta-c-src
+tta++/libtta++-src
 vorbis/libvorbis-src
 wavpack/wavpack-src
+id3tag/libid3tag-src

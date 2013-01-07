@@ -1,6 +1,9 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.in by autoheader.  */
 
+#ifndef LAME_CONFIG_H
+#define LAME_CONFIG_H
+
 /* debug define */
 /* #undef ABORTFP */
 
@@ -48,6 +51,9 @@
 
 /* Define to 1 if you have the `gettimeofday' function. */
 #define HAVE_GETTIMEOFDAY 1
+
+/* Define if you have the iconv() function and it works. */
+#define HAVE_ICONV 0
 
 /* add ieee754_float32_t type */
 /* #undef HAVE_IEEE754_FLOAT32_T */
@@ -193,6 +199,9 @@
 /* Define to 1 if you have the <xmmintrin.h> header file. */
 /* #undef HAVE_XMMINTRIN_H */
 
+/* Define as const if the declaration of iconv() needs const. */
+#define ICONV_CONST 
+
 /* requested by Frank, seems to be temporary needed for a smooth transition */
 #define LAME_LIBRARY_BUILD 1
 
@@ -218,13 +227,16 @@
 #define PACKAGE_NAME "lame"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "lame 3.98.4"
+#define PACKAGE_STRING "lame 3.99.5"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "lame"
 
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
+
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "3.98.4"
+#define PACKAGE_VERSION "3.99.5"
 
 /* Define to 1 if the C compiler supports function prototypes. */
 #define PROTOTYPES 1
@@ -296,23 +308,44 @@
 /* build with layer 2 decoding */
 #define USE_LAYER_2 1
 
+/* Enable extensions on AIX 3, Interix.  */
+#ifndef _ALL_SOURCE
+# define _ALL_SOURCE 1
+#endif
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# define _GNU_SOURCE 1
+#endif
+/* Enable threading extensions on Solaris.  */
+#ifndef _POSIX_PTHREAD_SEMANTICS
+# define _POSIX_PTHREAD_SEMANTICS 1
+#endif
+/* Enable extensions on HP NonStop.  */
+#ifndef _TANDEM_SOURCE
+# define _TANDEM_SOURCE 1
+#endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# define __EXTENSIONS__ 1
+#endif
+
+
 /* Version number of package */
-#define VERSION "3.98.4"
+#define VERSION "3.99.5"
 
 /* Define if using the dmalloc debugging malloc package */
 /* #undef WITH_DMALLOC */
 
-/* Define to 1 if your processor stores words with the most significant byte
-   first (like Motorola and SPARC, unlike Intel and VAX). */
-#if __BIG_ENDIAN__
-# define WORDS_BIGENDIAN 1
-#endif
-
-/* Define to 1 if on AIX 3.
-   System headers sometimes define this.
-   We just want to avoid a redefinition error message.  */
-#ifndef _ALL_SOURCE
-/* # undef _ALL_SOURCE */
+/* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
+   significant byte first (like Motorola and SPARC, unlike Intel). */
+#if defined AC_APPLE_UNIVERSAL_BUILD
+# if defined __BIG_ENDIAN__
+#  define WORDS_BIGENDIAN 1
+# endif
+#else
+# ifndef WORDS_BIGENDIAN
+/* #  undef WORDS_BIGENDIAN */
+# endif
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
@@ -351,3 +384,5 @@
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 /* #undef size_t */
+
+#endif /* LAME_CONFIG_H */
