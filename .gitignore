@@ -26,6 +26,7 @@ sndfile/libsndfile-src
 speex/speex-src
 taglib/taglib-src
 tta/libtta-c-src
+tta++/libtta++-src
 vorbis/libvorbis-src
 wavpack/wavpack-src
 id3tag/libid3tag-src
