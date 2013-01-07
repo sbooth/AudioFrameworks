@@ -27,7 +27,7 @@ discid
 
 <http://musicbrainz.org/doc/libdiscid>
 
-(tested version: libdiscid-0.2.2.tar.gz)
+(tested version: libdiscid-0.3.0.tar.gz)
 
 1. Download
 2. Decompress
