@@ -122,8 +122,8 @@ musepack
 6. Build
 
 
-musicbrainz3
-------------
+musicbrainz3 (deprecated)
+-------------------------
 
 <http://musicbrainz.org/doc/libmusicbrainz>
 <http://www.webdav.org/neon/>

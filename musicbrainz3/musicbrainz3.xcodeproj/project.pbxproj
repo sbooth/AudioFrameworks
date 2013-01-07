@@ -204,6 +204,9 @@
 		32E6FF190DCE6D88006F9032 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		32EF036510689B27008BAF8B /* discid_private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = discid_private.h; path = "libdiscid-src/include/discid/discid_private.h"; sourceTree = "<group>"; };
 		32EF036610689B27008BAF8B /* discid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = discid.h; path = "libdiscid-src/include/discid/discid.h"; sourceTree = "<group>"; };
+		3DAAA9A2169B0B69005253B6 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		3DAAA9A3169B0B69005253B6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		3DAAA9A4169B0B69005253B6 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		8CA3607F0D2F5D0F00F89E3B /* artist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = artist.cpp; path = "libmusicbrainz-src/src/artist.cpp"; sourceTree = "<group>"; };
 		8CA360800D2F5D0F00F89E3B /* artistalias.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = artistalias.cpp; path = "libmusicbrainz-src/src/artistalias.cpp"; sourceTree = "<group>"; };
 		8CA360810D2F5D0F00F89E3B /* disc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = disc.cpp; path = "libmusicbrainz-src/src/disc.cpp"; sourceTree = "<group>"; };
@@ -287,6 +290,7 @@
 		0867D691FE84028FC02AAC07 /* musicbrainz3 */ = {
 			isa = PBXGroup;
 			children = (
+				3DAAA9A1169B0B69005253B6 /* Configs */,
 				320092B3105D71C70055BE17 /* neon */,
 				32009283105D70ED0055BE17 /* discid */,
 				08FB77ACFE841707C02AAC07 /* musicbrainz3 */,
@@ -458,6 +462,17 @@
 				320092ED105D71E90055BE17 /* ne_xmlreq.h */,
 			);
 			name = neon;
+			sourceTree = "<group>";
+		};
+		3DAAA9A1169B0B69005253B6 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				3DAAA9A2169B0B69005253B6 /* Base.xcconfig */,
+				3DAAA9A3169B0B69005253B6 /* Debug.xcconfig */,
+				3DAAA9A4169B0B69005253B6 /* Release.xcconfig */,
+			);
+			name = Configs;
+			path = ../Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -741,26 +756,19 @@
 		};
 		4FADC24708B4156D00ABE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAAA9A3169B0B69005253B6 /* Debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
 			};
 			name = Debug;
 		};
 		4FADC24808B4156D00ABE55E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAAA9A4169B0B69005253B6 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PREBINDING = NO;
-				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};
