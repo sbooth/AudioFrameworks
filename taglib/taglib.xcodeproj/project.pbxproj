@@ -1483,7 +1483,6 @@
 					"\"$(SRCROOT)/build/taglib.build/Release/taglib.build/Objects-normal/x86_64\"",
 				);
 				PRODUCT_NAME = taglib;
-				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1513,7 +1512,6 @@
 					"\"$(SRCROOT)/build/taglib.build/Release/taglib.build/Objects-normal/x86_64\"",
 				);
 				PRODUCT_NAME = taglib;
-				SDKROOT = "";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

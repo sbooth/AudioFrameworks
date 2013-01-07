@@ -282,7 +282,6 @@
 			baseConfigurationReference = 32E7398910B9D32D00094C8A /* Debug.xcconfig */;
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -291,7 +290,6 @@
 			baseConfigurationReference = 32E7398A10B9D32D00094C8A /* Release.xcconfig */;
 			buildSettings = {
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				SDKROOT = "";
 			};
 			name = Release;
 		};
