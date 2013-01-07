@@ -285,7 +285,7 @@
 /* #undef NO_ERETURN */
 
 /* Define to disable error messages. */
-/* #undef NO_ERROR */
+/* #undef NO_ERRORMSG */
 
 /* Define to disable feeder and buffered readers. */
 /* #undef NO_FEEDER */
@@ -327,7 +327,7 @@
 #define PACKAGE_NAME "mpg123"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "mpg123 1.13.3"
+#define PACKAGE_STRING "mpg123 1.14.4"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "mpg123"
@@ -336,7 +336,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.13.2"
+#define PACKAGE_VERSION "1.14.4"
 
 /* Define if portaudio v18 API is wanted. */
 /* #undef PORTAUDIO18 */
@@ -371,7 +371,10 @@
 #define USE_MODULES 1
 
 /* Version number of package */
-#define VERSION "1.13.2"
+#define VERSION "1.14.4"
+
+/* Define to use Win32 named pipes */
+/* #undef WANT_WIN32_FIFO */
 
 /* Define to use Win32 sockets */
 /* #undef WANT_WIN32_SOCKETS */
@@ -379,12 +382,24 @@
 /* Define to use Unicode for Windows */
 /* #undef WANT_WIN32_UNICODE */
 
+/* WinXP and above for ipv6 */
+/* #undef WINVER */
+
 /* Define WORDS_BIGENDIAN to 1 if your processor stores words with the most
    significant byte first (like Motorola and SPARC, unlike Intel). */
-#ifdef __BIG_ENDIAN__
-# define WORDS_BIGENDIAN 1
+#if defined AC_APPLE_UNIVERSAL_BUILD
+# if defined __BIG_ENDIAN__
+#  define WORDS_BIGENDIAN 1
+# endif
 #else
-# undef WORDS_BIGENDIAN 
+# ifndef WORDS_BIGENDIAN
+/* #  undef WORDS_BIGENDIAN */
+# endif
+#endif
+
+/* Enable large inode numbers on Mac OS X 10.5.  */
+#ifndef _DARWIN_USE_64_BIT_INODE
+# define _DARWIN_USE_64_BIT_INODE 1
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
@@ -392,6 +407,9 @@
 
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
+
+/* WinXP and above for ipv6 */
+/* #undef _WIN32_WINNT */
 
 /* Define to empty if `const' does not conform to ANSI C. */
 /* #undef const */

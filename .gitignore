@@ -18,6 +18,7 @@ flac/flac-src
 lame/lame-src
 mad/libmad-src
 mp4v2/mp4v2-src
+mpg123/mpg123-src
 musepack/musepack-src
 musicbrainz3/libmusicbrainz-src
 musicbrainz3/neon-src

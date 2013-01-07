@@ -305,9 +305,10 @@ tta, tta++
 mpg123
 ------
 
-[http://www.mpg123.de/][17]
+<http://www.mpg123.de/>
+<http://sourceforge.net/projects/mpg123/files/mpg123/>
 
-(tested version: mpg123-1.13.2.tar.bz2)
+(tested version: mpg123-1.14.4.tar.bz2)
 
 1. Download
 2. Decompress
