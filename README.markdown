@@ -200,7 +200,7 @@ LAME
 
 <http://lame.sourceforge.net/download.php>
 
-(tested version: lame-3.98.4.tar.bz2)
+(tested version: lame-3.99.5.tar.gz)
 
 1. Download
 2. Decompress
