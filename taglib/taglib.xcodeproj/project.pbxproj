@@ -374,7 +374,6 @@
 		3261F77D11A9A0B700E08DCD /* wavproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavproperties.h; sourceTree = "<group>"; };
 		3261F77E11A9A0B700E08DCD /* tag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tag.cpp; sourceTree = "<group>"; };
 		3261F77F11A9A0B700E08DCD /* tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tag.h; sourceTree = "<group>"; };
-		3261F78011A9A0B700E08DCD /* taglib.pro */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = taglib.pro; sourceTree = "<group>"; };
 		3261F78111A9A0B700E08DCD /* taglib_config.h.cmake */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = taglib_config.h.cmake; sourceTree = "<group>"; };
 		3261F78311A9A0B700E08DCD /* taglib_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = taglib_export.h; sourceTree = "<group>"; };
 		3261F78411A9A0B700E08DCD /* tagunion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tagunion.cpp; sourceTree = "<group>"; };
@@ -707,7 +706,6 @@
 				3261F76B11A9A0B700E08DCD /* riff */,
 				3261F77E11A9A0B700E08DCD /* tag.cpp */,
 				3261F77F11A9A0B700E08DCD /* tag.h */,
-				3261F78011A9A0B700E08DCD /* taglib.pro */,
 				3261F78111A9A0B700E08DCD /* taglib_config.h.cmake */,
 				3261F78311A9A0B700E08DCD /* taglib_export.h */,
 				3261F78411A9A0B700E08DCD /* tagunion.cpp */,
@@ -1319,6 +1317,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = sbooth.org;
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "taglib" */;
@@ -1470,7 +1469,6 @@
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
