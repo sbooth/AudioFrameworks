@@ -214,7 +214,7 @@ sndfile
 
 <http://www.mega-nerd.com/libsndfile/>
 
-(tested version: libsndfile-1.0.23.tar.gz)
+(tested version: libsndfile-1.0.25.tar.gz)
 
 1. Download
 2. Decompress
