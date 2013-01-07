@@ -202,6 +202,10 @@
 		32E92DC11613E46C00917F63 /* ownershipframe.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E92DBF1613E46C00917F63 /* ownershipframe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32E92DC41613E4A800917F63 /* tpropertymap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32E92DC21613E4A800917F63 /* tpropertymap.cpp */; };
 		32E92DC51613E4A800917F63 /* tpropertymap.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E92DC31613E4A800917F63 /* tpropertymap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DAAA941169AEB60005253B6 /* opusfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAA93D169AEB60005253B6 /* opusfile.cpp */; };
+		3DAAA942169AEB60005253B6 /* opusfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DAAA93E169AEB60005253B6 /* opusfile.h */; };
+		3DAAA943169AEB60005253B6 /* opusproperties.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAA93F169AEB60005253B6 /* opusproperties.cpp */; };
+		3DAAA944169AEB60005253B6 /* opusproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DAAA940169AEB60005253B6 /* opusproperties.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -506,6 +510,10 @@
 		32E92DBF1613E46C00917F63 /* ownershipframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ownershipframe.h; sourceTree = "<group>"; };
 		32E92DC21613E4A800917F63 /* tpropertymap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tpropertymap.cpp; sourceTree = "<group>"; };
 		32E92DC31613E4A800917F63 /* tpropertymap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tpropertymap.h; sourceTree = "<group>"; };
+		3DAAA93D169AEB60005253B6 /* opusfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = opusfile.cpp; sourceTree = "<group>"; };
+		3DAAA93E169AEB60005253B6 /* opusfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opusfile.h; sourceTree = "<group>"; };
+		3DAAA93F169AEB60005253B6 /* opusproperties.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = opusproperties.cpp; sourceTree = "<group>"; };
+		3DAAA940169AEB60005253B6 /* opusproperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opusproperties.h; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* taglib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = taglib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -888,6 +896,7 @@
 				3261F75811A9A0B700E08DCD /* oggpage.h */,
 				3261F75911A9A0B700E08DCD /* oggpageheader.cpp */,
 				3261F75A11A9A0B700E08DCD /* oggpageheader.h */,
+				3DAAA93C169AEB60005253B6 /* opus */,
 				3261F75B11A9A0B700E08DCD /* speex */,
 				3261F76211A9A0B700E08DCD /* vorbis */,
 				3261F76911A9A0B700E08DCD /* xiphcomment.cpp */,
@@ -1158,6 +1167,17 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		3DAAA93C169AEB60005253B6 /* opus */ = {
+			isa = PBXGroup;
+			children = (
+				3DAAA93D169AEB60005253B6 /* opusfile.cpp */,
+				3DAAA93E169AEB60005253B6 /* opusfile.h */,
+				3DAAA93F169AEB60005253B6 /* opusproperties.cpp */,
+				3DAAA940169AEB60005253B6 /* opusproperties.h */,
+			);
+			path = opus;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1266,6 +1286,8 @@
 				32E92DC11613E46C00917F63 /* ownershipframe.h in Headers */,
 				32E92DC51613E4A800917F63 /* tpropertymap.h in Headers */,
 				3226274B16265E100041896F /* infotag.h in Headers */,
+				3DAAA942169AEB60005253B6 /* opusfile.h in Headers */,
+				3DAAA944169AEB60005253B6 /* opusproperties.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1427,6 +1449,8 @@
 				32E92DC01613E46C00917F63 /* ownershipframe.cpp in Sources */,
 				32E92DC41613E4A800917F63 /* tpropertymap.cpp in Sources */,
 				3226274A16265E100041896F /* infotag.cpp in Sources */,
+				3DAAA941169AEB60005253B6 /* opusfile.cpp in Sources */,
+				3DAAA943169AEB60005253B6 /* opusproperties.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

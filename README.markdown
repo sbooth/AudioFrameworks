@@ -131,6 +131,21 @@ taglib
 
 (tested version: taglib 1.8)
 
+taglib
+------
+
+[http://taglib.github.com//][9]
+
+(tested version: taglib 08863dec0b)
+
+1. git clone https://github.com/taglib/taglib.git taglib-src
+2. cd taglib-src
+3. git checkout 08863dec0b
+4. Move the folder into taglib/
+5. Build
+
+Alternatively, you can use release version 1.8, but you will have to remove “infotag.h” and “infotag.cpp” from the project:
+
 1. Download
 2. Decompress
 3. Rename folder to "taglib-src"
