@@ -267,7 +267,7 @@ tta, tta++
 
 1. Download
 2. Decompress
-3. Rename the folder to (for tta use libtta-c-src, for tta++ use libtta++-src)
+3. Rename the folder (for tta use libtta-c-src, for tta++ use libtta++-src)
 4. Move the folder into tta
 5. Apply the patch "tta.patch": 'patch < tta.patch'
 6. Build
