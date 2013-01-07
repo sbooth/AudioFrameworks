@@ -12,6 +12,7 @@ cddb/libcddb-src
 cdparanoia/cdparanoia-src
 cuetools/cuetools-src
 discid/libdiscid-src
+dumb/dumb-src
 ogg/libogg-src
 flac/flac-src
 lame/lame-src

@@ -36,6 +36,20 @@ discid
 5. Build
 
 
+DUMB (Dynamic Universal Music Bibliotheque)
+-------------------------------------------
+
+[http://dumb.sourceforge.net/][7]
+
+(tested version: dumb-0.9.3.tar.gz, http://prdownloads.sourceforge.net/dumb/dumb-0.9.3.tar.gz?download)
+
+1. Download
+2. Decompress
+3. Rename folder to "dumb-src"
+4. Move the folder into dumb/
+5. Build
+
+
 ogg
 ---
 
