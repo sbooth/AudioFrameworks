@@ -42,13 +42,13 @@
 #define PACKAGE "mp4v2"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "eddyg@myreflection.org"
+#define PACKAGE_BUGREPORT "kidjan@gmail.com"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "MP4v2"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "MP4v2 trunk-r487"
+#define PACKAGE_STRING "MP4v2 trunk-r501"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "mp4v2"
@@ -57,10 +57,10 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "trunk-r487"
+#define PACKAGE_VERSION "trunk-r501"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "trunk-r487"
+#define VERSION "trunk-r501"
