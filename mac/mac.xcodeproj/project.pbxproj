@@ -78,6 +78,54 @@
 		32B7E8E912DABC8A005B82C9 /* SmartPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88C12DABC8A005B82C9 /* SmartPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E8EA12DABC8A005B82C9 /* StdLibFileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E88D12DABC8A005B82C9 /* StdLibFileIO.cpp */; };
 		32B7E8EB12DABC8A005B82C9 /* StdLibFileIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88E12DABC8A005B82C9 /* StdLibFileIO.h */; };
+		426F7E821CD84A7B00E5757F /* APECompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83512DABC89005B82C9 /* APECompress.cpp */; };
+		426F7E831CD84A7B00E5757F /* APECompressCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83712DABC89005B82C9 /* APECompressCore.cpp */; };
+		426F7E841CD84A7B00E5757F /* APECompressCreate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83912DABC89005B82C9 /* APECompressCreate.cpp */; };
+		426F7E851CD84A7B00E5757F /* APEDecompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83B12DABC89005B82C9 /* APEDecompress.cpp */; };
+		426F7E861CD84A7B00E5757F /* APEHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83D12DABC89005B82C9 /* APEHeader.cpp */; };
+		426F7E871CD84A7B00E5757F /* APEInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83F12DABC8A005B82C9 /* APEInfo.cpp */; };
+		426F7E881CD84A7B00E5757F /* APELink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84112DABC8A005B82C9 /* APELink.cpp */; };
+		426F7E891CD84A7B00E5757F /* APETag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84412DABC8A005B82C9 /* APETag.cpp */; };
+		426F7E8A1CD84A7B00E5757F /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84912DABC8A005B82C9 /* common.cpp */; };
+		426F7E8B1CD84A7B00E5757F /* BitArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84D12DABC8A005B82C9 /* BitArray.cpp */; };
+		426F7E8C1CD84A7B00E5757F /* MACLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84F12DABC8A005B82C9 /* MACLib.cpp */; };
+		426F7E8D1CD84A7B00E5757F /* MD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85512DABC8A005B82C9 /* MD5.cpp */; };
+		426F7E8E1CD84A7B00E5757F /* NewPredictor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85812DABC8A005B82C9 /* NewPredictor.cpp */; };
+		426F7E8F1CD84A7B00E5757F /* NNFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85A12DABC8A005B82C9 /* NNFilter.cpp */; };
+		426F7E901CD84A7B00E5757F /* Anti-Predictor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85D12DABC8A005B82C9 /* Anti-Predictor.cpp */; };
+		426F7E911CD84A7B00E5757F /* AntiPredictorExtraHigh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85F12DABC8A005B82C9 /* AntiPredictorExtraHigh.cpp */; };
+		426F7E921CD84A7B00E5757F /* AntiPredictorFast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86012DABC8A005B82C9 /* AntiPredictorFast.cpp */; };
+		426F7E931CD84A7B00E5757F /* AntiPredictorHigh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86112DABC8A005B82C9 /* AntiPredictorHigh.cpp */; };
+		426F7E941CD84A7B00E5757F /* AntiPredictorNormal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86212DABC8A005B82C9 /* AntiPredictorNormal.cpp */; };
+		426F7E951CD84A7B00E5757F /* APEDecompressCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86312DABC8A005B82C9 /* APEDecompressCore.cpp */; };
+		426F7E961CD84A7B00E5757F /* APEDecompressOld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86512DABC8A005B82C9 /* APEDecompressOld.cpp */; };
+		426F7E971CD84A7C00E5757F /* UnBitArrayOld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86912DABC8A005B82C9 /* UnBitArrayOld.cpp */; };
+		426F7E981CD84A7C00E5757F /* UnMAC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86B12DABC8A005B82C9 /* UnMAC.cpp */; };
+		426F7E991CD84A7C00E5757F /* Prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86E12DABC8A005B82C9 /* Prepare.cpp */; };
+		426F7E9A1CD84A7C00E5757F /* UnBitArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87212DABC8A005B82C9 /* UnBitArray.cpp */; };
+		426F7E9B1CD84A7C00E5757F /* UnBitArrayBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87412DABC8A005B82C9 /* UnBitArrayBase.cpp */; };
+		426F7E9C1CD84A7C00E5757F /* GlobalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329E55CF12DC372B00BF40EC /* GlobalFunctions.cpp */; };
+		426F7E9D1CD84A7C00E5757F /* WAVInputSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329E55C612DC371000BF40EC /* WAVInputSource.cpp */; };
+		426F7E9E1CD84A7C00E5757F /* CharacterHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87C12DABC8A005B82C9 /* CharacterHelper.cpp */; };
+		426F7E9F1CD84A7C00E5757F /* CircleBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87E12DABC8A005B82C9 /* CircleBuffer.cpp */; };
+		426F7EA01CD84A7C00E5757F /* MACUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E88612DABC8A005B82C9 /* MACUtils.cpp */; };
+		426F7EA11CD84A7C00E5757F /* StdLibFileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E88D12DABC8A005B82C9 /* StdLibFileIO.cpp */; };
+		426F7EA21CD84AB700E5757F /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55BC12DC36EE00BF40EC /* config.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EA31CD84AB700E5757F /* CharacterHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87D12DABC8A005B82C9 /* CharacterHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EA61CD84AB700E5757F /* IO.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88512DABC8A005B82C9 /* IO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EA71CD84AB700E5757F /* MACUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88712DABC8A005B82C9 /* MACUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EA81CD84AB700E5757F /* SmartPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88C12DABC8A005B82C9 /* SmartPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EAA1CD84AC300E5757F /* NoWindows.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88A12DABC8A005B82C9 /* NoWindows.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EAB1CD84ADA00E5757F /* All.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87912DABC8A005B82C9 /* All.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EAC1CD84B1B00E5757F /* APECompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83612DABC89005B82C9 /* APECompress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EAF1CD84B1B00E5757F /* APEDecompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83C12DABC89005B82C9 /* APEDecompress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EB01CD84B1B00E5757F /* APEHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83E12DABC8A005B82C9 /* APEHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EB11CD84B1B00E5757F /* APEInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E84012DABC8A005B82C9 /* APEInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EB21CD84B1B00E5757F /* APELink.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E84212DABC8A005B82C9 /* APELink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EB31CD84B1B00E5757F /* APETag.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E84512DABC8A005B82C9 /* APETag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EB41CD84B1B00E5757F /* MACLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85012DABC8A005B82C9 /* MACLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EB51CD84B1B00E5757F /* Prepare.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E86F12DABC8A005B82C9 /* Prepare.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7EB61CD84B1B00E5757F /* UnBitArrayBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87512DABC8A005B82C9 /* UnBitArrayBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,11 +203,19 @@
 		32E7398810B9D32D00094C8A /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398910B9D32D00094C8A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Configs/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398A10B9D32D00094C8A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		426F7E791CD84A3B00E5757F /* libmac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		426F7E761CD84A3B00E5757F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* mac.framework */,
+				426F7E791CD84A3B00E5757F /* libmac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -322,6 +379,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		426F7E771CD84A3B00E5757F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426F7EAC1CD84B1B00E5757F /* APECompress.h in Headers */,
+				426F7EAF1CD84B1B00E5757F /* APEDecompress.h in Headers */,
+				426F7EB01CD84B1B00E5757F /* APEHeader.h in Headers */,
+				426F7EB11CD84B1B00E5757F /* APEInfo.h in Headers */,
+				426F7EB21CD84B1B00E5757F /* APELink.h in Headers */,
+				426F7EB31CD84B1B00E5757F /* APETag.h in Headers */,
+				426F7EB41CD84B1B00E5757F /* MACLib.h in Headers */,
+				426F7EB51CD84B1B00E5757F /* Prepare.h in Headers */,
+				426F7EB61CD84B1B00E5757F /* UnBitArrayBase.h in Headers */,
+				426F7EAB1CD84ADA00E5757F /* All.h in Headers */,
+				426F7EA21CD84AB700E5757F /* config.h in Headers */,
+				426F7EA31CD84AB700E5757F /* CharacterHelper.h in Headers */,
+				426F7EA61CD84AB700E5757F /* IO.h in Headers */,
+				426F7EA71CD84AB700E5757F /* MACUtils.h in Headers */,
+				426F7EAA1CD84AC300E5757F /* NoWindows.h in Headers */,
+				426F7EA81CD84AB700E5757F /* SmartPtr.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF500486A6940098B216 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,6 +451,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		426F7E781CD84A3B00E5757F /* mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426F7E811CD84A3B00E5757F /* Build configuration list for PBXNativeTarget "mac" */;
+			buildPhases = (
+				426F7E751CD84A3B00E5757F /* Sources */,
+				426F7E761CD84A3B00E5757F /* Frameworks */,
+				426F7E771CD84A3B00E5757F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mac;
+			productName = mac;
+			productReference = 426F7E791CD84A3B00E5757F /* libmac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8DC2EF4F0486A6940098B216 /* mac.framework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "mac.framework" */;
@@ -397,6 +494,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0440;
+				TargetAttributes = {
+					426F7E781CD84A3B00E5757F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "mac" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -414,6 +516,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* mac.framework */,
+				426F7E781CD84A3B00E5757F /* mac */,
 			);
 		};
 /* End PBXProject section */
@@ -429,6 +532,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		426F7E751CD84A3B00E5757F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426F7E821CD84A7B00E5757F /* APECompress.cpp in Sources */,
+				426F7E831CD84A7B00E5757F /* APECompressCore.cpp in Sources */,
+				426F7E841CD84A7B00E5757F /* APECompressCreate.cpp in Sources */,
+				426F7E851CD84A7B00E5757F /* APEDecompress.cpp in Sources */,
+				426F7E861CD84A7B00E5757F /* APEHeader.cpp in Sources */,
+				426F7E871CD84A7B00E5757F /* APEInfo.cpp in Sources */,
+				426F7E881CD84A7B00E5757F /* APELink.cpp in Sources */,
+				426F7E891CD84A7B00E5757F /* APETag.cpp in Sources */,
+				426F7E8A1CD84A7B00E5757F /* common.cpp in Sources */,
+				426F7E8B1CD84A7B00E5757F /* BitArray.cpp in Sources */,
+				426F7E8C1CD84A7B00E5757F /* MACLib.cpp in Sources */,
+				426F7E8D1CD84A7B00E5757F /* MD5.cpp in Sources */,
+				426F7E8E1CD84A7B00E5757F /* NewPredictor.cpp in Sources */,
+				426F7E8F1CD84A7B00E5757F /* NNFilter.cpp in Sources */,
+				426F7E901CD84A7B00E5757F /* Anti-Predictor.cpp in Sources */,
+				426F7E911CD84A7B00E5757F /* AntiPredictorExtraHigh.cpp in Sources */,
+				426F7E921CD84A7B00E5757F /* AntiPredictorFast.cpp in Sources */,
+				426F7E931CD84A7B00E5757F /* AntiPredictorHigh.cpp in Sources */,
+				426F7E941CD84A7B00E5757F /* AntiPredictorNormal.cpp in Sources */,
+				426F7E951CD84A7B00E5757F /* APEDecompressCore.cpp in Sources */,
+				426F7E961CD84A7B00E5757F /* APEDecompressOld.cpp in Sources */,
+				426F7E971CD84A7C00E5757F /* UnBitArrayOld.cpp in Sources */,
+				426F7E981CD84A7C00E5757F /* UnMAC.cpp in Sources */,
+				426F7E991CD84A7C00E5757F /* Prepare.cpp in Sources */,
+				426F7E9A1CD84A7C00E5757F /* UnBitArray.cpp in Sources */,
+				426F7E9B1CD84A7C00E5757F /* UnBitArrayBase.cpp in Sources */,
+				426F7E9C1CD84A7C00E5757F /* GlobalFunctions.cpp in Sources */,
+				426F7E9D1CD84A7C00E5757F /* WAVInputSource.cpp in Sources */,
+				426F7E9E1CD84A7C00E5757F /* CharacterHelper.cpp in Sources */,
+				426F7E9F1CD84A7C00E5757F /* CircleBuffer.cpp in Sources */,
+				426F7EA01CD84A7C00E5757F /* MACUtils.cpp in Sources */,
+				426F7EA11CD84A7C00E5757F /* StdLibFileIO.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,6 +661,91 @@
 			};
 			name = Release;
 		};
+		426F7E7F1CD84A3B00E5757F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		426F7E801CD84A3B00E5757F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -539,6 +766,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		426F7E811CD84A3B00E5757F /* Build configuration list for PBXNativeTarget "mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426F7E7F1CD84A3B00E5757F /* Debug */,
+				426F7E801CD84A3B00E5757F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

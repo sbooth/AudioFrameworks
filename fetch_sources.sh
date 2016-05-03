@@ -14,6 +14,8 @@ MUSEPACK_VERSION="r475"
 MUSICBRAINZ3_VERSION="3.0.3"
 NEON_VERSION="0.29.5"
 OFA1_VERSION="0.9.3"
+OPUS_VERSION="1.1.2"
+OPUSFILE_VERSION="0.7"
 SNDFILE_VERSION="1.0.25"
 SPEEX_VERSION="1.2rc1"
 TTA_VERSION="2.1"
@@ -21,6 +23,7 @@ TTA_PLUS_PLUS_VERSION="2.1"
 TAGLIB_GIT_HASH="08863dec0bb3ae324e53041378de6ef707ae584b"
 VORBIS_VERSION="1.3.3"
 WAVPACK_VERSION="4.60.1"
+ZLIB_VERSION="1.2.8"
 
 function _fetch_github_hash
 {
@@ -107,6 +110,9 @@ function clean
 	rm -rf "vorbis/libvorbis-src"
 	rm -rf "wavpack/wavpack-src"
 	rm -rf "id3tag/libid3tag-src"
+	rm -rf "opus/opus-src"
+	rm -rf "opus/opusfile-src"
+	rm -rf "zlib/zlib-src"
 
 	# ignore these, as they're stored in git and not downloaded
 	# "cdparanoia/cdparanoia-src"
@@ -225,6 +231,19 @@ function fetch_ofa1
 	       "ofa1.patch"
 }
 
+function fetch_opus
+{
+	_fetch_http "opus" \
+	            "opus" \
+	            "${OPUS_VERSION}" \
+	            "http://downloads.xiph.org/releases/opus/opus-${OPUS_VERSION}.tar.gz"
+
+	_fetch_http "opus" \
+	            "opusfile" \
+	            "${OPUSFILE_VERSION}" \
+	            "http://downloads.xiph.org/releases/opus/opusfile-${OPUSFILE_VERSION}.tar.gz"
+}
+
 function fetch_ogg
 {
 	_fetch_http "ogg" \
@@ -301,6 +320,14 @@ function fetch_wavpack
 	            "http://www.wavpack.com/wavpack-${WAVPACK_VERSION}.tar.bz2"
 }
 
+function fetch_zlib
+{
+	_fetch_http "zlib" \
+	            "zlib" \
+	            "${ZLIB_VERSION}" \
+	            "http://zlib.net/zlib-${ZLIB_VERSION}.tar.gz"
+}
+
 clean
 
 fetch_cddb
@@ -316,6 +343,7 @@ fetch_musepack
 fetch_musicbrainz3
 fetch_ofa1
 fetch_ogg
+fetch_opus
 fetch_sndfile
 fetch_speex
 fetch_taglib
@@ -323,3 +351,4 @@ fetch_tta
 fetch_tta_plus_plus
 fetch_vorbis
 fetch_wavpack
+fetch_zlib

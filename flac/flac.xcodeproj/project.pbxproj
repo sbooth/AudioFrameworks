@@ -120,6 +120,23 @@
 		32FB64EB10F04BFD00BC90EC /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 32FB64E910F04BFD00BC90EC /* framing.c */; };
 		32FB64EE10F04C1500BC90EC /* ogg.h in Headers */ = {isa = PBXBuildFile; fileRef = 32FB64EC10F04C1500BC90EC /* ogg.h */; };
 		32FB64EF10F04C1500BC90EC /* os_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 32FB64ED10F04C1500BC90EC /* os_types.h */; };
+		426F80511CD8569300E5757F /* ogg_decoder_aspect.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B350DCFA05100FBB728 /* ogg_decoder_aspect.c */; };
+		426F80521CD8569300E5757F /* ogg_encoder_aspect.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B360DCFA05100FBB728 /* ogg_encoder_aspect.c */; };
+		426F80531CD8569300E5757F /* ogg_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B370DCFA05100FBB728 /* ogg_helper.c */; };
+		426F80541CD8569300E5757F /* ogg_mapping.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B380DCFA05100FBB728 /* ogg_mapping.c */; };
+		426F80551CD856AE00E5757F /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = 32FB64E810F04BFD00BC90EC /* bitwise.c */; };
+		426F80561CD856AE00E5757F /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 32FB64E910F04BFD00BC90EC /* framing.c */; };
+		426F80571CD856BC00E5757F /* ogg.h in Headers */ = {isa = PBXBuildFile; fileRef = 32FB64EC10F04C1500BC90EC /* ogg.h */; };
+		426F80581CD856BC00E5757F /* os_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 32FB64ED10F04C1500BC90EC /* os_types.h */; };
+		426F80591CD856EC00E5757F /* all.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D8659E10530AF0002E8E1A /* all.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F805A1CD856EC00E5757F /* assert.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D8659F10530AF0002E8E1A /* assert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F805B1CD856EC00E5757F /* callback.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A010530AF0002E8E1A /* callback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F805C1CD856EC00E5757F /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A110530AF0002E8E1A /* export.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F805D1CD856EC00E5757F /* format.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A210530AF0002E8E1A /* format.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F805E1CD856EC00E5757F /* metadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A310530AF0002E8E1A /* metadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F805F1CD856EC00E5757F /* ordinals.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A410530AF0002E8E1A /* ordinals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F80601CD856EC00E5757F /* stream_decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A510530AF0002E8E1A /* stream_decoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F80611CD856EC00E5757F /* stream_encoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D865A610530AF0002E8E1A /* stream_encoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -694,7 +711,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426F80591CD856EC00E5757F /* all.h in Headers */,
+				426F805A1CD856EC00E5757F /* assert.h in Headers */,
+				426F805B1CD856EC00E5757F /* callback.h in Headers */,
+				426F805C1CD856EC00E5757F /* export.h in Headers */,
+				426F805D1CD856EC00E5757F /* format.h in Headers */,
+				426F805E1CD856EC00E5757F /* metadata.h in Headers */,
+				426F805F1CD856EC00E5757F /* ordinals.h in Headers */,
+				426F80601CD856EC00E5757F /* stream_decoder.h in Headers */,
+				426F80611CD856EC00E5757F /* stream_encoder.h in Headers */,
 				320A7B110DCF9F9E00FBB728 /* config.h in Headers */,
+				426F80571CD856BC00E5757F /* ogg.h in Headers */,
+				426F80581CD856BC00E5757F /* os_types.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1070,10 +1098,16 @@
 				320A7B470DCFA05100FBB728 /* memory.c in Sources */,
 				320A7B480DCFA05100FBB728 /* metadata_iterators.c in Sources */,
 				320A7B490DCFA05100FBB728 /* metadata_object.c in Sources */,
+				426F80511CD8569300E5757F /* ogg_decoder_aspect.c in Sources */,
+				426F80521CD8569300E5757F /* ogg_encoder_aspect.c in Sources */,
+				426F80531CD8569300E5757F /* ogg_helper.c in Sources */,
+				426F80541CD8569300E5757F /* ogg_mapping.c in Sources */,
 				320A7B4E0DCFA05100FBB728 /* stream_decoder.c in Sources */,
 				320A7B4F0DCFA05100FBB728 /* stream_encoder.c in Sources */,
 				320A7B500DCFA05100FBB728 /* stream_encoder_framing.c in Sources */,
 				320A7B510DCFA05100FBB728 /* window.c in Sources */,
+				426F80551CD856AE00E5757F /* bitwise.c in Sources */,
+				426F80561CD856AE00E5757F /* framing.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1152,10 +1186,14 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "HAVE_CONFIG_H=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "HAVE_CONFIG_H=1";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/flac-src/src/libFLAC/include",
+					"$(SRCROOT)/flac-src/include",
+					"$(SRCROOT)/../ogg/libogg-src/include",
+				);
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = FLAC;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/src/libFLAC/include $(SRCROOT)/flac-src/include $(SRCROOT)/../ogg/libogg-src/include";
 			};
 			name = Debug;
 		};
@@ -1166,10 +1204,14 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
-				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "HAVE_CONFIG_H=1";
+				GCC_PREPROCESSOR_DEFINITIONS = "HAVE_CONFIG_H=1";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/flac-src/src/libFLAC/include",
+					"$(SRCROOT)/flac-src/include",
+					"$(SRCROOT)/../ogg/libogg-src/include",
+				);
 				INSTALL_PATH = /usr/local/lib;
 				PRODUCT_NAME = FLAC;
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/flac-src/src/libFLAC/include $(SRCROOT)/flac-src/include $(SRCROOT)/../ogg/libogg-src/include";
 			};
 			name = Release;
 		};
