@@ -7,7 +7,6 @@ if [ ! -d "$1" ]; then
 fi
 
 DO_CLEAN=1
-rm -rf $1/*
 
 WRK_DIR="${1}"
 CONFIGURATION="Release"
@@ -30,6 +29,8 @@ function _xcodebuild
 	xcodebuild -project "${XCODEPROJ_PATH}" -target "${TARGET}" ${PARAMS} 
 }
 
+rm -rf $1/*
+
 _xcodebuild "dumb/dumb.xcodeproj" \
             "dumb-OSX" \
             "dumb"
@@ -47,7 +48,7 @@ _xcodebuild "mp4v2/mp4v2.xcodeproj" \
             "mp4v2"
 
 _xcodebuild "mpg123/mpg123.xcodeproj" \
-            "mpg123.framework" \
+            "mpg123" \
             "mpg123"
 
 _xcodebuild "musepack/musepack.xcodeproj" \
@@ -67,7 +68,7 @@ _xcodebuild "opus/opus.xcodeproj" \
             "opus"
 
 _xcodebuild "sndfile/sndfile.xcodeproj" \
-            "sndfile.framework" \
+            "sndfile" \
             "sndfile"
 
 _xcodebuild "speex/speex.xcodeproj" \
@@ -77,6 +78,10 @@ _xcodebuild "speex/speex.xcodeproj" \
 _xcodebuild "taglib/taglib.xcodeproj" \
             "tag" \
             "taglib"
+
+_xcodebuild "tta++/tta++.xcodeproj" \
+            "tta++" \
+            "tta++"
 
 _xcodebuild "vorbis/vorbis.xcodeproj" \
             "vorbis" \

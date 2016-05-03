@@ -95,6 +95,9 @@
 		426F80B81CD85A2700E5757F /* vorbisfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 32E73A5510B9D5E500094C8A /* vorbisfile.c */; };
 		426F80B91CD85A3400E5757F /* vorbisfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73AF010B9D83A00094C8A /* vorbisfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		426F80C91CD85B6400E5757F /* ogg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426F80C21CD85B3200E5757F /* ogg.framework */; };
+		426F845E1CD874B800E5757F /* codec.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73AEE10B9D83A00094C8A /* codec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F845F1CD874B800E5757F /* vorbisenc.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73AEF10B9D83A00094C8A /* vorbisenc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F84601CD874B800E5757F /* vorbisfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E73AF010B9D83A00094C8A /* vorbisfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -417,6 +420,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426F845E1CD874B800E5757F /* codec.h in Headers */,
+				426F845F1CD874B800E5757F /* vorbisenc.h in Headers */,
+				426F84601CD874B800E5757F /* vorbisfile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
