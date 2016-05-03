@@ -1,0 +1,20 @@
+--- ./dumb-src-old/include/dumb.h	2016-05-03 20:06:05.000000000 +1000
++++ ./dumb-src/include/dumb.h	2016-05-03 20:06:17.000000000 +1000
+@@ -29,6 +29,8 @@
+ 	extern "C" {
+ #endif
+ 
++#pragma GCC diagnostic push
++#pragma GCC diagnostic ignored "-Wreserved-user-defined-literal"
+ 
+ #define DUMB_MAJOR_VERSION    0
+ #define DUMB_MINOR_VERSION    9
+@@ -70,6 +72,8 @@
+ 
+ #define DUMB_DATE_STR DUMB_DAY_STR1"."DUMB_MONTH_STR1"."DUMB_YEAR_STR4
+ 
++#pragma GCC diagnostic pop
++
+ 
+ #undef MIN
+ #undef MAX

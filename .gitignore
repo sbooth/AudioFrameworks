@@ -37,3 +37,4 @@ id3tag/libid3tag-src
 zlib/zlib-src
 opus/opus-src
 opus/opusfile-src
+mac/mac-src

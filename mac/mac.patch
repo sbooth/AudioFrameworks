@@ -1,0 +1,20 @@
+--- mac-src-bad/Source/Shared/All.h	2015-03-24 21:54:56.000000000 +1100
++++ mac-src/Source/Shared/All.h	2016-05-03 18:17:21.000000000 +1000
+@@ -39,8 +39,6 @@
+ #define ape_max(a,b)    (((a) > (b)) ? (a) : (b))
+ #define ape_min(a,b)    (((a) < (b)) ? (a) : (b))
+ 
+-#include "SmartPtr.h"
+-
+ /*****************************************************************************************
+ Global compiler settings (useful for porting)
+ *****************************************************************************************/
+@@ -136,6 +134,8 @@
+     #define ASSERT(e)                                    
+ #endif
+ 
++#include "SmartPtr.h"
++
+ /*****************************************************************************************
+ WAVE format descriptor (binary compatible with Windows define, but in the APE namespace)
+ *****************************************************************************************/

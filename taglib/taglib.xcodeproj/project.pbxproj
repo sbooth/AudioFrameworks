@@ -14,8 +14,8 @@
 		426F88671CD879BE00E5757F /* taglib_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 324B3788105C754F00B1AA21 /* taglib_config.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		426F8A311CD87DF000E5757F /* Doxyfile.cmake in Resources */ = {isa = PBXBuildFile; fileRef = 426F88891CD87DE300E5757F /* Doxyfile.cmake */; };
 		426F8A321CD87DFC00E5757F /* modfileprivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F88D81CD87DE300E5757F /* modfileprivate.h */; };
-		426F8A331CD87E0100E5757F /* opusfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89401CD87DE300E5757F /* opusfile.h */; };
-		426F8A341CD87E0500E5757F /* opusproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89421CD87DE300E5757F /* opusproperties.h */; };
+		426F8A331CD87E0100E5757F /* opusfile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89401CD87DE300E5757F /* opusfile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F8A341CD87E0500E5757F /* opusproperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F89421CD87DE300E5757F /* opusproperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		426F8A351CD87E0E00E5757F /* apefile.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F88981CD87DE300E5757F /* apefile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		426F8A361CD87E0E00E5757F /* apefooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F889A1CD87DE300E5757F /* apefooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		426F8A371CD87E0E00E5757F /* apeitem.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F889C1CD87DE300E5757F /* apeitem.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1580,6 +1580,8 @@
 				426F8A7D1CD87E0E00E5757F /* oggfile.h in Headers */,
 				426F8A7E1CD87E0E00E5757F /* oggpage.h in Headers */,
 				426F8A7F1CD87E0E00E5757F /* oggpageheader.h in Headers */,
+				426F8A341CD87E0500E5757F /* opusproperties.h in Headers */,
+				426F8A331CD87E0100E5757F /* opusfile.h in Headers */,
 				426F8A801CD87E0E00E5757F /* speexfile.h in Headers */,
 				426F8A811CD87E0E00E5757F /* speexproperties.h in Headers */,
 				426F8A821CD87E0E00E5757F /* vorbisfile.h in Headers */,
@@ -1628,8 +1630,6 @@
 				426F8AAD1CD87E2000E5757F /* tlist.tcc in Headers */,
 				426F8AAE1CD87E2000E5757F /* tmap.tcc in Headers */,
 				426F88671CD879BE00E5757F /* taglib_config.h in Headers */,
-				426F8A341CD87E0500E5757F /* opusproperties.h in Headers */,
-				426F8A331CD87E0100E5757F /* opusfile.h in Headers */,
 				426F8A321CD87DFC00E5757F /* modfileprivate.h in Headers */,
 				426F804E1CD8556E00E5757F /* config.h in Headers */,
 			);

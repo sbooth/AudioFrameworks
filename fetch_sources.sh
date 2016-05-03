@@ -7,6 +7,7 @@ DUMB_VERSION="0.9.3"
 OGG_VERSION="1.3.0"
 FLAC_VERSION="1.2.1"
 LAME_VERSION="3.99.5"
+MAC_VERSION="416"
 MAD_VERSION="0.15.1b"
 MP4V2_SVN_REVISION="501"
 MPG123_VERSION="1.14.4"
@@ -74,6 +75,13 @@ function _fetch_svn
 	svn export -qr "${REVISION}" "${URL}" "${DIRECTORY}/${NAME}-src"
 }
 
+function _fix_cr
+{
+	FILE=$1
+
+	perl -i -pe's/\R/\n/g' "${FILE}"
+}
+
 function _patch
 {
 	DIRECTORY=$1
@@ -113,6 +121,7 @@ function clean
 	rm -rf "opus/opus-src"
 	rm -rf "opus/opusfile-src"
 	rm -rf "zlib/zlib-src"
+	rm -rf "mac/mac-src"
 
 	# ignore these, as they're stored in git and not downloaded
 	# "cdparanoia/cdparanoia-src"
@@ -149,6 +158,9 @@ function fetch_dumb
 	            "dumb" \
 	            "${DUMB_VERSION}" \
 	            "http://prdownloads.sourceforge.net/dumb/dumb-${DUMB_VERSION}.tar.gz"
+
+	_patch "dumb" \
+	       "dumb.patch"
 }
 
 function fetch_flac
@@ -166,6 +178,22 @@ function fetch_lame
 	            "lame" \
 	            "${LAME_VERSION}" \
 	            "http://prdownloads.sourceforge.net/lame/lame-${LAME_VERSION}.tar.gz"
+}
+
+
+function fetch_mac
+{
+	URL="http://monkeysaudio.com/files/MAC_SDK_${MAC_VERSION}.zip"
+
+	echo "Fetching mac (${MAC_VERSION}): $URL"
+
+	mkdir -p "mac/mac-src"
+	curl -sL "${URL}" | tar -xj -C "mac/mac-src"
+
+	_fix_cr "mac/mac-src/Source/Shared/All.h"
+
+	_patch "mac" \
+	       "mac.patch"
 }
 
 function fetch_mad
@@ -285,9 +313,8 @@ function fetch_tta
 
 	# angry carriage return situation breaks `patch`.
 	# `patch -l` doesn't resolve it, so..:
-	perl -i -pe's/\R/\n/g' "tta/libtta-c-src/filter.h"
-	perl -i -pe's/\R/\n/g' "tta/libtta-c-src/libtta.h"
-	perl -i -pe's/\R/\n/g' "tta/libtta-c-src/libtta.c"
+	_fix_cr "tta/libtta-c-src/filter.h"
+	_fix_cr "tta/libtta-c-src/libtta.h"
 
 	_patch "tta" \
 	       "tta.patch"
@@ -336,6 +363,7 @@ fetch_discid
 fetch_dumb
 fetch_flac
 fetch_lame
+fetch_mac
 fetch_mad
 fetch_mp4v2
 fetch_mpg123
