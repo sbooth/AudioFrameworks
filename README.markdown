@@ -1,7 +1,7 @@
 Audio Frameworks for Mac OS X
 =============================
 
-This repository contains Xcode projects that help building Mac OS X framework of various open-source audio libraries.
+This repository contains Xcode projects that help building Mac OS X libraries of various open-source audio libraries.
 
 Usage
 -----
@@ -10,7 +10,11 @@ This repo doesn't contain the sources for the respective frameworks or libraries
 
 You can use the included `build_sfbaudioengine_frameworks.sh` to build the dependencies for SFBAudioEngine. You can invoke it like this: 
 
-    /build_sfbaudioengine_frameworks.sh ../SFBAudioEngine/Frameworks`
+```bash
+./build_sfbaudioengine_frameworks.sh /path/to/output  # builds libraries
+./assemble.sh /path/to/output                         # copies libs and headers to appropriate folders
+cp -R /path/to/output/dist/* /path/to/SFBAudioEngine  # places libraries in SFBAudioEngine folder
+```
 
 The path in the argument must exist already!
 
