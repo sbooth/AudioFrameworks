@@ -315,6 +315,7 @@ function fetch_tta
 	# `patch -l` doesn't resolve it, so..:
 	_fix_cr "tta/libtta-c-src/filter.h"
 	_fix_cr "tta/libtta-c-src/libtta.h"
+	_fix_cr "tta/libtta-c-src/libtta.c"
 
 	_patch "tta" \
 	       "tta.patch"
