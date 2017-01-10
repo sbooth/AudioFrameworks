@@ -62,7 +62,7 @@ void WriteAiff(int f,long bytes){
   write(f,"COMM",4);             /* 16 */
   PutNum(18,f,1,4);              /* 20 */
   PutNum(2,f,1,2);               /* 22 */
-  PutNum(frames,f,1,4);          /* 26 */    
+  PutNum(frames,f,1,4);          /* 26 */
   PutNum(16,f,1,2);              /* 28 */
   write(f,"@\016\254D\0\0\0\0\0\0",10); /* 38 (44.100 as a float) */
 
@@ -89,7 +89,7 @@ void WriteAifc(int f,long bytes){
   write(f,"COMM",4);             /* 28 */
   PutNum(38,f,1,4);              /* 32 */
   PutNum(2,f,1,2);               /* 34 */
-  PutNum(frames,f,1,4);          /* 38 */    
+  PutNum(frames,f,1,4);          /* 38 */
   PutNum(16,f,1,2);              /* 40 */
   write(f,"@\016\254D\0\0\0\0\0\0",10); /* 50 (44.100 as a float) */
 

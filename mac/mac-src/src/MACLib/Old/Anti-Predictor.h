@@ -8,7 +8,7 @@ CAntiPredictor * CreateAntiPredictor(int nCompressionLevel, int nVersion);
 /*****************************************************************************************
 Base class for all anti-predictors
 *****************************************************************************************/
-class CAntiPredictor 
+class CAntiPredictor
 {
 public:
 
@@ -24,7 +24,7 @@ public:
 /*****************************************************************************************
 Offset anti-predictor
 *****************************************************************************************/
-class CAntiPredictorOffset : public CAntiPredictor 
+class CAntiPredictorOffset : public CAntiPredictor
 {
 public:
 

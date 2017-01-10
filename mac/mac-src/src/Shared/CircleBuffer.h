@@ -1,7 +1,7 @@
 #ifndef APE_CIRCLEBUFFER_H
 #define APE_CIRCLEBUFFER_H
 
-class CCircleBuffer  
+class CCircleBuffer
 {
 public:
 

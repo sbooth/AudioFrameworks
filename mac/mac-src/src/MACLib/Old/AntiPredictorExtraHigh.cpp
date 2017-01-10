@@ -28,14 +28,14 @@ void CAntiPredictorExtraHigh0000To3320::AntiPredictorOffset(int* Input_Array, in
     }
 
     memcpy(Output_Array, Input_Array, Max_Order * 4);
-    
+
 //    int m = 512;
 
     if (dm > 0)
         for (q = Max_Order; q < Number_of_Elements; q++) {
             Output_Array[q] = Input_Array[q] + (Output_Array[q - g] >> 3);
         }
-            
+
     else
         for (q = Max_Order; q < Number_of_Elements; q++) {
             Output_Array[q] = Input_Array[q] - (Output_Array[q - g] >> 3);
@@ -46,7 +46,7 @@ void CAntiPredictorExtraHigh0000To3320::AntiPredictorOffset(int* Input_Array, in
 /*****************************************************************************************
 Extra high 3320 to 3600 implementation
 *****************************************************************************************/
-void CAntiPredictorExtraHigh3320To3600::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements, int Iterations, unsigned int *pOffsetValueArrayA, unsigned int *pOffsetValueArrayB) 
+void CAntiPredictorExtraHigh3320To3600::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements, int Iterations, unsigned int *pOffsetValueArrayA, unsigned int *pOffsetValueArrayB)
 {
     for (int z = Iterations; z >= 0; z--)
     {
@@ -61,7 +61,7 @@ void CAntiPredictorExtraHigh3320To3600::AntiPredict(int *pInputArray, int *pOutp
 
 void CAntiPredictorExtraHigh3320To3600::AntiPredictorOffset(int* Input_Array, int* Output_Array, int Number_of_Elements, int g, int dm, int Max_Order)
 {
-    
+
     int q;
 
     if ((g==0) || (Number_of_Elements <= Max_Order)) {
@@ -70,7 +70,7 @@ void CAntiPredictorExtraHigh3320To3600::AntiPredictorOffset(int* Input_Array, in
     }
 
     memcpy(Output_Array, Input_Array, Max_Order * 4);
-    
+
     int m = 512;
 
     if (dm > 0)
@@ -78,7 +78,7 @@ void CAntiPredictorExtraHigh3320To3600::AntiPredictorOffset(int* Input_Array, in
             Output_Array[q] = Input_Array[q] + ((Output_Array[q - g] * m) >> 12);
             (Input_Array[q] ^ Output_Array[q - g]) > 0 ? m += 8 : m -= 8;
         }
-            
+
     else
         for (q = Max_Order; q < Number_of_Elements; q++) {
             Output_Array[q] = Input_Array[q] - ((Output_Array[q - g] * m) >> 12);
@@ -121,7 +121,7 @@ void CAntiPredictorExtraHigh3600To3700::AntiPredictorOffset(int* Input_Array, in
     }
 
     memcpy(Output_Array, Input_Array, Max_Order * 4);
-    
+
     int m = 64;
     int m2 = 64;
 
@@ -167,7 +167,7 @@ void CAntiPredictorExtraHigh3700To3800::AntiPredictorOffset(int* Input_Array, in
     }
 
     memcpy(Output_Array, Input_Array, Max_Order * 4);
-    
+
     int m = 64;
     int m2 = 64;
 
@@ -181,14 +181,14 @@ void CAntiPredictorExtraHigh3700To3800::AntiPredictorOffset(int* Input_Array, in
 /*****************************************************************************************
 Extra high 3800 to Current
 *****************************************************************************************/
-void CAntiPredictorExtraHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements, bool bMMXAvailable, int CPULoadBalancingFactor, int nVersion) 
+void CAntiPredictorExtraHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements, bool bMMXAvailable, int CPULoadBalancingFactor, int nVersion)
 {
     const int nFilterStageElements = (nVersion < 3830) ? 128 : 256;
     const int nFilterStageShift = (nVersion < 3830) ? 11 : 12;
     const int nMaxElements = (nVersion < 3830) ? 134 : 262;
     const int nFirstElement = (nVersion < 3830) ? 128 : 256;
     const int nStageCShift = (nVersion < 3830) ? 10 : 11;
-  
+
     //short frame handling
     if (NumberOfElements < nMaxElements) {
         memcpy(pOutputArray, pInputArray, NumberOfElements * 4);
@@ -197,7 +197,7 @@ void CAntiPredictorExtraHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pO
 
     //make the first five samples identical in both arrays
     memcpy(pOutputArray, pInputArray, nFirstElement * 4);
-    
+
     //variable declares and initializations
     //short bm[nFirstElement]; memset(bm, 0, nFirstElement * 2);
     short bm[256]; memset(bm, 0, 256 * 2);
@@ -213,7 +213,7 @@ void CAntiPredictorExtraHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pO
     int opp = op[-1];
     int Original;
     CAntiPredictorExtraHighHelper Helper;
-    
+
     //undo the initial prediction stuff
     int q; // loop variable
     for (q = 1; q < nFirstElement; q++) {
@@ -243,7 +243,7 @@ void CAntiPredictorExtraHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pO
             int *pFM = &FM[8];
             int nDotProduct = 0;
             FP[0] = ip[0];
-            
+
             if (FP[0] == 0)
             {
                 EXPAND_8_TIMES(nDotProduct += *pFP * *pFM--; *pFP-- = *(pFP - 1);)
@@ -295,7 +295,7 @@ void CAntiPredictorExtraHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pO
             m4 += ((p4 >> 28) & 8) - 4;
         }
 
-        
+
         p2 = *op + ((IPP2 - p4) << 3);
         p3 = (*op - p4) << 1;
         IPP2 = p4;
@@ -318,7 +318,7 @@ void CAntiPredictorExtraHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pO
 
         /////////////////////////////////////////////
         *op += ((op[-1] * 31) >> 5);
-        
+
     }
 
     free(IPAdaptFactor);

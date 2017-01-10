@@ -6,9 +6,9 @@ This repository contains Xcode projects that help building Mac OS X framework of
 Usage
 -----
 
-This repo doesn't contain the sources for the respective frameworks or libraries. You need to add those yourself. 
+This repo doesn't contain the sources for the respective frameworks or libraries. You need to add those yourself.
 
-You can use the included `build_sfbaudioengine_frameworks.sh` to build the dependencies for SFBAudioEngine. You can invoke it like this: 
+You can use the included `build_sfbaudioengine_frameworks.sh` to build the dependencies for SFBAudioEngine. You can invoke it like this:
 
     /build_sfbaudioengine_frameworks.sh ../SFBAudioEngine/Frameworks`
 
@@ -97,7 +97,7 @@ mad
 2. Decompress
 3. Rename folder to "libmad-src"
 4. Move the folder into mad/
-5. Apply the patch "mad.patch": 'patch < mad.patch' 
+5. Apply the patch "mad.patch": 'patch < mad.patch'
 6. Build
 
 

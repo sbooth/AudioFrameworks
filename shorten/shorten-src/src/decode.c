@@ -66,7 +66,7 @@ int shn_seek(shn_file *this_shn, unsigned int sample)
 	this_shn->status.datarest = shn_get_frame_length(this_shn) - ret;
 
 	this_shn->vars.eof = FALSE;
-	
+
 	return ret;
 }
 
@@ -508,7 +508,7 @@ shn_file *shn_load(char *filename, shn_config config)
 
 	/*Copying config */
 	tmp_file->config = config;
-	
+
 	tmp_file->vars.fd = NULL;
 	tmp_file->vars.seek_to = -1;
 	tmp_file->vars.eof = 0;
@@ -589,7 +589,7 @@ shn_file *shn_load(char *filename, shn_config config)
 	if (NO_SEEK_TABLE != tmp_file->vars.seek_table_entries)
 	{
 		first_seek_table = (shn_seek_entry *)tmp_file->seek_table;
-	
+
 		/* check for broken seek tables - if found, disable seeking */
 		if (0 == tmp_file->seek_header.version)
 		{
@@ -608,14 +608,14 @@ shn_file *shn_load(char *filename, shn_config config)
 			shn_debug(tmp_file->config, "Adjusting seek table offsets by %ld bytes due to mismatch between seek table values and input file - seeking might not work correctly.",
 				tmp_file->vars.seek_offset);
 		}
-	} 
+	}
 
 	fseek(tmp_file->vars.fd,0,SEEK_SET);
 	tmp_file->vars.going = 1;
 	tmp_file->vars.seek_to = -1;
 
 	shn_debug(tmp_file->config, "Successfully loaded file: '%s'",filename);
-	
+
 	return tmp_file;
 }
 
@@ -661,7 +661,7 @@ static int shn_init_decode_state(shn_file *this_shn)
 	this_shn->decode_state->nwritebuf = 0;
 
 	this_shn->vars.bytes_in_buf = 0;
-	
+
 	this_shn->status.buffer = NULL;
 	this_shn->status.offset = NULL;
 	this_shn->status.lpcqoffset = 0;
@@ -909,7 +909,7 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 	/***********************/
 	/* EXTRACT starts here */
 	/***********************/
-	
+
 	if(!this_shn->status.datarest) return 0;
 	if(this_shn->status.datarest*shn_get_channels(this_shn)*shn_get_bitspersample(this_shn)/8 < bytes_to_read) {
 		bytes_to_read = this_shn->status.datarest*shn_get_channels(this_shn)*shn_get_bitspersample(this_shn)/8;
@@ -995,7 +995,7 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 							nlpc = uvar_get(LPCQSIZE,this_shn);
 							if (this_shn->vars.fatal_error)
 								goto cleanup;
-							
+
 							for(i = 0; i < nlpc; i++) {
 								this_shn->status.qlpc[i] = var_get(LPCQUANT,this_shn);
 								if (this_shn->vars.fatal_error)
@@ -1005,7 +1005,7 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 								cbuffer[i - nlpc] -= coffset;
 							for(i = 0; i < this_shn->status.blocksize; i++) {
 								slong sum = this_shn->status.lpcqoffset;
-								
+
 								for(j = 0; j < nlpc; j++)
 									sum += this_shn->status.qlpc[j] * cbuffer[i - j - 1];
 								cbuffer[i] = var_get(resn,this_shn) + (sum >> LPCQUANT);
@@ -1021,10 +1021,10 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 					/* store mean value if appropriate : N.B. Duplicated code */
 					if(this_shn->status.nmean > 0) {
 						slong sum = (this_shn->status.version < 2) ? 0 : this_shn->status.blocksize / 2;
-						
+
 						for(i = 0; i < this_shn->status.blocksize; i++)
 							sum += cbuffer[i];
-						
+
 						for(i = 1; i < this_shn->status.nmean; i++)
 							this_shn->status.offset[this_shn->status.chan][i - 1] = this_shn->status.offset[this_shn->status.chan][i];
 						if(this_shn->status.version < 2)
@@ -1032,30 +1032,30 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 						else
 							this_shn->status.offset[this_shn->status.chan][this_shn->status.nmean - 1] = (sum / this_shn->status.blocksize) << this_shn->status.bitshift;
 					}
-					
+
 					/* do the wrap */
 					for(i = -this_shn->status.nwrap; i < 0; i++)
 						cbuffer[i] = cbuffer[i + this_shn->status.blocksize];
-					
+
 					fix_bitshift(cbuffer, this_shn->status.blocksize, this_shn->status.bitshift, this_shn->status.internal_ftype);
-					
+
 					if(this_shn->status.chan == this_shn->status.nchan - 1) {
 						if (!this_shn->vars.going || this_shn->vars.fatal_error)
 							goto cleanup;
-						
+
 						fwrite_type(this_shn->status.buffer, this_shn->status.ftype, this_shn->status.nchan, this_shn->status.blocksize, this_shn);
-						
+
 						buffer_ret = write_to_buffer(this_shn,read_buffer,bytes_to_read);
 						if(buffer_ret == bytes_to_read)
 							buffer_is_full = 1;
-						
+
 						if (this_shn->vars.seek_to != -1) {
 							shn_seek_entry *seek_info;
-							
+
 							shn_debug(this_shn->config, "Seeking to %d",this_shn->vars.seek_to);
-							
+
 							seek_info = shn_seek_entry_search(this_shn->config,this_shn->seek_table,this_shn->vars.seek_to,0,(ulong)(this_shn->vars.seek_table_entries - 1),this_shn->vars.seek_resolution);
-							
+
 							this_shn->status.buffer[0][-1] = shn_uchar_to_slong_le(seek_info->data+24);
 							this_shn->status.buffer[0][-2] = shn_uchar_to_slong_le(seek_info->data+28);
 							this_shn->status.buffer[0][-3] = shn_uchar_to_slong_le(seek_info->data+32);
@@ -1072,21 +1072,21 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 								this_shn->status.offset[1][2]  = shn_uchar_to_slong_le(seek_info->data+72);
 								this_shn->status.offset[1][3]  = shn_uchar_to_slong_le(seek_info->data+76);
 							}
-							
+
 							this_shn->status.bitshift = shn_uchar_to_ushort_le(seek_info->data+22);
-							
+
 							ulong seekto_offset = shn_uchar_to_ulong_le(seek_info->data+8) + this_shn->vars.seek_offset;
-							
+
 							fseek(this_shn->vars.fd,(slong)seekto_offset,SEEK_SET);
 							fread((uchar*) this_shn->decode_state->getbuf, 1, BUFSIZ, this_shn->vars.fd);
-							
+
 							this_shn->decode_state->getbufp = this_shn->decode_state->getbuf + shn_uchar_to_ushort_le(seek_info->data+14);
 							this_shn->decode_state->nbitget = shn_uchar_to_ushort_le(seek_info->data+16);
 							this_shn->decode_state->nbyteget = shn_uchar_to_ushort_le(seek_info->data+12);
 							this_shn->decode_state->gbuffer = shn_uchar_to_ulong_le(seek_info->data+18);
-							
+
 							this_shn->vars.bytes_in_buf = 0;
-							
+
 							this_shn->vars.seek_to = -1;
 						}
 					}
@@ -1094,35 +1094,35 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 					break;
 				}
 				break;
-			
+
 			case FN_QUIT:
 				/* empty out last of buffer */
 				buffer_ret = write_to_buffer(this_shn,read_buffer,this_shn->vars.bytes_in_buf);
-				if(buffer_ret == bytes_to_read) 
+				if(buffer_ret == bytes_to_read)
 					buffer_is_full = 1;
-				
+
 				this_shn->vars.eof = TRUE;
-				
+
 				goto cleanup;
 				break;
-			
+
 			case FN_BLOCKSIZE:
 				this_shn->status.blocksize = UINT_GET(this_shn->status.version, (int) (log((double) this_shn->status.blocksize) / M_LN2), this_shn);
 				if (this_shn->vars.fatal_error)
 					goto cleanup;
 				break;
-			
+
 			case FN_BITSHIFT:
 				this_shn->status.bitshift = uvar_get(BITSHIFTSIZE,this_shn);
 				if (this_shn->vars.fatal_error)
 					goto cleanup;
 				break;
-			
+
 			case FN_VERBATIM:
 				cklen = uvar_get(VERBATIM_CKSIZE_SIZE,this_shn);
 				if (this_shn->vars.fatal_error)
 					goto cleanup;
-					
+
 				uchar tmp;
 				while (cklen--) {
 					tmp = (uchar)uvar_get(VERBATIM_BYTE_SIZE,this_shn);
@@ -1130,7 +1130,7 @@ int shn_read(shn_file *this_shn, uchar *read_buffer, int bytes_to_read) {
 						goto cleanup;
 				}
 				break;
-			
+
 			default:
 				shn_error_fatal(this_shn,"Sanity check fails trying to decode function: %d",cmd);
 				goto cleanup;

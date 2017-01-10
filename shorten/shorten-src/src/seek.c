@@ -267,16 +267,16 @@ void shn_load_seek_table(shn_file *this_shn,char *filename)
 {
 	if (load_appended_seek_table(this_shn,filename,0))
 		return;
-	
+
 	if (load_appended_seek_table(this_shn,filename,ID3V1_TAG_SIZE))
 		return;
-	
+
 	if (load_separate_seek_table_samedir(this_shn,filename))
 		return;
-	
+
 	if (load_separate_seek_table_relative(this_shn,filename))
 		return;
-	
+
 	if (load_separate_seek_table_absolute(this_shn,filename))
 		return;
 

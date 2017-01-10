@@ -11,21 +11,21 @@ CAPEInfo:
 /*****************************************************************************************
 Construction
 *****************************************************************************************/
-CAPEInfo::CAPEInfo(int * pErrorCode, const wchar_t * pFilename, CAPETag * pTag) 
+CAPEInfo::CAPEInfo(int * pErrorCode, const wchar_t * pFilename, CAPETag * pTag)
 {
     *pErrorCode = ERROR_SUCCESS;
     CloseFile();
-    
+
     // open the file
     m_spIO.Assign(new IO_CLASS_NAME);
-    
+
     if (m_spIO->Open(pFilename) != 0)
     {
         CloseFile();
         *pErrorCode = ERROR_INVALID_INPUT_FILE;
         return;
     }
-    
+
     // get the file information
     if (GetFileInformation(true) != 0)
     {
@@ -78,7 +78,7 @@ CAPEInfo::CAPEInfo(int * pErrorCode, CIO * pIO, CAPETag * pTag)
 /*****************************************************************************************
 Destruction
 *****************************************************************************************/
-CAPEInfo::~CAPEInfo() 
+CAPEInfo::~CAPEInfo()
 {
     CloseFile();
 }
@@ -86,16 +86,16 @@ CAPEInfo::~CAPEInfo()
 /*****************************************************************************************
 Close the file
 *****************************************************************************************/
-int CAPEInfo::CloseFile() 
+int CAPEInfo::CloseFile()
 {
     m_spIO.Delete();
     m_APEFileInfo.spWaveHeaderData.Delete();
     m_APEFileInfo.spSeekBitTable.Delete();
     m_APEFileInfo.spSeekByteTable.Delete();
     m_APEFileInfo.spAPEDescriptor.Delete();
-    
+
     m_spAPETag.Delete();
-    
+
     // re-initialize variables
     m_APEFileInfo.nSeekTableElements = 0;
     m_bHasFileInformationLoaded = false;
@@ -106,7 +106,7 @@ int CAPEInfo::CloseFile()
 /*****************************************************************************************
 Get the file information about the file
 *****************************************************************************************/
-int CAPEInfo::GetFileInformation(bool bGetTagInformation) 
+int CAPEInfo::GetFileInformation(bool bGetTagInformation)
 {
     // quit if there is no simple file
     if (m_spIO == NULL) { return -1; }
@@ -195,7 +195,7 @@ long CAPEInfo::GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1, long nParam2)
     case APE_INFO_FRAME_BITRATE:
     {
         int nFrame = nParam1;
-        
+
         nRetVal = 0;
 
         int nFrameBytes = GetInfo(APE_INFO_FRAME_BYTES, nFrame);
@@ -219,11 +219,11 @@ long CAPEInfo::GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1, long nParam2)
     case APE_INFO_SEEK_BIT:
     {
         int nFrame = nParam1;
-        if (GET_FRAMES_START_ON_BYTES_BOUNDARIES(this)) 
+        if (GET_FRAMES_START_ON_BYTES_BOUNDARIES(this))
         {
             nRetVal = 0;
         }
-        else 
+        else
         {
             if (nFrame < 0 || nFrame >= m_APEFileInfo.nTotalFrames)
                 nRetVal = 0;
@@ -245,7 +245,7 @@ long CAPEInfo::GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1, long nParam2)
     {
         char * pBuffer = (char *) nParam1;
         int nMaxBytes = nParam2;
-        
+
         if (m_APEFileInfo.nFormatFlags & MAC_FORMAT_FLAG_CREATE_WAV_HEADER)
         {
             if (sizeof(WAVE_HEADER) > (unsigned int)nMaxBytes)
@@ -286,7 +286,7 @@ long CAPEInfo::GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1, long nParam2)
         }
         else
         {
-            if (m_APEFileInfo.nWAVTerminatingBytes > 0) 
+            if (m_APEFileInfo.nWAVTerminatingBytes > 0)
             {
                 // variables
                 int nOriginalFileLocation = m_spIO->GetPosition();
@@ -316,17 +316,17 @@ long CAPEInfo::GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1, long nParam2)
     case APE_INFO_FRAME_BYTES:
     {
         int nFrame = nParam1;
-        
+
         // bound-check the frame index
-        if ((nFrame < 0) || (nFrame >= m_APEFileInfo.nTotalFrames)) 
+        if ((nFrame < 0) || (nFrame >= m_APEFileInfo.nTotalFrames))
         {
             nRetVal = -1;
         }
         else
         {
-            if (nFrame != (m_APEFileInfo.nTotalFrames - 1)) 
+            if (nFrame != (m_APEFileInfo.nTotalFrames - 1))
                 nRetVal = GetInfo(APE_INFO_SEEK_BYTE, nFrame + 1) - GetInfo(APE_INFO_SEEK_BYTE, nFrame);
-            else 
+            else
                 nRetVal = m_spIO->GetSize() - m_spAPETag->GetTagBytes() - m_APEFileInfo.nWAVTerminatingBytes - GetInfo(APE_INFO_SEEK_BYTE, nFrame);
         }
         break;
@@ -336,15 +336,15 @@ long CAPEInfo::GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1, long nParam2)
         int nFrame = nParam1;
 
         // bound-check the frame index
-        if ((nFrame < 0) || (nFrame >= m_APEFileInfo.nTotalFrames)) 
+        if ((nFrame < 0) || (nFrame >= m_APEFileInfo.nTotalFrames))
         {
             nRetVal = -1;
         }
         else
         {
-            if (nFrame != (m_APEFileInfo.nTotalFrames - 1)) 
+            if (nFrame != (m_APEFileInfo.nTotalFrames - 1))
                 nRetVal = m_APEFileInfo.nBlocksPerFrame;
-            else 
+            else
                 nRetVal = m_APEFileInfo.nFinalFrameBlocks;
         }
         break;

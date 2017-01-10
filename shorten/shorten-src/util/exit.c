@@ -48,7 +48,7 @@ char    *exitmessage;
 void basic_exit(exitcode) int exitcode; {
 
   /* try to delete the output file on all abnormal exit conditions */
-  if(exitcode != 0 && fileo != NULL && fileo != stdout) 
+  if(exitcode != 0 && fileo != NULL && fileo != stdout)
   {
     fclose(fileo);
     unlink(filenameo);
@@ -134,7 +134,7 @@ void perror_exit(va_alist) va_dcl {
 #ifndef MSDOS
     perror("\0");
 #endif
-    
+
 #endif /* _WINDOWS */
   }
   else {
@@ -169,7 +169,7 @@ void usage_exit(va_alist) va_dcl {
 #if defined(_WINDOWS) && defined(_DEBUG) && !defined(WIN32)
     _asm { int 3 }  /* mrhmod - catch if debugging */
 #endif
-    
+
 #ifndef _WINDOWS  /* mrhmod - must use exitmessage 'cos stderr not available */
     if(fmt != NULL) {
       fprintf(stderr, "%s: ", argv0);
@@ -187,7 +187,7 @@ void usage_exit(va_alist) va_dcl {
   va_end(args);
 
   basic_exit(exitcode);
-} 	
+} 
 
 
 # ifdef HAVE_STDARG_H

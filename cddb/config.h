@@ -142,7 +142,7 @@
 /* #undef HAVE_WINSOCK2_H */
 
 /* Define as const if the declaration of iconv() needs const. */
-#define ICONV_CONST 
+#define ICONV_CONST
 
 /* Set to default log level */
 /* #undef LOGLEVEL */

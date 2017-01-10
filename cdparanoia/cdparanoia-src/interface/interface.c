@@ -1,7 +1,7 @@
 /******************************************************************
  * CopyPolicy: GNU Public License 2 applies
  * Copyright (C) 1998 Monty xiphmont@mit.edu
- * 
+ *
  * Top-level interface module for cdrom drive access.  SCSI, ATAPI, etc
  *    specific stuff are in other modules.  Note that SCSI does use
  *    specialized ioctls; these appear in common_interface.c where the
@@ -42,7 +42,7 @@ int cdda_close(cdrom_drive *d){
 #else
 	osx_cdda_close(d);
 #endif /* __APPLE__ */
-    
+
     free(d);
   }
   return(0);
@@ -55,16 +55,16 @@ int cdda_open(cdrom_drive *d){
 
 #ifndef __APPLE__
   switch(d->interface){
-  case GENERIC_SCSI:  
+  case GENERIC_SCSI:
     if((ret=scsi_init_drive(d)))
       return(ret);
     break;
-  case COOKED_IOCTL:  
+  case COOKED_IOCTL:
     if((ret=cooked_init_drive(d)))
       return(ret);
     break;
 #ifdef CDDA_TEST
-  case TEST_INTERFACE:  
+  case TEST_INTERFACE:
     if((ret=test_init_drive(d)))
       return(ret);
     break;
@@ -77,7 +77,7 @@ int cdda_open(cdrom_drive *d){
   ret = osx_init_drive(d);
 #endif /* __APPLE__ */
   /* Check TOC, enable for CDDA */
-  
+
   /* Some drives happily return a TOC even if there is no disc... */
   {
     int i;
@@ -92,7 +92,7 @@ int cdda_open(cdrom_drive *d){
 
   if((ret=d->enable_cdda(d,1)))
     return(ret);
-    
+
   /*  d->select_speed(d,d->maxspeed); most drives are full speed by default */
   if(d->bigendianp==-1)d->bigendianp=data_bigendianp(d);
   return(0);
@@ -112,19 +112,19 @@ long cdda_read(cdrom_drive *d, void *buffer, long beginsector, long sectors){
 	/* byteswap? */
 	if(d->bigendianp==-1) /* not determined yet */
 	  d->bigendianp=data_bigendianp(d);
-	
+
 	if(d->bigendianp!=bigendianp()){
 	  int i;
 	  u_int16_t *p=(u_int16_t *)buffer;
 	  long els=sectors*CD_FRAMESIZE_RAW/2;
-	  
+
 	  for(i=0;i<els;i++)p[i]=swap16(p[i]);
 	}
       }
     }
     return(sectors);
   }
-  
+
   cderror(d,"400: Device not open\n");
   return(-400);
 }

@@ -200,7 +200,7 @@
 /* #undef HAVE_XMMINTRIN_H */
 
 /* Define as const if the declaration of iconv() needs const. */
-#define ICONV_CONST 
+#define ICONV_CONST
 
 /* requested by Frank, seems to be temporary needed for a smooth transition */
 #define LAME_LIBRARY_BUILD 1

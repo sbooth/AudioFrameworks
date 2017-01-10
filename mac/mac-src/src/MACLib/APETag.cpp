@@ -14,7 +14,7 @@ CAPETagField::CAPETagField(const str_utf16 * pFieldName, const void * pFieldValu
     // field name
     m_spFieldNameUTF16.Assign(new str_utf16 [wcslen(pFieldName) + 1], true);
     memcpy(m_spFieldNameUTF16, pFieldName, (wcslen(pFieldName) + 1) * sizeof(str_utf16));
-    
+
     // data (we'll always allocate two extra bytes and memset to 0 so we're safely NULL terminated)
     m_nFieldValueBytes = max(nFieldBytes, 0);
     m_spFieldValue.Assign(new char [m_nFieldValueBytes + 2], true);
@@ -29,10 +29,10 @@ CAPETagField::CAPETagField(const str_utf16 * pFieldName, const void * pFieldValu
 CAPETagField::~CAPETagField()
 {
 }
-    
+
 int CAPETagField::GetFieldSize()
 {
-    CSmartPtr<char> spFieldNameANSI(GetANSIFromUTF16(m_spFieldNameUTF16), true); 
+    CSmartPtr<char> spFieldNameANSI(GetANSIFromUTF16(m_spFieldNameUTF16), true);
     return (strlen(spFieldNameANSI) + 1) + m_nFieldValueBytes + 4 + 4;
 }
 
@@ -62,8 +62,8 @@ int CAPETagField::SaveField(char * pBuffer)
     pBuffer += 4;
     *((int *) pBuffer) = m_nFieldFlags;
     pBuffer += 4;
-    
-    CSmartPtr<char> spFieldNameANSI((char *) GetANSIFromUTF16(m_spFieldNameUTF16), true); 
+
+    CSmartPtr<char> spFieldNameANSI((char *) GetANSIFromUTF16(m_spFieldNameUTF16), true);
     strcpy(pBuffer, spFieldNameANSI);
     pBuffer += strlen(spFieldNameANSI) + 1;
 
@@ -86,7 +86,7 @@ CAPETag::CAPETag(const str_utf16 * pFilename, bool bAnalyze)
     m_nFields = 0;
     m_nTagBytes = 0;
     m_bIgnoreReadOnly = false;
-    
+
     if (bAnalyze)
     {
         Analyze();
@@ -99,7 +99,7 @@ CAPETag::CAPETag(CIO * pIO, bool bAnalyze)
     m_bAnalyzed = false;
     m_nFields = 0;
     m_nTagBytes = 0;
-    
+
     if (bAnalyze)
     {
         Analyze();
@@ -134,7 +134,7 @@ int CAPETag::Save(bool bUseOldID3)
 {
     if (Remove(false) != ERROR_SUCCESS)
         return -1;
-    
+
     if (m_nFields == 0) { return ERROR_SUCCESS; }
 
     int nRetVal = -1;
@@ -184,12 +184,12 @@ int CAPETag::Save(bool bUseOldID3)
 int CAPETag::WriteBufferToEndOfIO(void * pBuffer, int nBytes)
 {
     int nOriginalPosition = m_spIO->GetPosition();
-    
+
     unsigned int nBytesWritten = 0;
     m_spIO->Seek(0, FILE_END);
 
     int nRetVal = m_spIO->Write(pBuffer, nBytes, &nBytesWritten);
-    
+
     m_spIO->Seek(nOriginalPosition, FILE_BEGIN);
 
     return nRetVal;
@@ -206,7 +206,7 @@ int CAPETag::Analyze()
 
     // store the original location
     int nOriginalPosition = m_spIO->GetPosition();
-    
+
     // check for a tag
     unsigned int nBytesRead;
     int nRetVal;
@@ -215,16 +215,16 @@ int CAPETag::Analyze()
     m_nAPETagVersion = -1;
     m_spIO->Seek(-ID3_TAG_BYTES, FILE_END);
     nRetVal = m_spIO->Read((unsigned char *) &ID3Tag, sizeof(ID3_TAG), &nBytesRead);
-    
+
     if ((nBytesRead == sizeof(ID3_TAG)) && (nRetVal == 0))
     {
-        if (ID3Tag.Header[0] == 'T' && ID3Tag.Header[1] == 'A' && ID3Tag.Header[2] == 'G') 
+        if (ID3Tag.Header[0] == 'T' && ID3Tag.Header[1] == 'A' && ID3Tag.Header[2] == 'G')
         {
             m_bHasID3Tag = true;
             m_nTagBytes += ID3_TAG_BYTES;
         }
     }
-    
+
     // set the fields
     if (m_bHasID3Tag)
     {
@@ -233,13 +233,13 @@ int CAPETag::Analyze()
         SetFieldID3String(APE_TAG_FIELD_TITLE, ID3Tag.Title, 30);
         SetFieldID3String(APE_TAG_FIELD_COMMENT, ID3Tag.Comment, 28);
         SetFieldID3String(APE_TAG_FIELD_YEAR, ID3Tag.Year, 4);
-        
+
         char cTemp[16]; sprintf(cTemp, "%d", ID3Tag.Track);
         SetFieldString(APE_TAG_FIELD_TRACK, cTemp, false);
 
-        if ((ID3Tag.Genre == GENRE_UNDEFINED) || (ID3Tag.Genre >= GENRE_COUNT)) 
+        if ((ID3Tag.Genre == GENRE_UNDEFINED) || (ID3Tag.Genre >= GENRE_COUNT))
             SetFieldString(APE_TAG_FIELD_GENRE, APE_TAG_GENRE_UNDEFINED);
-        else 
+        else
             SetFieldString(APE_TAG_FIELD_GENRE, g_ID3Genre[ID3Tag.Genre]);
     }
 
@@ -258,7 +258,7 @@ int CAPETag::Analyze()
 
                 int nRawFieldBytes = APETagFooter.GetFieldBytes();
                 m_nTagBytes += APETagFooter.GetTotalTagBytes();
-                
+
                 CSmartPtr<char> spRawTag(new char [nRawFieldBytes], true);
                 m_spIO->Seek(-(APETagFooter.GetTotalTagBytes() - APETagFooter.GetFieldsOffset()), FILE_END);
                 nRetVal = m_spIO->Read((unsigned char *) spRawTag.GetPtr(), nRawFieldBytes, &nBytesRead);
@@ -270,7 +270,7 @@ int CAPETag::Analyze()
                     for (int z = 0; z < APETagFooter.GetNumberFields(); z++)
                     {
                         int nMaximumFieldBytes = nRawFieldBytes - nLocation;
-                        
+
                         int nBytes = 0;
                         if (LoadField(&spRawTag[nLocation], nMaximumFieldBytes, &nBytes) != ERROR_SUCCESS)
                         {
@@ -287,7 +287,7 @@ int CAPETag::Analyze()
 
     // restore the file pointer
     m_spIO->Seek(nOriginalPosition, FILE_BEGIN);
-    
+
     return ERROR_SUCCESS;
 }
 
@@ -297,7 +297,7 @@ int CAPETag::ClearFields()
     {
         SAFE_DELETE(m_aryFields[z])
     }
-    
+
     m_nFields = 0;
 
     return ERROR_SUCCESS;
@@ -346,7 +346,7 @@ int CAPETag::GetFieldString(const str_utf16 * pFieldName, str_ansi * pBuffer, in
             *pBufferCharacters = strlen(spANSI);
         }
     }
-    
+
     delete [] pUTF16;
 
     return nRetVal;
@@ -411,7 +411,7 @@ int CAPETag::GetFieldString(const str_utf16 * pFieldName, str_utf16 * pBuffer, i
 int CAPETag::GetFieldBinary(const str_utf16 * pFieldName, void * pBuffer, int * pBufferBytes)
 {
     if (m_bAnalyzed == false) { Analyze(); }
-    
+
     int nRetVal = ERROR_UNDEFINED;
 
     if (*pBufferBytes > 0)
@@ -445,7 +445,7 @@ int CAPETag::GetFieldBinary(const str_utf16 * pFieldName, void * pBuffer, int * 
 
 int CAPETag::CreateID3Tag(ID3_TAG * pID3Tag)
 {
-    // error check 
+    // error check
     if (pID3Tag == NULL) { return -1; }
     if (m_bAnalyzed == false) { Analyze(); }
     if (m_nFields == 0) { return -1; }
@@ -455,7 +455,7 @@ int CAPETag::CreateID3Tag(ID3_TAG * pID3Tag)
 
     // header
     pID3Tag->Header[0] = 'T'; pID3Tag->Header[1] = 'A'; pID3Tag->Header[2] = 'G';
-    
+
     // standard fields
     GetFieldID3String(APE_TAG_FIELD_ARTIST, pID3Tag->Artist, 30);
     GetFieldID3String(APE_TAG_FIELD_ALBUM, pID3Tag->Album, 30);
@@ -467,11 +467,11 @@ int CAPETag::CreateID3Tag(ID3_TAG * pID3Tag)
     str_utf16 cBuffer[256] = { 0 }; int nBufferCharacters = 255;
     GetFieldString(APE_TAG_FIELD_TRACK, cBuffer, &nBufferCharacters);
     pID3Tag->Track = (unsigned char) _wtoi(cBuffer);
-    
+
     // genre
     cBuffer[0] = 0; nBufferCharacters = 255;
     GetFieldString(APE_TAG_FIELD_GENRE, cBuffer, &nBufferCharacters);
-        
+
     // convert the genre string to an index
     pID3Tag->Genre = 255;
     int nGenreIndex = 0;
@@ -483,7 +483,7 @@ int CAPETag::CreateID3Tag(ID3_TAG * pID3Tag)
             pID3Tag->Genre = nGenreIndex;
             bFound = true;
         }
-        
+
         nGenreIndex++;
     }
 
@@ -501,7 +501,7 @@ int CAPETag::LoadField(const char * pBuffer, int nMaximumBytes, int * pBytes)
     nLocation += 4;
     int nFieldFlags = *((int *) &pBuffer[nLocation]);
     nLocation += 4;
-    
+
     // safety check (so we can't get buffer overflow attacked)
     int nMaximumRead = nMaximumBytes - 8 - nFieldValueSize;
     bool bSafe = true;
@@ -583,7 +583,7 @@ int CAPETag::SetFieldBinary(const str_utf16 * pFieldName, const void * pFieldVal
         // fail if we're read-only (and not ignoring the read-only flag)
         if ((m_bIgnoreReadOnly == false) && (m_aryFields[nFieldIndex]->GetIsReadOnly()))
             return -1;
-        
+
         // erase the existing field
         SAFE_DELETE(m_aryFields[nFieldIndex])
 
@@ -600,7 +600,7 @@ int CAPETag::SetFieldBinary(const str_utf16 * pFieldName, const void * pFieldVal
         nFieldIndex = m_nFields;
         m_nFields++;
     }
-    
+
     // create the field and add it to the field array
     m_aryFields[nFieldIndex] = new CAPETagField(pFieldName, pFieldValue, nFieldBytes, nFieldFlags);
 
@@ -683,7 +683,7 @@ int CAPETag::Remove(bool bUpdate)
         }
 
     }
-    
+
     m_spIO->Seek(nOriginalPosition, FILE_BEGIN);
 
     if (bUpdate && bFailedToRemove == false)
@@ -699,17 +699,17 @@ int CAPETag::SetFieldID3String(const str_utf16 * pFieldName, const char * pField
     // allocate a buffer and terminate it
     CSmartPtr<str_ansi> spBuffer(new str_ansi [nBytes + 1], true);
     spBuffer[nBytes] = 0;
-    
+
     // make a capped copy of the string
     memcpy(spBuffer.GetPtr(), pFieldValue, nBytes);
-    
+
     // remove trailing white-space
     char * pEnd = &spBuffer[nBytes];
     while (((*pEnd == ' ') || (*pEnd == 0)) && pEnd >= &spBuffer[0]) { *pEnd-- = 0; }
 
     // set the field
     SetFieldString(pFieldName, spBuffer, false);
-    
+
     return ERROR_SUCCESS;
 }
 

@@ -144,7 +144,7 @@ static inline int32 swap_int32(int32 x)
     int32 y = x;
 
 #if __BYTE_ORDER == __BIG_ENDIAN
-    y = ((x & 0x000000ff) << 24) | 
+    y = ((x & 0x000000ff) << 24) |
 	((x & 0x0000ff00) << 8) |
 	((x & 0x00ff0000) >> 8) |
 	((x & 0xff000000) >> 24);

@@ -9,7 +9,7 @@
 
 /* Define if building for X86 */
 #if __LITTLE_ENDIAN__
-# define CPU_X86 
+# define CPU_X86
 #endif
 
 /* Define to enable assembly optimizations */

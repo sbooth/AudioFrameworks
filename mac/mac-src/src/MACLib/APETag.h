@@ -23,13 +23,13 @@ APETag layout
         Flags (4 bytes)
         Field Name (? ANSI bytes -- requires NULL terminator -- in range of 0x20 (space) to 0x7E (tilde))
         Value ([Value Size] bytes)
-3) Footer - APE_TAG_FOOTER (32 bytes)    
+3) Footer - APE_TAG_FOOTER (32 bytes)
 *****************************************************************************************/
 
 /*****************************************************************************************
 Notes
 
--When saving images, store the filename (no directory -- i.e. Cover.jpg) in UTF-8 followed 
+-When saving images, store the filename (no directory -- i.e. Cover.jpg) in UTF-8 followed
 by a null terminator, followed by the image data.
 *****************************************************************************************/
 
@@ -116,7 +116,7 @@ class APE_TAG_FOOTER
 {
 protected:
 
-    char m_cID[8];              // should equal 'APETAGEX'    
+    char m_cID[8];              // should equal 'APETAGEX'
     int m_nVersion;             // equals CURRENT_APE_TAG_VERSION
     int m_nSize;                // the complete size of the tag, including this footer (excludes header)
     int m_nFields;              // the number of fields in the tag
@@ -145,11 +145,11 @@ public:
 
     bool GetIsValid(bool bAllowHeader)
     {
-        bool bValid = (strncmp(m_cID, "APETAGEX", 8) == 0) && 
+        bool bValid = (strncmp(m_cID, "APETAGEX", 8) == 0) &&
             (m_nVersion <= CURRENT_APE_TAG_VERSION) &&
             (m_nFields <= 65536) &&
             (GetFieldBytes() <= (1024 * 1024 * 16));
-        
+
         if (bValid && (bAllowHeader == false) && GetIsHeader())
             bValid = false;
 
@@ -166,25 +166,25 @@ public:
 
     // create a tag field (use nFieldBytes = -1 for null-terminated strings)
     CAPETagField(const str_utf16 * pFieldName, const void * pFieldValue, int nFieldBytes = -1, int nFlags = 0);
-    
+
     // destructor
     ~CAPETagField();
 
     // gets the size of the entire field in bytes (name, value, and metadata)
     int GetFieldSize();
-    
+
     // get the name of the field
     const str_utf16 * GetFieldName();
 
     // get the value of the field
     const char * GetFieldValue();
-    
+
     // get the size of the value (in bytes)
     int GetFieldValueSize();
 
     // get any special flags
     int GetFieldFlags();
-    
+
     // output the entire field to a buffer (GetFieldSize() bytes)
     int SaveField(char * pBuffer);
 
@@ -196,7 +196,7 @@ public:
     void SetFieldFlags(int nFlags) { m_nFieldFlags = nFlags; }
 
 private:
-        
+
     CSmartPtr<str_utf16> m_spFieldNameUTF16;
     CSmartPtr<char> m_spFieldValue;
     int m_nFieldFlags;
@@ -210,18 +210,18 @@ class CAPETag
 {
 public:
 
-    // create an APE tag 
+    // create an APE tag
     // bAnalyze determines whether it will analyze immediately or on the first request
     // be careful with multiple threads / file pointer movement if you don't analyze immediately
     CAPETag(CIO * pIO, bool bAnalyze = true);
     CAPETag(const str_utf16 * pFilename, bool bAnalyze = true);
-    
+
     // destructor
     ~CAPETag();
 
     // save the tag to the I/O source (bUseOldID3 forces it to save as an ID3v1.1 tag instead of an APE tag)
     int Save(bool bUseOldID3 = false);
-    
+
     // removes any tags from the file (bUpdate determines whether is should re-analyze after removing the tag)
     int Remove(bool bUpdate = true);
 
@@ -242,7 +242,7 @@ public:
 
     // clear all the fields
     int ClearFields();
-    
+
     // get the total tag bytes in the file from the last analyze
     // need to call Save() then Analyze() to update any changes
     int GetTagBytes();

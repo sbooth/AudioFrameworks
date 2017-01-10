@@ -150,7 +150,7 @@ typedef struct _shn_seek_header
 {
 	uchar data[SEEK_HEADER_SIZE];
 	slong version;
-	ulong shnFileSize;	
+	ulong shnFileSize;
 } shn_seek_header;
 
 typedef struct _shn_seek_trailer

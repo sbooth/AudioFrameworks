@@ -4,7 +4,7 @@
 template <int MULTIPLY, int SHIFT> class CScaledFirstOrderFilter
 {
 public:
-    
+
     __inline void Flush()
     {
         m_nLastValue = 0;
@@ -24,7 +24,7 @@ public:
     }
 
 protected:
-    
+
     int m_nLastValue;
 };
 

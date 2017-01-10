@@ -23,7 +23,7 @@ linked_element *add_elem(linked_list *l,void *elem){
   if(l->head)
     l->head->prev=ret;
   else
-    l->tail=ret;    
+    l->tail=ret;
   ret->next=l->head;
   ret->prev=NULL;
   l->head=ret;
@@ -45,7 +45,7 @@ void free_elem(linked_element *e,int free_ptr){
     l->head=e->next;
   if(e==l->tail)
     l->tail=e->prev;
-    
+
   if(e->prev)
     e->prev->next=e->next;
   if(e->next)
@@ -53,7 +53,7 @@ void free_elem(linked_element *e,int free_ptr){
 
   l->active--;
   free(e);
-} 
+}
 
 void free_list(linked_list *list,int free_ptr){
   while(list->head)
@@ -103,12 +103,12 @@ c_block *new_c_block(cdrom_paranoia *p){
 void free_c_block(c_block *c){
   /* also rid ourselves of v_fragments that reference this block */
   v_fragment *v=v_first(c->p);
-  
+
   while(v){
     v_fragment *next=v_next(v);
     if(v->one==c)free_v_fragment(v);
     v=next;
-  }    
+  }
 
   free_elem(c->e,1);
 }
@@ -126,7 +126,7 @@ v_fragment *new_v_fragment(cdrom_paranoia *p,c_block *one,
 			   long begin, long end, int last){
   linked_element *e=new_elem(p->fragments);
   v_fragment *b=e->ptr;
-  
+
   b->e=e;
   b->p=p;
 
@@ -230,7 +230,7 @@ void c_insert(c_block *v,long pos,int16_t *b,long size){
     v->vector=realloc(v->vector,sizeof(int16_t)*(size+vs));
   else
     v->vector=malloc(sizeof(int16_t)*size);
-  
+
   if(pos<vs)memmove(v->vector+pos+size,v->vector+pos,
 		       (vs-pos)*sizeof(int16_t));
   memcpy(v->vector+pos,b,size*sizeof(int16_t));
@@ -247,7 +247,7 @@ void c_remove(c_block *v,long cutpos,long cutsize){
 
   memmove(v->vector+cutpos,v->vector+cutpos+cutsize,
             (vs-cutpos-cutsize)*sizeof(int16_t));
-  
+
   v->size-=cutsize;
 }
 

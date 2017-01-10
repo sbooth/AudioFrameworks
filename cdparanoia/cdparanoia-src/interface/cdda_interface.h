@@ -67,7 +67,7 @@ typedef struct cdrom_drive{
 #endif /* __APPLE__ */
   int bigendianp;
   int nsectors;
-  
+
   int cd_extra;
   int tracks;
   TOC disc_toc[MAXTRK];
@@ -85,7 +85,7 @@ typedef struct cdrom_drive{
 #ifndef __APPLE__
   int  (*read_toc)     (struct cdrom_drive *d);
 #endif /* __APPLE__ */
-  long (*read_audio)   (struct cdrom_drive *d, void *p, long begin, 
+  long (*read_audio)   (struct cdrom_drive *d, void *p, long begin,
 		       long sectors);
   int  (*set_speed)    (struct cdrom_drive *d, int speed);
 #ifndef __APPLE__
@@ -125,7 +125,7 @@ extern cdrom_drive *cdda_identify(const char *device, int messagedest,
 #ifndef __APPLE__
 extern cdrom_drive *cdda_identify_cooked(const char *device,int messagedest,
 					 char **message);
-extern cdrom_drive *cdda_identify_scsi(const char *generic_device, 
+extern cdrom_drive *cdda_identify_scsi(const char *generic_device,
 				       const char *ioctl_device,
 				       int messagedest, char **message);
 #endif /* __APPLE__ */
@@ -191,7 +191,7 @@ static char *strerror_tr[]={
   "Drive lost streaming"
 };
 
-/* Errors returned by lib: 
+/* Errors returned by lib:
 
 001: Unable to set CDROM to read audio mode
 002: Unable to read table of contents lead-out
@@ -202,7 +202,7 @@ static char *strerror_tr[]={
 007: Unknown, unrecoverable error reading data
 008: Unable to identify CDROM model
 009: CDROM reporting illegal table of contents
-010: Unaddressable sector 
+010: Unaddressable sector
 
 100: Interface not supported
 101: Drive is neither a CDROM nor a WORM device

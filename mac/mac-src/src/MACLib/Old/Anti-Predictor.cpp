@@ -8,7 +8,7 @@ CAntiPredictor * CreateAntiPredictor(int nCompressionLevel, int nVersion)
 {
     CAntiPredictor *pAntiPredictor = NULL;
 
-    switch (nCompressionLevel) 
+    switch (nCompressionLevel)
     {
 #ifdef ENABLE_COMPRESSION_MODE_FAST
         case COMPRESSION_LEVEL_FAST:
@@ -22,14 +22,14 @@ CAntiPredictor * CreateAntiPredictor(int nCompressionLevel, int nVersion)
             }
             break;
 #endif //ENABLE_COMPRESSION_MODE_FAST
-            
+
 #ifdef ENABLE_COMPRESSION_MODE_NORMAL
-        
+
         case COMPRESSION_LEVEL_NORMAL:
             if (nVersion < 3320)
             {
                 pAntiPredictor = (CAntiPredictor *) new CAntiPredictorNormal0000To3320;
-            }                
+            }
             else if (nVersion < 3800)
             {
                 pAntiPredictor = (CAntiPredictor *) new CAntiPredictorNormal3320To3800;
@@ -69,22 +69,22 @@ CAntiPredictor * CreateAntiPredictor(int nCompressionLevel, int nVersion)
 
 #ifdef ENABLE_COMPRESSION_MODE_EXTRA_HIGH
         case COMPRESSION_LEVEL_EXTRA_HIGH:
-            if (nVersion < 3320) 
+            if (nVersion < 3320)
             {
                 pAntiPredictor = (CAntiPredictor *) new CAntiPredictorExtraHigh0000To3320;
             }
-            else if (nVersion < 3600) 
+            else if (nVersion < 3600)
             {
                 pAntiPredictor = (CAntiPredictor *) new CAntiPredictorExtraHigh3320To3600;
             }
-            else if (nVersion < 3700) 
+            else if (nVersion < 3700)
             {
                 pAntiPredictor = (CAntiPredictor *) new CAntiPredictorExtraHigh3600To3700;
             }
-            else if (nVersion < 3800) 
+            else if (nVersion < 3800)
             {
                 pAntiPredictor = (CAntiPredictor *) new CAntiPredictorExtraHigh3700To3800;
-            }    
+            }
             else
             {
                 pAntiPredictor = (CAntiPredictor *) new CAntiPredictorExtraHigh3800ToCurrent;
@@ -98,20 +98,20 @@ CAntiPredictor * CreateAntiPredictor(int nCompressionLevel, int nVersion)
 
 
 
-CAntiPredictor::CAntiPredictor() 
+CAntiPredictor::CAntiPredictor()
 {
 }
 
-CAntiPredictor::~CAntiPredictor() 
+CAntiPredictor::~CAntiPredictor()
 {
 }
 
-void CAntiPredictor::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements) 
+void CAntiPredictor::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements)
 {
     return;
 }
 
-void CAntiPredictorOffset::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements, int Offset, int DeltaM) 
+void CAntiPredictorOffset::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements, int Offset, int DeltaM)
 {
 
     memcpy(pOutputArray, pInputArray, Offset * 4);
@@ -120,8 +120,8 @@ void CAntiPredictorOffset::AntiPredict(int *pInputArray, int *pOutputArray, int 
     int *ipo = &pOutputArray[0];
     int *op = &pOutputArray[Offset];
     int m = 0;
-    
-    for (; op < &pOutputArray[NumberOfElements]; ip++, ipo++, op++) 
+
+    for (; op < &pOutputArray[NumberOfElements]; ip++, ipo++, op++)
     {
         *op = *ip + ((*ipo * m) >> 12);
 
@@ -131,12 +131,12 @@ void CAntiPredictorOffset::AntiPredict(int *pInputArray, int *pOutputArray, int 
 
 #ifdef ENABLE_COMPRESSION_MODE_EXTRA_HIGH
 
-int CAntiPredictorExtraHighHelper::ConventionalDotProduct(short *bip, short *bbm, short *pIPAdaptFactor, int op, int nNumberOfIterations) 
+int CAntiPredictorExtraHighHelper::ConventionalDotProduct(short *bip, short *bbm, short *pIPAdaptFactor, int op, int nNumberOfIterations)
 {
     // dot product
     int nDotProduct = 0;
     short *pMaxBBM = &bbm[nNumberOfIterations];
-    
+
     if (op == 0)
     {
         while(bbm < pMaxBBM)
@@ -144,7 +144,7 @@ int CAntiPredictorExtraHighHelper::ConventionalDotProduct(short *bip, short *bbm
             EXPAND_32_TIMES(nDotProduct += *bip++ * *bbm++;)
         }
     }
-    else if (op > 0) 
+    else if (op > 0)
     {
         while(bbm < pMaxBBM)
         {
@@ -158,7 +158,7 @@ int CAntiPredictorExtraHighHelper::ConventionalDotProduct(short *bip, short *bbm
             EXPAND_32_TIMES(nDotProduct += *bip++ * *bbm; *bbm++ -= *pIPAdaptFactor++;)
         }
     }
-    
+
     // use the dot product
     return nDotProduct;
 }
@@ -221,14 +221,14 @@ int CAntiPredictorExtraHighHelper::ConventionalDotProduct(short *bip, short *bbm
     __asm add eax, 8                                            \
     __asm add edi, 8
 
-int CAntiPredictorExtraHighHelper::MMXDotProduct(short *bip, short *bbm, short *pIPAdaptFactor, int op, int nNumberOfIterations) 
+int CAntiPredictorExtraHighHelper::MMXDotProduct(short *bip, short *bbm, short *pIPAdaptFactor, int op, int nNumberOfIterations)
 {
     int nDotProduct;
     nNumberOfIterations = (nNumberOfIterations / 128);
 
-    if (op > 0) 
+    if (op > 0)
     {
-        __asm 
+        __asm
         {
             push eax
 
@@ -250,7 +250,7 @@ LBL_ADD_AGAIN:
 
             MMX_DOT_PRODUCT_3800_TO_CURRENT_PROCESS_CHUNK_ADD
             MMX_DOT_PRODUCT_3800_TO_CURRENT_PROCESS_CHUNK_ADD
-            MMX_DOT_PRODUCT_3800_TO_CURRENT_PROCESS_CHUNK_ADD    
+            MMX_DOT_PRODUCT_3800_TO_CURRENT_PROCESS_CHUNK_ADD
             MMX_DOT_PRODUCT_3800_TO_CURRENT_PROCESS_CHUNK_ADD
             MMX_DOT_PRODUCT_3800_TO_CURRENT_PROCESS_CHUNK_ADD
             MMX_DOT_PRODUCT_3800_TO_CURRENT_PROCESS_CHUNK_ADD
@@ -264,7 +264,7 @@ LBL_ADD_AGAIN:
             add esi, 8
             movq mm1, [esi]
             add esi, 8
-            
+
             movq mm3, [edi]
             add edi, 8
             movq mm4, [edi]
@@ -297,7 +297,7 @@ LBL_ADD_AGAIN:
             psrlq mm7, 32
             paddd mm6, mm7
             movd nDotProduct, mm6
-            
+
             pop edi
             pop esi
             pop eax
@@ -305,9 +305,9 @@ LBL_ADD_AGAIN:
 
         }
     }
-    else 
+    else
     {
-        __asm 
+        __asm
         {
             push eax
 
@@ -322,7 +322,7 @@ LBL_ADD_AGAIN:
             pxor mm7, mm7
 
 LBL_SUBTRACT_AGAIN:
-            
+
             /////////////////////////////////////////////////////////
             // process 8 mm registers full
             /////////////////////////////////////////////////////////
@@ -342,7 +342,7 @@ LBL_SUBTRACT_AGAIN:
             add esi, 8
             movq mm1, [esi]
             add esi, 8
-            
+
             movq mm3, [edi]
             add edi, 8
             movq mm4, [edi]
@@ -375,7 +375,7 @@ LBL_SUBTRACT_AGAIN:
             psrlq mm7, 32
             paddd mm6, mm7
             movd nDotProduct, mm6
-            
+
             pop edi
             pop esi
             pop eax
@@ -383,7 +383,7 @@ LBL_SUBTRACT_AGAIN:
 
         }
     }
-    
+
     return nDotProduct;
 }
 

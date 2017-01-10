@@ -22,7 +22,7 @@ CAPEDecompressOld::CAPEDecompressOld(int * pErrorCode, CAPEInfo * pAPEInfo, int 
 
     // create the buffer
     m_nBlockAlign = GetInfo(APE_INFO_BLOCK_ALIGN);
-    
+
     // initialize other stuff
     m_nBufferTail = 0;
     m_bDecompressorInitialized = false;
@@ -67,7 +67,7 @@ int CAPEDecompressOld::GetData(char * pBuffer, int nBlocks, int * pBlocksRetriev
     if (pBlocksRetrieved) *pBlocksRetrieved = 0;
 
     RETURN_ON_ERROR(InitializeDecompressor())
-    
+
     // cap
     int nBlocksUntilFinish = m_nFinishBlock - m_nCurrentBlock;
     nBlocks = min(nBlocks, nBlocksUntilFinish);
@@ -87,10 +87,10 @@ int CAPEDecompressOld::GetData(char * pBuffer, int nBlocks, int * pBlocksRetriev
         if (nIntialBytes > 0)
         {
             memcpy(&pBuffer[nTotalBytesNeeded - nBytesLeft], &m_spBuffer[0], nIntialBytes);
-            
+
             if ((m_nBufferTail - nIntialBytes) > 0)
                 memmove(&m_spBuffer[0], &m_spBuffer[nIntialBytes], m_nBufferTail - nIntialBytes);
-                
+
             nBytesLeft -= nIntialBytes;
             m_nBufferTail -= nIntialBytes;
 
@@ -107,14 +107,14 @@ int CAPEDecompressOld::GetData(char * pBuffer, int nBlocks, int * pBlocksRetriev
             m_nBufferTail += (nBlocksDecoded * m_nBlockAlign);
         }
     }
-    
+
     nBlocksRetrieved = (nTotalBytesNeeded - nBytesLeft) / m_nBlockAlign;
 
     // update the position
     m_nCurrentBlock += nBlocksRetrieved;
 
     if (pBlocksRetrieved) *pBlocksRetrieved = nBlocksRetrieved;
-    
+
     return ERROR_SUCCESS;
 }
 
@@ -124,7 +124,7 @@ int CAPEDecompressOld::Seek(int nBlockOffset)
 
     // use the offset
     nBlockOffset += m_nStartBlock;
-    
+
     // cap (to prevent seeking too far)
     if (nBlockOffset >= m_nFinishBlock)
         nBlockOffset = m_nFinishBlock - 1;
@@ -133,35 +133,35 @@ int CAPEDecompressOld::Seek(int nBlockOffset)
 
     // flush the buffer
     m_nBufferTail = 0;
-    
+
     // seek to the perfect location
     int nBaseFrame = nBlockOffset / GetInfo(APE_INFO_BLOCKS_PER_FRAME);
     int nBlocksToSkip = nBlockOffset % GetInfo(APE_INFO_BLOCKS_PER_FRAME);
     int nBytesToSkip = nBlocksToSkip * m_nBlockAlign;
-        
+
     // skip necessary blocks
     int nMaximumDecompressedFrameBytes = m_nBlockAlign * GetInfo(APE_INFO_BLOCKS_PER_FRAME);
     char *pTempBuffer = new char [nMaximumDecompressedFrameBytes + 16];
     ZeroMemory(pTempBuffer, nMaximumDecompressedFrameBytes + 16);
-    
+
     m_nCurrentFrame = nBaseFrame;
 
     int nBlocksDecoded = m_UnMAC.DecompressFrame((unsigned char *) pTempBuffer, m_nCurrentFrame++, 0);
-    
+
     if (nBlocksDecoded == -1)
     {
         return -1;
     }
-    
+
     int nBytesToKeep = (nBlocksDecoded * m_nBlockAlign) - nBytesToSkip;
     memcpy(&m_spBuffer[m_nBufferTail], &pTempBuffer[nBytesToSkip], nBytesToKeep);
     m_nBufferTail += nBytesToKeep;
-    
+
     delete [] pTempBuffer;
-    
+
 
     m_nCurrentBlock = nBlockOffset;
-    
+
     return ERROR_SUCCESS;
 }
 
@@ -243,7 +243,7 @@ long CAPEDecompressOld::GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1, long 
         {
             char * pBuffer = (char *) nParam1;
             int nMaxBytes = nParam2;
-            
+
             if (sizeof(WAVE_HEADER) > (unsigned int)nMaxBytes)
             {
                 nRetVal = -1;
@@ -251,8 +251,8 @@ long CAPEDecompressOld::GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1, long 
             else
             {
                 WAVEFORMATEX wfeFormat; GetInfo(APE_INFO_WAVEFORMATEX, (long) &wfeFormat, 0);
-                WAVE_HEADER WAVHeader; FillWaveHeader(&WAVHeader, 
-                    (m_nFinishBlock - m_nStartBlock) * GetInfo(APE_INFO_BLOCK_ALIGN), 
+                WAVE_HEADER WAVHeader; FillWaveHeader(&WAVHeader,
+                    (m_nFinishBlock - m_nStartBlock) * GetInfo(APE_INFO_BLOCK_ALIGN),
                     &wfeFormat,    0);
                 memcpy(pBuffer, &WAVHeader, sizeof(WAVE_HEADER));
                 nRetVal = 0;

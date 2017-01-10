@@ -15,7 +15,7 @@
 
 class CIO
 {
-    
+
 public:
 
     //construction / destruction
@@ -25,14 +25,14 @@ public:
     // open / close
     virtual int Open(const wchar_t * pName) = 0;
     virtual int Close() = 0;
-    
+
     // read / write
     virtual int Read(void * pBuffer, unsigned int nBytesToRead, unsigned int * pBytesRead) = 0;
     virtual int Write(const void * pBuffer, unsigned int nBytesToWrite, unsigned int * pBytesWritten) = 0;
-    
+
     // seek
     virtual int Seek(int nDistance, unsigned int nMoveMode) = 0;
-    
+
     // creation / destruction
     virtual int Create(const wchar_t * pName) = 0;
     virtual int Delete() = 0;

@@ -2,9 +2,9 @@
  * CopyPolicy: GNU Public License 2 applies
  * Copyright (C) 1998 Monty xiphmont@mit.edu
  *
- * CDROM communication common to all interface methods is done here 
+ * CDROM communication common to all interface methods is done here
  * (mostly ioctl stuff, but not ioctls specific to the 'cooked'
- * interface) 
+ * interface)
  *
  ******************************************************************/
 
@@ -21,7 +21,7 @@
 /* Test for presence of a cdrom by pinging with the 'CDROMVOLREAD' ioctl() */
 int ioctl_ping_cdrom(int fd){
   struct cdrom_volctrl volctl;
-  if (ioctl(fd, CDROMVOLREAD, &volctl)) 
+  if (ioctl(fd, CDROMVOLREAD, &volctl))
     return(1); /* failure */
 
   return(0);
@@ -35,7 +35,7 @@ int ioctl_ping_cdrom(int fd){
 char *atapi_drive_info(int fd){
   /* Work around the fact that the struct grew without warning in
      2.1/2.0.34 */
-  
+
   struct hd_driveid *id=malloc(512); /* the size in 2.0.34 */
   char *ret;
 
@@ -68,7 +68,7 @@ int data_bigendianp(cdrom_drive *d){
 
   /* Force no swap for now */
   d->bigendianp=-1;
-  
+
   cdmessage(d,"\nAttempting to determine drive endianness from data...");
   d->enable_cdda(d,1);
   for(i=0,checked=0;i<d->tracks;i++){
@@ -79,14 +79,14 @@ int data_bigendianp(cdrom_drive *d){
       long lastsector=cdda_track_lastsector(d,i+1);
       int zeroflag=-1;
       long beginsec=0;
-      
+
       /* find a block with nonzero data */
-      
+
       while(firstsector+readsectors<=lastsector){
 	int j;
-	
+
 	if(d->read_audio(d,buff,firstsector,readsectors)>0){
-	  
+
 	  /* Avoid scanning through jitter at the edges */
 	  for(beginsec=0;beginsec<readsectors;beginsec++){
 	    int offset=beginsec*CD_FRAMESIZE_RAW/2;
@@ -110,17 +110,17 @@ int data_bigendianp(cdrom_drive *d){
       }
 
       beginsec*=CD_FRAMESIZE_RAW/2;
-      
+
       /* un-interleave for an fft */
       if(!zeroflag){
 	int j;
-	
+
 	for(j=0;j<128;j++)a[j]=le16_to_cpu(buff[j*2+beginsec+460]);
 	for(j=0;j<128;j++)b[j]=le16_to_cpu(buff[j*2+beginsec+461]);
 	fft_forward(128,a,NULL,NULL);
 	fft_forward(128,b,NULL,NULL);
 	for(j=0;j<128;j++)lsb_energy+=fabs(a[j])+fabs(b[j]);
-	
+
 	for(j=0;j<128;j++)a[j]=be16_to_cpu(buff[j*2+beginsec+460]);
 	for(j=0;j<128;j++)b[j]=be16_to_cpu(buff[j*2+beginsec+461]);
 	fft_forward(128,a,NULL,NULL);
@@ -181,9 +181,9 @@ int FixupTOC(cdrom_drive *d,int tracks){
   struct cdrom_multisession ms_str;
 #endif /* __APPLE__ */
   int j;
-  
+
   /* First off, make sure the 'starting sector' is >=0 */
-  
+
   for(j=0;j<tracks;j++){
     if(d->disc_toc[j].dwStartSector<0){
       cdmessage(d,"\n\tTOC entry claims a negative start offset: massaging"
@@ -207,7 +207,7 @@ int FixupTOC(cdrom_drive *d,int tracks){
 	cdmessage(d,"\n\tTOC entries claim non-increasing offsets: massaging"
 		  ".\n");
 	 d->disc_toc[j].dwStartSector=last;
-	
+
       }
       last=d->disc_toc[j].dwStartSector;
     }
@@ -232,7 +232,7 @@ int FixupTOC(cdrom_drive *d,int tracks){
       /* adjust end of last audio track to be in the first session */
       for (j = tracks-1; j >= 0; j--) {
 	if (j > 0 && !IS_AUDIO(d,j) && IS_AUDIO(d,j-1)) {
-	  if (d->disc_toc[j].dwStartSector > ms_str.addr.lba - 11400) 
+	  if (d->disc_toc[j].dwStartSector > ms_str.addr.lba - 11400)
 	    d->disc_toc[j].dwStartSector = ms_str.addr.lba - 11400;
 	  break;
 	}

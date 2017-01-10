@@ -22,11 +22,11 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
 
     // the prepare code
 
-    if (pWaveFormatEx->wBitsPerSample == 8) 
+    if (pWaveFormatEx->wBitsPerSample == 8)
     {
-        if (pWaveFormatEx->nChannels == 2) 
+        if (pWaveFormatEx->nChannels == 2)
         {
-            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++) 
+            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++)
             {
                 R = (int) (*((unsigned char *) pRawData) - 128);
                 L = (int) (*((unsigned char *) (pRawData + 1)) - 128);
@@ -45,14 +45,14 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
                 pOutputX[nBlockIndex] = R + (pOutputY[nBlockIndex] / 2);
             }
         }
-        else if (pWaveFormatEx->nChannels == 1) 
+        else if (pWaveFormatEx->nChannels == 1)
         {
-            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++) 
+            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++)
             {
                 R = (int) (*((unsigned char *) pRawData) - 128);
-                                
+
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData++];
-                
+
                 // check the peak
                 if (labs(R) > *pPeakLevel)
                     *pPeakLevel = labs(R);
@@ -62,17 +62,17 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
             }
         }
     }
-    else if (pWaveFormatEx->wBitsPerSample == 24) 
+    else if (pWaveFormatEx->wBitsPerSample == 24)
     {
-        if (pWaveFormatEx->nChannels == 2) 
+        if (pWaveFormatEx->nChannels == 2)
         {
-            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++) 
+            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++)
             {
                 uint32 nTemp = 0;
 #if (__BYTE_ORDER == __BIG_ENDIAN)
 				nTemp |= (*(pRawData+2) << 0);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *(pRawData+2)];
-                
+
                 nTemp |= (*(pRawData+1) << 8);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *(pRawData+1)];
 
@@ -108,10 +108,10 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
 #else
                 nTemp |= (*pRawData << 0);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData++];
-                
+
                 nTemp |= (*pRawData << 8);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData++];
-                
+
                 nTemp |= (*pRawData << 16);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData++];
 #endif
@@ -132,9 +132,9 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
 
             }
         }
-        else if (pWaveFormatEx->nChannels == 1) 
+        else if (pWaveFormatEx->nChannels == 1)
         {
-            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++) 
+            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++)
             {
                 uint32 nTemp = 0;
 #if (__BYTE_ORDER == __BIG_ENDIAN)
@@ -143,17 +143,17 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
 
                 nTemp |= (*(pRawData+1) << 8);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *(pRawData+1)];
-                
+
                 nTemp |= (*pRawData << 16);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData];
 				pRawData += 3;
 #else
                 nTemp |= (*pRawData << 0);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData++];
-                
+
                 nTemp |= (*pRawData << 8);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData++];
-                
+
                 nTemp |= (*pRawData << 16);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData++];
 #endif
@@ -161,7 +161,7 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
                     R = (int) (nTemp & 0x7FFFFF) - 0x800000;
                 else
                     R = (int) (nTemp & 0x7FFFFF);
-    
+
                 // check the peak
                 if (labs(R) > *pPeakLevel)
                     *pPeakLevel = labs(R);
@@ -171,14 +171,14 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
             }
         }
     }
-    else 
+    else
     {
-        if (pWaveFormatEx->nChannels == 2) 
+        if (pWaveFormatEx->nChannels == 2)
         {
             int LPeak = 0;
             int RPeak = 0;
             int nBlockIndex = 0;
-            for (nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++) 
+            for (nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++)
             {
 #if (__BYTE_ORDER == __BIG_ENDIAN)
 				R = (int) *((int16 *) pRawData);
@@ -212,16 +212,16 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
 
             if (LPeak == 0) { *pSpecialCodes |= SPECIAL_FRAME_LEFT_SILENCE; }
             if (RPeak == 0) { *pSpecialCodes |= SPECIAL_FRAME_RIGHT_SILENCE; }
-            if (max(LPeak, RPeak) > *pPeakLevel) 
+            if (max(LPeak, RPeak) > *pPeakLevel)
             {
                 *pPeakLevel = max(LPeak, RPeak);
             }
 
             // check for pseudo-stereo files
             nBlockIndex = 0;
-            while (pOutputY[nBlockIndex++] == 0) 
+            while (pOutputY[nBlockIndex++] == 0)
             {
-                if (nBlockIndex == (nBytes / 4)) 
+                if (nBlockIndex == (nBytes / 4))
                 {
                     *pSpecialCodes |= SPECIAL_FRAME_PSEUDO_STEREO;
                     break;
@@ -229,10 +229,10 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
             }
 
         }
-        else if (pWaveFormatEx->nChannels == 1) 
+        else if (pWaveFormatEx->nChannels == 1)
         {
             int nPeak = 0;
-            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++) 
+            for (int nBlockIndex = 0; nBlockIndex < nTotalBlocks; nBlockIndex++)
             {
 #if (__BYTE_ORDER == __BIG_ENDIAN)
 				R = (int) *((int16 *) pRawData);
@@ -241,7 +241,7 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
 				pRawData += 2;
 #else
                 R = (int) *((int16 *) pRawData);
-                
+
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData++];
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *pRawData++];
 #endif
@@ -264,7 +264,7 @@ int CPrepare::Prepare(const unsigned char * pRawData, int nBytes, const WAVEFORM
     // add the special code
     CRC >>= 1;
 
-    if (*pSpecialCodes != 0) 
+    if (*pSpecialCodes != 0)
     {
         CRC |= (1 << 31);
     }
@@ -279,10 +279,10 @@ void CPrepare::Unprepare(int X, int Y, const WAVEFORMATEX * pWaveFormatEx, unsig
     #define CALCULATE_CRC_BYTE    *pCRC = (*pCRC >> 8) ^ CRC32_TABLE[(*pCRC & 0xFF) ^ *pOutput++];
     // decompress and convert from (x,y) -> (l,r)
     // sort of long and ugly.... sorry
-    
-    if (pWaveFormatEx->nChannels == 2) 
+
+    if (pWaveFormatEx->nChannels == 2)
     {
-        if (pWaveFormatEx->wBitsPerSample == 16) 
+        if (pWaveFormatEx->wBitsPerSample == 16)
         {
             // get the right and left values
             int nR = X - (Y / 2);
@@ -306,13 +306,13 @@ void CPrepare::Unprepare(int X, int Y, const WAVEFORMATEX * pWaveFormatEx, unsig
             *(int16 *) pOutput = (int16) nR;
             CALCULATE_CRC_BYTE
             CALCULATE_CRC_BYTE
-                
+
             *(int16 *) pOutput = (int16) nL;
             CALCULATE_CRC_BYTE
             CALCULATE_CRC_BYTE
 #endif
         }
-        else if (pWaveFormatEx->wBitsPerSample == 8) 
+        else if (pWaveFormatEx->wBitsPerSample == 8)
         {
             unsigned char R = (X - (Y / 2) + 128);
             *pOutput = R;
@@ -320,18 +320,18 @@ void CPrepare::Unprepare(int X, int Y, const WAVEFORMATEX * pWaveFormatEx, unsig
             *pOutput = (unsigned char) (R + Y);
             CALCULATE_CRC_BYTE
         }
-        else if (pWaveFormatEx->wBitsPerSample == 24) 
+        else if (pWaveFormatEx->wBitsPerSample == 24)
         {
             int32 RV, LV;
 
             RV = X - (Y / 2);
             LV = RV + Y;
-            
+
             uint32 nTemp = 0;
             if (RV < 0)
                 nTemp = ((uint32) (RV + 0x800000)) | 0x800000;
             else
-                nTemp = (uint32) RV;    
+                nTemp = (uint32) RV;
 #if (__BYTE_ORDER == __BIG_ENDIAN)
 			*(pOutput+2) = (unsigned char) ((nTemp >> 0) & 0xFF);
 			*pCRC = (*pCRC >> 8) ^ CRC32_TABLE[(*pCRC & 0xFF) ^ *(pOutput+2)];
@@ -352,7 +352,7 @@ void CPrepare::Unprepare(int X, int Y, const WAVEFORMATEX * pWaveFormatEx, unsig
             if (LV < 0)
                 nTemp = ((uint32) (LV + 0x800000)) | 0x800000;
             else
-                nTemp = (uint32) LV;    
+                nTemp = (uint32) LV;
 #if (__BYTE_ORDER == __BIG_ENDIAN)
 			*(pOutput+2) = (unsigned char) ((nTemp >> 0) & 0xFF);
 			*pCRC = (*pCRC >> 8) ^ CRC32_TABLE[(*pCRC & 0xFF) ^ *(pOutput+2)];
@@ -364,18 +364,18 @@ void CPrepare::Unprepare(int X, int Y, const WAVEFORMATEX * pWaveFormatEx, unsig
 #else
             *pOutput = (unsigned char) ((nTemp >> 0) & 0xFF);
             CALCULATE_CRC_BYTE
-            
+
             *pOutput = (unsigned char) ((nTemp >> 8) & 0xFF);
             CALCULATE_CRC_BYTE
-            
+
             *pOutput = (unsigned char) ((nTemp >> 16) & 0xFF);
             CALCULATE_CRC_BYTE
 #endif
         }
     }
-    else if (pWaveFormatEx->nChannels == 1) 
+    else if (pWaveFormatEx->nChannels == 1)
     {
-        if (pWaveFormatEx->wBitsPerSample == 16) 
+        if (pWaveFormatEx->wBitsPerSample == 16)
         {
             int16 R = X;
 #if (__BYTE_ORDER == __BIG_ENDIAN)
@@ -389,21 +389,21 @@ void CPrepare::Unprepare(int X, int Y, const WAVEFORMATEX * pWaveFormatEx, unsig
             CALCULATE_CRC_BYTE
 #endif
         }
-        else if (pWaveFormatEx->wBitsPerSample == 8) 
+        else if (pWaveFormatEx->wBitsPerSample == 8)
         {
             unsigned char R = X + 128;
             *pOutput = R;
             CALCULATE_CRC_BYTE
         }
-        else if (pWaveFormatEx->wBitsPerSample == 24) 
+        else if (pWaveFormatEx->wBitsPerSample == 24)
         {
             int32 RV = X;
-            
+
             uint32 nTemp = 0;
             if (RV < 0)
                 nTemp = ((uint32) (RV + 0x800000)) | 0x800000;
             else
-                nTemp = (uint32) RV;    
+                nTemp = (uint32) RV;
 #if (__BYTE_ORDER == __BIG_ENDIAN)
 			*(pOutput+2) = (unsigned char) ((nTemp >> 0) & 0xFF);
 			*pCRC = (*pCRC >> 8) ^ CRC32_TABLE[(*pCRC & 0xFF) ^ *(pOutput+2)];
@@ -433,37 +433,37 @@ int CPrepare::UnprepareOld(int *pInputX, int *pInputY, int nBlocks, const WAVEFO
 
     // decompress and convert from (x,y) -> (l,r)
     // sort of int and ugly.... sorry
-    if (pWaveFormatEx->nChannels == 2) 
+    if (pWaveFormatEx->nChannels == 2)
     {
         // convert the x,y data to raw data
-        if (pWaveFormatEx->wBitsPerSample == 16) 
+        if (pWaveFormatEx->wBitsPerSample == 16)
         {
             int16 R;
             unsigned char *Buffer = &pRawData[0];
             int *pX = pInputX;
             int *pY = pInputY;
 
-            for (; pX < &pInputX[nBlocks]; pX++, pY++) 
+            for (; pX < &pInputX[nBlocks]; pX++, pY++)
             {
                 R = *pX - (*pY / 2);
-                
+
                 *(int16 *) Buffer = (int16) R;
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
-                
+
                 *(int16 *) Buffer = (int16) R + *pY;
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
             }
         }
-        else if (pWaveFormatEx->wBitsPerSample == 8) 
+        else if (pWaveFormatEx->wBitsPerSample == 8)
         {
             unsigned char *R = (unsigned char *) &pRawData[0];
             unsigned char *L = (unsigned char *) &pRawData[1];
 
-            if (nFileVersion > 3830) 
+            if (nFileVersion > 3830)
             {
-                for (int SampleIndex = 0; SampleIndex < nBlocks; SampleIndex++, L+=2, R+=2) 
+                for (int SampleIndex = 0; SampleIndex < nBlocks; SampleIndex++, L+=2, R+=2)
                 {
                     *R = (unsigned char) (pInputX[SampleIndex] - (pInputY[SampleIndex] / 2) + 128);
                     CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *R];
@@ -471,7 +471,7 @@ int CPrepare::UnprepareOld(int *pInputX, int *pInputY, int nBlocks, const WAVEFO
                     CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *L];
                 }
             }
-            else 
+            else
             {
                 for (int SampleIndex = 0; SampleIndex < nBlocks; SampleIndex++, L+=2, R+=2)
                 {
@@ -483,7 +483,7 @@ int CPrepare::UnprepareOld(int *pInputX, int *pInputY, int nBlocks, const WAVEFO
                 }
             }
         }
-        else if (pWaveFormatEx->wBitsPerSample == 24) 
+        else if (pWaveFormatEx->wBitsPerSample == 24)
         {
             unsigned char *Buffer = (unsigned char *) &pRawData[0];
             int32 RV, LV;
@@ -492,16 +492,16 @@ int CPrepare::UnprepareOld(int *pInputX, int *pInputY, int nBlocks, const WAVEFO
             {
                 RV = pInputX[SampleIndex] - (pInputY[SampleIndex] / 2);
                 LV = RV + pInputY[SampleIndex];
-                
+
                 uint32 nTemp = 0;
                 if (RV < 0)
                     nTemp = ((uint32) (RV + 0x800000)) | 0x800000;
                 else
-                    nTemp = (uint32) RV;    
-                
+                    nTemp = (uint32) RV;
+
                 *Buffer = (unsigned char) ((nTemp >> 0) & 0xFF);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
-                
+
                 *Buffer = (unsigned char) ((nTemp >> 8) & 0xFF);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
 
@@ -512,27 +512,27 @@ int CPrepare::UnprepareOld(int *pInputX, int *pInputY, int nBlocks, const WAVEFO
                 if (LV < 0)
                     nTemp = ((uint32) (LV + 0x800000)) | 0x800000;
                 else
-                    nTemp = (uint32) LV;    
-                
+                    nTemp = (uint32) LV;
+
                 *Buffer = (unsigned char) ((nTemp >> 0) & 0xFF);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
-                
+
                 *Buffer = (unsigned char) ((nTemp >> 8) & 0xFF);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
-                
+
                 *Buffer = (unsigned char) ((nTemp >> 16) & 0xFF);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
             }
         }
     }
-    else if (pWaveFormatEx->nChannels == 1) 
+    else if (pWaveFormatEx->nChannels == 1)
     {
         // convert to raw data
-        if (pWaveFormatEx->wBitsPerSample == 8) 
+        if (pWaveFormatEx->wBitsPerSample == 8)
         {
             unsigned char *R = (unsigned char *) &pRawData[0];
 
-            if (nFileVersion > 3830) 
+            if (nFileVersion > 3830)
             {
                 for (int SampleIndex = 0; SampleIndex < nBlocks; SampleIndex++, R++)
                 {
@@ -540,7 +540,7 @@ int CPrepare::UnprepareOld(int *pInputX, int *pInputY, int nBlocks, const WAVEFO
                     CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *R];
                 }
             }
-            else 
+            else
             {
                 for (int SampleIndex = 0; SampleIndex < nBlocks; SampleIndex++, R++)
                 {
@@ -550,12 +550,12 @@ int CPrepare::UnprepareOld(int *pInputX, int *pInputY, int nBlocks, const WAVEFO
             }
 
         }
-        else if (pWaveFormatEx->wBitsPerSample == 24) 
+        else if (pWaveFormatEx->wBitsPerSample == 24)
         {
 
             unsigned char *Buffer = (unsigned char *) &pRawData[0];
             int32 RV;
-            for (int SampleIndex = 0; SampleIndex<nBlocks; SampleIndex++) 
+            for (int SampleIndex = 0; SampleIndex<nBlocks; SampleIndex++)
             {
                 RV = pInputX[SampleIndex];
 
@@ -563,23 +563,23 @@ int CPrepare::UnprepareOld(int *pInputX, int *pInputY, int nBlocks, const WAVEFO
                 if (RV < 0)
                     nTemp = ((uint32) (RV + 0x800000)) | 0x800000;
                 else
-                    nTemp = (uint32) RV;    
-                
+                    nTemp = (uint32) RV;
+
                 *Buffer = (unsigned char) ((nTemp >> 0) & 0xFF);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
-                
+
                 *Buffer = (unsigned char) ((nTemp >> 8) & 0xFF);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
-                
+
                 *Buffer = (unsigned char) ((nTemp >> 16) & 0xFF);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];
             }
         }
-        else 
+        else
         {
             unsigned char *Buffer = &pRawData[0];
 
-            for (int SampleIndex = 0; SampleIndex < nBlocks; SampleIndex++) 
+            for (int SampleIndex = 0; SampleIndex < nBlocks; SampleIndex++)
             {
                 *(int16 *) Buffer = (int16) (pInputX[SampleIndex]);
                 CRC = (CRC >> 8) ^ CRC32_TABLE[(CRC & 0xFF) ^ *Buffer++];

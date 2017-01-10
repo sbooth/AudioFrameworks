@@ -6,12 +6,12 @@
 * it under the terms of the GNU General Public License as published by
 * the Free Software Foundation; either version 2 of the License, or
 * (at your option) any later version.
-* 
+*
 * This program is distributed in the hope that it will be useful,
 * but WITHOUT ANY WARRANTY; without even the implied warranty of
 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 * GNU General Public License for more details.
-* 
+*
 * You should have received a copy of the GNU General Public License
 * along with this program; if not, write to the Free Software
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
@@ -27,20 +27,20 @@
 /*
  *  Block copy and convert byte order to little-endian.
  *  dst must be 32bit aligned.
- *  Length is the number of 32bit words 
- */   
-static void 
-CopyToLittleEndian ( uint32_t*       dst, 
-                     const uint8_t*  src, 
-             size_t          length ) 
+ *  Length is the number of 32bit words
+ */
+static void
+CopyToLittleEndian ( uint32_t*       dst,
+                     const uint8_t*  src,
+             size_t          length )
 {
     for ( ;length > 0; length--, src += 4, dst++  ) {
     *dst = (( (uint32_t) src [3] ) << 24) |
            (( (uint32_t) src [2] ) << 16) |
            (( (uint32_t) src [1] ) <<  8) |
            (( (uint32_t) src [0] ) <<  0);
-       
-       
+
+
     }
 }
 #endif
@@ -58,8 +58,8 @@ CopyToLittleEndian ( uint32_t*       dst,
 /*
    Initialise the MD5 context.
 */
-void 
-MD5Init ( MD5_CTX* context ) 
+void
+MD5Init ( MD5_CTX* context )
 {
     context -> count [0] = 0;
     context -> count [1] = 0;
@@ -82,10 +82,10 @@ MD5Init ( MD5_CTX* context )
 #define HH(a, b, c, d, x, s, ac)     { (a) += H (b, c, d) + (x) + (uint32_t)(ac); (a) = ROTATE_LEFT (a, s); (a) += (b); }
 #define II(a, b, c, d, x, s, ac)     { (a) += I (b, c, d) + (x) + (uint32_t)(ac); (a) = ROTATE_LEFT (a, s); (a) += (b); }
 
-static void 
-__MD5Transform ( uint32_t        state [4], 
-         const uint8_t*  in, 
-         int             repeat ) 
+static void
+__MD5Transform ( uint32_t        state [4],
+         const uint8_t*  in,
+         int             repeat )
 {
     const uint32_t*  x;
     uint32_t         a = state [0];
@@ -103,7 +103,7 @@ __MD5Transform ( uint32_t        state [4],
     if ( (unsigned long)in & 3 ) {
         memcpy ( tempBuffer, in, 64 );
         x = tempBuffer;
-    } 
+    }
     else {
         x = (const uint32_t*) in;
     }
@@ -125,7 +125,7 @@ __MD5Transform ( uint32_t        state [4],
     FF (d, a, b, c, x[13], 12, 0xfd987193); /* 14 */
     FF (c, d, a, b, x[14], 17, 0xa679438e); /* 15 */
     FF (b, c, d, a, x[15], 22, 0x49b40821); /* 16 */
-    
+
     GG (a, b, c, d, x[ 1],  5, 0xf61e2562); /* 17 */     /* Round 2 */
     GG (d, a, b, c, x[ 6],  9, 0xc040b340); /* 18 */
     GG (c, d, a, b, x[11], 14, 0x265e5a51); /* 19 */
@@ -142,7 +142,7 @@ __MD5Transform ( uint32_t        state [4],
     GG (d, a, b, c, x[ 2],  9, 0xfcefa3f8); /* 30 */
     GG (c, d, a, b, x[ 7], 14, 0x676f02d9); /* 31 */
     GG (b, c, d, a, x[12], 20, 0x8d2a4c8a); /* 32 */
-    
+
     HH (a, b, c, d, x[ 5],  4, 0xfffa3942); /* 33 */     /* Round 3 */
     HH (d, a, b, c, x[ 8], 11, 0x8771f681); /* 34 */
     HH (c, d, a, b, x[11], 16, 0x6d9d6122); /* 35 */
@@ -159,7 +159,7 @@ __MD5Transform ( uint32_t        state [4],
     HH (d, a, b, c, x[12], 11, 0xe6db99e5); /* 46 */
     HH (c, d, a, b, x[15], 16, 0x1fa27cf8); /* 47 */
     HH (b, c, d, a, x[ 2], 23, 0xc4ac5665); /* 48 */
-    
+
     II (a, b, c, d, x[ 0],  6, 0xf4292244); /* 49 */     /* Round 4 */
     II (d, a, b, c, x[ 7], 10, 0x432aff97); /* 50 */
     II (c, d, a, b, x[14], 15, 0xab9423a7); /* 51 */
@@ -176,12 +176,12 @@ __MD5Transform ( uint32_t        state [4],
     II (d, a, b, c, x[11], 10, 0xbd3af235); /* 62 */
     II (c, d, a, b, x[ 2], 15, 0x2ad7d2bb); /* 63 */
     II (b, c, d, a, x[ 9], 21, 0xeb86d391); /* 64 */
-    
+
     state [0] = a = a + state [0];
     state [1] = b = b + state [1];
     state [2] = c = c + state [2];
     state [3] = d = d + state [3];
-    
+
     in += 64;
     }
 }
@@ -192,24 +192,24 @@ __MD5Transform ( uint32_t        state [4],
    Process another sub-string of the message and update the context.
 */
 
-void 
-MD5Update ( MD5_CTX*        context, 
-            const uint8_t*  input, 
-        size_t          inputBytes ) 
+void
+MD5Update ( MD5_CTX*        context,
+            const uint8_t*  input,
+        size_t          inputBytes )
 {
     int           byteIndex;
     unsigned int  partLen;
     int           len;
     int           i;
-    
+
     /* Compute number of bytes mod 64 */
     byteIndex = (context -> count[0] >> 3) & 0x3F;
-    
+
     /* Update number of bits: count += 8 * inputBytes */
     if ( (context -> count [0] += inputBytes << 3) < (inputBytes << 3) )
     context -> count [1]++;
     context -> count [1] += inputBytes >> (32 - 3);
-    
+
     partLen = (64 - byteIndex);
 
     /* Transform as many times as possible. */
@@ -220,11 +220,11 @@ MD5Update ( MD5_CTX*        context,
     __MD5Transform ( context -> state, input + partLen, len );
     i         = partLen + (len << 6);
     byteIndex = 0;
-    } 
+    }
     else {
     i         = 0;
     }
-    
+
     /* Buffer remaining input */
     memcpy ( (context -> buffer) + byteIndex, input + i, inputBytes - i );
 }
@@ -232,28 +232,28 @@ MD5Update ( MD5_CTX*        context,
 #endif
 
 
-void 
-MD5Final ( uint8_t   digest [16], 
-       MD5_CTX*  context ) 
+void
+MD5Final ( uint8_t   digest [16],
+       MD5_CTX*  context )
 {
     static uint8_t  finalBlock [64];
     uint32_t        bits        [2];
     int             byteIndex;
     int             finalBlockLength;
-    
+
     byteIndex        = (context -> count[0] >> 3) & 0x3F;
     finalBlockLength = (byteIndex < 56  ?  56  :  120) - byteIndex;
     finalBlock[0]    = 0x80;
-    
+
 #if __BYTE_ORDER == __BIG_ENDIAN
     CopyToLittleEndian ( bits, (const uint8_t*) context -> count, 2 );
 #else
     memcpy ( bits, context->count, 8 );
 #endif
-    
+
     MD5Update ( context, finalBlock, finalBlockLength );
     MD5Update ( context, (const uint8_t*) bits, 8 );
-    
+
 #if __BYTE_ORDER == __BIG_ENDIAN
     CopyToLittleEndian ( (uint32_t*) digest, (const uint8_t*) context -> state, 4 );
 #else

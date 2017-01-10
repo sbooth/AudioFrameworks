@@ -38,7 +38,7 @@ typedef struct linked_element{
   void *ptr;
   struct linked_element *prev;
   struct linked_element *next;
-  
+
   struct linked_list *list;
   int stamp;
 } linked_element;
@@ -112,7 +112,7 @@ extern v_fragment *v_next(v_fragment *v);
 extern v_fragment *v_prev(v_fragment *v);
 
 typedef struct root_block{
-  long returnedlimit;   
+  long returnedlimit;
   long lastsector;
   struct cdrom_paranoia *p;
 
@@ -122,7 +122,7 @@ typedef struct root_block{
 } root_block;
 
 typedef struct offsets{
-  
+
   long offpoints;
   long newpoints;
   long offaccum;
@@ -142,7 +142,7 @@ typedef struct cdrom_paranoia{
   sort_info *sortcache;
 
   int readahead;          /* sectors of readahead in each readop */
-  int jitter;           
+  int jitter;
   long lastread;
 
   int enable;

@@ -27,7 +27,7 @@ Includes
 /*****************************************************************************************
 CUnMAC class construction
 *****************************************************************************************/
-CUnMAC::CUnMAC() 
+CUnMAC::CUnMAC()
 {
     // initialize member variables
     m_bInitialized                = false;
@@ -45,7 +45,7 @@ CUnMAC::CUnMAC()
 /*****************************************************************************************
 CUnMAC class destruction
 *****************************************************************************************/
-CUnMAC::~CUnMAC() 
+CUnMAC::~CUnMAC()
 {
     // uninitialize the decoder in case it isn't already
     Uninitialize();
@@ -54,7 +54,7 @@ CUnMAC::~CUnMAC()
 /*****************************************************************************************
 Initialize
 *****************************************************************************************/
-int CUnMAC::Initialize(IAPEDecompress *pAPEDecompress) 
+int CUnMAC::Initialize(IAPEDecompress *pAPEDecompress)
 {
     // uninitialize if it is currently initialized
     if (m_bInitialized)
@@ -77,7 +77,7 @@ int CUnMAC::Initialize(IAPEDecompress *pAPEDecompress)
 
     // set the initialized flag to true
     m_bInitialized = true;
-    
+
     m_pAPEDecompress->GetInfo(APE_INFO_WAVEFORMATEX, (long) &m_wfeInput);
 
     // return a successful value
@@ -87,13 +87,13 @@ int CUnMAC::Initialize(IAPEDecompress *pAPEDecompress)
 /*****************************************************************************************
 Uninitialize
 *****************************************************************************************/
-int CUnMAC::Uninitialize() 
+int CUnMAC::Uninitialize()
 {
-    if (m_bInitialized) 
+    if (m_bInitialized)
     {
         SAFE_DELETE(m_pAPEDecompressCore)
         SAFE_DELETE(m_pPrepare)
-        
+
         // clear the APE info pointer
         m_pAPEDecompress = NULL;
 
@@ -110,7 +110,7 @@ int CUnMAC::Uninitialize()
 /*****************************************************************************************
 Decompress frame
 *****************************************************************************************/
-int CUnMAC::DecompressFrame(unsigned char *pOutputData, int32 FrameIndex, int CPULoadBalancingFactor) 
+int CUnMAC::DecompressFrame(unsigned char *pOutputData, int32 FrameIndex, int CPULoadBalancingFactor)
 {
     return DecompressFrameOld(pOutputData, FrameIndex, CPULoadBalancingFactor);
 }
@@ -120,21 +120,21 @@ Seek to the proper frame (if necessary) and do any alignment of the bit array
 *****************************************************************************************/
 int CUnMAC::SeekToFrame(int FrameIndex)
 {
-    if (GET_FRAMES_START_ON_BYTES_BOUNDARIES(m_pAPEDecompress)) 
+    if (GET_FRAMES_START_ON_BYTES_BOUNDARIES(m_pAPEDecompress))
     {
-        if ((m_LastDecodedFrameIndex == -1) || ((FrameIndex - 1) != m_LastDecodedFrameIndex)) 
+        if ((m_LastDecodedFrameIndex == -1) || ((FrameIndex - 1) != m_LastDecodedFrameIndex))
         {
             int SeekRemainder = (m_pAPEDecompress->GetInfo(APE_INFO_SEEK_BYTE, FrameIndex) - m_pAPEDecompress->GetInfo(APE_INFO_SEEK_BYTE, 0)) % 4;
             m_pAPEDecompressCore->GetUnBitArrray()->FillAndResetBitArray(m_pAPEDecompress->GetInfo(APE_INFO_SEEK_BYTE, FrameIndex) - SeekRemainder, SeekRemainder * 8);
         }
-        else 
+        else
         {
             m_pAPEDecompressCore->GetUnBitArrray()->AdvanceToByteBoundary();
         }
     }
-    else 
+    else
     {
-        if ((m_LastDecodedFrameIndex == -1) || ((FrameIndex - 1) != m_LastDecodedFrameIndex)) 
+        if ((m_LastDecodedFrameIndex == -1) || ((FrameIndex - 1) != m_LastDecodedFrameIndex))
         {
             m_pAPEDecompressCore->GetUnBitArrray()->FillAndResetBitArray(m_pAPEDecompress->GetInfo(APE_INFO_SEEK_BYTE, FrameIndex), m_pAPEDecompress->GetInfo(APE_INFO_SEEK_BIT, FrameIndex));
         }
@@ -146,7 +146,7 @@ int CUnMAC::SeekToFrame(int FrameIndex)
 /*****************************************************************************************
 Old code for frame decompression
 *****************************************************************************************/
-int CUnMAC::DecompressFrameOld(unsigned char *pOutputData, int32 FrameIndex, int CPULoadBalancingFactor) 
+int CUnMAC::DecompressFrameOld(unsigned char *pOutputData, int32 FrameIndex, int CPULoadBalancingFactor)
 {
     // error check the parameters (too high of a frame index, etc.)
     if (FrameIndex >= m_pAPEDecompress->GetInfo(APE_INFO_TOTAL_FRAMES)) { return ERROR_SUCCESS; }
@@ -163,24 +163,24 @@ int CUnMAC::DecompressFrameOld(unsigned char *pOutputData, int32 FrameIndex, int
     // get the checksum
     unsigned int nSpecialCodes = 0;
     uint32 nStoredCRC = 0;
-    
+
     if (GET_USES_CRC(m_pAPEDecompress) == false)
     {
         nStoredCRC = m_pAPEDecompressCore->GetUnBitArrray()->DecodeValue(DECODE_VALUE_METHOD_UNSIGNED_RICE, 30);
         if (nStoredCRC == 0)
         {
             nSpecialCodes = SPECIAL_FRAME_LEFT_SILENCE | SPECIAL_FRAME_RIGHT_SILENCE;
-        }            
+        }
     }
     else
     {
         nStoredCRC = m_pAPEDecompressCore->GetUnBitArrray()->DecodeValue(DECODE_VALUE_METHOD_UNSIGNED_INT);
-        
+
         // get any 'special' codes if the file uses them (for silence, false stereo, etc.)
         nSpecialCodes = 0;
         if (GET_USES_SPECIAL_FRAMES(m_pAPEDecompress))
         {
-            if (nStoredCRC & 0x80000000) 
+            if (nStoredCRC & 0x80000000)
             {
                 nSpecialCodes = m_pAPEDecompressCore->GetUnBitArrray()->DecodeValue(DECODE_VALUE_METHOD_UNSIGNED_INT);
             }
@@ -193,20 +193,20 @@ int CUnMAC::DecompressFrameOld(unsigned char *pOutputData, int32 FrameIndex, int
 
     // decompress and convert from (x,y) -> (l,r)
     // sort of int and ugly.... sorry
-    if (m_pAPEDecompress->GetInfo(APE_INFO_CHANNELS) == 2) 
+    if (m_pAPEDecompress->GetInfo(APE_INFO_CHANNELS) == 2)
     {
         m_pAPEDecompressCore->GenerateDecodedArrays(nBlocks, nSpecialCodes, FrameIndex, CPULoadBalancingFactor);
 
         WAVEFORMATEX WaveFormatEx; m_pAPEDecompress->GetInfo(APE_INFO_WAVEFORMATEX, (long) &WaveFormatEx);
-        m_pPrepare->UnprepareOld(m_pAPEDecompressCore->GetDataX(), m_pAPEDecompressCore->GetDataY(), nBlocks, &WaveFormatEx, 
+        m_pPrepare->UnprepareOld(m_pAPEDecompressCore->GetDataX(), m_pAPEDecompressCore->GetDataY(), nBlocks, &WaveFormatEx,
             pOutputData, (unsigned int *) &CRC, (int *) &nSpecialCodes, m_pAPEDecompress->GetInfo(APE_INFO_FILE_VERSION));
     }
-    else if (m_pAPEDecompress->GetInfo(APE_INFO_CHANNELS) == 1) 
+    else if (m_pAPEDecompress->GetInfo(APE_INFO_CHANNELS) == 1)
     {
         m_pAPEDecompressCore->GenerateDecodedArrays(nBlocks, nSpecialCodes, FrameIndex, CPULoadBalancingFactor);
-        
+
         WAVEFORMATEX WaveFormatEx; m_pAPEDecompress->GetInfo(APE_INFO_WAVEFORMATEX, (long) &WaveFormatEx);
-        m_pPrepare->UnprepareOld(m_pAPEDecompressCore->GetDataX(), NULL, nBlocks, &WaveFormatEx, 
+        m_pPrepare->UnprepareOld(m_pAPEDecompressCore->GetDataX(), NULL, nBlocks, &WaveFormatEx,
             pOutputData, (unsigned int *) &CRC, (int *) &nSpecialCodes, m_pAPEDecompress->GetInfo(APE_INFO_FILE_VERSION));
     }
 
@@ -229,7 +229,7 @@ int CUnMAC::DecompressFrameOld(unsigned char *pOutputData, int32 FrameIndex, int
     }
 
     m_LastDecodedFrameIndex = FrameIndex;
-    return nBlocks;    
+    return nBlocks;
 }
 
 
@@ -254,7 +254,7 @@ uint32 CUnMAC::CalculateOldChecksum(int *pDataX, int *pDataY, int nChannels, int
         for (int z = 0; z < nBlocks; z++)
             nChecksum += labs(pDataX[z]);
     }
-    
+
     return nChecksum;
 }
 
