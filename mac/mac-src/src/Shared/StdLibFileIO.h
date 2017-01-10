@@ -16,14 +16,14 @@ public:
     // open / close
     int Open(const wchar_t * pName);
     int Close();
-    
+
     // read / write
     int Read(void * pBuffer, unsigned int nBytesToRead, unsigned int * pBytesRead);
     int Write(const void * pBuffer, unsigned int nBytesToWrite, unsigned int * pBytesWritten);
-    
+
     // seek
     int Seek(int nDistance, unsigned int nMoveMode);
-    
+
     // other functions
     int SetEOF();
 
@@ -38,7 +38,7 @@ public:
     int GetHandle();
 
 private:
-    
+
     wchar_t m_cFileName[MAX_PATH];
     bool m_bReadOnly;
     FILE * m_pFile;

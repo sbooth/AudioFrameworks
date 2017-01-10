@@ -13,7 +13,7 @@ struct APE_COMMON_HEADER
 /*****************************************************************************************
 APE header structure for old APE files (3.97 and earlier)
 *****************************************************************************************/
-struct APE_HEADER_OLD 
+struct APE_HEADER_OLD
 {
     char cID[4];                            // should equal 'MAC '
     uint16 nVersion;                        // version number * 1000 (3.81 = 3810)
@@ -37,7 +37,7 @@ class CAPEHeader
 {
 
 public:
-    
+
     CAPEHeader(CIO * pIO);
     ~CAPEHeader();
 

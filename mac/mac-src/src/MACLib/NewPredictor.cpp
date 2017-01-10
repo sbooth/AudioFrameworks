@@ -1,11 +1,11 @@
 #include "All.h"
 #include "APECompress.h"
 #include "NewPredictor.h"
-    
+
 /*****************************************************************************************
 CPredictorCompressNormal
 *****************************************************************************************/
-CPredictorCompressNormal::CPredictorCompressNormal(int nCompressionLevel) 
+CPredictorCompressNormal::CPredictorCompressNormal(int nCompressionLevel)
     : IPredictorCompress(nCompressionLevel)
 {
     if (nCompressionLevel == COMPRESSION_LEVEL_FAST)
@@ -51,7 +51,7 @@ CPredictorCompressNormal::~CPredictorCompressNormal()
     SAFE_DELETE(m_pNNFilter1)
     SAFE_DELETE(m_pNNFilter2)
 }
-    
+
 int CPredictorCompressNormal::Flush()
 {
     if (m_pNNFilter) m_pNNFilter->Flush();
@@ -91,7 +91,7 @@ int CPredictorCompressNormal::CompressValue(int nA, int nB)
     // stage 2: adaptive offset filter(s)
     m_rbPrediction[0] = nA;
     m_rbPrediction[-2] = m_rbPrediction[-1] - m_rbPrediction[-2];
-    
+
     m_rbPrediction[-5] = nB;
     m_rbPrediction[-6] = m_rbPrediction[-5] - m_rbPrediction[-6];
 
@@ -108,12 +108,12 @@ int CPredictorCompressNormal::CompressValue(int nA, int nB)
     m_rbAdapt[-4] = (m_rbPrediction[-5]) ? ((m_rbPrediction[-5] >> 30) & 2) - 1 : 0;
     m_rbAdapt[-5] = (m_rbPrediction[-6]) ? ((m_rbPrediction[-6] >> 30) & 2) - 1 : 0;
 
-    if (nOutput > 0) 
+    if (nOutput > 0)
     {
         int * pM = &paryM[-8]; int * pAdapt = &m_rbAdapt[-8];
         EXPAND_9_TIMES(*pM++ -= *pAdapt++;)
     }
-    else if (nOutput < 0) 
+    else if (nOutput < 0)
     {
         int * pM = &paryM[-8]; int * pAdapt = &m_rbAdapt[-8];
         EXPAND_9_TIMES(*pM++ += *pAdapt++;)
@@ -142,7 +142,7 @@ int CPredictorCompressNormal::CompressValue(int nA, int nB)
 /*****************************************************************************************
 CPredictorDecompressNormal3930to3950
 *****************************************************************************************/
-CPredictorDecompressNormal3930to3950::CPredictorDecompressNormal3930to3950(int nCompressionLevel, int nVersion) 
+CPredictorDecompressNormal3930to3950::CPredictorDecompressNormal3930to3950(int nCompressionLevel, int nVersion)
     : IPredictorDecompress(nCompressionLevel, nVersion)
 {
     m_pBuffer[0] = new int [HISTORY_ELEMENTS + WINDOW_BLOCKS];
@@ -179,13 +179,13 @@ CPredictorDecompressNormal3930to3950::~CPredictorDecompressNormal3930to3950()
     SAFE_DELETE(m_pNNFilter1)
     SAFE_ARRAY_DELETE(m_pBuffer[0])
 }
-    
+
 int CPredictorDecompressNormal3930to3950::Flush()
 {
     if (m_pNNFilter) m_pNNFilter->Flush();
     if (m_pNNFilter1) m_pNNFilter1->Flush();
 
-    ZeroMemory(m_pBuffer[0], (HISTORY_ELEMENTS + 1) * sizeof(int));    
+    ZeroMemory(m_pBuffer[0], (HISTORY_ELEMENTS + 1) * sizeof(int));
     ZeroMemory(&m_aryM[0], M_COUNT * sizeof(int));
 
     m_aryM[0] = 360;
@@ -194,7 +194,7 @@ int CPredictorDecompressNormal3930to3950::Flush()
     m_aryM[3] = 98;
 
     m_pInputBuffer = &m_pBuffer[0][HISTORY_ELEMENTS];
-    
+
     m_nLastValue = 0;
     m_nCurrentIndex = 0;
 
@@ -224,17 +224,17 @@ int CPredictorDecompressNormal3930to3950::DecompressValue(int nInput, int)
     int p2 = m_pInputBuffer[-1] - m_pInputBuffer[-2];
     int p3 = m_pInputBuffer[-2] - m_pInputBuffer[-3];
     int p4 = m_pInputBuffer[-3] - m_pInputBuffer[-4];
-    
+
     m_pInputBuffer[0] = nInput + (((p1 * m_aryM[0]) + (p2 * m_aryM[1]) + (p3 * m_aryM[2]) + (p4 * m_aryM[3])) >> 9);
-    
-    if (nInput > 0) 
+
+    if (nInput > 0)
     {
         m_aryM[0] -= ((p1 >> 30) & 2) - 1;
         m_aryM[1] -= ((p2 >> 30) & 2) - 1;
         m_aryM[2] -= ((p3 >> 30) & 2) - 1;
         m_aryM[3] -= ((p4 >> 30) & 2) - 1;
     }
-    else if (nInput < 0) 
+    else if (nInput < 0)
     {
         m_aryM[0] += ((p1 >> 30) & 2) - 1;
         m_aryM[1] += ((p2 >> 30) & 2) - 1;
@@ -254,7 +254,7 @@ int CPredictorDecompressNormal3930to3950::DecompressValue(int nInput, int)
 /*****************************************************************************************
 CPredictorDecompress3950toCurrent
 *****************************************************************************************/
-CPredictorDecompress3950toCurrent::CPredictorDecompress3950toCurrent(int nCompressionLevel, int nVersion) 
+CPredictorDecompress3950toCurrent::CPredictorDecompress3950toCurrent(int nCompressionLevel, int nVersion)
     : IPredictorDecompress(nCompressionLevel, nVersion)
 {
     m_nVersion = nVersion;
@@ -302,7 +302,7 @@ CPredictorDecompress3950toCurrent::~CPredictorDecompress3950toCurrent()
     SAFE_DELETE(m_pNNFilter1)
     SAFE_DELETE(m_pNNFilter2)
 }
-    
+
 int CPredictorDecompress3950toCurrent::Flush()
 {
     if (m_pNNFilter) m_pNNFilter->Flush();
@@ -324,9 +324,9 @@ int CPredictorDecompress3950toCurrent::Flush()
 
     m_Stage1FilterA.Flush();
     m_Stage1FilterB.Flush();
-    
+
     m_nLastValueA = 0;
-    
+
     m_nCurrentIndex = 0;
 
     return ERROR_SUCCESS;
@@ -354,7 +354,7 @@ int CPredictorDecompress3950toCurrent::DecompressValue(int nA, int nB)
     // stage 1: multiple predictors (order 2 and offset 1)
     m_rbPredictionA[0] = m_nLastValueA;
     m_rbPredictionA[-1] = m_rbPredictionA[0] - m_rbPredictionA[-1];
-    
+
     m_rbPredictionB[0] = m_Stage1FilterB.Compress(nB);
     m_rbPredictionB[-1] = m_rbPredictionB[0] - m_rbPredictionB[-1];
 
@@ -365,11 +365,11 @@ int CPredictorDecompress3950toCurrent::DecompressValue(int nA, int nB)
 
     m_rbAdaptA[0] = (m_rbPredictionA[0]) ? ((m_rbPredictionA[0] >> 30) & 2) - 1 : 0;
     m_rbAdaptA[-1] = (m_rbPredictionA[-1]) ? ((m_rbPredictionA[-1] >> 30) & 2) - 1 : 0;
-    
+
     m_rbAdaptB[0] = (m_rbPredictionB[0]) ? ((m_rbPredictionB[0] >> 30) & 2) - 1 : 0;
     m_rbAdaptB[-1] = (m_rbPredictionB[-1]) ? ((m_rbPredictionB[-1] >> 30) & 2) - 1 : 0;
 
-    if (nA > 0) 
+    if (nA > 0)
     {
         m_aryMA[0] -= m_rbAdaptA[0];
         m_aryMA[1] -= m_rbAdaptA[-1];
@@ -382,7 +382,7 @@ int CPredictorDecompress3950toCurrent::DecompressValue(int nA, int nB)
         m_aryMB[3] -= m_rbAdaptB[-3];
         m_aryMB[4] -= m_rbAdaptB[-4];
     }
-    else if (nA < 0) 
+    else if (nA < 0)
     {
         m_aryMA[0] += m_rbAdaptA[0];
         m_aryMA[1] += m_rbAdaptA[-1];
@@ -398,7 +398,7 @@ int CPredictorDecompress3950toCurrent::DecompressValue(int nA, int nB)
 
     int nRetVal = m_Stage1FilterA.Decompress(nCurrentA);
     m_nLastValueA = nCurrentA;
-    
+
     m_rbPredictionA.IncrementFast(); m_rbPredictionB.IncrementFast();
     m_rbAdaptA.IncrementFast(); m_rbAdaptB.IncrementFast();
 

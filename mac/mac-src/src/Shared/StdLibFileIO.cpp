@@ -126,17 +126,17 @@ int CStdLibFileIO::Open(const wchar_t * pName)
 
     char * wpName = GetANSIFromUTF16(pName);
 
-    if (0 == wcscmp(pName, L"-") || 0 == wcscmp(pName, L"/dev/stdin")) 
+    if (0 == wcscmp(pName, L"-") || 0 == wcscmp(pName, L"/dev/stdin"))
     {
         m_pFile = SETBINARY_IN(stdin);
         m_bReadOnly = true;                                                     // ReadOnly
     }
-    else if (0 == wcscmp (pName, L"/dev/stdout")) 
+    else if (0 == wcscmp (pName, L"/dev/stdout"))
     {
         m_pFile = SETBINARY_OUT(stdout);
         m_bReadOnly = false;                                                    // WriteOnly
     }
-    else 
+    else
     {
         m_pFile = fopen(wpName, "r+b");
 	if (!m_pFile)
@@ -164,7 +164,7 @@ int CStdLibFileIO::Close()
 {
     int nRetVal = -1;
 
-    if (m_pFile != NULL) 
+    if (m_pFile != NULL)
     {
         nRetVal = fclose(m_pFile);
         m_pFile = NULL;
@@ -225,12 +225,12 @@ int CStdLibFileIO::Create(const wchar_t * pName)
 {
     Close();
 
-    if (0 == wcscmp (pName, L"-") || 0 == wcscmp (pName, L"/dev/stdout")) 
+    if (0 == wcscmp (pName, L"-") || 0 == wcscmp (pName, L"/dev/stdout"))
     {
         m_pFile = SETBINARY_OUT(stdout);
         m_bReadOnly = false;                            // WriteOnly
     }
-    else 
+    else
     {
 	char * wpName = GetANSIFromUTF16(pName);
         m_pFile = fopen (wpName, "wb+");                 // Read/Write

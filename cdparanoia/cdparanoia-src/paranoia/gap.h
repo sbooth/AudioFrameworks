@@ -15,11 +15,11 @@ extern int i_stutter_or_gap(int16_t *A, int16_t *B,long offA, long offB,
 			    long gap);
 extern void i_analyze_rift_f(int16_t *A,int16_t *B,
 			     long sizeA, long sizeB,
-			     long aoffset, long boffset, 
+			     long aoffset, long boffset,
 			     long *matchA,long *matchB,long *matchC);
 extern void i_analyze_rift_r(int16_t *A,int16_t *B,
 			     long sizeA, long sizeB,
-			     long aoffset, long boffset, 
+			     long aoffset, long boffset,
 			     long *matchA,long *matchB,long *matchC);
 
 extern void analyze_rift_silence_f(int16_t *A,int16_t *B,long sizeA,long sizeB,

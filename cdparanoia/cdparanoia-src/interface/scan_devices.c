@@ -1,9 +1,9 @@
 /******************************************************************
  * CopyPolicy: GNU Public License 2 applies
  * Copyright (C) 1998 Monty xiphmont@mit.edu
- * 
+ *
  * Autoscan for or verify presence of a cdrom device
- * 
+ *
  ******************************************************************/
 
 #include <limits.h>
@@ -60,7 +60,7 @@ static char *cdrom_devices[]={
 cdrom_drive *cdda_find_a_cdrom(int messagedest,char **messages){
 #ifndef __APPLE__
   /* Brute force... */
-  
+
   int i=0;
   cdrom_drive *d;
 
@@ -75,7 +75,7 @@ cdrom_drive *cdda_find_a_cdrom(int messagedest,char **messages){
 	char *buffer=copystring(cdrom_devices[i]);
 
 	/* number, then letter */
-	
+
 	buffer[pos-(cdrom_devices[i])]=j+48;
 	if((d=cdda_identify(buffer,messagedest,messages)))
 	  return(d);
@@ -89,7 +89,7 @@ cdrom_drive *cdda_find_a_cdrom(int messagedest,char **messages){
       /* Name.  Go for it. */
       if((d=cdda_identify(cdrom_devices[i],messagedest,messages)))
 	return(d);
-      
+
       idmessage(messagedest,messages,"",NULL);
     }
     i++;
@@ -116,7 +116,7 @@ cdrom_drive *cdda_identify(const char *device, int messagedest,char **messages){
     idperror(messagedest,messages,"\tCould not stat %s",device);
     return(NULL);
   }
-    
+
 #ifndef CDDA_TEST
   if (!S_ISCHR(st.st_mode) &&
       !S_ISBLK(st.st_mode)){
@@ -135,7 +135,7 @@ cdrom_drive *cdda_identify(const char *device, int messagedest,char **messages){
 #ifdef CDDA_TEST
   if(!d)d=cdda_identify_test(device,messagedest,messages);
 #endif
-  
+
   return(d);
 }
 
@@ -176,7 +176,7 @@ cdrom_drive *cdda_identify_cooked(const char *dev, int messagedest,
     free(device);
     return(NULL);
   }
-    
+
   if (!S_ISCHR(st.st_mode) &&
       !S_ISBLK(st.st_mode)){
     idmessage(messagedest,messages,"\t\t%s is not a block or character device",device);
@@ -192,14 +192,14 @@ cdrom_drive *cdda_identify_cooked(const char *dev, int messagedest,
   case IDE3_MAJOR:
     /* Yay, ATAPI... */
     /* Ping for CDROM-ness */
-    
+
     fd=open(device,O_RDONLY|O_NONBLOCK);
     if(fd==-1){
       idperror(messagedest,messages,"\t\tUnable to open %s",device);
       free(device);
       return(NULL);
     }
-  
+
     if(ioctl_ping_cdrom(fd)){
       idmessage(messagedest,messages,"\t\tDevice %s is not a CDROM",device);
       close(fd);
@@ -212,7 +212,7 @@ cdrom_drive *cdda_identify_cooked(const char *dev, int messagedest,
       description=catstring(description,temp);
       free(temp);
     }
-    
+
     break;
   case CDU31A_CDROM_MAJOR:
     /* major indicates this is a cdrom; no ping necessary. */
@@ -250,8 +250,8 @@ cdrom_drive *cdda_identify_cooked(const char *dev, int messagedest,
     description=copystring("Philips/LMS CM206 proprietary: NOT CDDA CAPABLE");
     break;
 
-  case SCSI_CDROM_MAJOR:   
-  case SCSI_GENERIC_MAJOR: 
+  case SCSI_CDROM_MAJOR:
+  case SCSI_GENERIC_MAJOR:
     /* Nope nope nope */
     idmessage(messagedest,messages,"\t\t%s is not a cooked ioctl CDROM.",device);
     free(device);
@@ -270,9 +270,9 @@ cdrom_drive *cdda_identify_cooked(const char *dev, int messagedest,
     if(description)free(description);
     return(NULL);
   }
-  
+
   /* Minimum init */
-  
+
   d=calloc(1,sizeof(cdrom_drive));
   d->cdda_device_name=device;
   d->ioctl_device_name=copystring(device);
@@ -284,7 +284,7 @@ cdrom_drive *cdda_identify_cooked(const char *dev, int messagedest,
   d->bigendianp=-1; /* We don't know yet... */
   d->nsectors=-1;
   idmessage(messagedest,messages,"\t\tCDROM sensed: %s\n",description);
-  
+
   return(d);
 }
 
@@ -315,7 +315,7 @@ static int get_scsi_id(int fd, scsiid *id){
 
   if(ioctl(fd,SCSI_IOCTL_GET_BUS_NUMBER,&busarg)==0)
     id->bus=busarg;
-  
+
   return(0);
 }
 
@@ -346,13 +346,13 @@ static char *scsi_match(const char *device,char **prefixes,
 	return(strdup(buffer));
       }
     }
-  }	
+  }
 
   /* get the host/id/lun */
   if(dev==-1){
     idperror(messagedest,messages,"\t\tCould not access device %s",
 	     device);
-    
+
     goto matchfail;
   }
   if(get_scsi_id(dev,&a)){
@@ -367,7 +367,7 @@ static char *scsi_match(const char *device,char **prefixes,
     for(j=0;j<2;j++){
       int pattern=0;
       int matchf;
-      
+
       while(prefixes[pattern]!=NULL){
 	switch(j){
 	case 0:
@@ -379,7 +379,7 @@ static char *scsi_match(const char *device,char **prefixes,
 	  sprintf(buffer,"%s%c",prefixes[pattern],i+'a');
 	  break;
 	}
-	
+
 	matchf=open(buffer,O_RDONLY|O_NONBLOCK);
 	if(matchf!=-1){
 	  if(get_scsi_id(matchf,&b)==0){
@@ -394,7 +394,7 @@ static char *scsi_match(const char *device,char **prefixes,
 	pattern++;
       }
     }
-  } 
+  }
 
   idmessage(messagedest,messages,prompt,device);
 
@@ -436,7 +436,7 @@ static int verify_SG_version(cdrom_drive *d,int messagedest,
   version-=major*10000;
   minor=version/100;
   version-=minor*100;
-  
+
   sprintf(buffer,"\tSG interface version %d.%d.%d; OK.",
 	  major,minor,version);
 
@@ -444,10 +444,10 @@ static int verify_SG_version(cdrom_drive *d,int messagedest,
   return(major);
 }
 
-cdrom_drive *cdda_identify_scsi(const char *generic_device, 
+cdrom_drive *cdda_identify_scsi(const char *generic_device,
 				const char *ioctl_device, int messagedest,
 				char **messages){
-  
+
   cdrom_drive *d=NULL;
   struct stat i_st;
   struct stat g_st;
@@ -530,16 +530,16 @@ cdrom_drive *cdda_identify_scsi(const char *generic_device,
 		   devfs_scsi_test,devfs_scsi_generic,
 		   "\t\tNo generic SCSI device found to match CDROM device %s",
 		   messagedest,messages);
-      if(!generic_device)	
+      if(!generic_device)
 	goto cdda_identify_scsi_fail;
     }
   }
-  
+
   idmessage(messagedest,messages,"\t\tgeneric device: %s",generic_device);
   idmessage(messagedest,messages,"\t\tioctl device: %s",(ioctl_device?
 							 ioctl_device:
 							 "not found"));
-  
+
   if(stat(generic_device,&g_st)){
     idperror(messagedest,messages,"\t\tCould not access generic SCSI device "
 	     "%s",generic_device);
@@ -549,7 +549,7 @@ cdrom_drive *cdda_identify_scsi(const char *generic_device,
 
   if(ioctl_device)i_fd=open(ioctl_device,O_RDONLY|O_NONBLOCK);
   g_fd=open(generic_device,O_RDWR);
-  
+
   if(ioctl_device && i_fd==-1)
     idperror(messagedest,messages,"\t\tCould not open SCSI cdrom device "
 	     "%s (continuing)",ioctl_device);
@@ -593,7 +593,7 @@ cdrom_drive *cdda_identify_scsi(const char *generic_device,
 	      "major number",generic_device);
     goto cdda_identify_scsi_fail;
   }
-  
+
 
   d=calloc(1,sizeof(cdrom_drive));
 
@@ -629,7 +629,7 @@ cdrom_drive *cdda_identify_scsi(const char *generic_device,
   p = scsi_inquiry(d);
 
   /* It would seem some TOSHIBA CDROMs gets things wrong */
- 
+
   if (!strncmp (p + 8, "TOSHIBA", 7) &&
       !strncmp (p + 16, "CD-ROM", 6) &&
       p[0] == TYPE_DISK) {
@@ -656,9 +656,9 @@ cdrom_drive *cdda_identify_scsi(const char *generic_device,
   strscat(d->drive_model,p+32,4);
 
   idmessage(messagedest,messages,"\nCDROM model sensed sensed: %s",d->drive_model);
-  
+
   return(d);
-  
+
 cdda_identify_scsi_fail:
   if(generic_device)free((char *)generic_device);
   if(ioctl_device)free((char *)ioctl_device);
@@ -672,7 +672,7 @@ cdda_identify_scsi_fail:
 
 cdrom_drive *cdda_identify_test(const char *filename, int messagedest,
 				char **messages){
-  
+
   cdrom_drive *d=NULL;
   struct stat st;
   int fd=-1;
@@ -693,12 +693,12 @@ cdrom_drive *cdda_identify_test(const char *filename, int messagedest,
   }
 
   fd=open(filename,O_RDONLY);
-  
+
   if(fd==-1){
     idperror(messagedest,messages,"\t\tCould not open file %s",filename);
     return(NULL);
   }
-  
+
   d=calloc(1,sizeof(cdrom_drive));
 
   d->cdda_device_name=copystring(filename);
@@ -711,7 +711,7 @@ cdrom_drive *cdda_identify_test(const char *filename, int messagedest,
   d->nsectors=-1;
   d->drive_model=copystring("File based test interface");
   idmessage(messagedest,messages,"\t\tCDROM sensed: %s\n",d->drive_model);
-  
+
   return(d);
 }
 

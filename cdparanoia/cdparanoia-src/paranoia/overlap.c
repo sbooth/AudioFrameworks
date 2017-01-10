@@ -54,7 +54,7 @@ void i_paranoia_trim(cdrom_paranoia *p,long beginword,long endword){
 
     if(rbegin>beginword)
       goto rootfree;
-    
+
     if(rbegin+MAX_SECTOR_OVERLAP*CD_FRAMEWORDS<beginword){
       if(target+MIN_WORDS_OVERLAP>rend)
 	goto rootfree;
@@ -77,14 +77,14 @@ void i_paranoia_trim(cdrom_paranoia *p,long beginword,long endword){
 
   }
   return;
-  
+
 rootfree:
 
   i_cblock_destructor(root->vector);
   root->vector=NULL;
   root->returnedlimit=-1;
   root->lastsector=0;
-  
+
 }
 
 /**** Statistical and heuristic[al? :-] management ************************/
@@ -94,13 +94,13 @@ void offset_adjust_settings(cdrom_paranoia *p, void(*callback)(long,int,void*),v
     /* drift: look at the average offset value.  If it's over one
        sector, frob it.  We just want a little hysteresis [sp?]*/
     long av=(p->stage2.offpoints?p->stage2.offaccum/p->stage2.offpoints:0);
-    
+
     if(abs(av)>p->dynoverlap/4){
       av=(av/MIN_SECTOR_EPSILON)*MIN_SECTOR_EPSILON;
-      
+
       if(callback)(*callback)(ce(p->root.vector),PARANOIA_CB_DRIFT,userdata);
       p->dyndrift+=av;
-      
+
       /* Adjust all the values in the cache otherwise we get a
 	 (potentially unstable) feedback loop */
       {
@@ -141,18 +141,18 @@ void offset_adjust_settings(cdrom_paranoia *p, void(*callback)(long,int,void*),v
 
     if(p->dynoverlap<-p->stage1.offmin*1.5)
       p->dynoverlap=-p->stage1.offmin*1.5;
-						     
+
     if(p->dynoverlap<p->stage1.offmax*1.5)
       p->dynoverlap=p->stage1.offmax*1.5;
 
     if(p->dynoverlap<MIN_SECTOR_EPSILON)p->dynoverlap=MIN_SECTOR_EPSILON;
     if(p->dynoverlap>MAX_SECTOR_OVERLAP*CD_FRAMEWORDS)
       p->dynoverlap=MAX_SECTOR_OVERLAP*CD_FRAMEWORDS;
-    			     
+    
     if(callback)(*callback)(p->dynoverlap,PARANOIA_CB_OVERLAP,userdata);
 
     if(p->stage1.offpoints>600){ /* bit of a bug; this routine is
-				    called too often due to the overlap 
+				    called too often due to the overlap
 				    mesh alg we use in stage 1 */
       p->stage1.offpoints/=1.2;
       p->stage1.offaccum/=1.2;
@@ -174,7 +174,7 @@ void offset_add_value(cdrom_paranoia *p,offsets *o,long value,
     o->offaccum+=value;
     if(value<o->offmin)o->offmin=value;
     if(value>o->offmax)o->offmax=value;
-    
+
     if(o->newpoints>=10)offset_adjust_settings(p,callback,userdata);
   }
 }

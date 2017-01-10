@@ -9,9 +9,9 @@ CNNFilter::CNNFilter(int nOrder, int nShift, int nVersion)
     m_nOrder = nOrder;
     m_nShift = nShift;
     m_nVersion = nVersion;
-    
+
     m_bMMXAvailable = GetMMXAvailable();
-    
+
     m_rbInput.Create(NN_WINDOW_ELEMENTS, m_nOrder);
     m_rbDeltaM.Create(NN_WINDOW_ELEMENTS, m_nOrder);
     m_paryM = new short [m_nOrder];
@@ -71,7 +71,7 @@ int CNNFilter::Compress(int nInput)
     m_rbDeltaM[-1] >>= 1;
     m_rbDeltaM[-2] >>= 1;
     m_rbDeltaM[-8] >>= 1;
-        
+
     // increment and roll if necessary
     m_rbInput.IncrementSafe();
     m_rbDeltaM.IncrementSafe();
@@ -88,7 +88,7 @@ int CNNFilter::Decompress(int nInput)
         nDotProduct = CalculateDotProduct(&m_rbInput[-m_nOrder], &m_paryM[0], m_nOrder);
     else
         nDotProduct = CalculateDotProductNoMMX(&m_rbInput[-m_nOrder], &m_paryM[0], m_nOrder);
-    
+
     // adapt
     if (m_bMMXAvailable)
         Adapt(&m_paryM[0], &m_rbDeltaM[-m_nOrder], -nInput, m_nOrder);
@@ -130,7 +130,7 @@ int CNNFilter::Decompress(int nInput)
     // increment and roll if necessary
     m_rbInput.IncrementSafe();
     m_rbDeltaM.IncrementSafe();
-    
+
     return nOutput;
 }
 
@@ -138,8 +138,8 @@ void CNNFilter::AdaptNoMMX(short * pM, short * pAdapt, int nDirection, int nOrde
 {
     nOrder >>= 4;
 
-    if (nDirection < 0) 
-    {    
+    if (nDirection < 0)
+    {
         while (nOrder--)
         {
             EXPAND_16_TIMES(*pM++ += *pAdapt++;)
@@ -163,6 +163,6 @@ int CNNFilter::CalculateDotProductNoMMX(short * pA, short * pB, int nOrder)
     {
         EXPAND_16_TIMES(nDotProduct += *pA++ * *pB++;)
     }
-    
+
     return nDotProduct;
 }

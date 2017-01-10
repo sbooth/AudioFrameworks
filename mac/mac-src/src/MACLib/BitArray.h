@@ -23,7 +23,7 @@ struct BIT_ARRAY_STATE
 class CBitArray
 {
 public:
-    
+
     // construction / destruction
     CBitArray(CIO *pIO);
     ~CBitArray();
@@ -35,7 +35,7 @@ public:
 
     // output (saving)
     int OutputBitArray(bool bFinalize = false);
-    
+
     // other functions
     void Finalize();
     void AdvanceToByteBoundary();
@@ -43,9 +43,9 @@ public:
     void FlushState(BIT_ARRAY_STATE & BitArrayState);
     void FlushBitArray();
     inline CMD5Helper & GetMD5Helper() { return m_MD5; }
-        
+
 private:
-    
+
     // data members
     uint32 *            m_pBitArray;
     CIO    *                        m_pIO;
@@ -56,7 +56,7 @@ private:
 #ifdef BUILD_RANGE_TABLE
     void OutputRangeTable();
 #endif
-    
+
 };
 
 #endif // #ifndef APE_BITARRAY_H

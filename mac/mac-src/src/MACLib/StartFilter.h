@@ -128,7 +128,7 @@ public:
 //		nInput = m_Filter1.Compress(nInput);
 
 		m_rbInput[0] = nInput;
-		
+
 		int nPrediction1 = m_rbInput[-1];
 		int nPrediction2 = (2 * m_rbInput[-1]) - m_rbInput[-2];
 		int nPrediction3 = m_rbInput[-1] - m_rbInput[-2];

@@ -24,10 +24,10 @@ class IAPEDecompress;
 /*****************************************************************************************
 CUnMAC class... a class that allows decoding on a frame-by-frame basis
 *****************************************************************************************/
-class CUnMAC 
+class CUnMAC
 {
 public:
-    
+
     // construction/destruction
     CUnMAC();
     ~CUnMAC();
@@ -38,7 +38,7 @@ public:
     int DecompressFrame(unsigned char *pOutputData, int32 FrameIndex, int CPULoadBalancingFactor = 0);
 
     int SeekToFrame(int FrameIndex);
-    
+
 private:
 
     // data members
@@ -59,7 +59,7 @@ private:
     uint32 CalculateOldChecksum(int *pDataX, int *pDataY, int nChannels, int nBlocks);
 
 public:
-    
+
     int m_nBlocksProcessed;
     unsigned int m_nCRC;
     unsigned int m_nStoredCRC;

@@ -1,4 +1,4 @@
-/* Eliminate teeny little writes.  patch submitted by 
+/* Eliminate teeny little writes.  patch submitted by
    Rob Ross <rbross@parl.ces.clemson.edu> --Monty 19991008 */
 
 #include <string.h>

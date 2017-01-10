@@ -46,7 +46,7 @@ CBitArray::CBitArray(CIO *pIO)
     // allocate memory for the bit array
     m_pBitArray = new uint32 [BIT_ARRAY_ELEMENTS];
     memset(m_pBitArray, 0, BIT_ARRAY_BYTES);
-    
+
     // initialize other variables
     m_nCurrentBitIndex = 0;
     m_pIO = pIO;
@@ -73,7 +73,7 @@ int CBitArray::OutputBitArray(bool bFinalize)
     unsigned int nBytesWritten = 0;
     unsigned int nBytesToWrite = 0;
 //    unsigned int nRetVal = 0;
-    
+
     if (bFinalize)
     {
         nBytesToWrite = ((m_nCurrentBitIndex >> 5) * 4) + 4;
@@ -90,7 +90,7 @@ int CBitArray::OutputBitArray(bool bFinalize)
         RETURN_ON_ERROR(m_pIO->Write(m_pBitArray, nBytesToWrite, &nBytesWritten))
 
         // reset the bit pointer
-        m_nCurrentBitIndex = 0;    
+        m_nCurrentBitIndex = 0;
     }
     else
     {
@@ -107,15 +107,15 @@ int CBitArray::OutputBitArray(bool bFinalize)
 #endif
 
         RETURN_ON_ERROR(m_pIO->Write(m_pBitArray, nBytesToWrite, &nBytesWritten))
-        
+
         // move the last value to the front of the bit array
         m_pBitArray[0] = m_pBitArray[m_nCurrentBitIndex >> 5];
         m_nCurrentBitIndex = (m_nCurrentBitIndex & 31);
-        
+
         // zero the rest of the memory (may not need the +1 because of frame byte alignment)
         memset(&m_pBitArray[1], 0, min(nBytesToWrite + 1, BIT_ARRAY_BYTES - 1));
     }
-    
+
     // return a success
     return ERROR_SUCCESS;
 }
@@ -149,13 +149,13 @@ Range coding macros -- ugly, but outperform inline's (every cycle counts here)
                                                                                                 \
         m_RangeCoderInfo.low = (m_RangeCoderInfo.low << 8) & (TOP_VALUE - 1);                    \
         m_RangeCoderInfo.range <<= 8;                                                            \
-    }            
+    }
 
 #define ENCODE_FAST(RANGE_WIDTH, RANGE_TOTAL, SHIFT)                                            \
     NORMALIZE_RANGE_CODER                                                                        \
     const int nTemp = m_RangeCoderInfo.range >> (SHIFT);                                        \
     m_RangeCoderInfo.range = nTemp * (RANGE_WIDTH);                                                \
-    m_RangeCoderInfo.low += nTemp * (RANGE_TOTAL);    
+    m_RangeCoderInfo.low += nTemp * (RANGE_TOTAL);
 
 #define ENCODE_DIRECT(VALUE, SHIFT)                                                                \
     NORMALIZE_RANGE_CODER                                                                        \
@@ -173,7 +173,7 @@ int CBitArray::EncodeBits(unsigned int nValue, int nBits)
     {
         RETURN_ON_ERROR(OutputBitArray())
     }
-    
+
     ENCODE_DIRECT(nValue, nBits);
     return 0;
 }
@@ -181,7 +181,7 @@ int CBitArray::EncodeBits(unsigned int nValue, int nBits)
 /************************************************************************************
 Encodes an unsigned int to the bit array (no rice coding)
 ************************************************************************************/
-int CBitArray::EncodeUnsignedLong(unsigned int n) 
+int CBitArray::EncodeUnsignedLong(unsigned int n)
 {
     // make sure there are at least 8 bytes in the buffer
     if (m_nCurrentBitIndex > (BIT_ARRAY_BYTES - 8))
@@ -192,16 +192,16 @@ int CBitArray::EncodeUnsignedLong(unsigned int n)
     // encode the value
     uint32 nBitArrayIndex = m_nCurrentBitIndex >> 5;
     int nBitIndex = m_nCurrentBitIndex & 31;
-    
+
     if (nBitIndex == 0)
     {
         m_pBitArray[nBitArrayIndex] = n;
     }
-    else 
+    else
     {
         m_pBitArray[nBitArrayIndex] |= n >> nBitIndex;
         m_pBitArray[nBitArrayIndex + 1] = n << (32 - nBitIndex);
-    }    
+    }
 
     m_nCurrentBitIndex += 32;
 
@@ -211,7 +211,7 @@ int CBitArray::EncodeUnsignedLong(unsigned int n)
 /************************************************************************************
 Advance to a byte boundary (for frame alignment)
 ************************************************************************************/
-void CBitArray::AdvanceToByteBoundary() 
+void CBitArray::AdvanceToByteBoundary()
 {
     while (m_nCurrentBitIndex % 8)
         m_nCurrentBitIndex++;
@@ -228,22 +228,22 @@ int CBitArray::EncodeValue(int nEncode, BIT_ARRAY_STATE & BitArrayState)
     {
         RETURN_ON_ERROR(OutputBitArray())
     }
-    
+
     // convert to unsigned
     nEncode = (nEncode > 0) ? nEncode * 2 - 1 : -nEncode * 2;
-    
+
     int nOriginalKSum = BitArrayState.nKSum;
 
     // get the working k
 //    int nTempK = (BitArrayState.k) ? BitArrayState.k - 1 : 0;
-    
+
     // update nKSum
     BitArrayState.nKSum += ((nEncode + 1) / 2) - ((BitArrayState.nKSum + 16) >> 5);
 
     // update k
-    if (BitArrayState.nKSum < K_SUM_MIN_BOUNDARY[BitArrayState.k]) 
+    if (BitArrayState.nKSum < K_SUM_MIN_BOUNDARY[BitArrayState.k])
         BitArrayState.k--;
-    else if (BitArrayState.nKSum >= K_SUM_MIN_BOUNDARY[BitArrayState.k + 1]) 
+    else if (BitArrayState.nKSum >= K_SUM_MIN_BOUNDARY[BitArrayState.k + 1])
         BitArrayState.k++;
 
     // figure the pivot value
@@ -339,7 +339,7 @@ void CBitArray::FlushBitArray()
     m_RangeCoderInfo.help = 0;  // no bytes to follow
 }
 
-void CBitArray::FlushState(BIT_ARRAY_STATE & BitArrayState) 
+void CBitArray::FlushState(BIT_ARRAY_STATE & BitArrayState)
 {
     // k and ksum
     BitArrayState.k = 10;
@@ -362,7 +362,7 @@ void CBitArray::Finalize()
         {
             PUTC(0);
         }
-    } 
+    }
     else  // no carry
     {
         PUTC(m_RangeCoderInfo.buffer);
@@ -386,9 +386,9 @@ Build a range table (for development / debugging)
 void CBitArray::OutputRangeTable()
 {
     int z;
-    
+
     if (g_nTotalOverflow == 0) return;
-    
+
     int nTotal = 0;
     int aryWidth[256]; ZeroMemory(aryWidth, 256 * 4);
     for (z = 0; z < MODEL_ELEMENTS; z++)

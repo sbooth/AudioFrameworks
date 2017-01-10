@@ -5,7 +5,7 @@
 
 #ifdef ENABLE_COMPRESSION_MODE_HIGH
 
-void CAntiPredictorHigh0000To3320::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements) 
+void CAntiPredictorHigh0000To3320::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements)
 {
     // variable declares
     int p, pw;
@@ -13,34 +13,34 @@ void CAntiPredictorHigh0000To3320::AntiPredict(int *pInputArray, int *pOutputArr
     int m;
 
     // short frame handling
-    if (NumberOfElements < 32) 
+    if (NumberOfElements < 32)
     {
         memcpy(pOutputArray, pInputArray, NumberOfElements * 4);
         return;
     }
-    
+
     ////////////////////////////////////////
     // order 5
     ////////////////////////////////////////
     memcpy(pOutputArray, pInputArray, 32);
-    
+
     // initialize values
     m = 0;
-  
-    for (q = 8; q < NumberOfElements; q++) 
+
+    for (q = 8; q < NumberOfElements; q++)
     {
         p = (5 * pOutputArray[q - 1]) - (10 * pOutputArray[q - 2]) + (12 * pOutputArray[q - 3]) - (7 * pOutputArray[q - 4]) + pOutputArray[q - 5];
-        
+
         pw = (p * m) >> 12;
-        
+
         pOutputArray[q] = pInputArray[q] + pw;
-        
+
         // adjust m
         if (pInputArray[q] > 0)
             (p > 0) ? m += 1 : m -= 1;
         else if (pInputArray[q] < 0)
             (p > 0) ? m -= 1 : m += 1;
-        
+
     }
 
     ///////////////////////////////////////
@@ -49,28 +49,28 @@ void CAntiPredictorHigh0000To3320::AntiPredict(int *pInputArray, int *pOutputArr
     memcpy(pInputArray, pOutputArray, 32);
     m = 0;
 
-    for (q = 8; q < NumberOfElements; q++) 
+    for (q = 8; q < NumberOfElements; q++)
     {
         p = (4 * pInputArray[q - 1]) - (6 * pInputArray[q - 2]) + (4 * pInputArray[q - 3]) - pInputArray[q - 4];
         pw = (p * m) >> 12;
-        
+
         pInputArray[q] = pOutputArray[q] + pw;
-        
+
         // adjust m
         if (pOutputArray[q] > 0)
             (p > 0) ? m += 2 : m -= 2;
         else if (pOutputArray[q] < 0)
             (p > 0) ? m -= 2 : m += 2;
     }
-   
+
     CAntiPredictorNormal0000To3320 AntiPredictor;
     AntiPredictor.AntiPredict(pInputArray, pOutputArray, NumberOfElements);
 }
 
-void CAntiPredictorHigh3320To3600::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements) 
+void CAntiPredictorHigh3320To3600::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements)
 {
     // short frame handling
-    if (NumberOfElements < 8) 
+    if (NumberOfElements < 8)
     {
         memcpy(pOutputArray, pInputArray, NumberOfElements * 4);
         return;
@@ -80,25 +80,25 @@ void CAntiPredictorHigh3320To3600::AntiPredict(int *pInputArray, int *pOutputArr
     CAntiPredictorOffset AntiPredictorOffset;
     AntiPredictorOffset.AntiPredict(pInputArray, pOutputArray, NumberOfElements, 2, 12);
     AntiPredictorOffset.AntiPredict(pOutputArray, pInputArray, NumberOfElements, 3, 12);
-    
+
     AntiPredictorOffset.AntiPredict(pInputArray, pOutputArray, NumberOfElements, 4, 12);
     AntiPredictorOffset.AntiPredict(pOutputArray, pInputArray, NumberOfElements, 5, 12);
-    
+
     AntiPredictorOffset.AntiPredict(pInputArray, pOutputArray, NumberOfElements, 6, 12);
     AntiPredictorOffset.AntiPredict(pOutputArray, pInputArray, NumberOfElements, 7, 12);
-    
+
     // use the normal mode
     CAntiPredictorNormal3320To3800 AntiPredictor;
     AntiPredictor.AntiPredict(pInputArray, pOutputArray, NumberOfElements);
 }
 
-void CAntiPredictorHigh3600To3700::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements) 
+void CAntiPredictorHigh3600To3700::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements)
 {
     // variable declares
     int q;
 
     // short frame handling
-    if (NumberOfElements < 16) 
+    if (NumberOfElements < 16)
     {
         memcpy(pOutputArray, pInputArray, NumberOfElements * 4);
         return;
@@ -106,7 +106,7 @@ void CAntiPredictorHigh3600To3700::AntiPredict(int *pInputArray, int *pOutputArr
 
     // make the first five samples identical in both arrays
     memcpy(pOutputArray, pInputArray, 13 * 4);
-    
+
     // initialize values
     int bm1 = 0;
     int bm2 = 0;
@@ -145,12 +145,12 @@ void CAntiPredictorHigh3600To3700::AntiPredict(int *pInputArray, int *pOutputArr
     int bp12 = pOutputArray[1];
     int bp13 = pOutputArray[0];
 
-    for (q = 13; q < NumberOfElements; q++) 
+    for (q = 13; q < NumberOfElements; q++)
     {
         pInputArray[q] = pInputArray[q] - 1;
         OP0 = (pInputArray[q] - ((bp1 * bm1) >> 8) + ((bp2 * bm2) >> 8) - ((bp3 * bm3) >> 8) - ((bp4 * bm4) >> 8) - ((bp5 * bm5) >> 8) - ((bp6 * bm6) >> 8) - ((bp7 * bm7) >> 8) - ((bp8 * bm8) >> 8) - ((bp9 * bm9) >> 8) + ((bp10 * bm10) >> 8) + ((bp11 * bm11) >> 8) + ((bp12 * bm12) >> 8) + ((bp13 * bm13) >> 8));
-        
-        if (pInputArray[q] > 0) 
+
+        if (pInputArray[q] > 0)
         {
             bm1 -= bp1 > 0 ? 1 : -1;
             bm2 += bp2 >= 0 ? 1 : -1;
@@ -166,7 +166,7 @@ void CAntiPredictorHigh3600To3700::AntiPredict(int *pInputArray, int *pOutputArr
             bm12 += bp12 >= 0 ? 1 : -1;
             bm13 += bp13 > 0 ? 1 : -1;
         }
-        else if (pInputArray[q] < 0) 
+        else if (pInputArray[q] < 0)
         {
             bm1 -= bp1 <= 0 ? 1 : -1;
             bm2 += bp2 < 0 ? 1 : -1;
@@ -199,13 +199,13 @@ void CAntiPredictorHigh3600To3700::AntiPredict(int *pInputArray, int *pOutputArr
 
         pInputArray[q] = OP0 + ((p2 * m2) >> 11) + ((p3 * m3) >> 9) + ((p4 * m4) >> 9);
 
-        if (OP0 > 0) 
+        if (OP0 > 0)
         {
             m2 -= p2 > 0 ? -1 : 1;
             m3 -= p3 > 0 ? -1 : 1;
             m4 -= p4 > 0 ? -1 : 1;
         }
-        else if (OP0 < 0) 
+        else if (OP0 < 0)
         {
             m2 -= p2 > 0 ? 1 : -1;
             m3 -= p3 > 0 ? 1 : -1;
@@ -217,7 +217,7 @@ void CAntiPredictorHigh3600To3700::AntiPredict(int *pInputArray, int *pOutputArr
         p4 = pInputArray[q];
         pOutputArray[q] = pInputArray[q];// + ((p3 * m3) >> 9);
     }
-    
+
     m4 = 370;
 //    int m5 = 3900;
 
@@ -241,7 +241,7 @@ void CAntiPredictorHigh3600To3700::AntiPredict(int *pInputArray, int *pOutputArr
     int m6 = 0;
 
     IP1 = pInputArray[12];
-    for (q = 13; q < NumberOfElements; q++) 
+    for (q = 13; q < NumberOfElements; q++)
     {
         IP0 = pOutputArray[q] + ((p4 * m4) >> 9) - ((p6 * m6) >> 10);
         (pOutputArray[q] ^ p4) >= 0 ? m4++ : m4--;
@@ -256,7 +256,7 @@ void CAntiPredictorHigh3600To3700::AntiPredict(int *pInputArray, int *pOutputArr
     }
 }
 
-void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements) 
+void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements)
 {
     // the frame to start prediction on
     #define FIRST_ELEMENT    16
@@ -265,7 +265,7 @@ void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArr
 //    int y = -25;
 
     // short frame handling
-    if (NumberOfElements < 20) 
+    if (NumberOfElements < 20)
     {
         memcpy(pOutputArray, pInputArray, NumberOfElements * 4);
         return;
@@ -273,7 +273,7 @@ void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArr
 
     // make the first five samples identical in both arrays
     memcpy(pOutputArray, pInputArray, FIRST_ELEMENT * 4);
-    
+
     // variable declares and initializations
     int bm[FIRST_ELEMENT]; memset(bm, 0, FIRST_ELEMENT * 4);
     int m2 = 64, m3 = 115, m4 = 64, m5 = 740, m6 = 0;
@@ -287,7 +287,7 @@ void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArr
     int p7 = 2 * ip[-1] - ip[-2];
     int opp = op[-1];
     int Original;
-    
+
     // undo the initial prediction stuff
     for (int q = 1; q < FIRST_ELEMENT; q++) {
         pOutputArray[q] += pOutputArray[q - 1];
@@ -299,7 +299,7 @@ void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArr
         Original = *ip - 1;
         *ip = Original - (((ip[-1] * bm[0]) + (ip[-2] * bm[1]) + (ip[-3] * bm[2]) + (ip[-4] * bm[3]) + (ip[-5] * bm[4]) + (ip[-6] * bm[5]) + (ip[-7] * bm[6]) + (ip[-8] * bm[7]) + (ip[-9] * bm[8]) + (ip[-10] * bm[9]) + (ip[-11] * bm[10]) + (ip[-12] * bm[11]) + (ip[-13] * bm[12]) + (ip[-14] * bm[13]) + (ip[-15] * bm[14]) + (ip[-16] * bm[15])) >> 8);
 
-        if (Original > 0) 
+        if (Original > 0)
         {
             bm[0] -= ip[-1] > 0 ? 1 : -1;
             bm[1] += (((unsigned int)(ip[-2]) >> 30) & 2) - 1;
@@ -318,7 +318,7 @@ void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArr
             bm[14] -= ip[-15] > 0 ? 1 : -1;
             bm[15] += (((unsigned int)(ip[-16]) >> 30) & 2) - 1;
         }
-        else if (Original < 0) 
+        else if (Original < 0)
         {
             bm[0] -= ip[-1] <= 0 ? 1 : -1;
             bm[1] -= (((unsigned int)(ip[-2]) >> 30) & 2) - 1;
@@ -341,7 +341,7 @@ void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArr
         /////////////////////////////////////////////
         *op = *ip + (((p2 * m2) + (p3 * m3) + (p4 * m4)) >> 11);
 
-        if (*ip > 0) 
+        if (*ip > 0)
         {
             m2 -= p2 > 0 ? -1 : 1;
             m3 -= p3 > 0 ? -4 : 4;
@@ -363,10 +363,10 @@ void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArr
 
         /////////////////////////////////////////////
         *op += (((p7 * m5) - (opp * m6)) >> 10);
-        
+
         (IPP1 ^ p7) >= 0 ? m5+=2 : m5-=2;
         (IPP1 ^ opp) >= 0 ? m6-- : m6++;
-  
+
         p7 = 2 * *op - opp;
         opp = *op;
 
@@ -375,13 +375,13 @@ void CAntiPredictorHigh3700To3800::AntiPredict(int *pInputArray, int *pOutputArr
     }
 }
 
-void CAntiPredictorHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements) 
+void CAntiPredictorHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pOutputArray, int NumberOfElements)
 {
     // the frame to start prediction on
     #define FIRST_ELEMENT    16
 
     // short frame handling
-    if (NumberOfElements < 20) 
+    if (NumberOfElements < 20)
     {
         memcpy(pOutputArray, pInputArray, NumberOfElements * 4);
         return;
@@ -389,7 +389,7 @@ void CAntiPredictorHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pOutput
 
     // make the first five samples identical in both arrays
     memcpy(pOutputArray, pInputArray, FIRST_ELEMENT * 4);
-    
+
     // variable declares and initializations
     int bm[FIRST_ELEMENT]; memset(bm, 0, FIRST_ELEMENT * 4);
     int m2 = 64, m3 = 115, m4 = 64, m5 = 740, m6 = 0;
@@ -402,26 +402,26 @@ void CAntiPredictorHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pOutput
 //    int IPP1 = ip[-1];
     int p7 = 2 * ip[-1] - ip[-2];
     int opp = op[-1];
-    
+
     // undo the initial prediction stuff
-    for (int q = 1; q < FIRST_ELEMENT; q++) 
+    for (int q = 1; q < FIRST_ELEMENT; q++)
     {
         pOutputArray[q] += pOutputArray[q - 1];
     }
 
     // pump the primary loop
-    for (;op < &pOutputArray[NumberOfElements]; op++, ip++) 
+    for (;op < &pOutputArray[NumberOfElements]; op++, ip++)
     {
 
         unsigned int *pip = (unsigned int *) &ip[-FIRST_ELEMENT];
         int *pbm = &bm[0];
         int nDotProduct = 0;
-        
-        if (*ip > 0) 
+
+        if (*ip > 0)
         {
             EXPAND_16_TIMES(nDotProduct += *pip * *pbm; *pbm++ += ((*pip++ >> 30) & 2) - 1;)
         }
-        else if (*ip < 0) 
+        else if (*ip < 0)
         {
             EXPAND_16_TIMES(nDotProduct += *pip * *pbm; *pbm++ -= ((*pip++ >> 30) & 2) - 1;)
         }
@@ -435,40 +435,40 @@ void CAntiPredictorHigh3800ToCurrent::AntiPredict(int *pInputArray, int *pOutput
         /////////////////////////////////////////////
         *op = *ip + (((p2 * m2) + (p3 * m3) + (p4 * m4)) >> 11);
 
-        if (*ip > 0) 
+        if (*ip > 0)
         {
             m2 -= ((p2 >> 30) & 2) - 1;
             m3 -= ((p3 >> 28) & 8) - 4;
             m4 -= ((p4 >> 28) & 8) - 4;
 
         }
-        else if (*ip < 0) 
+        else if (*ip < 0)
         {
             m2 += ((p2 >> 30) & 2) - 1;
             m3 += ((p3 >> 28) & 8) - 4;
             m4 += ((p4 >> 28) & 8) - 4;
         }
 
-        
+
         p2 = *op + ((IPP2 - p4) << 3);
         p3 = (*op - p4) << 1;
         IPP2 = p4;
         p4 = *op;
-        
+
         /////////////////////////////////////////////
         *op += (((p7 * m5) - (opp * m6)) >> 10);
 
-        if (p4 > 0) 
+        if (p4 > 0)
         {
             m5 -= ((p7 >> 29) & 4) - 2;
             m6 += ((opp >> 30) & 2) - 1;
         }
-        else if (p4 < 0) 
+        else if (p4 < 0)
         {
             m5 += ((p7 >> 29) & 4) - 2;
             m6 -= ((opp >> 30) & 2) - 1;
         }
-  
+
         p7 = 2 * *op - opp;
         opp = *op;
 

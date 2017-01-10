@@ -22,7 +22,7 @@ long i_paranoia_overlap_r(int16_t *buffA,int16_t *buffB,
     if(buffA[beginA]!=buffB[beginB])break;
   beginA++;
   beginB++;
-  
+
   return(offsetA-beginA);
 }
 
@@ -31,10 +31,10 @@ long i_paranoia_overlap_f(int16_t *buffA,int16_t *buffB,
 			  long sizeA,long sizeB){
   long endA=offsetA;
   long endB=offsetB;
-  
+
   for(;endA<sizeA && endB<sizeB;endA++,endB++)
     if(buffA[endA]!=buffB[endB])break;
-  
+
   return(endA-offsetA);
 }
 
@@ -42,38 +42,38 @@ int i_stutter_or_gap(int16_t *A, int16_t *B,long offA, long offB,
 		     long gap){
   long a1=offA;
   long b1=offB;
-  
+
   if(a1<0){
     b1-=a1;
     gap+=a1;
     a1=0;
   }
-  
+
   return(memcmp(A+a1,B+b1,gap*2));
 }
 
 /* riftv is the first value into the rift -> or <- */
 void i_analyze_rift_f(int16_t *A,int16_t *B,
 		      long sizeA, long sizeB,
-		      long aoffset, long boffset, 
+		      long aoffset, long boffset,
 		      long *matchA,long *matchB,long *matchC){
-  
+
   long apast=sizeA-aoffset;
   long bpast=sizeB-boffset;
   long i;
-  
+
   *matchA=0, *matchB=0, *matchC=0;
-  
-  /* Look for three possible matches... (A) Ariftv->B, (B) Briftv->A and 
+
+  /* Look for three possible matches... (A) Ariftv->B, (B) Briftv->A and
      (c) AB->AB. */
-  
+
   for(i=0;;i++){
     if(i<bpast) /* A */
       if(i_paranoia_overlap_f(A,B,aoffset,boffset+i,sizeA,sizeB)>=MIN_WORDS_RIFT){
 	*matchA=i;
 	break;
       }
-    
+
     if(i<apast){ /* B */
       if(i_paranoia_overlap_f(A,B,aoffset+i,boffset,sizeA,sizeB)>=MIN_WORDS_RIFT){
 	*matchB=i;
@@ -86,11 +86,11 @@ void i_analyze_rift_f(int16_t *A,int16_t *B,
 	}
     }else
       if(i>=bpast)break;
-    
+
   }
-  
+
   if(*matchA==0 && *matchB==0 && *matchC==0)return;
-  
+
   if(*matchC)return;
   if(*matchA){
     if(i_stutter_or_gap(A,B,aoffset-*matchA,boffset,*matchA))
@@ -111,18 +111,18 @@ void i_analyze_rift_f(int16_t *A,int16_t *B,
 
 void i_analyze_rift_r(int16_t *A,int16_t *B,
 		      long sizeA, long sizeB,
-		      long aoffset, long boffset, 
+		      long aoffset, long boffset,
 		      long *matchA,long *matchB,long *matchC){
-  
+
   long apast=aoffset+1;
   long bpast=boffset+1;
   long i;
-  
+
   *matchA=0, *matchB=0, *matchC=0;
-  
-  /* Look for three possible matches... (A) Ariftv->B, (B) Briftv->A and 
+
+  /* Look for three possible matches... (A) Ariftv->B, (B) Briftv->A and
      (c) AB->AB. */
-  
+
   for(i=0;;i++){
     if(i<bpast) /* A */
       if(i_paranoia_overlap_r(A,B,aoffset,boffset-i)>=MIN_WORDS_RIFT){
@@ -133,7 +133,7 @@ void i_analyze_rift_r(int16_t *A,int16_t *B,
       if(i_paranoia_overlap_r(A,B,aoffset-i,boffset)>=MIN_WORDS_RIFT){
 	*matchB=i;
 	break;
-      }      
+      }
       if(i<bpast) /* C */
 	if(i_paranoia_overlap_r(A,B,aoffset-i,boffset-i)>=MIN_WORDS_RIFT){
 	  *matchC=i;
@@ -141,13 +141,13 @@ void i_analyze_rift_r(int16_t *A,int16_t *B,
 	}
     }else
       if(i>=bpast)break;
-    
+
   }
-  
+
   if(*matchA==0 && *matchB==0 && *matchC==0)return;
-  
+
   if(*matchC)return;
-  
+
   if(*matchA){
     if(i_stutter_or_gap(A,B,aoffset+1,boffset-*matchA+1,*matchA))
       return;

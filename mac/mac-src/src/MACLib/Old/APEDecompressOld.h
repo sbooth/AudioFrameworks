@@ -14,13 +14,13 @@ public:
     int Seek(int nBlockOffset);
 
     long GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1 = 0, long nParam2 = 0);
-    
+
 protected:
 
     // buffer
     CSmartPtr<char> m_spBuffer;
     int m_nBufferTail;
-    
+
     // file info
     int m_nBlockAlign;
     int m_nCurrentFrame;
@@ -31,10 +31,10 @@ protected:
     int m_nCurrentBlock;
     bool m_bIsRanged;
 
-    // decoding tools    
+    // decoding tools
     CUnMAC m_UnMAC;
     CSmartPtr<CAPEInfo> m_spAPEInfo;
-    
+
     bool m_bDecompressorInitialized;
     int InitializeDecompressor();
 };

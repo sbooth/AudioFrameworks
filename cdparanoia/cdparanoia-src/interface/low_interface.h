@@ -1,8 +1,8 @@
 /******************************************************************
  * CopyPolicy: GNU Public License 2 applies
  * Copyright (C) 1998 Monty xiphmont@mit.edu
- * 
- * internal include file for cdda interface kit for Linux 
+ *
+ * internal include file for cdda interface kit for Linux
  *
  ******************************************************************/
 
@@ -40,7 +40,7 @@
 #include <linux/ucdrom.h>
 #endif
 
-#ifndef CDROMAUDIOBUFSIZ      
+#ifndef CDROMAUDIOBUFSIZ
 #define CDROMAUDIOBUFSIZ        0x5382 /* set the audio buffer size */
 #endif
 

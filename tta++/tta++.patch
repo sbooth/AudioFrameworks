@@ -4,10 +4,10 @@ diff -ur libtta++-2.1/libtta.h libtta++-src/libtta.h
 @@ -18,7 +18,9 @@
  #include <stdio.h>
  #include <string.h>
- #include <stdlib.h> 
+ #include <stdlib.h>
 +#if !defined(__APPLE__)
- #include <malloc.h> 
+ #include <malloc.h>
 +#endif
  #include <stdexcept>
- 
+
  #ifdef CARIBBEAN

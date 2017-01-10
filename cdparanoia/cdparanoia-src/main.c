@@ -27,14 +27,14 @@
  *   04.04.98 - alpha 3: zillions of bugfixes, also added MMC and IDE_SCSI
  *                       emulation support
  *   05.04.98 - alpha 4: Segfault fix, cosmetic repairs
- *   05.04.98 - alpha 5: another segfault fix, cosmetic repairs, 
+ *   05.04.98 - alpha 5: another segfault fix, cosmetic repairs,
  *                       Gadi Oxman provided code to identify/fix nonstandard
- *                       ATAPI CDROMs 
+ *                       ATAPI CDROMs
  *   07.04.98 - alpha 6: Bugfixes to autodetection
  *   18.06.98 - alpha 7: Additional SCSI error handling code
  *                       cosmetic fixes
  *                       segfault fixes
- *                       new sync/silence code, smaller fft      
+ *                       new sync/silence code, smaller fft
  *   15.07.98 - alpha 8: More new SCSI code, better error recovery
  *                       more segfault fixes (two linux bugs, one my fault)
  *                       Fixup reporting fixes, smilie fixes.
@@ -115,7 +115,7 @@ static long parse_offset(cdrom_drive *d, char *offset, int begin){
       val=atoi(sec+1);
     else
       val=0;
-    
+
     switch(*sec){
     case '.':
       if(sectors!=-1){
@@ -139,7 +139,7 @@ static long parse_offset(cdrom_drive *d, char *offset, int begin){
 	  }
       break;
     }
-	 
+
     if(sec<=time)break;
     *sec='\0';
   }
@@ -162,7 +162,7 @@ static long parse_offset(cdrom_drive *d, char *offset, int begin){
       ret=cdda_track_firstsector(d,track);
     }
   }
-   
+
   /* OK, we had some sort of offset into a track */
 
   if(sectors!=-1)ret+=sectors;
@@ -194,14 +194,14 @@ static void display_toc(cdrom_drive *d){
   report("\nTable of contents (audio tracks only):\n"
 	 "track        length               begin        copy pre ch\n"
 	 "===========================================================");
-  
+
   for(i=1;i<=d->tracks;i++)
     if(cdda_track_audiop(d,i)){
       char buffer[256];
 
       long sec=cdda_track_firstsector(d,i);
       long off=cdda_track_lastsector(d,i)-sec+1;
-      
+
       sprintf(buffer,
 	      "%3d.  %7ld [%02d:%02d.%02d]  %7ld [%02d:%02d.%02d]  %s %s %s",
 	      i,
@@ -300,7 +300,7 @@ VERSION"\n"
 "SPAN ARGUMENT:\n"
 "The span argument may be a simple track number or a offset/span\n"
 "specification.  The syntax of an offset/span takes the rough form:\n\n"
-  
+
 "                       1[ww:xx:yy.zz]-2[aa:bb:cc.dd] \n\n"
 
 "Here, 1 and 2 are track numbers; the numbers in brackets provide a\n"
@@ -369,7 +369,7 @@ static int abort_on_skip=0;
 static void callback(long inpos, int function,void *userdata){
   /*
 
- (== PROGRESS == [--+!---x-------------->           | 007218 01 ] == :-) . ==) 
+ (== PROGRESS == [--+!---x-------------->           | 007218 01 ] == :-) . ==)
 
  */
 
@@ -390,7 +390,7 @@ static void callback(long inpos, int function,void *userdata){
   static int slast=0;
   static int stimeout=0;
   char *smilie="= :-)";
-  
+
   if(callscript)
     fprintf(stderr,"##: %d [%s] @ %ld\n",
 	    function,(function>=-2&&function<=13?callback_strings[function+2]:
@@ -400,7 +400,7 @@ static void callback(long inpos, int function,void *userdata){
     long test;
     osector=inpos;
     sector=inpos/CD_FRAMEWORDS;
-    
+
     if(printit==-1){
       if(isatty(STDERR_FILENO)){
 	printit=1;
@@ -409,14 +409,14 @@ static void callback(long inpos, int function,void *userdata){
       }
     }
 
-    if(printit==1){  /* else don't bother; it's probably being 
+    if(printit==1){  /* else don't bother; it's probably being
 			redirected */
       position=((float)(sector-callbegin)/
 		(callend-callbegin))*graph;
-      
+
       aheadposition=((float)(c_sector-callbegin)/
 		     (callend-callbegin))*graph;
-      
+
       if(function==-2){
 	v_sector=sector;
 	return;
@@ -440,7 +440,7 @@ static void callback(long inpos, int function,void *userdata){
 	  case PARANOIA_CB_READ:
 	    if(sector>c_sector)c_sector=sector;
 	    break;
-	    
+
 	  case PARANOIA_CB_FIXUP_EDGE:
 	    if(stimeout>=5){
 	      if(overlap>CD_FRAMEWORDS)
@@ -448,7 +448,7 @@ static void callback(long inpos, int function,void *userdata){
 	      else
 		slevel=1;
 	    }
-	    if(dispcache[position]==' ') 
+	    if(dispcache[position]==' ')
 	      dispcache[position]='-';
 	    break;
 	  case PARANOIA_CB_FIXUP_ATOM:
@@ -484,7 +484,7 @@ static void callback(long inpos, int function,void *userdata){
 	      dispcache[position]='!';
 	    break;
 	  }
-    
+
       switch(slevel){
       case 0:  /* finished, or no jitter */
 	if(skipped_flag)
@@ -497,7 +497,7 @@ static void callback(long inpos, int function,void *userdata){
 	break;
       case 2:  /* normal, overlap > 1 */
 	smilie=" :-|";
-	break; 
+	break;
       case 4:  /* drift */
 	smilie=" :-/";
 	break;
@@ -517,9 +517,9 @@ static void callback(long inpos, int function,void *userdata){
 	smilie=" ;-(";
 	skipped_flag=1;
 	break;
-	
+
       }
-      
+
       gettimeofday(&thistime,NULL);
       test=thistime.tv_sec*10+thistime.tv_usec/100000;
 
@@ -539,7 +539,7 @@ static void callback(long inpos, int function,void *userdata){
 	  case 2:case 6:
 	    heartbeat='o';
 	    break;
-	  case 3:case 5:  
+	  case 3:case 5:
 	    heartbeat='0';
 	    break;
 	  case 4:
@@ -554,7 +554,7 @@ static void callback(long inpos, int function,void *userdata){
 	  stimeout=0;
 	}
 	slast=slevel;
-	
+
 	if(abort_on_skip && skipped_flag && function !=-1){
 	  sprintf(buffer,
 		  "\r (== PROGRESS == [%s| %06ld %02d ] ==%s %c ==)   ",
@@ -565,16 +565,16 @@ static void callback(long inpos, int function,void *userdata){
 	    sprintf(buffer,
 		    "\r (== PROGRESS == [%s| ...... %02d ] ==%s %c ==)   ",
 		    dispcache,overlap/CD_FRAMEWORDS,smilie,heartbeat);
-	  
+
 	  else
 	    sprintf(buffer,
 		    "\r (== PROGRESS == [%s| %06ld %02d ] ==%s %c ==)   ",
 		    dispcache,v_sector,overlap/CD_FRAMEWORDS,smilie,heartbeat);
-	  
+
 	  if(aheadposition>=0 && aheadposition<graph && !(function==-1))
 	    buffer[aheadposition+19]='>';
 	}
-   
+
 	fprintf(stderr,buffer);
       }
     }
@@ -663,7 +663,7 @@ int main(int argc,char *argv[]){
   int batch=0,i;
 
   /* full paranoia, but allow skipping */
-  int paranoia_mode=PARANOIA_MODE_FULL^PARANOIA_MODE_NEVERSKIP; 
+  int paranoia_mode=PARANOIA_MODE_FULL^PARANOIA_MODE_NEVERSKIP;
 
   char *info_file=NULL;
   int out;
@@ -752,7 +752,7 @@ int main(int argc,char *argv[]){
       usage(stdout);
       exit(0);
     case 'Z':
-      paranoia_mode=PARANOIA_MODE_DISABLE; 
+      paranoia_mode=PARANOIA_MODE_DISABLE;
       break;
     case 'z':
       if (optarg) {
@@ -763,7 +763,7 @@ int main(int argc,char *argv[]){
       }
       break;
     case 'Y':
-      paranoia_mode|=PARANOIA_MODE_OVERLAP; /* cdda2wav style overlap 
+      paranoia_mode|=PARANOIA_MODE_OVERLAP; /* cdda2wav style overlap
 						check only */
       paranoia_mode&=~PARANOIA_MODE_VERIFY;
       break;
@@ -961,7 +961,7 @@ int main(int argc,char *argv[]){
     int batch_track;
 
     if(span){
-      /* look for the hyphen */ 
+      /* look for the hyphen */
       char *span2=strchr(span,'-');
       if(strrchr(span,'-')!=span2){
 	report("Error parsing span argument");
@@ -969,18 +969,18 @@ int main(int argc,char *argv[]){
 	d=NULL;
 	exit(1);
       }
-      
+
       if(span2!=NULL){
 	*span2='\0';
 	span2++;
       }
-      
+
       first_sector=parse_offset(d,span,-1);
       if(first_sector==-1)
 	last_sector=parse_offset(d,span2,cdda_disc_firstsector(d));
       else
 	last_sector=parse_offset(d,span2,first_sector);
-      
+
       if(first_sector==-1){
 	if(last_sector==-1){
 	  report("Error parsing span argument");
@@ -1025,7 +1025,7 @@ int main(int argc,char *argv[]){
 	      last_sector,
 	      track2,(int)(off2/(60*75)),(int)((off2/75)%60),(int)(off2%75));
       report(buffer);
-      
+
     }
 
     {
@@ -1042,8 +1042,8 @@ int main(int argc,char *argv[]){
 	cdda_verbose_set(d,CDDA_MESSAGE_LOGIT,CDDA_MESSAGE_LOGIT);
       else
 	cdda_verbose_set(d,CDDA_MESSAGE_FORGETIT,CDDA_MESSAGE_FORGETIT);
-      
-      paranoia_seek(p,cursor=first_sector,SEEK_SET);      
+
+      paranoia_seek(p,cursor=first_sector,SEEK_SET);
 
       /* this is probably a good idea in general */
       seteuid(getuid());
@@ -1070,12 +1070,12 @@ int main(int argc,char *argv[]){
 	  batch_last=last_sector;
 	  batch_track=-1;
 	}
-	
+
 	callbegin=batch_first;
 	callend=batch_last;
-	
+
 	/* argv[optind] is the span, argv[optind+1] (if exists) is outfile */
-	
+
 	if(optind+1<argc){
 	  if(!strcmp(argv[optind+1],"-")){
 	    out=dup(fileno(stdout));
@@ -1089,7 +1089,7 @@ int main(int argc,char *argv[]){
 	    char *post=strrchr(argv[optind+1],'/');
 	    int pos=(post?post-argv[optind+1]+1:0);
 	    char *file=argv[optind+1]+pos;
-	    
+
 	    path[0]='\0';
 
 	    if(pos)
@@ -1116,7 +1116,7 @@ int main(int argc,char *argv[]){
 		break;
 	      }
 	    }
-	    
+
 	    out=open(outfile_name,O_RDWR|O_CREAT|O_TRUNC,0666);
 	    if(out==-1){
 	      report3("Cannot open specified output file %s: %s",outfile_name,
@@ -1133,7 +1133,7 @@ int main(int argc,char *argv[]){
 	    sprintf(outfile_name,"track%02d.",batch_track);
 	  else
 	    outfile_name[0]='\0';
-	  
+
 	  switch(output_type){
 	  case 0: /* raw */
 	    strcat(outfile_name,"cdda.raw");
@@ -1148,7 +1148,7 @@ int main(int argc,char *argv[]){
 	    strcat(outfile_name,"cdda.aiff");
 	    break;
 	  }
-	  
+
 	  out=open(outfile_name,O_RDWR|O_CREAT|O_TRUNC,0666);
 	  if(out==-1){
 	    report3("Cannot open default output file %s: %s",outfile_name,
@@ -1159,7 +1159,7 @@ int main(int argc,char *argv[]){
 	  }
 	  report2("outputting to %s\n",outfile_name);
 	}
-	
+
 	switch(output_type){
 	case 0: /* raw */
 	  break;
@@ -1173,7 +1173,7 @@ int main(int argc,char *argv[]){
 	  WriteAiff(out,(batch_last-batch_first+1)*CD_FRAMESIZE_RAW);
 	  break;
 	}
-	
+
 	/* Off we go! */
 
 	if(offset_buffer_used){
@@ -1186,7 +1186,7 @@ int main(int argc,char *argv[]){
 	    exit(1);
 	  }
 	}
-	
+
 	skipped_flag=0;
 	while(cursor<=batch_last){
 	  /* read a sector */
@@ -1198,7 +1198,7 @@ int main(int argc,char *argv[]){
 	    fprintf(stderr,"\r                               "
 		    "                                           \r%s%s\n",
 		    mes?mes:"",err?err:"");
-	  
+
 	  if(err)free(err);
 	  if(mes)free(mes);
 	  if(readbuf==NULL){
@@ -1213,12 +1213,12 @@ int main(int argc,char *argv[]){
 
 	  skipped_flag=0;
 	  cursor++;
-	  
+
 	  if(output_endian!=bigendianp()){
 	    int i;
 	    for(i=0;i<CD_FRAMESIZE_RAW/2;i++)readbuf[i]=swap16(readbuf[i]);
 	  }
-	  
+
 	  callback(cursor*(CD_FRAMEWORDS)-1,-2,NULL);
 
 	  if(buffering_write(out,((char *)readbuf)+offset_skip,
@@ -1227,7 +1227,7 @@ int main(int argc,char *argv[]){
 	    exit(1);
 	  }
 	  offset_skip=0;
-	  
+
 	  if(output_endian!=bigendianp()){
 	    int i;
 	    for(i=0;i<CD_FRAMESIZE_RAW/2;i++)readbuf[i]=swap16(readbuf[i]);
@@ -1245,7 +1245,7 @@ int main(int argc,char *argv[]){
 	      fprintf(stderr,"\r                               "
 		      "                                           \r%s%s\n",
 		      mes?mes:"",err?err:"");
-	  
+
 	    if(err)free(err);if(mes)free(mes);
 	    if(readbuf==NULL){
 	      skipped_flag=1;
@@ -1256,14 +1256,14 @@ int main(int argc,char *argv[]){
 	    if(skipped_flag && abort_on_skip)break;
 	    skipped_flag=0;
 	    /* do not move the cursor */
-	  
+
 	    if(output_endian!=bigendianp())
 	      for(i=0;i<CD_FRAMESIZE_RAW/2;i++)
 		offset_buffer[i]=swap16(readbuf[i]);
 	    else
 	      memcpy(offset_buffer,readbuf,CD_FRAMESIZE_RAW);
 	    offset_buffer_used=sample_offset*4;
-	  
+
 	    callback(cursor*(CD_FRAMEWORDS),-2,NULL);
 
 	    if(buffering_write(out,(char *)offset_buffer,
@@ -1283,7 +1283,7 @@ int main(int argc,char *argv[]){
 	  if(batch_track!=-1){
 	    batch_track++;
 	    cursor=cdda_track_firstsector(d,batch_track);
-	    paranoia_seek(p,cursor,SEEK_SET);      
+	    paranoia_seek(p,cursor,SEEK_SET);
 	    offset_skip=sample_offset*4;
 	    offset_buffer_used=0;
 	  }
@@ -1297,7 +1297,7 @@ int main(int argc,char *argv[]){
   }
 
   report("Done.\n\n");
-  
+
   cdda_close(d);
   d=NULL;
   return 0;

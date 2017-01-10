@@ -29,7 +29,7 @@ protected:
     // file info
     int m_nBlockAlign;
     int m_nCurrentFrame;
-    
+
     // start / finish information
     int m_nStartBlock;
     int m_nFinishBlock;
@@ -37,13 +37,13 @@ protected:
     bool m_bIsRanged;
     bool m_bDecompressorInitialized;
 
-    // decoding tools    
+    // decoding tools
     CPrepare m_Prepare;
     WAVEFORMATEX m_wfeInput;
     unsigned int m_nCRC;
     unsigned int m_nStoredCRC;
     int m_nSpecialCodes;
-    
+
     int SeekToFrame(int nFrameIndex);
     void DecodeBlocksToFrameBuffer(int nBlocks);
     int FillFrameBuffer();
@@ -61,7 +61,7 @@ protected:
     CSmartPtr<IPredictorDecompress> m_spNewPredictorY;
 
     int m_nLastX;
-    
+
     // decoding buffer
     bool m_bErrorDecodingCurrentFrame;
     int m_nCurrentFrameBufferBlock;

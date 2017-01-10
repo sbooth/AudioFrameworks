@@ -2,7 +2,7 @@
  * CopyPolicy: GNU Public License 2 applies
  * Copyright (C) 1998 Monty xiphmont@mit.edu
  * derived from code (C) 1994-1996 Heiko Eissfeldt
- * 
+ *
  * Table of contents convenience functions
  *
  ******************************************************************/
@@ -50,7 +50,7 @@ long cdda_disc_firstsector(cdrom_drive *d){
        return(cdda_track_firstsector(d,i+1));
     }
 
-  cderror(d,"403: No audio tracks on disc\n");  
+  cderror(d,"403: No audio tracks on disc\n");
   return(-1);
 }
 
@@ -91,7 +91,7 @@ long cdda_disc_lastsector(cdrom_drive *d){
     if(cdda_track_audiop(d,i+1)==1)
       return(cdda_track_lastsector(d,i+1));
 
-  cderror(d,"403: No audio tracks on disc\n");  
+  cderror(d,"403: No audio tracks on disc\n");
   return(-1);
 }
 

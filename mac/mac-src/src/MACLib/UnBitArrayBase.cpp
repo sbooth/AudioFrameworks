@@ -21,13 +21,13 @@ CUnBitArrayBase * CreateUnBitArray(IAPEDecompress * pAPEDecompress, int nVersion
 #endif
 }
 
-void CUnBitArrayBase::AdvanceToByteBoundary() 
+void CUnBitArrayBase::AdvanceToByteBoundary()
 {
     int nMod = m_nCurrentBitIndex % 8;
     if (nMod != 0) { m_nCurrentBitIndex += 8 - nMod; }
 }
 
-uint32 CUnBitArrayBase::DecodeValueXBits(uint32 nBits) 
+uint32 CUnBitArrayBase::DecodeValueXBits(uint32 nBits)
 {
     // get more data if necessary
     if ((m_nCurrentBitIndex + nBits) >= m_nBits)
@@ -37,24 +37,24 @@ uint32 CUnBitArrayBase::DecodeValueXBits(uint32 nBits)
     uint32 nLeftBits = 32 - (m_nCurrentBitIndex & 31);
     uint32 nBitArrayIndex = m_nCurrentBitIndex >> 5;
     m_nCurrentBitIndex += nBits;
-    
+
     // if their isn't an overflow to the right value, get the value and exit
     if (nLeftBits >= nBits)
         return (m_pBitArray[nBitArrayIndex] & (POWERS_OF_TWO_MINUS_ONE[nLeftBits])) >> (nLeftBits - nBits);
-    
+
     // must get the "split" value from left and right
     int nRightBits = nBits - nLeftBits;
-    
+
     uint32 nLeftValue = ((m_pBitArray[nBitArrayIndex] & POWERS_OF_TWO_MINUS_ONE[nLeftBits]) << nRightBits);
     uint32 nRightValue = (m_pBitArray[nBitArrayIndex + 1] >> (32 - nRightBits));
     return (nLeftValue | nRightValue);
 }
 
-int CUnBitArrayBase::FillAndResetBitArray(int nFileLocation, int nNewBitIndex) 
+int CUnBitArrayBase::FillAndResetBitArray(int nFileLocation, int nNewBitIndex)
 {
     // reset the bit index
     m_nCurrentBitIndex = nNewBitIndex;
-    
+
     // seek if necessary
     if (nFileLocation != -1)
     {
@@ -78,14 +78,14 @@ int CUnBitArrayBase::FillAndResetBitArray(int nFileLocation, int nNewBitIndex)
     return 0;
 }
 
-int CUnBitArrayBase::FillBitArray() 
+int CUnBitArrayBase::FillBitArray()
 {
     // get the bit array index
     uint32 nBitArrayIndex = m_nCurrentBitIndex >> 5;
-    
+
     // move the remaining data to the front
     memmove((void *) (m_pBitArray), (const void *) (m_pBitArray + nBitArrayIndex), m_nBytes - (nBitArrayIndex * 4));
-    
+
     // read the new data
     int nBytesToRead = nBitArrayIndex * 4;
     unsigned int nBytesRead = 0;
@@ -103,7 +103,7 @@ int CUnBitArrayBase::FillBitArray()
 
     // adjust the m_Bit pointer
     m_nCurrentBitIndex = m_nCurrentBitIndex & 31;
-    
+
     // return
     return (nRetVal == 0) ? 0 : ERROR_IO_READ;
 }
@@ -117,14 +117,14 @@ int CUnBitArrayBase::CreateHelper(CIO * pIO, int nBytes, int nVersion)
     m_nElements = nBytes / 4;
     m_nBytes = m_nElements * 4;
     m_nBits = m_nBytes * 8;
-    
+
     // set the variables
     m_pIO = pIO;
     m_nVersion = nVersion;
     m_nCurrentBitIndex = 0;
-    
+
     // create the bitarray
     m_pBitArray = new uint32 [m_nElements];
-    
+
     return (m_pBitArray != NULL) ? 0 : ERROR_INSUFFICIENT_MEMORY;
 }

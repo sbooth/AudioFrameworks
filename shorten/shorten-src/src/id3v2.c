@@ -82,7 +82,7 @@ static unsigned long check_for_id3v2_tag(FILE *f)
 
 FILE *shn_open_and_discard_id3v2_tag(char *filename,int *file_has_id3v2_tag,long *id3v2_tag_size)
 /* opens a file, and if it contains an ID3v2 tag, skips past it */
-{ 
+{
   FILE *f;
   unsigned long tag_size;
 

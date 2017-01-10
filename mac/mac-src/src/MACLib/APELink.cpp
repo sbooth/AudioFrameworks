@@ -32,7 +32,7 @@ CAPELink::CAPELink(const str_utf16 * pFilename)
     {
         // create a buffer
         CSmartPtr<char> spBuffer(new char [1024], true);
-        
+
         // fill the buffer from the file and null terminate it
         unsigned int nBytesRead = 0;
         ioLinkFile.Read(spBuffer.GetPtr(), 1023, &nBytesRead);
@@ -78,7 +78,7 @@ void CAPELink::ParseData(const char * pData, const str_utf16 * pFilename)
                 // get the start and finish blocks
                 m_nStartBlock = atoi(&pStartBlock[strlen(APE_LINK_START_BLOCK_TAG)]);
                 m_nFinishBlock = atoi(&pFinishBlock[strlen(APE_LINK_FINISH_BLOCK_TAG)]);
-                
+
                 // get the path
                 char cImageFile[MAX_PATH + 1]; int nIndex = 0;
                 char * pImageCharacter = &pImageFile[strlen(APE_LINK_IMAGE_FILE_TAG)];

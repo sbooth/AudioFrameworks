@@ -9,7 +9,7 @@ to do whatever you need... the destructor will take care of any cleanup
 Notes:
     -Most all functions return 0 upon success, and some error code (other than 0) on
     failure.  However, all of the file functions that are wrapped from the Win32 API
-    return 0 on failure and some other number on success.  This applies to ReadFile, 
+    return 0 on failure and some other number on success.  This applies to ReadFile,
     WriteFile, SetFilePointer, etc...
 
 WARNING:
@@ -26,7 +26,7 @@ WARNING:
 #include "MACLib.h"
 
 /*****************************************************************************************
-APE_FILE_INFO - structure which describes most aspects of an APE file 
+APE_FILE_INFO - structure which describes most aspects of an APE file
 (used internally for speed and ease)
 *****************************************************************************************/
 struct APE_FILE_INFO
@@ -75,7 +75,7 @@ CAPEInfo - use this for all work with APE files
 class CAPEInfo
 {
 public:
-    
+
     // construction and destruction
     CAPEInfo(int * pErrorCode, const wchar_t * pFilename, CAPETag * pTag = NULL);
     CAPEInfo(int * pErrorCode, CIO * pIO, CAPETag * pTag = NULL);
@@ -83,13 +83,13 @@ public:
 
     // query for information
     long GetInfo(APE_DECOMPRESS_FIELDS Field, long nParam1 = 0, long nParam2 = 0);
-    
+
 private:
 
     // internal functions
     int GetFileInformation(bool bGetTagInformation = true);
     int CloseFile();
-    
+
     // internal variables
     bool m_bHasFileInformationLoaded;
     CSmartPtr<CIO> m_spIO;

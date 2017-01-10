@@ -4,8 +4,8 @@
 #define GENRE_UNDEFINED		255
 #define GENRE_COUNT			148
 
-const LPCWSTR g_ID3Genre[GENRE_COUNT] = 
-{ 
+const LPCWSTR g_ID3Genre[GENRE_COUNT] =
+{
 	L"Blues", L"Classic Rock", L"Country", L"Dance", L"Disco", L"Funk", L"Grunge", L"Hip-Hop",
 	L"Jazz", L"Metal", L"New Age", L"Oldies", L"Other", L"Pop", L"R&B", L"Rap", L"Reggae", L"Rock", L"Techno",
 	L"Industrial", L"Alternative", L"Ska", L"Death Metal", L"Pranks", L"Soundtrack", L"Euro-Techno", L"Ambient",
@@ -21,7 +21,7 @@ const LPCWSTR g_ID3Genre[GENRE_COUNT] =
 	L"Satire", L"Slow Jam", L"Club", L"Tango", L"Samba", L"Folklore", L"Ballad", L"Power Ballad", L"Rhythmic Soul", L"Freestyle",
 	L"Duet", L"Punk Rock", L"Drum Solo", L"Acapella", L"Euro-House", L"Dance Hall", L"Goa", L"Drum & Bass", L"Club House", L"Hardcore",
 	L"Terror", L"Indie", L"BritPop", L"Black Punk", L"Polsk Punk", L"Beat", L"Christian Gangsta", L"Heavy Metal", L"Black Metal",
-	L"Crossover", L"Contemporary C", L"Christian Rock", L"Merengue", L"Salsa", L"Thrash Metal", L"Anime", L"JPop", L"SynthPop" 
+	L"Crossover", L"Contemporary C", L"Christian Rock", L"Merengue", L"Salsa", L"Thrash Metal", L"Anime", L"JPop", L"SynthPop"
 };
 
 #endif // #ifndef APE_ID3GENRES_H

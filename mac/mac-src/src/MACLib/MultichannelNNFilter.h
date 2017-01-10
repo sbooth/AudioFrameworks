@@ -11,7 +11,7 @@ public:
 	{
 		m_pNNFilterA = new CNNFilter(nOrder1 + nOrder2, 11, 3980);
 		m_pNNFilterB = new CNNFilter(nOrder1 + nOrder2, 11, 3980);
-		
+
 		m_rbA.Create(NN_WINDOW_ELEMENTS, nOrder1 + nOrder2 + 1);
 		m_rbB.Create(NN_WINDOW_ELEMENTS, nOrder1 + nOrder2 + 1);
 
@@ -65,7 +65,7 @@ public:
 
 		m_rbB[-m_nOrder1 - 1] = m_rbA[0];
 		int nOutputB = nB + (m_pNNFilterB->GetPrediction(&m_rbB[-1]) >> m_nShift);
-		m_rbB[0] = GetSaturatedShortFromInt(nOutputB); 
+		m_rbB[0] = GetSaturatedShortFromInt(nOutputB);
 
 		m_pNNFilterA->AdaptAfterPrediction(&m_rbA[-1], -m_nOrder1, nA);
 		m_pNNFilterB->AdaptAfterPrediction(&m_rbB[-1], -m_nOrder1, nB);

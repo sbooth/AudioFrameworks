@@ -39,7 +39,7 @@ protected:
 
     // adaption
     int m_aryM[9];
-    
+
     // other
     int m_nCurrentIndex;
     CNNFilter * m_pNNFilter;
@@ -63,7 +63,7 @@ protected:
 
     // adaption
     int m_aryM[M_COUNT];
-    
+
     // buffer pointers
     int * m_pInputBuffer;
 
@@ -88,7 +88,7 @@ protected:
     // adaption
     int m_aryMA[M_COUNT];
     int m_aryMB[M_COUNT];
-    
+
     // buffer pointers
     CRollBufferFast<int, WINDOW_BLOCKS, 8> m_rbPredictionA;
     CRollBufferFast<int, WINDOW_BLOCKS, 8> m_rbPredictionB;

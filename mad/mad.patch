@@ -4,7 +4,7 @@ diff -ru libmad-0.15.1b/fixed.h libmad-src/fixed.h
 @@ -22,6 +22,12 @@
  # ifndef LIBMAD_FIXED_H
  # define LIBMAD_FIXED_H
- 
+
 +#if __BIG_ENDIAN__
 +# define FPM_PPC
 +#else
@@ -13,7 +13,7 @@ diff -ru libmad-0.15.1b/fixed.h libmad-src/fixed.h
 +
  # if SIZEOF_INT >= 4
  typedef   signed int mad_fixed_t;
- 
+
 @@ -167,7 +173,7 @@
   * significant bit depends on OPT_ACCURACY via mad_f_scale64().
   */
@@ -77,19 +77,19 @@ diff -ru libmad-0.15.1b/fixed.h libmad-src/fixed.h
  	    : "=&r" (__lo), "=&r" (__hi), "=r" (__result)  \
 @@ -266,17 +272,17 @@
  # endif
- 
+
  #  define MAD_F_MLX(hi, lo, x, y)  \
 -    asm ("smull	%0, %1, %2, %3"  \
 +    __asm ("smull	%0, %1, %2, %3"  \
  	 : "=&r" (lo), "=&r" (hi)  \
  	 : "%r" (x), "r" (y))
- 
+
  #  define MAD_F_MLA(hi, lo, x, y)  \
 -    asm ("smlal	%0, %1, %2, %3"  \
 +    __asm ("smlal	%0, %1, %2, %3"  \
  	 : "+r" (lo), "+r" (hi)  \
  	 : "%r" (x), "r" (y))
- 
+
  #  define MAD_F_MLN(hi, lo)  \
 -    asm ("rsbs	%0, %2, #0\n\t"  \
 +    __asm ("rsbs	%0, %2, #0\n\t"  \
@@ -97,7 +97,7 @@ diff -ru libmad-0.15.1b/fixed.h libmad-src/fixed.h
  	 : "=r" (lo), "=r" (hi)  \
  	 : "0" (lo), "1" (hi)  \
 @@ -284,7 +290,7 @@
- 
+
  #  define mad_f_scale64(hi, lo)  \
      ({ mad_fixed_t __result;  \
 -       asm ("movs	%0, %1, lsr %3\n\t"  \
@@ -113,7 +113,7 @@ diff -ru libmad-0.15.1b/fixed.h libmad-src/fixed.h
 +    __asm ("mult	%2,%3"  \
  	 : "=l" (lo), "=h" (hi)  \
  	 : "%r" (x), "r" (y))
- 
+
  # if defined(HAVE_MADD_ASM)
  #  define MAD_F_MLA(hi, lo, x, y)  \
 -    asm ("madd	%2,%3"  \
@@ -206,15 +206,15 @@ diff -ru libmad-0.15.1b/mad.h libmad-src/mad.h
 @@ -24,12 +24,20 @@
  extern "C" {
  # endif
- 
+
 +#if __BIG_ENDIAN__
 +# define FPM_PPC
 +#else
  # define FPM_INTEL
 +#endif
- 
- 
- 
+
+
+
  # define SIZEOF_INT 4
 +#if __LP64__
 +# define SIZEOF_LONG 8
@@ -222,5 +222,5 @@ diff -ru libmad-0.15.1b/mad.h libmad-src/mad.h
  # define SIZEOF_LONG 4
 +#endif
  # define SIZEOF_LONG_LONG 8
- 
- 
+
+

@@ -49,7 +49,7 @@ void sort_free(sort_info *i){
   free(i->bucketusage);
   free(i);
 }
- 
+
 static void sort_sort(sort_info *i,long sortlo,long sorthi){
   long j;
 
@@ -61,7 +61,7 @@ static void sort_sort(sort_info *i,long sortlo,long sorthi){
       i->bucketusage[i->lastbucket]=i->vector[j]+32768;
       i->lastbucket++;
     }
-    l->next=*hv;    
+    l->next=*hv;
     *hv=l;
   }
   i->sortbegin=0;
@@ -85,7 +85,7 @@ sort_link *sort_getmatch(sort_info *i,long post,long overlap,int value){
 
   if(i->sortbegin==-1)sort_sort(i,i->lo,i->hi);
   /* Now we reuse lo and hi */
-  
+
   post=max(0,min(i->size,post));
   i->val=value+32768;
   i->lo=max(0,post-overlap);       /* absolute position */
@@ -108,7 +108,7 @@ sort_link *sort_getmatch(sort_info *i,long post,long overlap,int value){
 sort_link *sort_nextmatch(sort_info *i,sort_link *prev){
   sort_link *ret=prev->next;
 
-  if(!ret || ipos(i,ret)>=i->hi)return(NULL); 
+  if(!ret || ipos(i,ret)>=i->hi)return(NULL);
   return(ret);
 }
 

@@ -61,7 +61,7 @@ typedef const wchar_t *     LPCWSTR;
 
 #define _wtoi(ws) wcstol(ws, NULL, 2)
 
-#include <locale.h> 
+#include <locale.h>
 
 #define _FPOSOFF(fp) ((long)(fp).__pos)
 #define MAX_PATH    260

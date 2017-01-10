@@ -23,7 +23,7 @@ extern "C" bool GetMMXAvailable(void)
         return false;
     }
 
-    if (nRegisterEDX & 0x800000) 
+    if (nRegisterEDX & 0x800000)
         RETURN_ON_EXCEPTION(__asm emms, false)
     else
         return false;
@@ -65,7 +65,7 @@ int WriteSafe(CIO * pIO, void * pBuffer, int nBytes)
 }
 
 bool FileExists(wchar_t * pFilename)
-{    
+{
     if (0 == wcscmp(pFilename, L"-")  ||  0 == wcscmp(pFilename, L"/dev/stdin"))
         return true;
 

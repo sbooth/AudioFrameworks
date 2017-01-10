@@ -164,7 +164,7 @@
 
 #define UINT_GET(version, nbit, file) \
   ((version == 0) ? uvar_get(nbit, file) : ulong_get(file))
-			
+
 #define putc_exit(val, stream)\
 { char rval;\
   if((rval = putc((val), (stream))) != (char) (val))\

@@ -25,10 +25,10 @@ int CAPEHeader::FindDescriptor(bool bSeek)
     int nJunkBytes = 0;
 
     // skip an ID3v2 tag (which we really don't support anyway...)
-    unsigned int nBytesRead = 0; 
+    unsigned int nBytesRead = 0;
     unsigned char cID3v2Header[10];
     m_pIO->Read((unsigned char *) cID3v2Header, 10, &nBytesRead);
-    if (cID3v2Header[0] == 'I' && cID3v2Header[1] == 'D' && cID3v2Header[2] == '3') 
+    if (cID3v2Header[0] == 'I' && cID3v2Header[1] == 'D' && cID3v2Header[2] == '3')
     {
         // why is it so hard to figure the lenght of an ID3v2 tag ?!?
 //        unsigned int nLength = *((unsigned int *) &cID3v2Header[6]);
@@ -41,12 +41,12 @@ int CAPEHeader::FindDescriptor(bool bSeek)
 
         bool bHasTagFooter = false;
 
-        if (cID3v2Header[5] & 16) 
+        if (cID3v2Header[5] & 16)
         {
             bHasTagFooter = true;
             nJunkBytes = nSyncSafeLength + 20;
         }
-        else 
+        else
         {
             nJunkBytes = nSyncSafeLength + 10;
         }
@@ -275,7 +275,7 @@ int CAPEHeader::AnalyzeOld(APE_FILE_INFO * pInfo)
     }
     else
         pInfo->nSeekTableElements = APEHeader.nTotalFrames;
-    
+
     // fill the APE info structure
     pInfo->nVersion                = int(APEHeader.nVersion);
     pInfo->nCompressionLevel    = int(APEHeader.nCompressionLevel);
@@ -324,7 +324,7 @@ int CAPEHeader::AnalyzeOld(APE_FILE_INFO * pInfo)
 
 #endif
 
-    if (APEHeader.nVersion <= 3800) 
+    if (APEHeader.nVersion <= 3800)
     {
         pInfo->spSeekBitTable.Assign(new unsigned char [pInfo->nSeekTableElements], true);
         if (pInfo->spSeekBitTable == NULL) { return ERROR_UNDEFINED; }

@@ -11,7 +11,7 @@ str_ansi * GetANSIFromUTF8(const str_utf8 * pUTF8)
 
 str_ansi * GetANSIFromUTF16(const str_utf16 * pUTF16)
 {
-    /* 
+    /*
      * In UTF-8, there will be at most 4 bytes for one character,
      * so the memory that result string need is at most 4 * len + 1 bytes.
      * That is supposed to be enough.
@@ -92,7 +92,7 @@ str_utf16 * GetUTF16FromUTF8(const str_utf8 * pUTF8)
     }
     pUTF16[nCharacters] = 0;
 
-    return pUTF16; 
+    return pUTF16;
 }
 
 str_utf8 * GetUTF8FromANSI(const str_ansi * pANSI)
