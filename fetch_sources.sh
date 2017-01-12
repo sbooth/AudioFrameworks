@@ -9,7 +9,7 @@ FLAC_VERSION="1.2.1"
 LAME_VERSION="3.99.5"
 MAC_VERSION="416"
 MAD_VERSION="0.15.1b"
-MP4V2_SVN_REVISION="501"
+MP4V2_GIT_HASH="6e1d4755c44f927d0a180a5352fdc0e273ccb325"
 MPG123_VERSION="1.14.4"
 MUSEPACK_VERSION="r475"
 MUSICBRAINZ3_VERSION="3.0.3"
@@ -24,15 +24,17 @@ TTA_PLUS_PLUS_VERSION="2.1"
 TAGLIB_GIT_HASH="821ff14a43da1c9d6094bd75a10c417bcdf7eafe"
 VORBIS_VERSION="1.3.3"
 WAVPACK_VERSION="4.60.1"
-ZLIB_VERSION="1.2.8"
+ZLIB_GIT_HASH="50893291621658f355bc5b4d450a8d06a563053d"
 
 function _fetch_github_hash
 {
 	DIRECTORY=$1
 	NAME=$2
-	HASH=$3
+	TEAM=$3
+	PROJECT=$4
+	HASH=$5
 
-	_fetch_http "${DIRECTORY}" "${NAME}" "${HASH}" "https://github.com/taglib/taglib/archive/${HASH}.tar.gz"
+	_fetch_http "${DIRECTORY}" "${NAME}" "${HASH}" "https://github.com/${TEAM}/${PROJECT}/archive/${HASH}.tar.gz"
 }
 
 function _fetch_http
@@ -209,10 +211,11 @@ function fetch_mad
 
 function fetch_mp4v2
 {
-	_fetch_svn "mp4v2" \
-	           "mp4v2" \
-	           "${MP4V2_SVN_REVISION}" \
-	           "http://mp4v2.googlecode.com/svn/trunk/"
+	_fetch_github_hash "mp4v2" \
+	                   "mp4v2" \
+					   "pcwalton" \
+					   "mp4v2" \
+	                   "${MP4V2_GIT_HASH}"
 }
 
 function fetch_mpg123
@@ -300,6 +303,8 @@ function fetch_taglib
 {
 	_fetch_github_hash "taglib" \
 	                   "taglib" \
+					   "taglib" \
+	                   "taglib" \
 	                   "${TAGLIB_GIT_HASH}"
 }
 
@@ -350,10 +355,11 @@ function fetch_wavpack
 
 function fetch_zlib
 {
-	_fetch_http "zlib" \
-	            "zlib" \
-	            "${ZLIB_VERSION}" \
-	            "http://zlib.net/zlib-${ZLIB_VERSION}.tar.gz"
+	_fetch_github_hash "zlib" \
+	                   "zlib" \
+					   "madler" \
+					   "zlib" \
+	                   "${ZLIB_GIT_HASH}"
 }
 
 clean
