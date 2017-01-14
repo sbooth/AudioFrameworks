@@ -8,67 +8,93 @@ fi
 
 DO_CLEAN=1
 
-FRAMEWORKDIR=../$1
+WRK_DIR="${1}"
+CONFIGURATION="Release"
+
+function _xcodebuild
+{
+	XCODEPROJ_PATH=$1
+	TARGET=$2
+	NAME=$3
+
+	PARAMS="-configuration ${CONFIGURATION}
+		CONFIGURATION_BUILD_DIR=${WRK_DIR}/build/${NAME}
+		PRIVATE_HEADERS_FOLDER_PATH=/include
+		PUBLIC_HEADERS_FOLDER_PATH=/include
+		"
+
+	if [ $DO_CLEAN -ne 0 ]; then
+		xcodebuild -project "${XCODEPROJ_PATH}" clean
+	fi
+	xcodebuild -project "${XCODEPROJ_PATH}" -target "${TARGET}" ${PARAMS} 
+}
 
 rm -rf $1/*
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project dumb/dumb.xcodeproj clean
-fi
-xcodebuild -project dumb/dumb.xcodeproj -target dumb.framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "dumb/dumb.xcodeproj" \
+            "dumb-OSX" \
+            "dumb"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project flac/flac.xcodeproj clean
-fi
-xcodebuild -project flac/flac.xcodeproj -target Framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "flac/flac.xcodeproj" \
+            "libFLAC" \
+            "FLAC"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project mac/mac.xcodeproj clean
-fi
-xcodebuild -project mac/mac.xcodeproj -target mac.framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "mac/mac.xcodeproj" \
+            "mac" \
+            "mac"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project mp4v2/mp4v2.xcodeproj clean
-fi
-xcodebuild -project mp4v2/mp4v2.xcodeproj -target mp4v2 -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "mp4v2/mp4v2.xcodeproj" \
+            "mp4v2" \
+            "mp4v2"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project musepack/musepack.xcodeproj clean
-fi
-xcodebuild -project musepack/musepack.xcodeproj -target mpcdec.framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "mpg123/mpg123.xcodeproj" \
+            "mpg123" \
+            "mpg123"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project mpg123/mpg123.xcodeproj clean
-fi
-xcodebuild -project mpg123/mpg123.xcodeproj -target mpg123.framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "musepack/musepack.xcodeproj" \
+            "mpcdec" \
+            "mpcdec"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project sndfile/sndfile.xcodeproj clean
-fi
-xcodebuild -project sndfile/sndfile.xcodeproj -target sndfile.framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "ogg/ogg.xcodeproj" \
+            "ogg" \
+            "ogg"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project speex/speex.xcodeproj clean
-fi
-xcodebuild -project speex/speex.xcodeproj -target speex.framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "opus/opus.xcodeproj" \
+            "opus" \
+            "opus"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project taglib/taglib.xcodeproj clean
-fi
-xcodebuild -project taglib/taglib.xcodeproj -target taglib -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "opus/opus.xcodeproj" \
+            "opusfile" \
+            "opus"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project tta/tta++.xcodeproj clean
-fi
-xcodebuild -project tta/tta++.xcodeproj -target tta++.framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "sndfile/sndfile.xcodeproj" \
+            "sndfile" \
+            "sndfile"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project vorbis/vorbis.xcodeproj clean
-fi
-xcodebuild -project vorbis/vorbis.xcodeproj -target vorbis.framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "speex/speex.xcodeproj" \
+            "speex" \
+            "speex"
 
-if [ $DO_CLEAN -ne 0 ]; then
-	xcodebuild -project wavpack/wavpack.xcodeproj clean
-fi
-xcodebuild -project wavpack/wavpack.xcodeproj -target Framework -configuration Release CONFIGURATION_BUILD_DIR=$FRAMEWORKDIR
+_xcodebuild "taglib/taglib.xcodeproj" \
+            "tag" \
+            "taglib"
 
+_xcodebuild "tta++/tta++.xcodeproj" \
+            "tta++" \
+            "tta++"
+
+_xcodebuild "vorbis/vorbis.xcodeproj" \
+            "vorbis" \
+            "vorbis"
+
+_xcodebuild "vorbis/vorbis.xcodeproj" \
+            "vorbisfile" \
+            "vorbis"
+
+_xcodebuild "wavpack/wavpack.xcodeproj" \
+            "libwavpack" \
+            "wavpack"
+
+_xcodebuild "zlib/zlib.xcodeproj" \
+            "z" \
+            "zlib"

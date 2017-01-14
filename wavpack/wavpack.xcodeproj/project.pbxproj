@@ -49,6 +49,7 @@
 		32E7366E10B9048C00094C8A /* wavpack_version.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7366B10B9048C00094C8A /* wavpack_version.h */; };
 		32E7367010B904A200094C8A /* wavpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7366F10B904A200094C8A /* wavpack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32E736D310B9079500094C8A /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 326D048D0DD02848001D08E9 /* libiconv.dylib */; };
+		426F7E2B1CD8474800E5757F /* wavpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E7366F10B904A200094C8A /* wavpack.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -233,6 +234,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426F7E2B1CD8474800E5757F /* wavpack.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
