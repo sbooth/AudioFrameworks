@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83A16EF019F48A2E00842DBC /* huffman.c in Sources */ = {isa = PBXBuildFile; fileRef = 83A16EED19F48A2E00842DBC /* huffman.c */; };
+		83A16EF119F48A2E00842DBC /* mpc_bits_reader.c in Sources */ = {isa = PBXBuildFile; fileRef = 83A16EEE19F48A2E00842DBC /* mpc_bits_reader.c */; };
+		83A16EF219F48A2E00842DBC /* mpc_demux.c in Sources */ = {isa = PBXBuildFile; fileRef = 83A16EEF19F48A2E00842DBC /* mpc_demux.c */; };
+		83A16EF919F48A3A00842DBC /* decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16EF319F48A3A00842DBC /* decoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16EFA19F48A3A00842DBC /* huffman.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16EF419F48A3A00842DBC /* huffman.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16EFB19F48A3A00842DBC /* internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16EF519F48A3A00842DBC /* internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16EFC19F48A3A00842DBC /* mpc_bits_reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16EF619F48A3A00842DBC /* mpc_bits_reader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16EFD19F48A3A00842DBC /* mpcdec_math.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16EF719F48A3A00842DBC /* mpcdec_math.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16EFE19F48A3A00842DBC /* requant.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16EF819F48A3A00842DBC /* requant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16F1219F48AE200842DBC /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = 83A16F0E19F48AE200842DBC /* crc32.c */; };
+		83A16F1319F48AE200842DBC /* fastmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 83A16F0F19F48AE200842DBC /* fastmath.c */; };
+		83A16F1419F48AE200842DBC /* huffman-bcl.c in Sources */ = {isa = PBXBuildFile; fileRef = 83A16F1019F48AE200842DBC /* huffman-bcl.c */; };
+		83A16F1519F48AE200842DBC /* tags.c in Sources */ = {isa = PBXBuildFile; fileRef = 83A16F1119F48AE200842DBC /* tags.c */; };
+		83A16F1E19F48FB800842DBC /* datatypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16F1719F48FB800842DBC /* datatypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16F1F19F48FB800842DBC /* minimax.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16F1819F48FB800842DBC /* minimax.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16F2019F48FB800842DBC /* mpc_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16F1919F48FB800842DBC /* mpc_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16F2119F48FB800842DBC /* mpcdec.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16F1A19F48FB800842DBC /* mpcdec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16F2219F48FB800842DBC /* mpcmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16F1B19F48FB800842DBC /* mpcmath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16F2319F48FB800842DBC /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16F1C19F48FB800842DBC /* reader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83A16F2419F48FB800842DBC /* streaminfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A16F1D19F48FB800842DBC /* streaminfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
+		8E6096C809F314CF006D8BD7 /* mpc_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6096BF09F314CF006D8BD7 /* mpc_decoder.c */; };
+		8E6096C909F314CF006D8BD7 /* mpc_reader.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6096C009F314CF006D8BD7 /* mpc_reader.c */; };
+		8E6096CA09F314CF006D8BD7 /* requant.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6096C109F314CF006D8BD7 /* requant.c */; };
+		8E6096CC09F314CF006D8BD7 /* streaminfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6096C309F314CF006D8BD7 /* streaminfo.c */; };
+		8E6096CD09F314CF006D8BD7 /* synth_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6096C409F314CF006D8BD7 /* synth_filter.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		833F683F1CDBCAB300AFB9F0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		835C889222CC1885001B4B3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83A16EED19F48A2E00842DBC /* huffman.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = huffman.c; path = Files/src/huffman.c; sourceTree = "<group>"; };
+		83A16EEE19F48A2E00842DBC /* mpc_bits_reader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mpc_bits_reader.c; path = Files/src/mpc_bits_reader.c; sourceTree = "<group>"; };
+		83A16EEF19F48A2E00842DBC /* mpc_demux.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mpc_demux.c; path = Files/src/mpc_demux.c; sourceTree = "<group>"; };
+		83A16EF319F48A3A00842DBC /* decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = decoder.h; path = Files/include/decoder.h; sourceTree = "<group>"; };
+		83A16EF419F48A3A00842DBC /* huffman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = huffman.h; path = Files/include/huffman.h; sourceTree = "<group>"; };
+		83A16EF519F48A3A00842DBC /* internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = internal.h; path = Files/include/internal.h; sourceTree = "<group>"; };
+		83A16EF619F48A3A00842DBC /* mpc_bits_reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mpc_bits_reader.h; path = Files/include/mpc_bits_reader.h; sourceTree = "<group>"; };
+		83A16EF719F48A3A00842DBC /* mpcdec_math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mpcdec_math.h; path = Files/include/mpcdec_math.h; sourceTree = "<group>"; };
+		83A16EF819F48A3A00842DBC /* requant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = requant.h; path = Files/include/requant.h; sourceTree = "<group>"; };
+		83A16F0E19F48AE200842DBC /* crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = crc32.c; path = Files/src/crc32.c; sourceTree = "<group>"; };
+		83A16F0F19F48AE200842DBC /* fastmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fastmath.c; path = Files/src/fastmath.c; sourceTree = "<group>"; };
+		83A16F1019F48AE200842DBC /* huffman-bcl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "huffman-bcl.c"; path = "Files/src/huffman-bcl.c"; sourceTree = "<group>"; };
+		83A16F1119F48AE200842DBC /* tags.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tags.c; path = Files/src/tags.c; sourceTree = "<group>"; };
+		83A16F1719F48FB800842DBC /* datatypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datatypes.h; sourceTree = "<group>"; };
+		83A16F1819F48FB800842DBC /* minimax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = minimax.h; sourceTree = "<group>"; };
+		83A16F1919F48FB800842DBC /* mpc_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpc_types.h; sourceTree = "<group>"; };
+		83A16F1A19F48FB800842DBC /* mpcdec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpcdec.h; sourceTree = "<group>"; };
+		83A16F1B19F48FB800842DBC /* mpcmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mpcmath.h; sourceTree = "<group>"; };
+		83A16F1C19F48FB800842DBC /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		83A16F1D19F48FB800842DBC /* streaminfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = streaminfo.h; sourceTree = "<group>"; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* mpcdec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = mpcdec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E6096BF09F314CF006D8BD7 /* mpc_decoder.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = mpc_decoder.c; path = Files/src/mpc_decoder.c; sourceTree = "<group>"; };
+		8E6096C009F314CF006D8BD7 /* mpc_reader.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = mpc_reader.c; path = Files/src/mpc_reader.c; sourceTree = "<group>"; };
+		8E6096C109F314CF006D8BD7 /* requant.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = requant.c; path = Files/src/requant.c; sourceTree = "<group>"; };
+		8E6096C309F314CF006D8BD7 /* streaminfo.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = streaminfo.c; path = Files/src/streaminfo.c; sourceTree = "<group>"; };
+		8E6096C409F314CF006D8BD7 /* synth_filter.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; name = synth_filter.c; path = Files/src/synth_filter.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* mpcdec.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* MPCDec */ = {
+			isa = PBXGroup;
+			children = (
+				8E6096BB09F314B2006D8BD7 /* Headers */,
+				8E6096BA09F314AD006D8BD7 /* Source */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = MPCDec;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+				089C1666FE841158C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		83A16F1619F48FB800842DBC /* mpcdec */ = {
+			isa = PBXGroup;
+			children = (
+				83A16F1719F48FB800842DBC /* datatypes.h */,
+				83A16F1819F48FB800842DBC /* minimax.h */,
+				83A16F1919F48FB800842DBC /* mpc_types.h */,
+				83A16F1A19F48FB800842DBC /* mpcdec.h */,
+				83A16F1B19F48FB800842DBC /* mpcmath.h */,
+				83A16F1C19F48FB800842DBC /* reader.h */,
+				83A16F1D19F48FB800842DBC /* streaminfo.h */,
+			);
+			name = mpcdec;
+			path = Files/include/mpcdec;
+			sourceTree = "<group>";
+		};
+		8E6096BA09F314AD006D8BD7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				83A16F0E19F48AE200842DBC /* crc32.c */,
+				83A16F0F19F48AE200842DBC /* fastmath.c */,
+				83A16F1019F48AE200842DBC /* huffman-bcl.c */,
+				83A16F1119F48AE200842DBC /* tags.c */,
+				83A16EED19F48A2E00842DBC /* huffman.c */,
+				83A16EEE19F48A2E00842DBC /* mpc_bits_reader.c */,
+				83A16EEF19F48A2E00842DBC /* mpc_demux.c */,
+				8E6096BF09F314CF006D8BD7 /* mpc_decoder.c */,
+				8E6096C009F314CF006D8BD7 /* mpc_reader.c */,
+				8E6096C109F314CF006D8BD7 /* requant.c */,
+				8E6096C309F314CF006D8BD7 /* streaminfo.c */,
+				8E6096C409F314CF006D8BD7 /* synth_filter.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		8E6096BB09F314B2006D8BD7 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				83A16F1619F48FB800842DBC /* mpcdec */,
+				83A16EF319F48A3A00842DBC /* decoder.h */,
+				83A16EF419F48A3A00842DBC /* huffman.h */,
+				83A16EF519F48A3A00842DBC /* internal.h */,
+				83A16EF619F48A3A00842DBC /* mpc_bits_reader.h */,
+				83A16EF719F48A3A00842DBC /* mpcdec_math.h */,
+				83A16EF819F48A3A00842DBC /* requant.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83A16F2219F48FB800842DBC /* mpcmath.h in Headers */,
+				83A16F1F19F48FB800842DBC /* minimax.h in Headers */,
+				83A16F2319F48FB800842DBC /* reader.h in Headers */,
+				83A16F1E19F48FB800842DBC /* datatypes.h in Headers */,
+				83A16F2419F48FB800842DBC /* streaminfo.h in Headers */,
+				83A16F2019F48FB800842DBC /* mpc_types.h in Headers */,
+				83A16F2119F48FB800842DBC /* mpcdec.h in Headers */,
+				83A16EFB19F48A3A00842DBC /* internal.h in Headers */,
+				83A16EFE19F48A3A00842DBC /* requant.h in Headers */,
+				83A16EFA19F48A3A00842DBC /* huffman.h in Headers */,
+				83A16EFD19F48A3A00842DBC /* mpcdec_math.h in Headers */,
+				83A16EFC19F48A3A00842DBC /* mpc_bits_reader.h in Headers */,
+				83A16EF919F48A3A00842DBC /* decoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8DC2EF4F0486A6940098B216 /* mpcdec Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "mpcdec Framework" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mpcdec Framework";
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = MPCDec;
+			productReference = 8DC2EF5B0486A6940098B216 /* mpcdec.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					8DC2EF4F0486A6940098B216 = {
+						DevelopmentTeam = N6E749HJ2X;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "MPCDec" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				es,
+				Base,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* MPCDec */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* mpcdec Framework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E6096C809F314CF006D8BD7 /* mpc_decoder.c in Sources */,
+				83A16EF019F48A2E00842DBC /* huffman.c in Sources */,
+				83A16F1519F48AE200842DBC /* tags.c in Sources */,
+				83A16EF119F48A2E00842DBC /* mpc_bits_reader.c in Sources */,
+				83A16F1219F48AE200842DBC /* crc32.c in Sources */,
+				8E6096C909F314CF006D8BD7 /* mpc_reader.c in Sources */,
+				8E6096CA09F314CF006D8BD7 /* requant.c in Sources */,
+				83A16F1419F48AE200842DBC /* huffman-bcl.c in Sources */,
+				8E6096CC09F314CF006D8BD7 /* streaminfo.c in Sources */,
+				83A16F1319F48AE200842DBC /* fastmath.c in Sources */,
+				83A16EF219F48A2E00842DBC /* mpc_demux.c in Sources */,
+				8E6096CD09F314CF006D8BD7 /* synth_filter.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				833F683F1CDBCAB300AFB9F0 /* es */,
+				835C889222CC1885001B4B3F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = Files/include/;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cogx.lib.mpcdec;
+				PRODUCT_NAME = mpcdec;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.cogx.lib.mpcdec;
+				PRODUCT_NAME = mpcdec;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = Files/include/;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SYMROOT = ../../build;
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				SYMROOT = ../../build;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "mpcdec Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "MPCDec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

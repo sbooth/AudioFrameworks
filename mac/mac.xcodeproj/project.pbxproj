@@ -81,6 +81,39 @@
 		426F8C601CD8905800E5757F /* WAVInfoDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BDD1CD88F9D00E5757F /* WAVInfoDialog.h */; };
 		426F8C611CD8905800E5757F /* WindowsEnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BDE1CD88F9D00E5757F /* WindowsEnvironment.h */; };
 		426F8C621CD8905800E5757F /* WinFileIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 426F8BE01CD88F9D00E5757F /* WinFileIO.h */; };
+		5BC32F9B2397B6E80014AA20 /* APECompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BE11CD88FCE00E5757F /* APECompress.cpp */; };
+		5BC32F9C2397B6E80014AA20 /* APECompressCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BE31CD88FCE00E5757F /* APECompressCore.cpp */; };
+		5BC32F9D2397B6E80014AA20 /* APECompressCreate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BE51CD88FCE00E5757F /* APECompressCreate.cpp */; };
+		5BC32F9E2397B6E80014AA20 /* APEDecompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BE71CD88FCE00E5757F /* APEDecompress.cpp */; };
+		5BC32F9F2397B6E80014AA20 /* APEHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BE91CD88FCE00E5757F /* APEHeader.cpp */; };
+		5BC32FA02397B6E80014AA20 /* APEInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BEB1CD88FCE00E5757F /* APEInfo.cpp */; };
+		5BC32FA12397B6E80014AA20 /* APELink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BED1CD88FCE00E5757F /* APELink.cpp */; };
+		5BC32FA22397B6F40014AA20 /* APESimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BEF1CD88FCE00E5757F /* APESimple.cpp */; };
+		5BC32FA32397B6F40014AA20 /* APETag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BF01CD88FCE00E5757F /* APETag.cpp */; };
+		5BC32FA42397B6F40014AA20 /* BitArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BF21CD88FCE00E5757F /* BitArray.cpp */; };
+		5BC32FA52397B6F40014AA20 /* MACLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BF41CD88FCE00E5757F /* MACLib.cpp */; };
+		5BC32FA62397B6F40014AA20 /* MACProgressHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BF61CD88FCE00E5757F /* MACProgressHelper.cpp */; };
+		5BC32FA72397B6F40014AA20 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BF81CD88FCE00E5757F /* md5.cpp */; };
+		5BC32FA82397B6F40014AA20 /* NewPredictor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BFA1CD88FCE00E5757F /* NewPredictor.cpp */; };
+		5BC32FA92397B6F40014AA20 /* NNFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BFC1CD88FCE00E5757F /* NNFilter.cpp */; };
+		5BC32FAA2397B6F40014AA20 /* Prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C0E1CD88FCE00E5757F /* Prepare.cpp */; };
+		5BC32FAB2397B6F40014AA20 /* UnBitArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C111CD88FCE00E5757F /* UnBitArray.cpp */; };
+		5BC32FAC2397B6F40014AA20 /* UnBitArrayBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C131CD88FCE00E5757F /* UnBitArrayBase.cpp */; };
+		5BC32FAD2397B6F40014AA20 /* WAVInputSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C151CD88FCE00E5757F /* WAVInputSource.cpp */; };
+		5BC32FAE2397B7010014AA20 /* Anti-Predictor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BFF1CD88FCE00E5757F /* Anti-Predictor.cpp */; };
+		5BC32FAF2397B7010014AA20 /* AntiPredictorExtraHigh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C011CD88FCE00E5757F /* AntiPredictorExtraHigh.cpp */; };
+		5BC32FB02397B7010014AA20 /* AntiPredictorFast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C021CD88FCE00E5757F /* AntiPredictorFast.cpp */; };
+		5BC32FB12397B7010014AA20 /* AntiPredictorHigh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C031CD88FCE00E5757F /* AntiPredictorHigh.cpp */; };
+		5BC32FB22397B7010014AA20 /* AntiPredictorNormal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C041CD88FCE00E5757F /* AntiPredictorNormal.cpp */; };
+		5BC32FB32397B7010014AA20 /* APEDecompressCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C051CD88FCE00E5757F /* APEDecompressCore.cpp */; };
+		5BC32FB42397B7010014AA20 /* APEDecompressOld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C071CD88FCE00E5757F /* APEDecompressOld.cpp */; };
+		5BC32FB52397B7010014AA20 /* UnBitArrayOld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C091CD88FCE00E5757F /* UnBitArrayOld.cpp */; };
+		5BC32FB62397B7010014AA20 /* UnMAC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8C0B1CD88FCE00E5757F /* UnMAC.cpp */; };
+		5BC32FB82397B7130014AA20 /* CharacterHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BCD1CD88F9C00E5757F /* CharacterHelper.cpp */; };
+		5BC32FB92397B7130014AA20 /* CircleBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BCF1CD88F9C00E5757F /* CircleBuffer.cpp */; };
+		5BC32FBA2397B7130014AA20 /* GlobalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BD11CD88F9C00E5757F /* GlobalFunctions.cpp */; };
+		5BC32FBB2397B7130014AA20 /* StdLibFileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BD81CD88F9C00E5757F /* StdLibFileIO.cpp */; };
+		5BC32FBE2397B7660014AA20 /* WinFileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 426F8BDF1CD88F9D00E5757F /* WinFileIO.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -519,6 +552,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC32F9B2397B6E80014AA20 /* APECompress.cpp in Sources */,
+				5BC32F9C2397B6E80014AA20 /* APECompressCore.cpp in Sources */,
+				5BC32F9D2397B6E80014AA20 /* APECompressCreate.cpp in Sources */,
+				5BC32F9E2397B6E80014AA20 /* APEDecompress.cpp in Sources */,
+				5BC32F9F2397B6E80014AA20 /* APEHeader.cpp in Sources */,
+				5BC32FA02397B6E80014AA20 /* APEInfo.cpp in Sources */,
+				5BC32FA12397B6E80014AA20 /* APELink.cpp in Sources */,
+				5BC32FA22397B6F40014AA20 /* APESimple.cpp in Sources */,
+				5BC32FA32397B6F40014AA20 /* APETag.cpp in Sources */,
+				5BC32FA42397B6F40014AA20 /* BitArray.cpp in Sources */,
+				5BC32FA52397B6F40014AA20 /* MACLib.cpp in Sources */,
+				5BC32FA62397B6F40014AA20 /* MACProgressHelper.cpp in Sources */,
+				5BC32FA72397B6F40014AA20 /* md5.cpp in Sources */,
+				5BC32FA82397B6F40014AA20 /* NewPredictor.cpp in Sources */,
+				5BC32FA92397B6F40014AA20 /* NNFilter.cpp in Sources */,
+				5BC32FAA2397B6F40014AA20 /* Prepare.cpp in Sources */,
+				5BC32FAB2397B6F40014AA20 /* UnBitArray.cpp in Sources */,
+				5BC32FAC2397B6F40014AA20 /* UnBitArrayBase.cpp in Sources */,
+				5BC32FAD2397B6F40014AA20 /* WAVInputSource.cpp in Sources */,
+				5BC32FAE2397B7010014AA20 /* Anti-Predictor.cpp in Sources */,
+				5BC32FAF2397B7010014AA20 /* AntiPredictorExtraHigh.cpp in Sources */,
+				5BC32FB02397B7010014AA20 /* AntiPredictorFast.cpp in Sources */,
+				5BC32FB12397B7010014AA20 /* AntiPredictorHigh.cpp in Sources */,
+				5BC32FB22397B7010014AA20 /* AntiPredictorNormal.cpp in Sources */,
+				5BC32FB32397B7010014AA20 /* APEDecompressCore.cpp in Sources */,
+				5BC32FB42397B7010014AA20 /* APEDecompressOld.cpp in Sources */,
+				5BC32FB52397B7010014AA20 /* UnBitArrayOld.cpp in Sources */,
+				5BC32FB62397B7010014AA20 /* UnMAC.cpp in Sources */,
+				5BC32FB82397B7130014AA20 /* CharacterHelper.cpp in Sources */,
+				5BC32FB92397B7130014AA20 /* CircleBuffer.cpp in Sources */,
+				5BC32FBA2397B7130014AA20 /* GlobalFunctions.cpp in Sources */,
+				5BC32FBB2397B7130014AA20 /* StdLibFileIO.cpp in Sources */,
+				5BC32FBE2397B7660014AA20 /* WinFileIO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

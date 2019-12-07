@@ -185,7 +185,8 @@ function fetch_lame
 
 function fetch_mac
 {
-	URL="http://monkeysaudio.com/files/MAC_SDK_${MAC_VERSION}.zip"
+	# URL="http://monkeysaudio.com/files/MAC_SDK_${MAC_VERSION}.zip"
+	URL="https://web.archive.org/web/20160402052014/http://monkeysaudio.com/files/MAC_SDK_416.zip"
 
 	echo "Fetching mac (${MAC_VERSION}): $URL"
 
