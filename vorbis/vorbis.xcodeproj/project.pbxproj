@@ -77,19 +77,33 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		32E73B3810B9D9CE00094C8A /* PBXContainerItemProxy */ = {
+		426F80C11CD85B3200E5757F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 32E73B3110B9D9CD00094C8A /* ogg.xcodeproj */;
+			containerPortal = 426F80BC1CD85B3200E5757F /* ogg.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = ogg.framework;
 		};
-		32E73B3A10B9D9D500094C8A /* PBXContainerItemProxy */ = {
+		426F80C31CD85B3200E5757F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 32E73B3110B9D9CD00094C8A /* ogg.xcodeproj */;
+			containerPortal = 426F80BC1CD85B3200E5757F /* ogg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 426F7F651CD8521C00E5757F;
+			remoteInfo = ogg;
+		};
+		426F80C51CD85B3F00E5757F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 426F80BC1CD85B3200E5757F /* ogg.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = ogg.framework;
+		};
+		426F80C71CD85B4400E5757F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 426F80BC1CD85B3200E5757F /* ogg.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 426F7F641CD8521C00E5757F;
+			remoteInfo = ogg;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -100,7 +114,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				32E73B7710B9DB4F00094C8A /* ogg.framework in Copy Embedded Frameworks */,
 			);
 			name = "Copy Embedded Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,17 +191,33 @@
 		32E73AEE10B9D83A00094C8A /* codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = codec.h; path = "libvorbis-src/include/vorbis/codec.h"; sourceTree = "<group>"; };
 		32E73AEF10B9D83A00094C8A /* vorbisenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vorbisenc.h; path = "libvorbis-src/include/vorbis/vorbisenc.h"; sourceTree = "<group>"; };
 		32E73AF010B9D83A00094C8A /* vorbisfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vorbisfile.h; path = "libvorbis-src/include/vorbis/vorbisfile.h"; sourceTree = "<group>"; };
-		32E73B3110B9D9CD00094C8A /* ogg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogg.xcodeproj; path = ../ogg/ogg.xcodeproj; sourceTree = SOURCE_ROOT; };
+		426F80881CD8592B00E5757F /* libvorbis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libvorbis.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		426F809B1CD8593200E5757F /* libvorbisfile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libvorbisfile.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		426F80BC1CD85B3200E5757F /* ogg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ogg.xcodeproj; path = ../ogg/ogg.xcodeproj; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* vorbis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = vorbis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		426F80851CD8592B00E5757F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426F80981CD8593200E5757F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32E73B3C10B9D9E100094C8A /* ogg.framework in Frameworks */,
+				426F80C91CD85B6400E5757F /* ogg.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* vorbis.framework */,
+				426F80881CD8592B00E5757F /* libvorbis.a */,
+				426F809B1CD8593200E5757F /* libvorbisfile.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,7 +248,7 @@
 		089C1665FE841158C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				32E73B3110B9D9CD00094C8A /* ogg.xcodeproj */,
+				426F80BC1CD85B3200E5757F /* ogg.xcodeproj */,
 				8DC2EF5A0486A6940098B216 /* Info.plist */,
 			);
 			name = Resources;
@@ -349,10 +380,11 @@
 			path = "libvorbis-src/lib/modes";
 			sourceTree = "<group>";
 		};
-		32E73B3210B9D9CD00094C8A /* Products */ = {
+		426F80BD1CD85B3200E5757F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32E73B3910B9D9CE00094C8A /* ogg.framework */,
+				426F80C21CD85B3200E5757F /* ogg.framework */,
+				426F80C41CD85B3200E5757F /* libogg.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,6 +392,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		426F80861CD8592B00E5757F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426F845E1CD874B800E5757F /* codec.h in Headers */,
+				426F845F1CD874B800E5757F /* vorbisenc.h in Headers */,
+				426F84601CD874B800E5757F /* vorbisfile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426F80991CD8593200E5757F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426F80B91CD85A3400E5757F /* vorbisfile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF500486A6940098B216 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,6 +462,41 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		426F80871CD8592B00E5757F /* vorbis */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426F80961CD8592B00E5757F /* Build configuration list for PBXNativeTarget "vorbis" */;
+			buildPhases = (
+				426F80841CD8592B00E5757F /* Sources */,
+				426F80851CD8592B00E5757F /* Frameworks */,
+				426F80861CD8592B00E5757F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				426F80C81CD85B4400E5757F /* PBXTargetDependency */,
+			);
+			name = vorbis;
+			productName = vorbis;
+			productReference = 426F80881CD8592B00E5757F /* libvorbis.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		426F809A1CD8593200E5757F /* vorbisfile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426F80A11CD8593200E5757F /* Build configuration list for PBXNativeTarget "vorbisfile" */;
+			buildPhases = (
+				426F80971CD8593200E5757F /* Sources */,
+				426F80981CD8593200E5757F /* Frameworks */,
+				426F80991CD8593200E5757F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vorbisfile;
+			productName = vorbisfile;
+			productReference = 426F809B1CD8593200E5757F /* libvorbisfile.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8DC2EF4F0486A6940098B216 /* vorbis.framework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "vorbis.framework" */;
@@ -425,7 +510,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				32E73B3B10B9D9D500094C8A /* PBXTargetDependency */,
+				426F80C61CD85B3F00E5757F /* PBXTargetDependency */,
 			);
 			name = vorbis.framework;
 			productInstallPath = "$(HOME)/Library/Frameworks";
@@ -456,23 +541,32 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 32E73B3210B9D9CD00094C8A /* Products */;
-					ProjectRef = 32E73B3110B9D9CD00094C8A /* ogg.xcodeproj */;
+					ProductGroup = 426F80BD1CD85B3200E5757F /* Products */;
+					ProjectRef = 426F80BC1CD85B3200E5757F /* ogg.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* vorbis.framework */,
+				426F80871CD8592B00E5757F /* vorbis */,
+				426F809A1CD8593200E5757F /* vorbisfile */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		32E73B3910B9D9CE00094C8A /* ogg.framework */ = {
+		426F80C21CD85B3200E5757F /* ogg.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ogg.framework;
-			remoteRef = 32E73B3810B9D9CE00094C8A /* PBXContainerItemProxy */;
+			remoteRef = 426F80C11CD85B3200E5757F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		426F80C41CD85B3200E5757F /* libogg.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libogg.a;
+			remoteRef = 426F80C31CD85B3200E5757F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -488,6 +582,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		426F80841CD8592B00E5757F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426F80A51CD859C200E5757F /* analysis.c in Sources */,
+				426F80A61CD859C200E5757F /* bitrate.c in Sources */,
+				426F80A71CD859C200E5757F /* block.c in Sources */,
+				426F80A81CD859C200E5757F /* codebook.c in Sources */,
+				426F80A91CD859C200E5757F /* envelope.c in Sources */,
+				426F80AA1CD859C200E5757F /* floor0.c in Sources */,
+				426F80AB1CD859C200E5757F /* floor1.c in Sources */,
+				426F80AC1CD859C200E5757F /* info.c in Sources */,
+				426F80AD1CD859C200E5757F /* lookup.c in Sources */,
+				426F80AE1CD859C200E5757F /* lpc.c in Sources */,
+				426F80AF1CD859C200E5757F /* lsp.c in Sources */,
+				426F80B01CD859C200E5757F /* mapping0.c in Sources */,
+				426F80B11CD859C200E5757F /* psy.c in Sources */,
+				426F80B21CD859C200E5757F /* registry.c in Sources */,
+				426F80B31CD859C200E5757F /* res0.c in Sources */,
+				426F80B41CD859C200E5757F /* sharedbook.c in Sources */,
+				426F80B51CD859C200E5757F /* smallft.c in Sources */,
+				426F80B61CD859C200E5757F /* synthesis.c in Sources */,
+				426F80B71CD859C200E5757F /* window.c in Sources */,
+				426F80A41CD8598C00E5757F /* mdct.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426F80971CD8593200E5757F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426F80B81CD85A2700E5757F /* vorbisfile.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,10 +650,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		32E73B3B10B9D9D500094C8A /* PBXTargetDependency */ = {
+		426F80C61CD85B3F00E5757F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ogg.framework;
-			targetProxy = 32E73B3A10B9D9D500094C8A /* PBXContainerItemProxy */;
+			targetProxy = 426F80C51CD85B3F00E5757F /* PBXContainerItemProxy */;
+		};
+		426F80C81CD85B4400E5757F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ogg;
+			targetProxy = 426F80C71CD85B4400E5757F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -632,6 +766,192 @@
 			};
 			name = Release;
 		};
+		426F808E1CD8592B00E5757F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/libvorbis-src/include",
+					"$(SRCROOT)/libvorbis-src/lib",
+					"$(SRCROOT)/../ogg/libogg-src/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		426F808F1CD8592B00E5757F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/libvorbis-src/include",
+					"$(SRCROOT)/libvorbis-src/lib",
+					"$(SRCROOT)/../ogg/libogg-src/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		426F80A21CD8593200E5757F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/libvorbis-src/include",
+					"$(SRCROOT)/libvorbis-src/lib",
+					"$(SRCROOT)/../ogg/libogg-src/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		426F80A31CD8593200E5757F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/libvorbis-src/include",
+					"$(SRCROOT)/libvorbis-src/lib",
+					"$(SRCROOT)/../ogg/libogg-src/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -649,6 +969,24 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		426F80961CD8592B00E5757F /* Build configuration list for PBXNativeTarget "vorbis" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426F808E1CD8592B00E5757F /* Debug */,
+				426F808F1CD8592B00E5757F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		426F80A11CD8593200E5757F /* Build configuration list for PBXNativeTarget "vorbisfile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426F80A21CD8593200E5757F /* Debug */,
+				426F80A31CD8593200E5757F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

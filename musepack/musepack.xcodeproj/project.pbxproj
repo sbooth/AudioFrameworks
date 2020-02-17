@@ -53,6 +53,20 @@
 		32CA90C210B9E0B7005A85DA /* mpcmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90BB10B9E0B7005A85DA /* mpcmath.h */; };
 		32CA90C310B9E0B7005A85DA /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90BC10B9E0B7005A85DA /* reader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32CA90C410B9E0B7005A85DA /* streaminfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90BD10B9E0B7005A85DA /* streaminfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7F4A1CD84E1000E5757F /* crc32.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA90AF10B9E0A9005A85DA /* crc32.c */; };
+		426F7F4B1CD84E1000E5757F /* huffman-bcl.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA90B110B9E0A9005A85DA /* huffman-bcl.c */; };
+		426F7F4C1CD84E1000E5757F /* huffman.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA908E10B9E095005A85DA /* huffman.c */; };
+		426F7F4D1CD84E1000E5757F /* mpc_bits_reader.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA909110B9E095005A85DA /* mpc_bits_reader.c */; };
+		426F7F4E1CD84E1000E5757F /* mpc_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA909310B9E095005A85DA /* mpc_decoder.c */; };
+		426F7F4F1CD84E1000E5757F /* mpc_demux.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA909410B9E095005A85DA /* mpc_demux.c */; };
+		426F7F501CD84E1000E5757F /* mpc_reader.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA909510B9E095005A85DA /* mpc_reader.c */; };
+		426F7F511CD84E1000E5757F /* requant.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA909710B9E095005A85DA /* requant.c */; };
+		426F7F521CD84E1000E5757F /* streaminfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA909910B9E095005A85DA /* streaminfo.c */; };
+		426F7F531CD84E1000E5757F /* synth_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = 32CA909A10B9E095005A85DA /* synth_filter.c */; };
+		426F7F561CD84E1C00E5757F /* mpc_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90B910B9E0B7005A85DA /* mpc_types.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7F571CD84E1C00E5757F /* mpcdec.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90BA10B9E0B7005A85DA /* mpcdec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7F591CD84E1C00E5757F /* reader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90BC10B9E0B7005A85DA /* reader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7F5A1CD84E1C00E5757F /* streaminfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA90BD10B9E0B7005A85DA /* streaminfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +97,7 @@
 		32E7398810B9D32D00094C8A /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398910B9D32D00094C8A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Configs/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398A10B9D32D00094C8A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		426F7F411CD84DEC00E5757F /* libmpcdec.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmpcdec.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* mpcdec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = mpcdec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -483,6 +498,43 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/musepack-src/include";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		426F7F471CD84DEC00E5757F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/musepack-src/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		426F7F481CD84DEC00E5757F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/musepack-src/include";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};

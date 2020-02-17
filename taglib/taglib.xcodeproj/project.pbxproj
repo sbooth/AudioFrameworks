@@ -468,6 +468,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		426F7F751CD8543700E5757F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,6 +490,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* taglib.framework */,
+				426F7F781CD8543700E5757F /* libtag.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -718,7 +726,7 @@
 				32BC7B5F18AF91520031C72B /* mp4tag.cpp */,
 				32BC7B6018AF91520031C72B /* mp4tag.h */,
 			);
-			path = mp4;
+			path = it;
 			sourceTree = "<group>";
 		};
 		32BC7B6118AF91520031C72B /* mpc */ = {
@@ -729,7 +737,7 @@
 				32BC7B6418AF91520031C72B /* mpcproperties.cpp */,
 				32BC7B6518AF91520031C72B /* mpcproperties.h */,
 			);
-			path = mpc;
+			path = mod;
 			sourceTree = "<group>";
 		};
 		32BC7B6618AF91520031C72B /* mpeg */ = {
@@ -746,7 +754,7 @@
 				32BC7B9E18AF91530031C72B /* xingheader.cpp */,
 				32BC7B9F18AF91530031C72B /* xingheader.h */,
 			);
-			path = mpeg;
+			path = mp4;
 			sourceTree = "<group>";
 		};
 		32BC7B6718AF91520031C72B /* id3v1 */ = {
@@ -757,7 +765,7 @@
 				32BC7B6A18AF91520031C72B /* id3v1tag.cpp */,
 				32BC7B6B18AF91520031C72B /* id3v1tag.h */,
 			);
-			path = id3v1;
+			path = mpc;
 			sourceTree = "<group>";
 		};
 		32BC7B6C18AF91530031C72B /* id3v2 */ = {
@@ -783,7 +791,7 @@
 				32BC7B9618AF91530031C72B /* id3v2tag.cpp */,
 				32BC7B9718AF91530031C72B /* id3v2tag.h */,
 			);
-			path = id3v2;
+			path = mpeg;
 			sourceTree = "<group>";
 		};
 		32BC7B6D18AF91530031C72B /* frames */ = {
@@ -814,7 +822,7 @@
 				32BC7B8418AF91530031C72B /* urllinkframe.cpp */,
 				32BC7B8518AF91530031C72B /* urllinkframe.h */,
 			);
-			path = frames;
+			path = id3v1;
 			sourceTree = "<group>";
 		};
 		32BC7BA018AF91530031C72B /* ogg */ = {
@@ -833,7 +841,7 @@
 				32BC7BB918AF91530031C72B /* xiphcomment.cpp */,
 				32BC7BBA18AF91530031C72B /* xiphcomment.h */,
 			);
-			path = ogg;
+			path = id3v2;
 			sourceTree = "<group>";
 		};
 		32BC7BA118AF91530031C72B /* flac */ = {
@@ -842,7 +850,7 @@
 				32BC7BA218AF91530031C72B /* oggflacfile.cpp */,
 				32BC7BA318AF91530031C72B /* oggflacfile.h */,
 			);
-			path = flac;
+			path = frames;
 			sourceTree = "<group>";
 		};
 		32BC7BAA18AF91530031C72B /* opus */ = {
@@ -997,18 +1005,244 @@
 			path = xm;
 			sourceTree = "<group>";
 		};
-		32C88DFF0371C24200C91783 /* Other Sources */ = {
+		426F89A71CD87DE300E5757F /* data */ = {
 			isa = PBXGroup;
 			children = (
-				3270FB851322FFCA00B661DB /* config.h */,
-				324B3788105C754F00B1AA21 /* taglib_config.h */,
+				426F89A81CD87DE300E5757F /* 005411.id3 */,
+				426F89A91CD87DE300E5757F /* 64bit.mp4 */,
+				426F89AA1CD87DE300E5757F /* alaw.aifc */,
+				426F89AB1CD87DE300E5757F /* alaw.wav */,
+				426F89AC1CD87DE300E5757F /* ape-id3v1.mp3 */,
+				426F89AD1CD87DE300E5757F /* ape-id3v2.mp3 */,
+				426F89AE1CD87DE300E5757F /* ape.mp3 */,
+				426F89AF1CD87DE300E5757F /* bladeenc.mp3 */,
+				426F89B01CD87DE300E5757F /* blank_video.m4v */,
+				426F89B11CD87DE300E5757F /* broken-tenc.id3 */,
+				426F89B21CD87DE300E5757F /* changed.mod */,
+				426F89B31CD87DE300E5757F /* changed.s3m */,
+				426F89B41CD87DE300E5757F /* changed.xm */,
+				426F89B51CD87DE300E5757F /* click.mpc */,
+				426F89B61CD87DE300E5757F /* click.wv */,
+				426F89B71CD87DE300E5757F /* compressed_id3_frame.mp3 */,
+				426F89B81CD87DE300E5757F /* correctness_gain_silent_output.opus */,
+				426F89B91CD87DE300E5757F /* covr-junk.m4a */,
+				426F89BA1CD87DE300E5757F /* duplicate_id3v2.aiff */,
+				426F89BB1CD87DE300E5757F /* duplicate_id3v2.mp3 */,
+				426F89BC1CD87DE300E5757F /* duplicate_tags.wav */,
+				426F89BD1CD87DE300E5757F /* empty.aiff */,
+				426F89BE1CD87DE300E5757F /* empty.dsf */,
+				426F89BF1CD87DE300E5757F /* empty.ogg */,
+				426F89C01CD87DE300E5757F /* empty.spx */,
+				426F89C11CD87DE300E5757F /* empty.tta */,
+				426F89C21CD87DE300E5757F /* empty.wav */,
+				426F89C31CD87DE300E5757F /* empty_alac.m4a */,
+				426F89C41CD87DE300E5757F /* empty_flac.oga */,
+				426F89C51CD87DE300E5757F /* empty_vorbis.oga */,
+				426F89C61CD87DE300E5757F /* excessive_alloc.aif */,
+				426F89C71CD87DE300E5757F /* excessive_alloc.mp3 */,
+				426F89C81CD87DE300E5757F /* float64.wav */,
+				426F89C91CD87DE300E5757F /* four_channels.wv */,
+				426F89CA1CD87DE300E5757F /* gnre.m4a */,
+				426F89CB1CD87DE300E5757F /* has-tags.m4a */,
+				426F89CC1CD87DE300E5757F /* id3v22-tda.mp3 */,
+				426F89CD1CD87DE300E5757F /* ilst-is-last.m4a */,
+				426F89CE1CD87DE300E5757F /* infloop.m4a */,
+				426F89CF1CD87DE300E5757F /* infloop.mpc */,
+				426F89D01CD87DE300E5757F /* infloop.wav */,
+				426F89D11CD87DE300E5757F /* infloop.wv */,
+				426F89D21CD87DE300E5757F /* invalid-frames1.mp3 */,
+				426F89D31CD87DE300E5757F /* invalid-frames2.mp3 */,
+				426F89D41CD87DE300E5757F /* invalid-frames3.mp3 */,
+				426F89D51CD87DE300E5757F /* lame_cbr.mp3 */,
+				426F89D61CD87DE300E5757F /* lame_vbr.mp3 */,
+				426F89D71CD87DE300E5757F /* longloop.ape */,
+				426F89D81CD87DE300E5757F /* lossless.wma */,
+				426F89D91CD87DE300E5757F /* mac-390-hdr.ape */,
+				426F89DA1CD87DE300E5757F /* mac-396.ape */,
+				426F89DB1CD87DE300E5757F /* mac-399-id3v2.ape */,
+				426F89DC1CD87DE300E5757F /* mac-399-tagged.ape */,
+				426F89DD1CD87DE300E5757F /* mac-399.ape */,
+				426F89DE1CD87DE300E5757F /* matroska.mka */,
+				426F89DF1CD87DE300E5757F /* mpeg2.mp3 */,
+				426F89E01CD87DE300E5757F /* multiple-vc.flac */,
+				426F89E11CD87DE300E5757F /* no-extension */,
+				426F89E21CD87DE300E5757F /* no-tags.3g2 */,
+				426F89E31CD87DE300E5757F /* no-tags.flac */,
+				426F89E41CD87DE300E5757F /* no-tags.m4a */,
+				426F89E51CD87DE300E5757F /* no_length.wv */,
+				426F89E61CD87DE300E5757F /* noise.aif */,
+				426F89E71CD87DE300E5757F /* noise_odd.aif */,
+				426F89E81CD87DE300E5757F /* pcm_with_fact_chunk.wav */,
+				426F89E91CD87DE300E5757F /* rare_frames.mp3 */,
+				426F89EA1CD87DE300E5757F /* segfault.aif */,
+				426F89EB1CD87DE300E5757F /* segfault.mpc */,
+				426F89EC1CD87DE300E5757F /* segfault.oga */,
+				426F89ED1CD87DE300E5757F /* segfault.wav */,
+				426F89EE1CD87DE300E5757F /* segfault2.mpc */,
+				426F89EF1CD87DE300E5757F /* silence-1.wma */,
+				426F89F01CD87DE300E5757F /* silence-44-s.flac */,
+				426F89F11CD87DE300E5757F /* sinewave.flac */,
+				426F89F21CD87DE300E5757F /* stripped.xm */,
+				426F89F31CD87DE300E5757F /* sv4_header.mpc */,
+				426F89F41CD87DE300E5757F /* sv5_header.mpc */,
+				426F89F51CD87DE300E5757F /* sv8_header.mpc */,
+				426F89F61CD87DE300E5757F /* tagged.tta */,
+				426F89F71CD87DE300E5757F /* tagged.wv */,
+				426F89F81CD87DE300E5757F /* test.it */,
+				426F89F91CD87DE300E5757F /* test.mod */,
+				426F89FA1CD87DE300E5757F /* test.ogg */,
+				426F89FB1CD87DE300E5757F /* test.s3m */,
+				426F89FC1CD87DE300E5757F /* test.xm */,
+				426F89FD1CD87DE300E5757F /* unsupported-extension.xxx */,
+				426F89FE1CD87DE300E5757F /* unsynch.id3 */,
+				426F89FF1CD87DE300E5757F /* vbri.mp3 */,
+				426F8A001CD87DE300E5757F /* w000.mp3 */,
+				426F8A011CD87DE300E5757F /* xing.mp3 */,
+				426F8A021CD87DE300E5757F /* zero-size-chunk.wav */,
+				426F8A031CD87DE300E5757F /* zero-sized-padding.flac */,
+				426F8A041CD87DE300E5757F /* zerodiv.ape */,
+				426F8A051CD87DE300E5757F /* zerodiv.mpc */,
 			);
-			name = "Other Sources";
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		426F7F761CD8543700E5757F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426F8A351CD87E0E00E5757F /* apefile.h in Headers */,
+				426F8A361CD87E0E00E5757F /* apefooter.h in Headers */,
+				426F8A371CD87E0E00E5757F /* apeitem.h in Headers */,
+				426F8A381CD87E0E00E5757F /* apeproperties.h in Headers */,
+				426F8A391CD87E0E00E5757F /* apetag.h in Headers */,
+				426F8A3A1CD87E0E00E5757F /* asfattribute.h in Headers */,
+				426F8A3B1CD87E0E00E5757F /* asffile.h in Headers */,
+				426F8A3C1CD87E0E00E5757F /* asfpicture.h in Headers */,
+				426F8A3D1CD87E0E00E5757F /* asfproperties.h in Headers */,
+				426F8A3E1CD87E0E00E5757F /* asftag.h in Headers */,
+				426F8A3F1CD87E0E00E5757F /* asfutils.h in Headers */,
+				426F8A401CD87E0E00E5757F /* audioproperties.h in Headers */,
+				426F8A411CD87E0E00E5757F /* dsffile.h in Headers */,
+				426F8A421CD87E0E00E5757F /* dsfproperties.h in Headers */,
+				426F8A431CD87E0E00E5757F /* ebmlconstants.h in Headers */,
+				426F8A441CD87E0E00E5757F /* ebmlelement.h in Headers */,
+				426F8A451CD87E0E00E5757F /* ebmlfile.h in Headers */,
+				426F8A461CD87E0E00E5757F /* ebmlmatroskaaudio.h in Headers */,
+				426F8A471CD87E0E00E5757F /* ebmlmatroskaconstants.h in Headers */,
+				426F8A481CD87E0E00E5757F /* ebmlmatroskafile.h in Headers */,
+				426F8A491CD87E0E00E5757F /* fileref.h in Headers */,
+				426F8A4A1CD87E0E00E5757F /* flacfile.h in Headers */,
+				426F8A4B1CD87E0E00E5757F /* flacmetadatablock.h in Headers */,
+				426F8A4C1CD87E0E00E5757F /* flacpicture.h in Headers */,
+				426F8A4D1CD87E0E00E5757F /* flacproperties.h in Headers */,
+				426F8A4E1CD87E0E00E5757F /* flacunknownmetadatablock.h in Headers */,
+				426F8A4F1CD87E0E00E5757F /* itfile.h in Headers */,
+				426F8A501CD87E0E00E5757F /* itproperties.h in Headers */,
+				426F8A511CD87E0E00E5757F /* modfile.h in Headers */,
+				426F8A521CD87E0E00E5757F /* modfilebase.h in Headers */,
+				426F8A531CD87E0E00E5757F /* modproperties.h in Headers */,
+				426F8A541CD87E0E00E5757F /* modtag.h in Headers */,
+				426F8A551CD87E0E00E5757F /* mp4atom.h in Headers */,
+				426F8A561CD87E0E00E5757F /* mp4coverart.h in Headers */,
+				426F8A571CD87E0E00E5757F /* mp4file.h in Headers */,
+				426F8A581CD87E0E00E5757F /* mp4item.h in Headers */,
+				426F8A591CD87E0E00E5757F /* mp4properties.h in Headers */,
+				426F8A5A1CD87E0E00E5757F /* mp4tag.h in Headers */,
+				426F8A5B1CD87E0E00E5757F /* mpcfile.h in Headers */,
+				426F8A5C1CD87E0E00E5757F /* mpcproperties.h in Headers */,
+				426F8A5D1CD87E0E00E5757F /* id3v1genres.h in Headers */,
+				426F8A5E1CD87E0E00E5757F /* id3v1tag.h in Headers */,
+				426F8A5F1CD87E0E00E5757F /* attachedpictureframe.h in Headers */,
+				426F8A601CD87E0E00E5757F /* chapterframe.h in Headers */,
+				426F8A611CD87E0E00E5757F /* commentsframe.h in Headers */,
+				426F8A621CD87E0E00E5757F /* eventtimingcodesframe.h in Headers */,
+				426F8A631CD87E0E00E5757F /* generalencapsulatedobjectframe.h in Headers */,
+				426F8A641CD87E0E00E5757F /* ownershipframe.h in Headers */,
+				426F8A651CD87E0E00E5757F /* podcastframe.h in Headers */,
+				426F8A661CD87E0E00E5757F /* popularimeterframe.h in Headers */,
+				426F8A671CD87E0E00E5757F /* privateframe.h in Headers */,
+				426F8A681CD87E0E00E5757F /* relativevolumeframe.h in Headers */,
+				426F8A691CD87E0E00E5757F /* synchronizedlyricsframe.h in Headers */,
+				426F8A6A1CD87E0E00E5757F /* tableofcontentsframe.h in Headers */,
+				426F8A6B1CD87E0E00E5757F /* textidentificationframe.h in Headers */,
+				426F8A6C1CD87E0E00E5757F /* uniquefileidentifierframe.h in Headers */,
+				426F8A6D1CD87E0E00E5757F /* unknownframe.h in Headers */,
+				426F8A6E1CD87E0E00E5757F /* unsynchronizedlyricsframe.h in Headers */,
+				426F8A6F1CD87E0E00E5757F /* urllinkframe.h in Headers */,
+				426F8A701CD87E0E00E5757F /* id3v2extendedheader.h in Headers */,
+				426F8A711CD87E0E00E5757F /* id3v2footer.h in Headers */,
+				426F8A721CD87E0E00E5757F /* id3v2frame.h in Headers */,
+				426F8A731CD87E0E00E5757F /* id3v2framefactory.h in Headers */,
+				426F8A741CD87E0E00E5757F /* id3v2header.h in Headers */,
+				426F8A751CD87E0E00E5757F /* id3v2synchdata.h in Headers */,
+				426F8A761CD87E0E00E5757F /* id3v2tag.h in Headers */,
+				426F8A771CD87E0E00E5757F /* mpegfile.h in Headers */,
+				426F8A781CD87E0E00E5757F /* mpegheader.h in Headers */,
+				426F8A791CD87E0E00E5757F /* mpegproperties.h in Headers */,
+				426F8A7A1CD87E0E00E5757F /* mpegutils.h in Headers */,
+				426F8A7B1CD87E0E00E5757F /* xingheader.h in Headers */,
+				426F8A7C1CD87E0E00E5757F /* oggflacfile.h in Headers */,
+				426F8A7D1CD87E0E00E5757F /* oggfile.h in Headers */,
+				426F8A7E1CD87E0E00E5757F /* oggpage.h in Headers */,
+				426F8A7F1CD87E0E00E5757F /* oggpageheader.h in Headers */,
+				426F8A341CD87E0500E5757F /* opusproperties.h in Headers */,
+				426F8A331CD87E0100E5757F /* opusfile.h in Headers */,
+				426F8A801CD87E0E00E5757F /* speexfile.h in Headers */,
+				426F8A811CD87E0E00E5757F /* speexproperties.h in Headers */,
+				426F8A821CD87E0E00E5757F /* vorbisfile.h in Headers */,
+				426F8A831CD87E0E00E5757F /* vorbisproperties.h in Headers */,
+				426F8A841CD87E0E00E5757F /* xiphcomment.h in Headers */,
+				426F8A851CD87E0E00E5757F /* aifffile.h in Headers */,
+				426F8A861CD87E0E00E5757F /* aiffproperties.h in Headers */,
+				426F8A871CD87E0E00E5757F /* rifffile.h in Headers */,
+				426F8A881CD87E0E00E5757F /* riffutils.h in Headers */,
+				426F8A891CD87E0E00E5757F /* infotag.h in Headers */,
+				426F8A8A1CD87E0E00E5757F /* wavfile.h in Headers */,
+				426F8A8B1CD87E0E00E5757F /* wavproperties.h in Headers */,
+				426F8A8C1CD87E0E00E5757F /* s3mfile.h in Headers */,
+				426F8A8D1CD87E0E00E5757F /* s3mproperties.h in Headers */,
+				426F8A8E1CD87E0E00E5757F /* tag.h in Headers */,
+				426F8A8F1CD87E0E00E5757F /* taglib_export.h in Headers */,
+				426F8A901CD87E0E00E5757F /* tagunion.h in Headers */,
+				426F8A911CD87E0E00E5757F /* tagutils.h in Headers */,
+				426F8A921CD87E0E00E5757F /* taglib.h in Headers */,
+				426F8A931CD87E0E00E5757F /* tbytevector.h in Headers */,
+				426F8A941CD87E0E00E5757F /* tbytevectorlist.h in Headers */,
+				426F8A951CD87E0E00E5757F /* tbytevectorstream.h in Headers */,
+				426F8A961CD87E0E00E5757F /* tdebug.h in Headers */,
+				426F8A971CD87E0E00E5757F /* tdebuglistener.h in Headers */,
+				426F8A981CD87E0E00E5757F /* tfile.h in Headers */,
+				426F8A991CD87E0E00E5757F /* tfilestream.h in Headers */,
+				426F8A9A1CD87E0E00E5757F /* tiostream.h in Headers */,
+				426F8A9B1CD87E0E00E5757F /* tlist.h in Headers */,
+				426F8A9C1CD87E0E00E5757F /* tmap.h in Headers */,
+				426F8A9D1CD87E0F00E5757F /* tpicture.h in Headers */,
+				426F8A9E1CD87E0F00E5757F /* tpicturemap.h in Headers */,
+				426F8A9F1CD87E0F00E5757F /* tpropertymap.h in Headers */,
+				426F8AA01CD87E0F00E5757F /* trefcounter.h in Headers */,
+				426F8AA11CD87E0F00E5757F /* tsmartptr.h in Headers */,
+				426F8AA21CD87E0F00E5757F /* tstring.h in Headers */,
+				426F8AA31CD87E0F00E5757F /* tstringhandler.h in Headers */,
+				426F8AA41CD87E0F00E5757F /* tstringlist.h in Headers */,
+				426F8AA51CD87E0F00E5757F /* tutils.h in Headers */,
+				426F8AA61CD87E0F00E5757F /* unicode.h in Headers */,
+				426F8AA71CD87E0F00E5757F /* trueaudiofile.h in Headers */,
+				426F8AA81CD87E0F00E5757F /* trueaudioproperties.h in Headers */,
+				426F8AA91CD87E0F00E5757F /* wavpackfile.h in Headers */,
+				426F8AAA1CD87E0F00E5757F /* wavpackproperties.h in Headers */,
+				426F8AAB1CD87E0F00E5757F /* xmfile.h in Headers */,
+				426F8AAC1CD87E0F00E5757F /* xmproperties.h in Headers */,
+				426F8AAD1CD87E2000E5757F /* tlist.tcc in Headers */,
+				426F8AAE1CD87E2000E5757F /* tmap.tcc in Headers */,
+				426F88671CD879BE00E5757F /* taglib_config.h in Headers */,
+				426F8A321CD87DFC00E5757F /* modfileprivate.h in Headers */,
+				426F804E1CD8556E00E5757F /* config.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF500486A6940098B216 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1133,9 +1367,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8DC2EF4F0486A6940098B216 /* taglib */ = {
+		426F7F771CD8543700E5757F /* tag */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "taglib" */;
+			buildConfigurationList = 426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "tag" */;
+			buildPhases = (
+				426F804F1CD8558700E5757F /* Resources */,
+				426F7F741CD8543700E5757F /* Sources */,
+				426F7F751CD8543700E5757F /* Frameworks */,
+				426F7F761CD8543700E5757F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tag;
+			productName = tag;
+			productReference = 426F7F781CD8543700E5757F /* libtag.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8DC2EF4F0486A6940098B216 /* taglib.framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "taglib.framework" */;
 			buildPhases = (
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
@@ -1146,7 +1398,7 @@
 			);
 			dependencies = (
 			);
-			name = taglib;
+			name = taglib.framework;
 			productInstallPath = "$(HOME)/Library/Frameworks";
 			productName = taglib;
 			productReference = 8DC2EF5B0486A6940098B216 /* taglib.framework */;
@@ -1160,6 +1412,11 @@
 			attributes = {
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = sbooth.org;
+				TargetAttributes = {
+					426F7F771CD8543700E5757F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "taglib" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1176,12 +1433,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8DC2EF4F0486A6940098B216 /* taglib */,
+				8DC2EF4F0486A6940098B216 /* taglib.framework */,
+				426F7F771CD8543700E5757F /* tag */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		426F804F1CD8558700E5757F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426F8A311CD87DF000E5757F /* Doxyfile.cmake in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF520486A6940098B216 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1197,6 +1463,124 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		426F7F741CD8543700E5757F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426F8AAF1CD87E3000E5757F /* apefile.cpp in Sources */,
+				426F8AB01CD87E3000E5757F /* apefooter.cpp in Sources */,
+				426F8AB11CD87E3000E5757F /* apeitem.cpp in Sources */,
+				426F8AB21CD87E3000E5757F /* apeproperties.cpp in Sources */,
+				426F8AB31CD87E3000E5757F /* apetag.cpp in Sources */,
+				426F8AB41CD87E3000E5757F /* asfattribute.cpp in Sources */,
+				426F8AB51CD87E3000E5757F /* asffile.cpp in Sources */,
+				426F8AB61CD87E3000E5757F /* asfpicture.cpp in Sources */,
+				426F8AB71CD87E3000E5757F /* asfproperties.cpp in Sources */,
+				426F8AB81CD87E3000E5757F /* asftag.cpp in Sources */,
+				426F8AB91CD87E3000E5757F /* audioproperties.cpp in Sources */,
+				426F8ABA1CD87E3000E5757F /* dsffile.cpp in Sources */,
+				426F8ABB1CD87E3000E5757F /* dsfproperties.cpp in Sources */,
+				426F8ABC1CD87E3000E5757F /* ebmlelement.cpp in Sources */,
+				426F8ABD1CD87E3000E5757F /* ebmlfile.cpp in Sources */,
+				426F8ABE1CD87E3000E5757F /* ebmlmatroskaaudio.cpp in Sources */,
+				426F8ABF1CD87E3000E5757F /* ebmlmatroskafile.cpp in Sources */,
+				426F8AC01CD87E3000E5757F /* fileref.cpp in Sources */,
+				426F8AC11CD87E3000E5757F /* flacfile.cpp in Sources */,
+				426F8AC21CD87E3000E5757F /* flacmetadatablock.cpp in Sources */,
+				426F8AC31CD87E3000E5757F /* flacpicture.cpp in Sources */,
+				426F8AC41CD87E3000E5757F /* flacproperties.cpp in Sources */,
+				426F8AC51CD87E3000E5757F /* flacunknownmetadatablock.cpp in Sources */,
+				426F8AC61CD87E3000E5757F /* itfile.cpp in Sources */,
+				426F8AC71CD87E3000E5757F /* itproperties.cpp in Sources */,
+				426F8AC81CD87E3000E5757F /* modfile.cpp in Sources */,
+				426F8AC91CD87E3000E5757F /* modfilebase.cpp in Sources */,
+				426F8ACA1CD87E3000E5757F /* modproperties.cpp in Sources */,
+				426F8ACB1CD87E3000E5757F /* modtag.cpp in Sources */,
+				426F8ACC1CD87E3000E5757F /* mp4atom.cpp in Sources */,
+				426F8ACD1CD87E3000E5757F /* mp4coverart.cpp in Sources */,
+				426F8ACE1CD87E3000E5757F /* mp4file.cpp in Sources */,
+				426F8ACF1CD87E3000E5757F /* mp4item.cpp in Sources */,
+				426F8AD01CD87E3000E5757F /* mp4properties.cpp in Sources */,
+				426F8AD11CD87E3000E5757F /* mp4tag.cpp in Sources */,
+				426F8AD21CD87E3000E5757F /* mpcfile.cpp in Sources */,
+				426F8AD31CD87E3000E5757F /* mpcproperties.cpp in Sources */,
+				426F8AD41CD87E3000E5757F /* id3v1genres.cpp in Sources */,
+				426F8AD51CD87E3000E5757F /* id3v1tag.cpp in Sources */,
+				426F8AD61CD87E3000E5757F /* attachedpictureframe.cpp in Sources */,
+				426F8AD71CD87E3000E5757F /* chapterframe.cpp in Sources */,
+				426F8AD81CD87E3000E5757F /* commentsframe.cpp in Sources */,
+				426F8AD91CD87E3000E5757F /* eventtimingcodesframe.cpp in Sources */,
+				426F8ADA1CD87E3000E5757F /* generalencapsulatedobjectframe.cpp in Sources */,
+				426F8ADB1CD87E3000E5757F /* ownershipframe.cpp in Sources */,
+				426F8ADC1CD87E3000E5757F /* podcastframe.cpp in Sources */,
+				426F8ADD1CD87E3000E5757F /* popularimeterframe.cpp in Sources */,
+				426F8ADE1CD87E3000E5757F /* privateframe.cpp in Sources */,
+				426F8ADF1CD87E3000E5757F /* relativevolumeframe.cpp in Sources */,
+				426F8AE01CD87E3000E5757F /* synchronizedlyricsframe.cpp in Sources */,
+				426F8AE11CD87E3000E5757F /* tableofcontentsframe.cpp in Sources */,
+				426F8AE21CD87E3000E5757F /* textidentificationframe.cpp in Sources */,
+				426F8AE31CD87E3000E5757F /* uniquefileidentifierframe.cpp in Sources */,
+				426F8AE41CD87E3000E5757F /* unknownframe.cpp in Sources */,
+				426F8AE51CD87E3000E5757F /* unsynchronizedlyricsframe.cpp in Sources */,
+				426F8AE61CD87E3100E5757F /* urllinkframe.cpp in Sources */,
+				426F8AE71CD87E3100E5757F /* id3v2extendedheader.cpp in Sources */,
+				426F8AE81CD87E3100E5757F /* id3v2footer.cpp in Sources */,
+				426F8AE91CD87E3100E5757F /* id3v2frame.cpp in Sources */,
+				426F8AEA1CD87E3100E5757F /* id3v2framefactory.cpp in Sources */,
+				426F8AEB1CD87E3100E5757F /* id3v2header.cpp in Sources */,
+				426F8AEC1CD87E3100E5757F /* id3v2synchdata.cpp in Sources */,
+				426F8AED1CD87E3100E5757F /* id3v2tag.cpp in Sources */,
+				426F8AEE1CD87E3100E5757F /* mpegfile.cpp in Sources */,
+				426F8AEF1CD87E3100E5757F /* mpegheader.cpp in Sources */,
+				426F8AF01CD87E3100E5757F /* mpegproperties.cpp in Sources */,
+				426F8AF11CD87E3100E5757F /* xingheader.cpp in Sources */,
+				426F8AF21CD87E3100E5757F /* oggflacfile.cpp in Sources */,
+				426F8AF31CD87E3100E5757F /* oggfile.cpp in Sources */,
+				426F8AF41CD87E3100E5757F /* oggpage.cpp in Sources */,
+				426F8AF51CD87E3100E5757F /* oggpageheader.cpp in Sources */,
+				426F8AF61CD87E3100E5757F /* opusfile.cpp in Sources */,
+				426F8AF71CD87E3100E5757F /* opusproperties.cpp in Sources */,
+				426F8AF81CD87E3100E5757F /* speexfile.cpp in Sources */,
+				426F8AF91CD87E3100E5757F /* speexproperties.cpp in Sources */,
+				426F8AFA1CD87E3100E5757F /* vorbisfile.cpp in Sources */,
+				426F8AFB1CD87E3100E5757F /* vorbisproperties.cpp in Sources */,
+				426F8AFC1CD87E3100E5757F /* xiphcomment.cpp in Sources */,
+				426F8AFD1CD87E3100E5757F /* aifffile.cpp in Sources */,
+				426F8AFE1CD87E3100E5757F /* aiffproperties.cpp in Sources */,
+				426F8AFF1CD87E3100E5757F /* rifffile.cpp in Sources */,
+				426F8B001CD87E3100E5757F /* infotag.cpp in Sources */,
+				426F8B011CD87E3100E5757F /* wavfile.cpp in Sources */,
+				426F8B021CD87E3100E5757F /* wavproperties.cpp in Sources */,
+				426F8B031CD87E3100E5757F /* s3mfile.cpp in Sources */,
+				426F8B041CD87E3100E5757F /* s3mproperties.cpp in Sources */,
+				426F8B051CD87E3100E5757F /* tag.cpp in Sources */,
+				426F8B061CD87E3100E5757F /* tagunion.cpp in Sources */,
+				426F8B071CD87E3100E5757F /* tagutils.cpp in Sources */,
+				426F8B081CD87E3100E5757F /* tbytevector.cpp in Sources */,
+				426F8B091CD87E3100E5757F /* tbytevectorlist.cpp in Sources */,
+				426F8B0A1CD87E3100E5757F /* tbytevectorstream.cpp in Sources */,
+				426F8B0B1CD87E3100E5757F /* tdebug.cpp in Sources */,
+				426F8B0C1CD87E3100E5757F /* tdebuglistener.cpp in Sources */,
+				426F8B0D1CD87E3100E5757F /* tfile.cpp in Sources */,
+				426F8B0E1CD87E3100E5757F /* tfilestream.cpp in Sources */,
+				426F8B0F1CD87E3100E5757F /* tiostream.cpp in Sources */,
+				426F8B101CD87E3100E5757F /* tpicture.cpp in Sources */,
+				426F8B111CD87E3100E5757F /* tpicturemap.cpp in Sources */,
+				426F8B121CD87E3100E5757F /* tpropertymap.cpp in Sources */,
+				426F8B131CD87E3100E5757F /* trefcounter.cpp in Sources */,
+				426F8B141CD87E3100E5757F /* tstring.cpp in Sources */,
+				426F8B151CD87E3100E5757F /* tstringhandler.cpp in Sources */,
+				426F8B161CD87E3100E5757F /* tstringlist.cpp in Sources */,
+				426F8B171CD87E3100E5757F /* unicode.cpp in Sources */,
+				426F8B181CD87E3100E5757F /* trueaudiofile.cpp in Sources */,
+				426F8B191CD87E3100E5757F /* trueaudioproperties.cpp in Sources */,
+				426F8B1A1CD87E3100E5757F /* wavpackfile.cpp in Sources */,
+				426F8B1B1CD87E3100E5757F /* wavpackproperties.cpp in Sources */,
+				426F8B1C1CD87E3100E5757F /* xmfile.cpp in Sources */,
+				426F8B1D1CD87E3100E5757F /* xmproperties.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1433,10 +1817,103 @@
 			};
 			name = Release;
 		};
+		426F7F7F1CD8543700E5757F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		426F7F801CD8543700E5757F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "taglib" */ = {
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "taglib.framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91AE08733DA50010E9CD /* Debug */,
@@ -1450,6 +1927,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		426F7F7E1CD8543700E5757F /* Build configuration list for PBXNativeTarget "tag" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426F7F7F1CD8543700E5757F /* Debug */,
+				426F7F801CD8543700E5757F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

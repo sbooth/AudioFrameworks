@@ -86,6 +86,46 @@
 		329E0E501346DD7300674474 /* readxm.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DF01346DD7300674474 /* readxm.c */; };
 		329E0E511346DD7300674474 /* readxm2.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DF11346DD7300674474 /* readxm2.c */; };
 		329E0E521346DD7300674474 /* xmeffect.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DF21346DD7300674474 /* xmeffect.c */; };
+		426F7DBE1CD69D1900E5757F /* dumb.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E0DA61346DD7300674474 /* dumb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		426F7DCB1CD69D4D00E5757F /* atexit.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DC71346DD7300674474 /* atexit.c */; };
+		426F7DCC1CD69D4D00E5757F /* duhlen.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DC81346DD7300674474 /* duhlen.c */; };
+		426F7DCD1CD69D4D00E5757F /* duhtag.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DC91346DD7300674474 /* duhtag.c */; };
+		426F7DCE1CD69D4D00E5757F /* dumbfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DCA1346DD7300674474 /* dumbfile.c */; };
+		426F7DCF1CD69D4D00E5757F /* loadduh.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DCB1346DD7300674474 /* loadduh.c */; };
+		426F7DD01CD69D4D00E5757F /* makeduh.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DCC1346DD7300674474 /* makeduh.c */; };
+		426F7DD11CD69D4D00E5757F /* rawsig.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DCD1346DD7300674474 /* rawsig.c */; };
+		426F7DD21CD69D4D00E5757F /* readduh.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DCE1346DD7300674474 /* readduh.c */; };
+		426F7DD31CD69D4D00E5757F /* register.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DCF1346DD7300674474 /* register.c */; };
+		426F7DD41CD69D4D00E5757F /* rendduh.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DD01346DD7300674474 /* rendduh.c */; };
+		426F7DD51CD69D4D00E5757F /* rendsig.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DD11346DD7300674474 /* rendsig.c */; };
+		426F7DD61CD69D4D00E5757F /* unload.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DD21346DD7300674474 /* unload.c */; };
+		426F7DD71CD69D5600E5757F /* itload.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DDE1346DD7300674474 /* itload.c */; };
+		426F7DD81CD69D5600E5757F /* itload2.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DDF1346DD7300674474 /* itload2.c */; };
+		426F7DD91CD69D5600E5757F /* itmisc.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE01346DD7300674474 /* itmisc.c */; };
+		426F7DDA1CD69D5600E5757F /* itorder.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE11346DD7300674474 /* itorder.c */; };
+		426F7DDB1CD69D5600E5757F /* itread.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE21346DD7300674474 /* itread.c */; };
+		426F7DDC1CD69D5600E5757F /* itread2.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE31346DD7300674474 /* itread2.c */; };
+		426F7DDD1CD69D5600E5757F /* itrender.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE41346DD7300674474 /* itrender.c */; };
+		426F7DDE1CD69D5600E5757F /* itunload.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE51346DD7300674474 /* itunload.c */; };
+		426F7DDF1CD69D5600E5757F /* loadmod.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE61346DD7300674474 /* loadmod.c */; };
+		426F7DE01CD69D5600E5757F /* loadmod2.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE71346DD7300674474 /* loadmod2.c */; };
+		426F7DE11CD69D5600E5757F /* loads3m.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE81346DD7300674474 /* loads3m.c */; };
+		426F7DE21CD69D5600E5757F /* loads3m2.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DE91346DD7300674474 /* loads3m2.c */; };
+		426F7DE31CD69D5600E5757F /* loadxm.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DEA1346DD7300674474 /* loadxm.c */; };
+		426F7DE41CD69D5600E5757F /* loadxm2.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DEB1346DD7300674474 /* loadxm2.c */; };
+		426F7DE51CD69D5600E5757F /* readmod.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DEC1346DD7300674474 /* readmod.c */; };
+		426F7DE61CD69D5600E5757F /* readmod2.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DED1346DD7300674474 /* readmod2.c */; };
+		426F7DE71CD69D5600E5757F /* reads3m.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DEE1346DD7300674474 /* reads3m.c */; };
+		426F7DE81CD69D5600E5757F /* reads3m2.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DEF1346DD7300674474 /* reads3m2.c */; };
+		426F7DE91CD69D5600E5757F /* readxm.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DF01346DD7300674474 /* readxm.c */; };
+		426F7DEA1CD69D5600E5757F /* readxm2.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DF11346DD7300674474 /* readxm2.c */; };
+		426F7DEB1CD69D5600E5757F /* xmeffect.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DF21346DD7300674474 /* xmeffect.c */; };
+		426F7DEC1CD69D6000E5757F /* clickrem.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DD41346DD7300674474 /* clickrem.c */; };
+		426F7DED1CD69D6000E5757F /* memfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DD51346DD7300674474 /* memfile.c */; };
+		426F7DEE1CD69D6000E5757F /* resample.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DD81346DD7300674474 /* resample.c */; };
+		426F7DEF1CD69D6000E5757F /* sampbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DDA1346DD7300674474 /* sampbuf.c */; };
+		426F7DF01CD69D6000E5757F /* silence.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DDB1346DD7300674474 /* silence.c */; };
+		426F7DF11CD69D6000E5757F /* stdfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 329E0DDC1346DD7300674474 /* stdfile.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +222,7 @@
 		32E7398810B9D32D00094C8A /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398910B9D32D00094C8A /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Configs/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		32E7398A10B9D32D00094C8A /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
+		426F7DB51CD69C4600E5757F /* libdumb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdumb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* dumb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = dumb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -677,11 +718,12 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
@@ -700,6 +742,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_VERSION = A;
 				GCC_MODEL_TUNING = G5;
 				INFOPLIST_FILE = Info.plist;
@@ -804,6 +847,47 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/dumb-src/include";
+			};
+			name = Release;
+		};
+		426F7DBB1CD69C4600E5757F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = dumb;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/dumb-src/include";
+			};
+			name = Debug;
+		};
+		426F7DBC1CD69C4600E5757F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = dumb;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/dumb-src/include";
 			};
 			name = Release;

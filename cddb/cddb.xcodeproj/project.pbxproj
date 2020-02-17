@@ -41,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		32B7E37212DA7A23005B82C9 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		3DAAA9A9169B0E00005253B6 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		3DAAA9AA169B0E00005253B6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		3DAAA9AB169B0E00005253B6 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		8CA35CFD0D2E764100F89E3B /* cddb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cddb.c; path = "libcddb-src/lib/cddb.c"; sourceTree = "<group>"; };
 		8CA35CFE0D2E764100F89E3B /* cddb_cmd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cddb_cmd.c; path = "libcddb-src/lib/cddb_cmd.c"; sourceTree = "<group>"; };
 		8CA35CFF0D2E764100F89E3B /* cddb_conn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cddb_conn.c; path = "libcddb-src/lib/cddb_conn.c"; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 		0867D691FE84028FC02AAC07 /* cddb */ = {
 			isa = PBXGroup;
 			children = (
+				3DAAA9A8169B0E00005253B6 /* Configs */,
 				08FB77ACFE841707C02AAC07 /* Source */,
 				089C1665FE841158C02AAC07 /* Resources */,
 				034768DDFF38A45A11DB9C8B /* Products */,
@@ -146,6 +150,17 @@
 				8CA35D080D2E764100F89E3B /* ll.c */,
 			);
 			name = Source;
+			sourceTree = "<group>";
+		};
+		3DAAA9A8169B0E00005253B6 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				3DAAA9A9169B0E00005253B6 /* Base.xcconfig */,
+				3DAAA9AA169B0E00005253B6 /* Debug.xcconfig */,
+				3DAAA9AB169B0E00005253B6 /* Release.xcconfig */,
+			);
+			name = Configs;
+			path = ../Configs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +277,7 @@
 /* Begin XCBuildConfiguration section */
 		4FADC24308B4156D00ABE55E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAAA9AA169B0E00005253B6 /* Debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COPY_PHASE_STRIP = NO;
@@ -287,6 +303,7 @@
 		};
 		4FADC24408B4156D00ABE55E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAAA9AB169B0E00005253B6 /* Release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

@@ -1,17 +1,27 @@
 Audio Frameworks for Mac OS X
 =============================
 
-This repository contains Xcode projects that help building Mac OS X framework of various open-source audio libraries.
+This repository contains Xcode projects that help building Mac OS X libraries of various open-source audio libraries.
 
 Usage
 -----
 
-This repo doesn't contain the sources for the respective frameworks or libraries. You need to add those yourself. 
+This repo doesn't contain the sources for the respective frameworks or libraries. You need to add those yourself. You can add them by hand (described below) or use the included `fetch_sources.sh` to pull the sources.
+
+You can use the included `build_sfbaudioengine_frameworks.sh` to build the dependencies for SFBAudioEngine. You can invoke it like this: 
+
+```bash
+./build_sfbaudioengine_frameworks.sh /path/to/output  # builds libraries
+./assemble.sh /path/to/output                         # copies libs and headers to appropriate folders
+cp -R /path/to/output/dist/* /path/to/SFBAudioEngine  # places libraries in SFBAudioEngine folder
+```
+
+The path in the argument must exist already!
 
 CDDB
 ----
 
-[http://libcddb.sourceforge.net/download.html][1]
+<http://libcddb.sourceforge.net/download.html>
 
 (tested version: libcddb-1.3.2.tar.bz2)
 
@@ -25,9 +35,9 @@ CDDB
 discid
 ------
 
-[http://musicbrainz.org/doc/libdiscid][2]
+<http://musicbrainz.org/doc/libdiscid>
 
-(tested version: libdiscid-0.2.2.tar.gz)
+(tested version: libdiscid-0.3.0.tar.gz)
 
 1. Download
 2. Decompress
@@ -36,12 +46,26 @@ discid
 5. Build
 
 
+DUMB (Dynamic Universal Music Bibliotheque)
+-------------------------------------------
+
+<http://dumb.sourceforge.net/>
+
+(tested version: dumb-0.9.3.tar.gz, http://prdownloads.sourceforge.net/dumb/dumb-0.9.3.tar.gz?download)
+
+1. Download
+2. Decompress
+3. Rename folder to "dumb-src"
+4. Move the folder into dumb/
+5. Build
+
+
 ogg
 ---
 
-[http://xiph.org/downloads/][3]
+<http://xiph.org/downloads/>
 
-(tested version: libogg-1.2.2.tar.gz)
+(tested version: libogg-1.3.0.tar.gz)
 
 1. Download
 2. Decompress
@@ -53,7 +77,7 @@ ogg
 flac
 ----
 
-[http://xiph.org/downloads/][3]
+<http://xiph.org/downloads/>
 
 (tested version: flac-1.2.1.tar.gz)
 
@@ -69,7 +93,7 @@ flac
 mad
 ---
 
-[http://sourceforge.net/projects/mad/files/][4]
+<http://sourceforge.net/projects/mad/files/>
 
 (tested version: libmad-0.15.1b.tar.gz)
 
@@ -84,11 +108,11 @@ mad
 mp4v2
 -----
 
-[http://code.google.com/p/mp4v2/source/checkout][5]
+<http://code.google.com/p/mp4v2/source/checkout>
 
-(tested version: svn revision 426)
+(tested version: svn revision 501)
 
-1. svn co -r 426 http://mp4v2.googlecode.com/svn/trunk/ mp4v2-src
+1. svn co -r 501 http://mp4v2.googlecode.com/svn/trunk/ mp4v2-src
 2. Move the folder into mp4v2/
 3. Build
 
@@ -96,9 +120,9 @@ mp4v2
 musepack
 --------
 
-[http://www.musepack.net/index.php?pg=src][6]
+<http://www.musepack.net/index.php?pg=src>
 
-(tested version: musepack_src_r435.tar.gz)
+(tested version: musepack_src_r475.tar.gz)
 
 1. Download
 2. Decompress
@@ -108,11 +132,11 @@ musepack
 6. Build
 
 
-musicbrainz3
-------------
+musicbrainz3 (deprecated)
+-------------------------
 
-[http://musicbrainz.org/doc/libmusicbrainz][7]
-[http://www.webdav.org/neon/][8]
+<http://musicbrainz.org/doc/libmusicbrainz>
+<http://www.webdav.org/neon/>
 
 (tested version: libmusicbrainz-3.0.3.tar.gz, http://www.webdav.org/neon/neon-0.29.5.tar.gz)
 
@@ -127,22 +151,31 @@ musicbrainz3
 taglib
 ------
 
-[http://developer.kde.org/~wheeler/taglib.html][9]
+<http://taglib.github.com>
 
-(tested version: taglib 6b063862c38dce47b5d2)
+(tested version: taglib 08863dec0b)
 
 1. git clone https://github.com/taglib/taglib.git taglib-src
-2. git checkout 6b063862c38dce47b5d2
-3. Move the folder into taglib/
-4. Build
+2. cd taglib-src
+3. git checkout 08863dec0b
+4. Move the folder into taglib/
+5. Build
+
+Alternatively, you can use release version 1.8, but you will have to remove “infotag.h” and “infotag.cpp” from the project:
+
+1. Download
+2. Decompress
+3. Rename folder to "taglib-src"
+4. Move the folder into taglib/
+5. Build
 
 
 vorbis
 ------
 
-[http://xiph.org/downloads/][3]
+<http://xiph.org/downloads/>
 
-(tested version: libvorbis-1.3.2.tar.bz2)
+(tested version: libvorbis-1.3.3.tar.gz)
 
 1. Download
 2. Decompress
@@ -154,7 +187,7 @@ vorbis
 wavpack
 -------
 
-[http://www.wavpack.com/downloads.html][10]
+<http://www.wavpack.com/downloads.html>
 
 (tested version: wavpack-4.60.1.tar.bz2)
 
@@ -169,9 +202,9 @@ wavpack
 LAME
 ----
 
-[http://lame.sourceforge.net/download.php][11]
+<http://lame.sourceforge.net/download.php>
 
-(tested version: lame-3.98.4.tar.bz2)
+(tested version: lame-3.99.5.tar.gz)
 
 1. Download
 2. Decompress
@@ -183,9 +216,9 @@ LAME
 sndfile
 -------
 
-[http://www.mega-nerd.com/libsndfile/][12]
+<http://www.mega-nerd.com/libsndfile/>
 
-(tested version: libsndfile-1.0.23.tar.gz)
+(tested version: libsndfile-1.0.25.tar.gz)
 
 1. Download
 2. Decompress
@@ -197,7 +230,7 @@ sndfile
 ofa1
 ----
 
-[http://code.google.com/p/musicip-libofa/][13]
+<http://code.google.com/p/musicip-libofa/>
 
 (tested version: libofa-0.9.3.tar.gz)
 
@@ -232,7 +265,7 @@ cdparanoia
 cuetools
 --------
 
-[http://developer.berlios.de/projects/cuetools/][14]
+<http://developer.berlios.de/projects/cuetools/>
 
 (tested version: cuetools-1.3.1.tar.gz)
 
@@ -246,7 +279,7 @@ cuetools
 speex
 -----
 
-[http://www.speex.org/][15]
+<http://www.speex.org/>
 
 (tested version: speex-1.2rc1.tar.gz)
 
@@ -257,16 +290,16 @@ speex
 5. Build
 
 
-tta
----
+tta, tta++
+----------
 
-[http://en.true-audio.com/Free_Downloads][16]
+<http://en.true-audio.com/Free_Downloads>
 
-(tested version: libtta-c-2.0.tar.gz)
+(tested version: libtta-2.1.tar.gz, libtta++-2.1.tar.gz)
 
 1. Download
 2. Decompress
-3. Rename the folder to libtta-c-src
+3. Rename the folder (for tta use libtta-c-src, for tta++ use libtta++-src)
 4. Move the folder into tta
 5. Apply the patch "tta.patch": 'patch < tta.patch'
 6. Build
@@ -275,9 +308,10 @@ tta
 mpg123
 ------
 
-[http://www.mpg123.de/][17]
+<http://www.mpg123.de/>
+<http://sourceforge.net/projects/mpg123/files/mpg123/>
 
-(tested version: mpg123-1.13.2.tar.bz2)
+(tested version: mpg123-1.14.4.tar.bz2)
 
 1. Download
 2. Decompress
@@ -291,21 +325,3 @@ License
 
 The Xcode projects are distributed under the modified BSD license.
 
-
-  [1]: http://libcddb.sourceforge.net/download.html
-  [2]: http://musicbrainz.org/doc/libdiscid
-  [3]: http://xiph.org/downloads/
-  [4]: http://sourceforge.net/projects/mad/files/
-  [5]: http://code.google.com/p/mp4v2/source/checkout
-  [6]: http://www.musepack.net/index.php?pg=src
-  [7]: http://musicbrainz.org/doc/libmusicbrainz
-  [8]: http://www.webdav.org/neon/
-  [9]: http://developer.kde.org/~wheeler/taglib.html
-  [10]: http://www.wavpack.com/downloads.html
-  [11]: http://lame.sourceforge.net/download.php
-  [12]: http://www.mega-nerd.com/libsndfile/
-  [13]: http://code.google.com/p/musicip-libofa/
-  [14]: http://developer.berlios.de/projects/cuetools/
-  [15]: http://www.speex.org/
-  [16]: http://en.true-audio.com/Free_Downloads
-  [17]: http://www.mpg123.de
