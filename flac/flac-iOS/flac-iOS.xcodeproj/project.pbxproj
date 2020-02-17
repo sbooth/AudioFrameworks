@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		322ADD6612E9626700E77E34 /* bitmath.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD1512E9626600E77E34 /* bitmath.c */; };
+		322ADD6712E9626700E77E34 /* bitreader.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD1612E9626600E77E34 /* bitreader.c */; };
+		322ADD6812E9626700E77E34 /* bitwriter.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD1712E9626600E77E34 /* bitwriter.c */; };
+		322ADD6912E9626700E77E34 /* cpu.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD1812E9626600E77E34 /* cpu.c */; };
+		322ADD6A12E9626700E77E34 /* crc.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD1912E9626600E77E34 /* crc.c */; };
+		322ADD6B12E9626700E77E34 /* fixed.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD1A12E9626600E77E34 /* fixed.c */; };
+		322ADD6C12E9626700E77E34 /* float.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD1C12E9626600E77E34 /* float.c */; };
+		322ADD6D12E9626700E77E34 /* format.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD1D12E9626600E77E34 /* format.c */; };
+		322ADD7212E9626700E77E34 /* nasm.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD2512E9626600E77E34 /* nasm.h */; };
+		322ADD7312E9626700E77E34 /* stream_encoder_asm.nasm in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD2612E9626600E77E34 /* stream_encoder_asm.nasm */; };
+		322ADD7412E9626700E77E34 /* all.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD2B12E9626600E77E34 /* all.h */; };
+		322ADD7512E9626700E77E34 /* bitmath.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD2C12E9626600E77E34 /* bitmath.h */; };
+		322ADD7612E9626700E77E34 /* bitreader.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD2D12E9626600E77E34 /* bitreader.h */; };
+		322ADD7712E9626700E77E34 /* bitwriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD2E12E9626600E77E34 /* bitwriter.h */; };
+		322ADD7812E9626700E77E34 /* cpu.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD2F12E9626600E77E34 /* cpu.h */; };
+		322ADD7912E9626700E77E34 /* crc.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3012E9626600E77E34 /* crc.h */; };
+		322ADD7A12E9626700E77E34 /* fixed.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3112E9626600E77E34 /* fixed.h */; };
+		322ADD7B12E9626700E77E34 /* float.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3212E9626600E77E34 /* float.h */; };
+		322ADD7C12E9626700E77E34 /* format.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3312E9626600E77E34 /* format.h */; };
+		322ADD7D12E9626700E77E34 /* lpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3412E9626600E77E34 /* lpc.h */; };
+		322ADD7E12E9626700E77E34 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3712E9626600E77E34 /* md5.h */; };
+		322ADD7F12E9626700E77E34 /* memory.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3812E9626600E77E34 /* memory.h */; };
+		322ADD8012E9626700E77E34 /* metadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3912E9626600E77E34 /* metadata.h */; };
+		322ADD8112E9626700E77E34 /* ogg_decoder_aspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3A12E9626600E77E34 /* ogg_decoder_aspect.h */; };
+		322ADD8212E9626700E77E34 /* ogg_encoder_aspect.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3B12E9626600E77E34 /* ogg_encoder_aspect.h */; };
+		322ADD8312E9626700E77E34 /* ogg_helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3C12E9626600E77E34 /* ogg_helper.h */; };
+		322ADD8412E9626700E77E34 /* ogg_mapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3D12E9626600E77E34 /* ogg_mapping.h */; };
+		322ADD8512E9626700E77E34 /* stream_encoder_framing.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3E12E9626600E77E34 /* stream_encoder_framing.h */; };
+		322ADD8612E9626700E77E34 /* window.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD3F12E9626600E77E34 /* window.h */; };
+		322ADD8712E9626700E77E34 /* all.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD4112E9626600E77E34 /* all.h */; };
+		322ADD8812E9626700E77E34 /* stream_decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD4412E9626600E77E34 /* stream_decoder.h */; };
+		322ADD8912E9626700E77E34 /* stream_encoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 322ADD4512E9626600E77E34 /* stream_encoder.h */; };
+		322ADD8A12E9626700E77E34 /* lpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD4B12E9626600E77E34 /* lpc.c */; };
+		322ADD8B12E9626700E77E34 /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD4F12E9626600E77E34 /* md5.c */; };
+		322ADD8C12E9626700E77E34 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD5012E9626600E77E34 /* memory.c */; };
+		322ADD8D12E9626700E77E34 /* metadata_iterators.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD5112E9626600E77E34 /* metadata_iterators.c */; };
+		322ADD8E12E9626700E77E34 /* metadata_object.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD5212E9626600E77E34 /* metadata_object.c */; };
+		322ADD8F12E9626700E77E34 /* ogg_decoder_aspect.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD5312E9626600E77E34 /* ogg_decoder_aspect.c */; };
+		322ADD9012E9626700E77E34 /* ogg_encoder_aspect.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD5412E9626600E77E34 /* ogg_encoder_aspect.c */; };
+		322ADD9112E9626700E77E34 /* ogg_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD5512E9626600E77E34 /* ogg_helper.c */; };
+		322ADD9212E9626700E77E34 /* ogg_mapping.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD5612E9626600E77E34 /* ogg_mapping.c */; };
+		322ADD9512E9626700E77E34 /* stream_decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD6212E9626600E77E34 /* stream_decoder.c */; };
+		322ADD9612E9626700E77E34 /* stream_encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD6312E9626600E77E34 /* stream_encoder.c */; };
+		322ADD9712E9626700E77E34 /* stream_encoder_framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD6412E9626700E77E34 /* stream_encoder_framing.c */; };
+		322ADD9812E9626700E77E34 /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 322ADD6512E9626700E77E34 /* window.c */; };
+		AA747D9F0F9514B9006C5449 /* flac_iOS_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* flac_iOS_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		322ADD1512E9626600E77E34 /* bitmath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitmath.c; sourceTree = "<group>"; };
+		322ADD1612E9626600E77E34 /* bitreader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitreader.c; sourceTree = "<group>"; };
+		322ADD1712E9626600E77E34 /* bitwriter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitwriter.c; sourceTree = "<group>"; };
+		322ADD1812E9626600E77E34 /* cpu.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cpu.c; sourceTree = "<group>"; };
+		322ADD1912E9626600E77E34 /* crc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = crc.c; sourceTree = "<group>"; };
+		322ADD1A12E9626600E77E34 /* fixed.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fixed.c; sourceTree = "<group>"; };
+		322ADD1B12E9626600E77E34 /* flac.pc.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flac.pc.in; sourceTree = "<group>"; };
+		322ADD1C12E9626600E77E34 /* float.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = float.c; sourceTree = "<group>"; };
+		322ADD1D12E9626600E77E34 /* format.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = format.c; sourceTree = "<group>"; };
+		322ADD1F12E9626600E77E34 /* bitreader_asm.nasm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nasm; path = bitreader_asm.nasm; sourceTree = "<group>"; };
+		322ADD2012E9626600E77E34 /* cpu_asm.nasm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nasm; path = cpu_asm.nasm; sourceTree = "<group>"; };
+		322ADD2112E9626600E77E34 /* fixed_asm.nasm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nasm; path = fixed_asm.nasm; sourceTree = "<group>"; };
+		322ADD2212E9626600E77E34 /* lpc_asm.nasm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nasm; path = lpc_asm.nasm; sourceTree = "<group>"; };
+		322ADD2312E9626600E77E34 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		322ADD2412E9626600E77E34 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		322ADD2512E9626600E77E34 /* nasm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nasm.h; sourceTree = "<group>"; };
+		322ADD2612E9626600E77E34 /* stream_encoder_asm.nasm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.nasm; path = stream_encoder_asm.nasm; sourceTree = "<group>"; };
+		322ADD2812E9626600E77E34 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		322ADD2912E9626600E77E34 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		322ADD2B12E9626600E77E34 /* all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = all.h; sourceTree = "<group>"; };
+		322ADD2C12E9626600E77E34 /* bitmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmath.h; sourceTree = "<group>"; };
+		322ADD2D12E9626600E77E34 /* bitreader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitreader.h; sourceTree = "<group>"; };
+		322ADD2E12E9626600E77E34 /* bitwriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitwriter.h; sourceTree = "<group>"; };
+		322ADD2F12E9626600E77E34 /* cpu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu.h; sourceTree = "<group>"; };
+		322ADD3012E9626600E77E34 /* crc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crc.h; sourceTree = "<group>"; };
+		322ADD3112E9626600E77E34 /* fixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fixed.h; sourceTree = "<group>"; };
+		322ADD3212E9626600E77E34 /* float.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = float.h; sourceTree = "<group>"; };
+		322ADD3312E9626600E77E34 /* format.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = format.h; sourceTree = "<group>"; };
+		322ADD3412E9626600E77E34 /* lpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lpc.h; sourceTree = "<group>"; };
+		322ADD3512E9626600E77E34 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		322ADD3612E9626600E77E34 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		322ADD3712E9626600E77E34 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		322ADD3812E9626600E77E34 /* memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory.h; sourceTree = "<group>"; };
+		322ADD3912E9626600E77E34 /* metadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metadata.h; sourceTree = "<group>"; };
+		322ADD3A12E9626600E77E34 /* ogg_decoder_aspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ogg_decoder_aspect.h; sourceTree = "<group>"; };
+		322ADD3B12E9626600E77E34 /* ogg_encoder_aspect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ogg_encoder_aspect.h; sourceTree = "<group>"; };
+		322ADD3C12E9626600E77E34 /* ogg_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ogg_helper.h; sourceTree = "<group>"; };
+		322ADD3D12E9626600E77E34 /* ogg_mapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ogg_mapping.h; sourceTree = "<group>"; };
+		322ADD3E12E9626600E77E34 /* stream_encoder_framing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream_encoder_framing.h; sourceTree = "<group>"; };
+		322ADD3F12E9626600E77E34 /* window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = "<group>"; };
+		322ADD4112E9626600E77E34 /* all.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = all.h; sourceTree = "<group>"; };
+		322ADD4212E9626600E77E34 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		322ADD4312E9626600E77E34 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		322ADD4412E9626600E77E34 /* stream_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream_decoder.h; sourceTree = "<group>"; };
+		322ADD4512E9626600E77E34 /* stream_encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream_encoder.h; sourceTree = "<group>"; };
+		322ADD4612E9626600E77E34 /* libFLAC.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libFLAC.m4; sourceTree = "<group>"; };
+		322ADD4712E9626600E77E34 /* libFLAC_dynamic.dsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libFLAC_dynamic.dsp; sourceTree = "<group>"; };
+		322ADD4812E9626600E77E34 /* libFLAC_dynamic.vcproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = libFLAC_dynamic.vcproj; sourceTree = "<group>"; };
+		322ADD4912E9626600E77E34 /* libFLAC_static.dsp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = libFLAC_static.dsp; sourceTree = "<group>"; };
+		322ADD4A12E9626600E77E34 /* libFLAC_static.vcproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = libFLAC_static.vcproj; sourceTree = "<group>"; };
+		322ADD4B12E9626600E77E34 /* lpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lpc.c; sourceTree = "<group>"; };
+		322ADD4C12E9626600E77E34 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		322ADD4D12E9626600E77E34 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		322ADD4E12E9626600E77E34 /* Makefile.lite */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.lite; sourceTree = "<group>"; };
+		322ADD4F12E9626600E77E34 /* md5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md5.c; sourceTree = "<group>"; };
+		322ADD5012E9626600E77E34 /* memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memory.c; sourceTree = "<group>"; };
+		322ADD5112E9626600E77E34 /* metadata_iterators.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = metadata_iterators.c; sourceTree = "<group>"; };
+		322ADD5212E9626600E77E34 /* metadata_object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = metadata_object.c; sourceTree = "<group>"; };
+		322ADD5312E9626600E77E34 /* ogg_decoder_aspect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ogg_decoder_aspect.c; sourceTree = "<group>"; };
+		322ADD5412E9626600E77E34 /* ogg_encoder_aspect.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ogg_encoder_aspect.c; sourceTree = "<group>"; };
+		322ADD5512E9626600E77E34 /* ogg_helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ogg_helper.c; sourceTree = "<group>"; };
+		322ADD5612E9626600E77E34 /* ogg_mapping.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ogg_mapping.c; sourceTree = "<group>"; };
+		322ADD5912E9626600E77E34 /* lpc_asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = lpc_asm.s; sourceTree = "<group>"; };
+		322ADD5A12E9626600E77E34 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		322ADD5B12E9626600E77E34 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		322ADD5D12E9626600E77E34 /* lpc_asm.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = lpc_asm.s; sourceTree = "<group>"; };
+		322ADD5E12E9626600E77E34 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		322ADD5F12E9626600E77E34 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		322ADD6012E9626600E77E34 /* Makefile.am */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.am; sourceTree = "<group>"; };
+		322ADD6112E9626600E77E34 /* Makefile.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.in; sourceTree = "<group>"; };
+		322ADD6212E9626600E77E34 /* stream_decoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream_decoder.c; sourceTree = "<group>"; };
+		322ADD6312E9626600E77E34 /* stream_encoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream_encoder.c; sourceTree = "<group>"; };
+		322ADD6412E9626700E77E34 /* stream_encoder_framing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream_encoder_framing.c; sourceTree = "<group>"; };
+		322ADD6512E9626700E77E34 /* window.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = window.c; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* flac_iOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flac_iOS_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libflac_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libflac_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libflac_iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* flac-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = "flac-iOS";
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				322ADD1412E9626600E77E34 /* libFLAC */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		322ADD1412E9626600E77E34 /* libFLAC */ = {
+			isa = PBXGroup;
+			children = (
+				322ADD1512E9626600E77E34 /* bitmath.c */,
+				322ADD1612E9626600E77E34 /* bitreader.c */,
+				322ADD1712E9626600E77E34 /* bitwriter.c */,
+				322ADD1812E9626600E77E34 /* cpu.c */,
+				322ADD1912E9626600E77E34 /* crc.c */,
+				322ADD1A12E9626600E77E34 /* fixed.c */,
+				322ADD1B12E9626600E77E34 /* flac.pc.in */,
+				322ADD1C12E9626600E77E34 /* float.c */,
+				322ADD1D12E9626600E77E34 /* format.c */,
+				322ADD1E12E9626600E77E34 /* ia32 */,
+				322ADD2712E9626600E77E34 /* include */,
+				322ADD4612E9626600E77E34 /* libFLAC.m4 */,
+				322ADD4712E9626600E77E34 /* libFLAC_dynamic.dsp */,
+				322ADD4812E9626600E77E34 /* libFLAC_dynamic.vcproj */,
+				322ADD4912E9626600E77E34 /* libFLAC_static.dsp */,
+				322ADD4A12E9626600E77E34 /* libFLAC_static.vcproj */,
+				322ADD4B12E9626600E77E34 /* lpc.c */,
+				322ADD4C12E9626600E77E34 /* Makefile.am */,
+				322ADD4D12E9626600E77E34 /* Makefile.in */,
+				322ADD4E12E9626600E77E34 /* Makefile.lite */,
+				322ADD4F12E9626600E77E34 /* md5.c */,
+				322ADD5012E9626600E77E34 /* memory.c */,
+				322ADD5112E9626600E77E34 /* metadata_iterators.c */,
+				322ADD5212E9626600E77E34 /* metadata_object.c */,
+				322ADD5312E9626600E77E34 /* ogg_decoder_aspect.c */,
+				322ADD5412E9626600E77E34 /* ogg_encoder_aspect.c */,
+				322ADD5512E9626600E77E34 /* ogg_helper.c */,
+				322ADD5612E9626600E77E34 /* ogg_mapping.c */,
+				322ADD5712E9626600E77E34 /* ppc */,
+				322ADD6212E9626600E77E34 /* stream_decoder.c */,
+				322ADD6312E9626600E77E34 /* stream_encoder.c */,
+				322ADD6412E9626700E77E34 /* stream_encoder_framing.c */,
+				322ADD6512E9626700E77E34 /* window.c */,
+			);
+			name = libFLAC;
+			path = "../flac-src/src/libFLAC";
+			sourceTree = SOURCE_ROOT;
+		};
+		322ADD1E12E9626600E77E34 /* ia32 */ = {
+			isa = PBXGroup;
+			children = (
+				322ADD1F12E9626600E77E34 /* bitreader_asm.nasm */,
+				322ADD2012E9626600E77E34 /* cpu_asm.nasm */,
+				322ADD2112E9626600E77E34 /* fixed_asm.nasm */,
+				322ADD2212E9626600E77E34 /* lpc_asm.nasm */,
+				322ADD2312E9626600E77E34 /* Makefile.am */,
+				322ADD2412E9626600E77E34 /* Makefile.in */,
+				322ADD2512E9626600E77E34 /* nasm.h */,
+				322ADD2612E9626600E77E34 /* stream_encoder_asm.nasm */,
+			);
+			path = ia32;
+			sourceTree = "<group>";
+		};
+		322ADD2712E9626600E77E34 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				322ADD2812E9626600E77E34 /* Makefile.am */,
+				322ADD2912E9626600E77E34 /* Makefile.in */,
+				322ADD2A12E9626600E77E34 /* private */,
+				322ADD4012E9626600E77E34 /* protected */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		322ADD2A12E9626600E77E34 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				322ADD2B12E9626600E77E34 /* all.h */,
+				322ADD2C12E9626600E77E34 /* bitmath.h */,
+				322ADD2D12E9626600E77E34 /* bitreader.h */,
+				322ADD2E12E9626600E77E34 /* bitwriter.h */,
+				322ADD2F12E9626600E77E34 /* cpu.h */,
+				322ADD3012E9626600E77E34 /* crc.h */,
+				322ADD3112E9626600E77E34 /* fixed.h */,
+				322ADD3212E9626600E77E34 /* float.h */,
+				322ADD3312E9626600E77E34 /* format.h */,
+				322ADD3412E9626600E77E34 /* lpc.h */,
+				322ADD3512E9626600E77E34 /* Makefile.am */,
+				322ADD3612E9626600E77E34 /* Makefile.in */,
+				322ADD3712E9626600E77E34 /* md5.h */,
+				322ADD3812E9626600E77E34 /* memory.h */,
+				322ADD3912E9626600E77E34 /* metadata.h */,
+				322ADD3A12E9626600E77E34 /* ogg_decoder_aspect.h */,
+				322ADD3B12E9626600E77E34 /* ogg_encoder_aspect.h */,
+				322ADD3C12E9626600E77E34 /* ogg_helper.h */,
+				322ADD3D12E9626600E77E34 /* ogg_mapping.h */,
+				322ADD3E12E9626600E77E34 /* stream_encoder_framing.h */,
+				322ADD3F12E9626600E77E34 /* window.h */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		322ADD4012E9626600E77E34 /* protected */ = {
+			isa = PBXGroup;
+			children = (
+				322ADD4112E9626600E77E34 /* all.h */,
+				322ADD4212E9626600E77E34 /* Makefile.am */,
+				322ADD4312E9626600E77E34 /* Makefile.in */,
+				322ADD4412E9626600E77E34 /* stream_decoder.h */,
+				322ADD4512E9626600E77E34 /* stream_encoder.h */,
+			);
+			path = protected;
+			sourceTree = "<group>";
+		};
+		322ADD5712E9626600E77E34 /* ppc */ = {
+			isa = PBXGroup;
+			children = (
+				322ADD5812E9626600E77E34 /* as */,
+				322ADD5C12E9626600E77E34 /* gas */,
+				322ADD6012E9626600E77E34 /* Makefile.am */,
+				322ADD6112E9626600E77E34 /* Makefile.in */,
+			);
+			path = ppc;
+			sourceTree = "<group>";
+		};
+		322ADD5812E9626600E77E34 /* as */ = {
+			isa = PBXGroup;
+			children = (
+				322ADD5912E9626600E77E34 /* lpc_asm.s */,
+				322ADD5A12E9626600E77E34 /* Makefile.am */,
+				322ADD5B12E9626600E77E34 /* Makefile.in */,
+			);
+			path = as;
+			sourceTree = "<group>";
+		};
+		322ADD5C12E9626600E77E34 /* gas */ = {
+			isa = PBXGroup;
+			children = (
+				322ADD5D12E9626600E77E34 /* lpc_asm.s */,
+				322ADD5E12E9626600E77E34 /* Makefile.am */,
+				322ADD5F12E9626600E77E34 /* Makefile.in */,
+			);
+			path = gas;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* flac_iOS_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* flac_iOS_Prefix.pch in Headers */,
+				322ADD7212E9626700E77E34 /* nasm.h in Headers */,
+				322ADD7412E9626700E77E34 /* all.h in Headers */,
+				322ADD7512E9626700E77E34 /* bitmath.h in Headers */,
+				322ADD7612E9626700E77E34 /* bitreader.h in Headers */,
+				322ADD7712E9626700E77E34 /* bitwriter.h in Headers */,
+				322ADD7812E9626700E77E34 /* cpu.h in Headers */,
+				322ADD7912E9626700E77E34 /* crc.h in Headers */,
+				322ADD7A12E9626700E77E34 /* fixed.h in Headers */,
+				322ADD7B12E9626700E77E34 /* float.h in Headers */,
+				322ADD7C12E9626700E77E34 /* format.h in Headers */,
+				322ADD7D12E9626700E77E34 /* lpc.h in Headers */,
+				322ADD7E12E9626700E77E34 /* md5.h in Headers */,
+				322ADD7F12E9626700E77E34 /* memory.h in Headers */,
+				322ADD8012E9626700E77E34 /* metadata.h in Headers */,
+				322ADD8112E9626700E77E34 /* ogg_decoder_aspect.h in Headers */,
+				322ADD8212E9626700E77E34 /* ogg_encoder_aspect.h in Headers */,
+				322ADD8312E9626700E77E34 /* ogg_helper.h in Headers */,
+				322ADD8412E9626700E77E34 /* ogg_mapping.h in Headers */,
+				322ADD8512E9626700E77E34 /* stream_encoder_framing.h in Headers */,
+				322ADD8612E9626700E77E34 /* window.h in Headers */,
+				322ADD8712E9626700E77E34 /* all.h in Headers */,
+				322ADD8812E9626700E77E34 /* stream_decoder.h in Headers */,
+				322ADD8912E9626700E77E34 /* stream_encoder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* flac-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "flac-iOS" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "flac-iOS";
+			productName = "flac-iOS";
+			productReference = D2AAC07E0554694100DB518D /* libflac_iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "flac-iOS" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* flac-iOS */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* flac-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				322ADD6612E9626700E77E34 /* bitmath.c in Sources */,
+				322ADD6712E9626700E77E34 /* bitreader.c in Sources */,
+				322ADD6812E9626700E77E34 /* bitwriter.c in Sources */,
+				322ADD6912E9626700E77E34 /* cpu.c in Sources */,
+				322ADD6A12E9626700E77E34 /* crc.c in Sources */,
+				322ADD6B12E9626700E77E34 /* fixed.c in Sources */,
+				322ADD6C12E9626700E77E34 /* float.c in Sources */,
+				322ADD6D12E9626700E77E34 /* format.c in Sources */,
+				322ADD7312E9626700E77E34 /* stream_encoder_asm.nasm in Sources */,
+				322ADD8A12E9626700E77E34 /* lpc.c in Sources */,
+				322ADD8B12E9626700E77E34 /* md5.c in Sources */,
+				322ADD8C12E9626700E77E34 /* memory.c in Sources */,
+				322ADD8D12E9626700E77E34 /* metadata_iterators.c in Sources */,
+				322ADD8E12E9626700E77E34 /* metadata_object.c in Sources */,
+				322ADD8F12E9626700E77E34 /* ogg_decoder_aspect.c in Sources */,
+				322ADD9012E9626700E77E34 /* ogg_encoder_aspect.c in Sources */,
+				322ADD9112E9626700E77E34 /* ogg_helper.c in Sources */,
+				322ADD9212E9626700E77E34 /* ogg_mapping.c in Sources */,
+				322ADD9512E9626700E77E34 /* stream_decoder.c in Sources */,
+				322ADD9612E9626700E77E34 /* stream_encoder.c in Sources */,
+				322ADD9712E9626700E77E34 /* stream_encoder_framing.c in Sources */,
+				322ADD9812E9626700E77E34 /* window.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/flac_iOS.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = flac_iOS_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = flac_iOS;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/flac_iOS.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = flac_iOS_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = flac_iOS;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "flac-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "flac-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

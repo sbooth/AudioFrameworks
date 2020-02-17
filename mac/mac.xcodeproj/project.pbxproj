@@ -9,17 +9,73 @@
 /* Begin PBXBuildFile section */
 		324DB41712DC34330055AF3F /* APEDecompressOld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86512DABC8A005B82C9 /* APEDecompressOld.cpp */; };
 		324DB41812DC34340055AF3F /* APEDecompressOld.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E86612DABC8A005B82C9 /* APEDecompressOld.h */; };
+		3259CA0317389F1A0035D749 /* APECompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83512DABC89005B82C9 /* APECompress.cpp */; };
+		3259CA0417389F1A0035D749 /* APECompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83612DABC89005B82C9 /* APECompress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA0517389F1A0035D749 /* APECompressCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83712DABC89005B82C9 /* APECompressCore.cpp */; };
+		3259CA0617389F1A0035D749 /* APECompressCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83812DABC89005B82C9 /* APECompressCore.h */; };
+		3259CA0717389F1A0035D749 /* APECompressCreate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83912DABC89005B82C9 /* APECompressCreate.cpp */; };
+		3259CA0817389F1A0035D749 /* APECompressCreate.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83A12DABC89005B82C9 /* APECompressCreate.h */; };
+		3259CA0917389F1A0035D749 /* APEDecompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83B12DABC89005B82C9 /* APEDecompress.cpp */; };
+		3259CA0A17389F1A0035D749 /* APEDecompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83C12DABC89005B82C9 /* APEDecompress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA0B17389F1A0035D749 /* APEHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83D12DABC89005B82C9 /* APEHeader.cpp */; };
+		3259CA0C17389F1A0035D749 /* APEHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83E12DABC8A005B82C9 /* APEHeader.h */; };
+		3259CA0D17389F1A0035D749 /* APEInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83F12DABC8A005B82C9 /* APEInfo.cpp */; };
+		3259CA0E17389F1A0035D749 /* APEInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E84012DABC8A005B82C9 /* APEInfo.h */; };
+		3259CA0F17389F1A0035D749 /* APELink.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84112DABC8A005B82C9 /* APELink.cpp */; };
+		3259CA1017389F1A0035D749 /* APELink.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E84212DABC8A005B82C9 /* APELink.h */; };
+		3259CA1117389F1A0035D749 /* APETag.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84412DABC8A005B82C9 /* APETag.cpp */; };
+		3259CA1217389F1A0035D749 /* APETag.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E84512DABC8A005B82C9 /* APETag.h */; };
+		3259CA1317389F1E0035D749 /* BitArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84D12DABC8A005B82C9 /* BitArray.cpp */; };
+		3259CA1417389F1E0035D749 /* BitArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E84E12DABC8A005B82C9 /* BitArray.h */; };
+		3259CA1517389F1E0035D749 /* MACLib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84F12DABC8A005B82C9 /* MACLib.cpp */; };
+		3259CA1617389F1E0035D749 /* MACLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85012DABC8A005B82C9 /* MACLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA1717389F1E0035D749 /* MD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85512DABC8A005B82C9 /* MD5.cpp */; };
+		3259CA1817389F1E0035D749 /* MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85612DABC8A005B82C9 /* MD5.h */; };
+		3259CA1A17389F1E0035D749 /* NewPredictor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85812DABC8A005B82C9 /* NewPredictor.cpp */; };
+		3259CA1B17389F1E0035D749 /* NewPredictor.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85912DABC8A005B82C9 /* NewPredictor.h */; };
+		3259CA1C17389F1E0035D749 /* NNFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85A12DABC8A005B82C9 /* NNFilter.cpp */; };
+		3259CA1D17389F1E0035D749 /* NNFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85B12DABC8A005B82C9 /* NNFilter.h */; };
+		3259CA1E17389F220035D749 /* Predictor.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E86D12DABC8A005B82C9 /* Predictor.h */; };
+		3259CA1F17389F220035D749 /* Prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86E12DABC8A005B82C9 /* Prepare.cpp */; };
+		3259CA2017389F220035D749 /* Prepare.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E86F12DABC8A005B82C9 /* Prepare.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA2117389F220035D749 /* ScaledFirstOrderFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87012DABC8A005B82C9 /* ScaledFirstOrderFilter.h */; };
+		3259CA2317389F220035D749 /* UnBitArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87212DABC8A005B82C9 /* UnBitArray.cpp */; };
+		3259CA2417389F220035D749 /* UnBitArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87312DABC8A005B82C9 /* UnBitArray.h */; };
+		3259CA2517389F220035D749 /* UnBitArrayBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87412DABC8A005B82C9 /* UnBitArrayBase.cpp */; };
+		3259CA2617389F220035D749 /* UnBitArrayBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87512DABC8A005B82C9 /* UnBitArrayBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA2917389F390035D749 /* Anti-Predictor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85D12DABC8A005B82C9 /* Anti-Predictor.cpp */; };
+		3259CA2A17389F390035D749 /* Anti-Predictor.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85E12DABC8A005B82C9 /* Anti-Predictor.h */; };
+		3259CA2B17389F390035D749 /* AntiPredictorExtraHigh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85F12DABC8A005B82C9 /* AntiPredictorExtraHigh.cpp */; };
+		3259CA2C17389F390035D749 /* AntiPredictorFast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86012DABC8A005B82C9 /* AntiPredictorFast.cpp */; };
+		3259CA2D17389F390035D749 /* AntiPredictorHigh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86112DABC8A005B82C9 /* AntiPredictorHigh.cpp */; };
+		3259CA2E17389F390035D749 /* AntiPredictorNormal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86212DABC8A005B82C9 /* AntiPredictorNormal.cpp */; };
+		3259CA2F17389F390035D749 /* APEDecompressCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86312DABC8A005B82C9 /* APEDecompressCore.cpp */; };
+		3259CA3017389F390035D749 /* APEDecompressCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E86412DABC8A005B82C9 /* APEDecompressCore.h */; };
+		3259CA3117389F390035D749 /* APEDecompressOld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86512DABC8A005B82C9 /* APEDecompressOld.cpp */; };
+		3259CA3217389F390035D749 /* APEDecompressOld.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E86612DABC8A005B82C9 /* APEDecompressOld.h */; };
+		3259CA3317389F390035D749 /* UnBitArrayOld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86912DABC8A005B82C9 /* UnBitArrayOld.cpp */; };
+		3259CA3417389F390035D749 /* UnBitArrayOld.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E86A12DABC8A005B82C9 /* UnBitArrayOld.h */; };
+		3259CA3517389F390035D749 /* UnMAC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86B12DABC8A005B82C9 /* UnMAC.cpp */; };
+		3259CA3617389F390035D749 /* UnMAC.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E86C12DABC8A005B82C9 /* UnMAC.h */; };
+		3259CA391738A2BE0035D749 /* GlobalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329E55CF12DC372B00BF40EC /* GlobalFunctions.cpp */; };
+		3259CA3A1738A2D20035D749 /* GlobalFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55D012DC372B00BF40EC /* GlobalFunctions.h */; };
+		3259CA3B1738A2D20035D749 /* RollBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55C512DC371000BF40EC /* RollBuffer.h */; };
+		3259CA3F1738A2D20035D749 /* All.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87912DABC8A005B82C9 /* All.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA401738A2D20035D749 /* CharacterHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87C12DABC8A005B82C9 /* CharacterHelper.cpp */; };
+		3259CA411738A2D20035D749 /* CharacterHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87D12DABC8A005B82C9 /* CharacterHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA421738A2D20035D749 /* CircleBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87E12DABC8A005B82C9 /* CircleBuffer.cpp */; };
+		3259CA431738A2D20035D749 /* CircleBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87F12DABC8A005B82C9 /* CircleBuffer.h */; };
+		3259CA441738A2D20035D749 /* ID3Genres.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88412DABC8A005B82C9 /* ID3Genres.h */; };
+		3259CA451738A2D20035D749 /* IO.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88512DABC8A005B82C9 /* IO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA481738A2D20035D749 /* NoWindows.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88A12DABC8A005B82C9 /* NoWindows.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA491738A2D20035D749 /* SmartPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88C12DABC8A005B82C9 /* SmartPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3259CA4A1738A2D20035D749 /* StdLibFileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E88D12DABC8A005B82C9 /* StdLibFileIO.cpp */; };
+		3259CA4B1738A2D20035D749 /* StdLibFileIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88E12DABC8A005B82C9 /* StdLibFileIO.h */; };
 		329E559512DC34E100BF40EC /* CircleBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87E12DABC8A005B82C9 /* CircleBuffer.cpp */; };
 		329E559612DC34E100BF40EC /* CircleBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87F12DABC8A005B82C9 /* CircleBuffer.h */; };
-		329E55A012DC350300BF40EC /* MACUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E88612DABC8A005B82C9 /* MACUtils.cpp */; };
-		329E55B112DC355F00BF40EC /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E84912DABC8A005B82C9 /* common.cpp */; };
-		329E55BD12DC36EE00BF40EC /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55BC12DC36EE00BF40EC /* config.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		329E55C812DC371000BF40EC /* RollBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55C512DC371000BF40EC /* RollBuffer.h */; };
-		329E55C912DC371000BF40EC /* WAVInputSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329E55C612DC371000BF40EC /* WAVInputSource.cpp */; };
-		329E55CA12DC371000BF40EC /* WAVInputSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55C712DC371000BF40EC /* WAVInputSource.h */; };
 		329E55D112DC372B00BF40EC /* GlobalFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 329E55CF12DC372B00BF40EC /* GlobalFunctions.cpp */; };
 		329E55D212DC372B00BF40EC /* GlobalFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55D012DC372B00BF40EC /* GlobalFunctions.h */; };
-		329E55D812DC375900BF40EC /* Assembly.h in Headers */ = {isa = PBXBuildFile; fileRef = 329E55D712DC375900BF40EC /* Assembly.h */; };
 		32B7E89512DABC8A005B82C9 /* APECompress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83512DABC89005B82C9 /* APECompress.cpp */; };
 		32B7E89612DABC8A005B82C9 /* APECompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E83612DABC89005B82C9 /* APECompress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E89712DABC8A005B82C9 /* APECompressCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E83712DABC89005B82C9 /* APECompressCore.cpp */; };
@@ -42,7 +98,6 @@
 		32B7E8AF12DABC8A005B82C9 /* MACLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85012DABC8A005B82C9 /* MACLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E8B412DABC8A005B82C9 /* MD5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85512DABC8A005B82C9 /* MD5.cpp */; };
 		32B7E8B512DABC8A005B82C9 /* MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85612DABC8A005B82C9 /* MD5.h */; };
-		32B7E8B612DABC8A005B82C9 /* MultichannelNNFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85712DABC8A005B82C9 /* MultichannelNNFilter.h */; };
 		32B7E8B712DABC8A005B82C9 /* NewPredictor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85812DABC8A005B82C9 /* NewPredictor.cpp */; };
 		32B7E8B812DABC8A005B82C9 /* NewPredictor.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E85912DABC8A005B82C9 /* NewPredictor.h */; };
 		32B7E8B912DABC8A005B82C9 /* NNFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E85A12DABC8A005B82C9 /* NNFilter.cpp */; };
@@ -63,7 +118,6 @@
 		32B7E8CC12DABC8A005B82C9 /* Prepare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E86E12DABC8A005B82C9 /* Prepare.cpp */; };
 		32B7E8CD12DABC8A005B82C9 /* Prepare.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E86F12DABC8A005B82C9 /* Prepare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E8CE12DABC8A005B82C9 /* ScaledFirstOrderFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87012DABC8A005B82C9 /* ScaledFirstOrderFilter.h */; };
-		32B7E8CF12DABC8A005B82C9 /* StartFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87112DABC8A005B82C9 /* StartFilter.h */; };
 		32B7E8D012DABC8A005B82C9 /* UnBitArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87212DABC8A005B82C9 /* UnBitArray.cpp */; };
 		32B7E8D112DABC8A005B82C9 /* UnBitArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87312DABC8A005B82C9 /* UnBitArray.h */; };
 		32B7E8D212DABC8A005B82C9 /* UnBitArrayBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E87412DABC8A005B82C9 /* UnBitArrayBase.cpp */; };
@@ -73,7 +127,6 @@
 		32B7E8DA12DABC8A005B82C9 /* CharacterHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E87D12DABC8A005B82C9 /* CharacterHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E8E112DABC8A005B82C9 /* ID3Genres.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88412DABC8A005B82C9 /* ID3Genres.h */; };
 		32B7E8E212DABC8A005B82C9 /* IO.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88512DABC8A005B82C9 /* IO.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32B7E8E412DABC8A005B82C9 /* MACUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88712DABC8A005B82C9 /* MACUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E8E712DABC8A005B82C9 /* NoWindows.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88A12DABC8A005B82C9 /* NoWindows.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E8E912DABC8A005B82C9 /* SmartPtr.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E88C12DABC8A005B82C9 /* SmartPtr.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32B7E8EA12DABC8A005B82C9 /* StdLibFileIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 32B7E88D12DABC8A005B82C9 /* StdLibFileIO.cpp */; };
@@ -81,13 +134,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		329E55BC12DC36EE00BF40EC /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		3259C9FF17389F010035D749 /* libmac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		329E55C512DC371000BF40EC /* RollBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollBuffer.h; sourceTree = "<group>"; };
-		329E55C612DC371000BF40EC /* WAVInputSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WAVInputSource.cpp; sourceTree = "<group>"; };
-		329E55C712DC371000BF40EC /* WAVInputSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAVInputSource.h; sourceTree = "<group>"; };
 		329E55CF12DC372B00BF40EC /* GlobalFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlobalFunctions.cpp; sourceTree = "<group>"; };
 		329E55D012DC372B00BF40EC /* GlobalFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFunctions.h; sourceTree = "<group>"; };
-		329E55D712DC375900BF40EC /* Assembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assembly.h; sourceTree = "<group>"; };
 		32B7E83512DABC89005B82C9 /* APECompress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APECompress.cpp; sourceTree = "<group>"; };
 		32B7E83612DABC89005B82C9 /* APECompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APECompress.h; sourceTree = "<group>"; };
 		32B7E83712DABC89005B82C9 /* APECompressCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APECompressCore.cpp; sourceTree = "<group>"; };
@@ -104,14 +154,12 @@
 		32B7E84212DABC8A005B82C9 /* APELink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APELink.h; sourceTree = "<group>"; };
 		32B7E84412DABC8A005B82C9 /* APETag.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = APETag.cpp; sourceTree = "<group>"; };
 		32B7E84512DABC8A005B82C9 /* APETag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APETag.h; sourceTree = "<group>"; };
-		32B7E84912DABC8A005B82C9 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
 		32B7E84D12DABC8A005B82C9 /* BitArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BitArray.cpp; sourceTree = "<group>"; };
 		32B7E84E12DABC8A005B82C9 /* BitArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BitArray.h; sourceTree = "<group>"; };
 		32B7E84F12DABC8A005B82C9 /* MACLib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MACLib.cpp; sourceTree = "<group>"; };
 		32B7E85012DABC8A005B82C9 /* MACLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACLib.h; sourceTree = "<group>"; };
 		32B7E85512DABC8A005B82C9 /* MD5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MD5.cpp; sourceTree = "<group>"; };
 		32B7E85612DABC8A005B82C9 /* MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MD5.h; sourceTree = "<group>"; };
-		32B7E85712DABC8A005B82C9 /* MultichannelNNFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultichannelNNFilter.h; sourceTree = "<group>"; };
 		32B7E85812DABC8A005B82C9 /* NewPredictor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NewPredictor.cpp; sourceTree = "<group>"; };
 		32B7E85912DABC8A005B82C9 /* NewPredictor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPredictor.h; sourceTree = "<group>"; };
 		32B7E85A12DABC8A005B82C9 /* NNFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NNFilter.cpp; sourceTree = "<group>"; };
@@ -134,7 +182,6 @@
 		32B7E86E12DABC8A005B82C9 /* Prepare.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Prepare.cpp; sourceTree = "<group>"; };
 		32B7E86F12DABC8A005B82C9 /* Prepare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prepare.h; sourceTree = "<group>"; };
 		32B7E87012DABC8A005B82C9 /* ScaledFirstOrderFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaledFirstOrderFilter.h; sourceTree = "<group>"; };
-		32B7E87112DABC8A005B82C9 /* StartFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartFilter.h; sourceTree = "<group>"; };
 		32B7E87212DABC8A005B82C9 /* UnBitArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnBitArray.cpp; sourceTree = "<group>"; };
 		32B7E87312DABC8A005B82C9 /* UnBitArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnBitArray.h; sourceTree = "<group>"; };
 		32B7E87412DABC8A005B82C9 /* UnBitArrayBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UnBitArrayBase.cpp; sourceTree = "<group>"; };
@@ -146,8 +193,6 @@
 		32B7E87F12DABC8A005B82C9 /* CircleBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleBuffer.h; sourceTree = "<group>"; };
 		32B7E88412DABC8A005B82C9 /* ID3Genres.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ID3Genres.h; sourceTree = "<group>"; };
 		32B7E88512DABC8A005B82C9 /* IO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IO.h; sourceTree = "<group>"; };
-		32B7E88612DABC8A005B82C9 /* MACUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MACUtils.cpp; sourceTree = "<group>"; };
-		32B7E88712DABC8A005B82C9 /* MACUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACUtils.h; sourceTree = "<group>"; };
 		32B7E88A12DABC8A005B82C9 /* NoWindows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoWindows.h; sourceTree = "<group>"; };
 		32B7E88C12DABC8A005B82C9 /* SmartPtr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmartPtr.h; sourceTree = "<group>"; };
 		32B7E88D12DABC8A005B82C9 /* StdLibFileIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StdLibFileIO.cpp; sourceTree = "<group>"; };
@@ -160,6 +205,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3259C9FC17389F010035D749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* mac.framework */,
+				3259C9FF17389F010035D749 /* libmac.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,14 +278,12 @@
 				32B7E84212DABC8A005B82C9 /* APELink.h */,
 				32B7E84412DABC8A005B82C9 /* APETag.cpp */,
 				32B7E84512DABC8A005B82C9 /* APETag.h */,
-				32B7E84612DABC8A005B82C9 /* Assembly */,
 				32B7E84D12DABC8A005B82C9 /* BitArray.cpp */,
 				32B7E84E12DABC8A005B82C9 /* BitArray.h */,
 				32B7E84F12DABC8A005B82C9 /* MACLib.cpp */,
 				32B7E85012DABC8A005B82C9 /* MACLib.h */,
 				32B7E85512DABC8A005B82C9 /* MD5.cpp */,
 				32B7E85612DABC8A005B82C9 /* MD5.h */,
-				32B7E85712DABC8A005B82C9 /* MultichannelNNFilter.h */,
 				32B7E85812DABC8A005B82C9 /* NewPredictor.cpp */,
 				32B7E85912DABC8A005B82C9 /* NewPredictor.h */,
 				32B7E85A12DABC8A005B82C9 /* NNFilter.cpp */,
@@ -242,7 +293,6 @@
 				32B7E86E12DABC8A005B82C9 /* Prepare.cpp */,
 				32B7E86F12DABC8A005B82C9 /* Prepare.h */,
 				32B7E87012DABC8A005B82C9 /* ScaledFirstOrderFilter.h */,
-				32B7E87112DABC8A005B82C9 /* StartFilter.h */,
 				32B7E87212DABC8A005B82C9 /* UnBitArray.cpp */,
 				32B7E87312DABC8A005B82C9 /* UnBitArray.h */,
 				32B7E87412DABC8A005B82C9 /* UnBitArrayBase.cpp */,
@@ -250,15 +300,6 @@
 			);
 			name = MACLib;
 			path = "mac-src/src/MACLib";
-			sourceTree = "<group>";
-		};
-		32B7E84612DABC8A005B82C9 /* Assembly */ = {
-			isa = PBXGroup;
-			children = (
-				329E55D712DC375900BF40EC /* Assembly.h */,
-				32B7E84912DABC8A005B82C9 /* common.cpp */,
-			);
-			path = Assembly;
 			sourceTree = "<group>";
 		};
 		32B7E85C12DABC8A005B82C9 /* Old */ = {
@@ -288,9 +329,6 @@
 				329E55CF12DC372B00BF40EC /* GlobalFunctions.cpp */,
 				329E55D012DC372B00BF40EC /* GlobalFunctions.h */,
 				329E55C512DC371000BF40EC /* RollBuffer.h */,
-				329E55C612DC371000BF40EC /* WAVInputSource.cpp */,
-				329E55C712DC371000BF40EC /* WAVInputSource.h */,
-				329E55BC12DC36EE00BF40EC /* config.h */,
 				32B7E87912DABC8A005B82C9 /* All.h */,
 				32B7E87C12DABC8A005B82C9 /* CharacterHelper.cpp */,
 				32B7E87D12DABC8A005B82C9 /* CharacterHelper.h */,
@@ -298,8 +336,6 @@
 				32B7E87F12DABC8A005B82C9 /* CircleBuffer.h */,
 				32B7E88412DABC8A005B82C9 /* ID3Genres.h */,
 				32B7E88512DABC8A005B82C9 /* IO.h */,
-				32B7E88612DABC8A005B82C9 /* MACUtils.cpp */,
-				32B7E88712DABC8A005B82C9 /* MACUtils.h */,
 				32B7E88A12DABC8A005B82C9 /* NoWindows.h */,
 				32B7E88C12DABC8A005B82C9 /* SmartPtr.h */,
 				32B7E88D12DABC8A005B82C9 /* StdLibFileIO.cpp */,
@@ -322,6 +358,46 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3259C9FD17389F010035D749 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3259CA0417389F1A0035D749 /* APECompress.h in Headers */,
+				3259CA0617389F1A0035D749 /* APECompressCore.h in Headers */,
+				3259CA0817389F1A0035D749 /* APECompressCreate.h in Headers */,
+				3259CA0A17389F1A0035D749 /* APEDecompress.h in Headers */,
+				3259CA0C17389F1A0035D749 /* APEHeader.h in Headers */,
+				3259CA0E17389F1A0035D749 /* APEInfo.h in Headers */,
+				3259CA1017389F1A0035D749 /* APELink.h in Headers */,
+				3259CA1217389F1A0035D749 /* APETag.h in Headers */,
+				3259CA1417389F1E0035D749 /* BitArray.h in Headers */,
+				3259CA1617389F1E0035D749 /* MACLib.h in Headers */,
+				3259CA1817389F1E0035D749 /* MD5.h in Headers */,
+				3259CA1B17389F1E0035D749 /* NewPredictor.h in Headers */,
+				3259CA1D17389F1E0035D749 /* NNFilter.h in Headers */,
+				3259CA1E17389F220035D749 /* Predictor.h in Headers */,
+				3259CA2017389F220035D749 /* Prepare.h in Headers */,
+				3259CA2117389F220035D749 /* ScaledFirstOrderFilter.h in Headers */,
+				3259CA2417389F220035D749 /* UnBitArray.h in Headers */,
+				3259CA2617389F220035D749 /* UnBitArrayBase.h in Headers */,
+				3259CA2A17389F390035D749 /* Anti-Predictor.h in Headers */,
+				3259CA3017389F390035D749 /* APEDecompressCore.h in Headers */,
+				3259CA3217389F390035D749 /* APEDecompressOld.h in Headers */,
+				3259CA3417389F390035D749 /* UnBitArrayOld.h in Headers */,
+				3259CA3617389F390035D749 /* UnMAC.h in Headers */,
+				3259CA3A1738A2D20035D749 /* GlobalFunctions.h in Headers */,
+				3259CA3B1738A2D20035D749 /* RollBuffer.h in Headers */,
+				3259CA3F1738A2D20035D749 /* All.h in Headers */,
+				3259CA411738A2D20035D749 /* CharacterHelper.h in Headers */,
+				3259CA431738A2D20035D749 /* CircleBuffer.h in Headers */,
+				3259CA441738A2D20035D749 /* ID3Genres.h in Headers */,
+				3259CA451738A2D20035D749 /* IO.h in Headers */,
+				3259CA481738A2D20035D749 /* NoWindows.h in Headers */,
+				3259CA491738A2D20035D749 /* SmartPtr.h in Headers */,
+				3259CA4B1738A2D20035D749 /* StdLibFileIO.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF500486A6940098B216 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,7 +413,6 @@
 				32B7E8AD12DABC8A005B82C9 /* BitArray.h in Headers */,
 				32B7E8AF12DABC8A005B82C9 /* MACLib.h in Headers */,
 				32B7E8B512DABC8A005B82C9 /* MD5.h in Headers */,
-				32B7E8B612DABC8A005B82C9 /* MultichannelNNFilter.h in Headers */,
 				32B7E8B812DABC8A005B82C9 /* NewPredictor.h in Headers */,
 				32B7E8BA12DABC8A005B82C9 /* NNFilter.h in Headers */,
 				32B7E8BC12DABC8A005B82C9 /* Anti-Predictor.h in Headers */,
@@ -347,30 +422,42 @@
 				32B7E8CB12DABC8A005B82C9 /* Predictor.h in Headers */,
 				32B7E8CD12DABC8A005B82C9 /* Prepare.h in Headers */,
 				32B7E8CE12DABC8A005B82C9 /* ScaledFirstOrderFilter.h in Headers */,
-				32B7E8CF12DABC8A005B82C9 /* StartFilter.h in Headers */,
 				32B7E8D112DABC8A005B82C9 /* UnBitArray.h in Headers */,
 				32B7E8D312DABC8A005B82C9 /* UnBitArrayBase.h in Headers */,
 				32B7E8D612DABC8A005B82C9 /* All.h in Headers */,
 				32B7E8DA12DABC8A005B82C9 /* CharacterHelper.h in Headers */,
 				32B7E8E112DABC8A005B82C9 /* ID3Genres.h in Headers */,
 				32B7E8E212DABC8A005B82C9 /* IO.h in Headers */,
-				32B7E8E412DABC8A005B82C9 /* MACUtils.h in Headers */,
 				32B7E8E712DABC8A005B82C9 /* NoWindows.h in Headers */,
 				32B7E8E912DABC8A005B82C9 /* SmartPtr.h in Headers */,
 				32B7E8EB12DABC8A005B82C9 /* StdLibFileIO.h in Headers */,
 				324DB41812DC34340055AF3F /* APEDecompressOld.h in Headers */,
 				329E559612DC34E100BF40EC /* CircleBuffer.h in Headers */,
-				329E55BD12DC36EE00BF40EC /* config.h in Headers */,
 				329E55C812DC371000BF40EC /* RollBuffer.h in Headers */,
-				329E55CA12DC371000BF40EC /* WAVInputSource.h in Headers */,
 				329E55D212DC372B00BF40EC /* GlobalFunctions.h in Headers */,
-				329E55D812DC375900BF40EC /* Assembly.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3259C9FE17389F010035D749 /* mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3259CA0217389F010035D749 /* Build configuration list for PBXNativeTarget "mac" */;
+			buildPhases = (
+				3259C9FB17389F010035D749 /* Sources */,
+				3259C9FC17389F010035D749 /* Frameworks */,
+				3259C9FD17389F010035D749 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mac;
+			productName = mac;
+			productReference = 3259C9FF17389F010035D749 /* libmac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8DC2EF4F0486A6940098B216 /* mac.framework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "mac.framework" */;
@@ -395,6 +482,9 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "mac" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -411,6 +501,7 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* mac.framework */,
+				3259C9FE17389F010035D749 /* mac */,
 			);
 		};
 /* End PBXProject section */
@@ -426,6 +517,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3259C9FB17389F010035D749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3259CA0317389F1A0035D749 /* APECompress.cpp in Sources */,
+				3259CA0517389F1A0035D749 /* APECompressCore.cpp in Sources */,
+				3259CA0717389F1A0035D749 /* APECompressCreate.cpp in Sources */,
+				3259CA0917389F1A0035D749 /* APEDecompress.cpp in Sources */,
+				3259CA0B17389F1A0035D749 /* APEHeader.cpp in Sources */,
+				3259CA0D17389F1A0035D749 /* APEInfo.cpp in Sources */,
+				3259CA0F17389F1A0035D749 /* APELink.cpp in Sources */,
+				3259CA1117389F1A0035D749 /* APETag.cpp in Sources */,
+				3259CA1317389F1E0035D749 /* BitArray.cpp in Sources */,
+				3259CA1517389F1E0035D749 /* MACLib.cpp in Sources */,
+				3259CA1717389F1E0035D749 /* MD5.cpp in Sources */,
+				3259CA1A17389F1E0035D749 /* NewPredictor.cpp in Sources */,
+				3259CA1C17389F1E0035D749 /* NNFilter.cpp in Sources */,
+				3259CA1F17389F220035D749 /* Prepare.cpp in Sources */,
+				3259CA2317389F220035D749 /* UnBitArray.cpp in Sources */,
+				3259CA2517389F220035D749 /* UnBitArrayBase.cpp in Sources */,
+				3259CA2917389F390035D749 /* Anti-Predictor.cpp in Sources */,
+				3259CA2B17389F390035D749 /* AntiPredictorExtraHigh.cpp in Sources */,
+				3259CA2C17389F390035D749 /* AntiPredictorFast.cpp in Sources */,
+				3259CA2D17389F390035D749 /* AntiPredictorHigh.cpp in Sources */,
+				3259CA2E17389F390035D749 /* AntiPredictorNormal.cpp in Sources */,
+				3259CA2F17389F390035D749 /* APEDecompressCore.cpp in Sources */,
+				3259CA3117389F390035D749 /* APEDecompressOld.cpp in Sources */,
+				3259CA3317389F390035D749 /* UnBitArrayOld.cpp in Sources */,
+				3259CA3517389F390035D749 /* UnMAC.cpp in Sources */,
+				3259CA391738A2BE0035D749 /* GlobalFunctions.cpp in Sources */,
+				3259CA401738A2D20035D749 /* CharacterHelper.cpp in Sources */,
+				3259CA421738A2D20035D749 /* CircleBuffer.cpp in Sources */,
+				3259CA4A1738A2D20035D749 /* StdLibFileIO.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -458,9 +585,6 @@
 				32B7E8EA12DABC8A005B82C9 /* StdLibFileIO.cpp in Sources */,
 				324DB41712DC34330055AF3F /* APEDecompressOld.cpp in Sources */,
 				329E559512DC34E100BF40EC /* CircleBuffer.cpp in Sources */,
-				329E55A012DC350300BF40EC /* MACUtils.cpp in Sources */,
-				329E55B112DC355F00BF40EC /* common.cpp in Sources */,
-				329E55C912DC371000BF40EC /* WAVInputSource.cpp in Sources */,
 				329E55D112DC372B00BF40EC /* GlobalFunctions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,16 +595,23 @@
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PLATFORM_APPLE,
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
+				PRODUCT_BUNDLE_IDENTIFIER = com.monkeysaudio;
 				PRODUCT_NAME = mac;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -489,13 +620,18 @@
 		1DEB91AF08733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = PLATFORM_APPLE;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@rpath";
+				PRODUCT_BUNDLE_IDENTIFIER = com.monkeysaudio;
 				PRODUCT_NAME = mac;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -505,6 +641,29 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32E7398910B9D32D00094C8A /* Debug.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -512,6 +671,93 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 32E7398A10B9D32D00094C8A /* Release.xcconfig */;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+			};
+			name = Release;
+		};
+		3259CA0017389F010035D749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					PLATFORM_APPLE,
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /tmp;
+				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3259CA0117389F010035D749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = PLATFORM_APPLE;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = /tmp;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -532,6 +778,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3259CA0217389F010035D749 /* Build configuration list for PBXNativeTarget "mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3259CA0017389F010035D749 /* Debug */,
+				3259CA0117389F010035D749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
