@@ -72,6 +72,26 @@
 		320A7C8A0DCFA81F00FBB728 /* libreplaygain_synthesis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320A7BC70DCFA3E700FBB728 /* libreplaygain_synthesis.a */; };
 		320A7C8B0DCFA81F00FBB728 /* libutf8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320A7C2A0DCFA6A900FBB728 /* libutf8.a */; };
 		320A7C8F0DCFA83300FBB728 /* libgetopt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 320A7BAF0DCFA2F800FBB728 /* libgetopt.a */; };
+		321AE2A723FB7C2F00405170 /* lpc_intrin_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE29D23FB7C2E00405170 /* lpc_intrin_sse41.c */; };
+		321AE2A823FB7C2F00405170 /* stream_encoder_intrin_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE29E23FB7C2E00405170 /* stream_encoder_intrin_sse2.c */; };
+		321AE2A923FB7C2F00405170 /* lpc_intrin_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE29F23FB7C2E00405170 /* lpc_intrin_sse2.c */; };
+		321AE2AA23FB7C2F00405170 /* lpc_intrin_vsx.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A023FB7C2E00405170 /* lpc_intrin_vsx.c */; };
+		321AE2AB23FB7C2F00405170 /* stream_encoder_intrin_avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A123FB7C2E00405170 /* stream_encoder_intrin_avx2.c */; };
+		321AE2AC23FB7C2F00405170 /* lpc_intrin_avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A223FB7C2E00405170 /* lpc_intrin_avx2.c */; };
+		321AE2AD23FB7C2F00405170 /* fixed_intrin_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A323FB7C2E00405170 /* fixed_intrin_sse2.c */; };
+		321AE2AE23FB7C2F00405170 /* fixed_intrin_ssse3.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A423FB7C2F00405170 /* fixed_intrin_ssse3.c */; };
+		321AE2AF23FB7C2F00405170 /* lpc_intrin_sse.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A523FB7C2F00405170 /* lpc_intrin_sse.c */; };
+		321AE2B023FB7C2F00405170 /* stream_encoder_intrin_ssse3.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A623FB7C2F00405170 /* stream_encoder_intrin_ssse3.c */; };
+		321AE2B123FB7C6200405170 /* fixed_intrin_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A323FB7C2E00405170 /* fixed_intrin_sse2.c */; };
+		321AE2B223FB7C6200405170 /* fixed_intrin_ssse3.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A423FB7C2F00405170 /* fixed_intrin_ssse3.c */; };
+		321AE2B323FB7C6200405170 /* lpc_intrin_avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A223FB7C2E00405170 /* lpc_intrin_avx2.c */; };
+		321AE2B423FB7C6200405170 /* lpc_intrin_sse.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A523FB7C2F00405170 /* lpc_intrin_sse.c */; };
+		321AE2B523FB7C6200405170 /* lpc_intrin_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE29F23FB7C2E00405170 /* lpc_intrin_sse2.c */; };
+		321AE2B623FB7C6200405170 /* lpc_intrin_sse41.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE29D23FB7C2E00405170 /* lpc_intrin_sse41.c */; };
+		321AE2B723FB7C6200405170 /* lpc_intrin_vsx.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A023FB7C2E00405170 /* lpc_intrin_vsx.c */; };
+		321AE2B823FB7C7D00405170 /* stream_encoder_intrin_avx2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A123FB7C2E00405170 /* stream_encoder_intrin_avx2.c */; };
+		321AE2B923FB7C7D00405170 /* stream_encoder_intrin_sse2.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE29E23FB7C2E00405170 /* stream_encoder_intrin_sse2.c */; };
+		321AE2BA23FB7C7D00405170 /* stream_encoder_intrin_ssse3.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2A623FB7C2F00405170 /* stream_encoder_intrin_ssse3.c */; };
 		322C9BB51125AAE300FD72D8 /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = 32FB64E810F04BFD00BC90EC /* bitwise.c */; };
 		322C9BB61125AAE300FD72D8 /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 32FB64E910F04BFD00BC90EC /* framing.c */; };
 		322C9BE51125ABD100FD72D8 /* analyze.c in Sources */ = {isa = PBXBuildFile; fileRef = 320A7B680DCFA14E00FBB728 /* analyze.c */; };
@@ -305,6 +325,16 @@
 		320A7C6B0DCFA7B500FBB728 /* usage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = usage.h; path = "flac-src/src/metaflac/usage.h"; sourceTree = "<group>"; };
 		320A7C6C0DCFA7B500FBB728 /* utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = utils.c; path = "flac-src/src/metaflac/utils.c"; sourceTree = "<group>"; };
 		320A7C6D0DCFA7B500FBB728 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utils.h; path = "flac-src/src/metaflac/utils.h"; sourceTree = "<group>"; };
+		321AE29D23FB7C2E00405170 /* lpc_intrin_sse41.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc_intrin_sse41.c; path = "flac-src/src/libFLAC/lpc_intrin_sse41.c"; sourceTree = "<group>"; };
+		321AE29E23FB7C2E00405170 /* stream_encoder_intrin_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stream_encoder_intrin_sse2.c; path = "flac-src/src/libFLAC/stream_encoder_intrin_sse2.c"; sourceTree = "<group>"; };
+		321AE29F23FB7C2E00405170 /* lpc_intrin_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc_intrin_sse2.c; path = "flac-src/src/libFLAC/lpc_intrin_sse2.c"; sourceTree = "<group>"; };
+		321AE2A023FB7C2E00405170 /* lpc_intrin_vsx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc_intrin_vsx.c; path = "flac-src/src/libFLAC/lpc_intrin_vsx.c"; sourceTree = "<group>"; };
+		321AE2A123FB7C2E00405170 /* stream_encoder_intrin_avx2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stream_encoder_intrin_avx2.c; path = "flac-src/src/libFLAC/stream_encoder_intrin_avx2.c"; sourceTree = "<group>"; };
+		321AE2A223FB7C2E00405170 /* lpc_intrin_avx2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc_intrin_avx2.c; path = "flac-src/src/libFLAC/lpc_intrin_avx2.c"; sourceTree = "<group>"; };
+		321AE2A323FB7C2E00405170 /* fixed_intrin_sse2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fixed_intrin_sse2.c; path = "flac-src/src/libFLAC/fixed_intrin_sse2.c"; sourceTree = "<group>"; };
+		321AE2A423FB7C2F00405170 /* fixed_intrin_ssse3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fixed_intrin_ssse3.c; path = "flac-src/src/libFLAC/fixed_intrin_ssse3.c"; sourceTree = "<group>"; };
+		321AE2A523FB7C2F00405170 /* lpc_intrin_sse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lpc_intrin_sse.c; path = "flac-src/src/libFLAC/lpc_intrin_sse.c"; sourceTree = "<group>"; };
+		321AE2A623FB7C2F00405170 /* stream_encoder_intrin_ssse3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stream_encoder_intrin_ssse3.c; path = "flac-src/src/libFLAC/stream_encoder_intrin_ssse3.c"; sourceTree = "<group>"; };
 		322C9BB01125AAB600FD72D8 /* libiPhone lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiPhone lib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32437F9A10CE4D5E005A8B46 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
 		32437F9B10CE4D5E005A8B46 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Configs/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -472,9 +502,16 @@
 				320A7B2A0DCFA05100FBB728 /* bitwriter.c */,
 				320A7B2B0DCFA05100FBB728 /* cpu.c */,
 				320A7B2C0DCFA05100FBB728 /* crc.c */,
+				321AE2A323FB7C2E00405170 /* fixed_intrin_sse2.c */,
+				321AE2A423FB7C2F00405170 /* fixed_intrin_ssse3.c */,
 				320A7B2D0DCFA05100FBB728 /* fixed.c */,
 				320A7B2E0DCFA05100FBB728 /* float.c */,
 				320A7B2F0DCFA05100FBB728 /* format.c */,
+				321AE2A223FB7C2E00405170 /* lpc_intrin_avx2.c */,
+				321AE2A523FB7C2F00405170 /* lpc_intrin_sse.c */,
+				321AE29F23FB7C2E00405170 /* lpc_intrin_sse2.c */,
+				321AE29D23FB7C2E00405170 /* lpc_intrin_sse41.c */,
+				321AE2A023FB7C2E00405170 /* lpc_intrin_vsx.c */,
 				320A7B300DCFA05100FBB728 /* lpc.c */,
 				320A7B310DCFA05100FBB728 /* md5.c */,
 				320A7B320DCFA05100FBB728 /* memory.c */,
@@ -485,8 +522,11 @@
 				320A7B370DCFA05100FBB728 /* ogg_helper.c */,
 				320A7B380DCFA05100FBB728 /* ogg_mapping.c */,
 				320A7B390DCFA05100FBB728 /* stream_decoder.c */,
-				320A7B3A0DCFA05100FBB728 /* stream_encoder.c */,
 				320A7B3B0DCFA05100FBB728 /* stream_encoder_framing.c */,
+				321AE2A123FB7C2E00405170 /* stream_encoder_intrin_avx2.c */,
+				321AE29E23FB7C2E00405170 /* stream_encoder_intrin_sse2.c */,
+				321AE2A623FB7C2F00405170 /* stream_encoder_intrin_ssse3.c */,
+				320A7B3A0DCFA05100FBB728 /* stream_encoder.c */,
 				320A7B3C0DCFA05100FBB728 /* window.c */,
 			);
 			name = libFLAC;
@@ -1058,20 +1098,30 @@
 				32D8650F105306FB002E8E1A /* bitmath.c in Sources */,
 				32D86510105306FC002E8E1A /* bitreader.c in Sources */,
 				32D86511105306FD002E8E1A /* bitwriter.c in Sources */,
+				321AE2B123FB7C6200405170 /* fixed_intrin_sse2.c in Sources */,
 				32D8651510530704002E8E1A /* cpu.c in Sources */,
 				32D8651610530705002E8E1A /* crc.c in Sources */,
 				32D8651B10530708002E8E1A /* fixed.c in Sources */,
+				321AE2B923FB7C7D00405170 /* stream_encoder_intrin_sse2.c in Sources */,
 				32D8651C10530709002E8E1A /* float.c in Sources */,
+				321AE2B523FB7C6200405170 /* lpc_intrin_sse2.c in Sources */,
+				321AE2B723FB7C6200405170 /* lpc_intrin_vsx.c in Sources */,
+				321AE2B823FB7C7D00405170 /* stream_encoder_intrin_avx2.c in Sources */,
 				32D8651E1053070C002E8E1A /* format.c in Sources */,
 				32D8652010530718002E8E1A /* lpc.c in Sources */,
 				32D865211053071C002E8E1A /* md5.c in Sources */,
 				32D865221053071D002E8E1A /* memory.c in Sources */,
 				32D865231053071E002E8E1A /* metadata_iterators.c in Sources */,
+				321AE2B423FB7C6200405170 /* lpc_intrin_sse.c in Sources */,
 				32D865241053071E002E8E1A /* metadata_object.c in Sources */,
 				32D8652910530753002E8E1A /* window.c in Sources */,
+				321AE2BA23FB7C7D00405170 /* stream_encoder_intrin_ssse3.c in Sources */,
 				32D8652D1053076A002E8E1A /* stream_encoder.c in Sources */,
 				32D8652E1053076B002E8E1A /* stream_decoder.c in Sources */,
 				32D8658910530A31002E8E1A /* stream_encoder_framing.c in Sources */,
+				321AE2B323FB7C6200405170 /* lpc_intrin_avx2.c in Sources */,
+				321AE2B623FB7C6200405170 /* lpc_intrin_sse41.c in Sources */,
+				321AE2B223FB7C6200405170 /* fixed_intrin_ssse3.c in Sources */,
 				32FB64D510F04B8600BC90EC /* ogg_decoder_aspect.c in Sources */,
 				32FB64D610F04B8700BC90EC /* ogg_encoder_aspect.c in Sources */,
 				32FB64D710F04B8800BC90EC /* ogg_helper.c in Sources */,
@@ -1094,18 +1144,28 @@
 				320A7B430DCFA05100FBB728 /* float.c in Sources */,
 				320A7B440DCFA05100FBB728 /* format.c in Sources */,
 				320A7B450DCFA05100FBB728 /* lpc.c in Sources */,
+				321AE2A823FB7C2F00405170 /* stream_encoder_intrin_sse2.c in Sources */,
 				320A7B460DCFA05100FBB728 /* md5.c in Sources */,
 				320A7B470DCFA05100FBB728 /* memory.c in Sources */,
 				320A7B480DCFA05100FBB728 /* metadata_iterators.c in Sources */,
+				321AE2AE23FB7C2F00405170 /* fixed_intrin_ssse3.c in Sources */,
+				321AE2A723FB7C2F00405170 /* lpc_intrin_sse41.c in Sources */,
 				320A7B490DCFA05100FBB728 /* metadata_object.c in Sources */,
 				426F80511CD8569300E5757F /* ogg_decoder_aspect.c in Sources */,
+				321AE2A923FB7C2F00405170 /* lpc_intrin_sse2.c in Sources */,
 				426F80521CD8569300E5757F /* ogg_encoder_aspect.c in Sources */,
 				426F80531CD8569300E5757F /* ogg_helper.c in Sources */,
+				321AE2B023FB7C2F00405170 /* stream_encoder_intrin_ssse3.c in Sources */,
+				321AE2AB23FB7C2F00405170 /* stream_encoder_intrin_avx2.c in Sources */,
 				426F80541CD8569300E5757F /* ogg_mapping.c in Sources */,
+				321AE2AD23FB7C2F00405170 /* fixed_intrin_sse2.c in Sources */,
 				320A7B4E0DCFA05100FBB728 /* stream_decoder.c in Sources */,
 				320A7B4F0DCFA05100FBB728 /* stream_encoder.c in Sources */,
 				320A7B500DCFA05100FBB728 /* stream_encoder_framing.c in Sources */,
 				320A7B510DCFA05100FBB728 /* window.c in Sources */,
+				321AE2AC23FB7C2F00405170 /* lpc_intrin_avx2.c in Sources */,
+				321AE2AA23FB7C2F00405170 /* lpc_intrin_vsx.c in Sources */,
+				321AE2AF23FB7C2F00405170 /* lpc_intrin_sse.c in Sources */,
 				426F80551CD856AE00E5757F /* bitwise.c in Sources */,
 				426F80561CD856AE00E5757F /* framing.c in Sources */,
 			);
