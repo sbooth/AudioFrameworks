@@ -2,7 +2,7 @@
 /* src/config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Set to 1 if the compile is GNU GCC. */
-#define COMPILER_IS_GCC 1
+#define COMPILER_IS_GCC 0
 
 /* Target processor clips on negative float to int conversion. */
 #define CPU_CLIPS_NEGATIVE 0
@@ -11,18 +11,10 @@
 #define CPU_CLIPS_POSITIVE 0
 
 /* Target processor is big endian. */
-#if __BIG_ENDIAN__
-# define CPU_IS_BIG_ENDIAN 1
-#else
-# define CPU_IS_BIG_ENDIAN 0
-#endif
+#define CPU_IS_BIG_ENDIAN 0
 
 /* Target processor is little endian. */
-#if __BIG_ENDIAN__
-# define CPU_IS_LITTLE_ENDIAN 0
-#else
-# define CPU_IS_LITTLE_ENDIAN 1
-#endif
+#define CPU_IS_LITTLE_ENDIAN 1
 
 /* Set to 1 to enable experimental code. */
 #define ENABLE_EXPERIMENTAL_CODE 0
@@ -49,10 +41,7 @@
 /* #undef HAVE_ENDIAN_H */
 
 /* Will be set to 1 if flac, ogg and vorbis are available. */
-#define HAVE_EXTERNAL_LIBS 0
-
-/* Set to 1 if the compile supports the struct hack. */
-#define HAVE_FLEXIBLE_ARRAY 1
+#define HAVE_EXTERNAL_XIPH_LIBS 0
 
 /* Define to 1 if you have the `floor' function. */
 #define HAVE_FLOOR 1
@@ -65,6 +54,9 @@
 
 /* Define to 1 if you have the `fstat' function. */
 #define HAVE_FSTAT 1
+
+/* Define to 1 if you have the `fstat64' function. */
+#define HAVE_FSTAT64 1
 
 /* Define to 1 if you have the `fsync' function. */
 #define HAVE_FSYNC 1
@@ -105,8 +97,14 @@
 /* Define if you have C99's lrintf function. */
 #define HAVE_LRINTF 1
 
+/* Define to 1 if you have the `lround' function. */
+#define HAVE_LROUND 1
+
 /* Define to 1 if you have the `lseek' function. */
 #define HAVE_LSEEK 1
+
+/* Define to 1 if you have the `lseek64' function. */
+/* #undef HAVE_LSEEK64 */
 
 /* Define to 1 if you have the `malloc' function. */
 #define HAVE_MALLOC 1
@@ -123,12 +121,6 @@
 /* Define to 1 if you have the `pipe' function. */
 #define HAVE_PIPE 1
 
-/* Define to 1 if you have the `pread' function. */
-#define HAVE_PREAD 1
-
-/* Define to 1 if you have the `pwrite' function. */
-#define HAVE_PWRITE 1
-
 /* Define to 1 if you have the `read' function. */
 #define HAVE_READ 1
 
@@ -138,17 +130,14 @@
 /* Define to 1 if you have the `setlocale' function. */
 #define HAVE_SETLOCALE 1
 
-/* Define to 1 if you have the <sndio.h> header file. */
-/* #undef HAVE_SNDIO_H */
+/* Set to 1 if <sndio.h> is available. */
+#define HAVE_SNDIO_H 0
 
 /* Define to 1 if you have the `snprintf' function. */
 #define HAVE_SNPRINTF 1
 
 /* Set to 1 if you have libsqlite3. */
 #define HAVE_SQLITE3 1
-
-/* Define to 1 if the system has the type `ssize_t'. */
-#define HAVE_SSIZE_T 1
 
 /* Define to 1 if you have the <stdint.h> header file. */
 #define HAVE_STDINT_H 1
@@ -177,6 +166,10 @@
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
 
+/* Define to 1 or 0, depending whether the compiler supports simple visibility
+   declarations. */
+#define HAVE_VISIBILITY 1
+
 /* Define to 1 if you have the `vsnprintf' function. */
 #define HAVE_VSNPRINTF 1
 
@@ -186,15 +179,14 @@
 /* Define to 1 if you have the `write' function. */
 #define HAVE_WRITE 1
 
-/* Define to the sub-directory in which libtool stores uninstalled libraries.
-   */
+/* The host triplet of the compiled binary. */
+#define HOST_TRIPLET "x86_64-apple-darwin19.3.0"
+
+/* Define to the sub-directory where libtool stores uninstalled libraries. */
 #define LT_OBJDIR ".libs/"
 
-/* Define to 1 if your C compiler doesn't accept -c and -o together. */
-/* #undef NO_MINUS_C_MINUS_O */
-
-/* Set to 1 if compiling for MacOSX */
-#define OS_IS_MACOSX 1
+/* Set to 1 if compiling for OpenBSD */
+#define OS_IS_OPENBSD 0
 
 /* Set to 1 if compiling for Win32 */
 #define OS_IS_WIN32 0
@@ -209,7 +201,7 @@
 #define PACKAGE_NAME "libsndfile"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libsndfile 1.0.25"
+#define PACKAGE_STRING "libsndfile 1.0.28"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "libsndfile"
@@ -218,7 +210,7 @@
 #define PACKAGE_URL "http://www.mega-nerd.com/libsndfile/"
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "1.0.25"
+#define PACKAGE_VERSION "1.0.28"
 
 /* Set to maximum allowed value of sf_count_t type. */
 #define SF_COUNT_MAX 0x7FFFFFFFFFFFFFFFLL
@@ -235,21 +227,11 @@
 /* The size of `int64_t', as computed by sizeof. */
 #define SIZEOF_INT64_T 8
 
-/* The size of `loff_t', as computed by sizeof. */
-/* #undef SIZEOF_LOFF_T */
-
 /* The size of `long', as computed by sizeof. */
-#if __LP64__
-# define SIZEOF_LONG 8
-#else
-# define SIZEOF_LONG 4
-#endif
+#define SIZEOF_LONG 8
 
 /* The size of `long long', as computed by sizeof. */
 #define SIZEOF_LONG_LONG 8
-
-/* The size of `off64_t', as computed by sizeof. */
-/* #undef SIZEOF_OFF64_T */
 
 /* The size of `off_t', as computed by sizeof. */
 #define SIZEOF_OFF_T 8
@@ -263,15 +245,8 @@
 /* The size of `size_t', as computed by sizeof. */
 #define SIZEOF_SIZE_T 8
 
-/* The size of `ssize_t', as computed by sizeof. */
-#define SIZEOF_SSIZE_T 8
-
 /* The size of `void*', as computed by sizeof. */
-#if __LP64__
-# define SIZEOF_VOIDP 8
-#else
-# define SIZEOF_VOIDP 4
-#endif
+#define SIZEOF_VOIDP 8
 
 /* The size of `wchar_t', as computed by sizeof. */
 #define SIZEOF_WCHAR_T 4
@@ -282,30 +257,63 @@
 /* Set to long if unknown. */
 #define TYPEOF_SF_COUNT_T int64_t
 
+/* Enable extensions on AIX 3, Interix.  */
+#ifndef _ALL_SOURCE
+# define _ALL_SOURCE 1
+#endif
+/* Enable GNU extensions on systems that have them.  */
+#ifndef _GNU_SOURCE
+# define _GNU_SOURCE 1
+#endif
+/* Enable threading extensions on Solaris.  */
+#ifndef _POSIX_PTHREAD_SEMANTICS
+# define _POSIX_PTHREAD_SEMANTICS 1
+#endif
+/* Enable extensions on HP NonStop.  */
+#ifndef _TANDEM_SOURCE
+# define _TANDEM_SOURCE 1
+#endif
+/* Enable general extensions on Solaris.  */
+#ifndef __EXTENSIONS__
+# define __EXTENSIONS__ 1
+#endif
+
+
 /* Set to 1 to use the native windows API */
 #define USE_WINDOWS_API 0
 
 /* Version number of package */
-#define VERSION "1.0.25"
+#define VERSION "1.0.28"
 
 /* Set to 1 if windows DLL is being built. */
 #define WIN32_TARGET_DLL 0
 
 /* Target processor is big endian. */
-#if __BIG_ENDIAN__
-# define WORDS_BIGENDIAN 1
-#else
-# define WORDS_BIGENDIAN 0
+#define WORDS_BIGENDIAN 0
+
+/* Enable large inode numbers on Mac OS X 10.5.  */
+#ifndef _DARWIN_USE_64_BIT_INODE
+# define _DARWIN_USE_64_BIT_INODE 1
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 /* #undef _FILE_OFFSET_BITS */
 
-/* Define to make fseeko etc. visible, on some hosts. */
-/* #undef _LARGEFILE_SOURCE */
-
 /* Define for large files, on AIX-style hosts. */
 /* #undef _LARGE_FILES */
 
+/* Define to 1 if on MINIX. */
+/* #undef _MINIX */
+
+/* Define to 2 if the system does not provide POSIX.1 features except with
+   this defined. */
+/* #undef _POSIX_1_SOURCE */
+
+/* Define to 1 if you need to in order for `stat' and other things to work. */
+/* #undef _POSIX_SOURCE */
+
 /* Set to 1 to use C99 printf/snprintf in MinGW. */
 /* #undef __USE_MINGW_ANSI_STDIO */
+
+/* Define to `int' if <sys/types.h> does not define. */
+/* #undef ssize_t */
