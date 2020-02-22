@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321AE2C023FB7DE300405170 /* xmm_quantize_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 321AE2BF23FB7DE300405170 /* xmm_quantize_sub.c */; };
 		327DE6F112D68A1900D450B8 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 327DE6DE12D68A1900D450B8 /* bitstream.c */; };
 		327DE6F212D68A1900D450B8 /* encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 327DE6DF12D68A1900D450B8 /* encoder.c */; };
 		327DE6F312D68A1900D450B8 /* fft.c in Sources */ = {isa = PBXBuildFile; fileRef = 327DE6E012D68A1900D450B8 /* fft.c */; };
@@ -56,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321AE2BF23FB7DE300405170 /* xmm_quantize_sub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = xmm_quantize_sub.c; path = "lame-src/libmp3lame/vector/xmm_quantize_sub.c"; sourceTree = "<group>"; };
 		32437FE210CE4E3B005A8B46 /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Base.xcconfig; path = ../Configs/Base.xcconfig; sourceTree = SOURCE_ROOT; };
 		32437FE310CE4E3B005A8B46 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = ../Configs/Debug.xcconfig; sourceTree = SOURCE_ROOT; };
 		32437FE410CE4E3B005A8B46 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = ../Configs/Release.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -135,6 +137,7 @@
 		08FB7795FE84155DC02AAC07 /* libmp3lame */ = {
 			isa = PBXGroup;
 			children = (
+				321AE2BF23FB7DE300405170 /* xmm_quantize_sub.c */,
 				32B7E4FE12DAA482005B82C9 /* lame-analysis.h */,
 				32B7E4F812DAA46E005B82C9 /* encoder.h */,
 				32B7E4EF12DAA452005B82C9 /* machine.h */,
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				327DE6F112D68A1900D450B8 /* bitstream.c in Sources */,
+				321AE2C023FB7DE300405170 /* xmm_quantize_sub.c in Sources */,
 				327DE6F212D68A1900D450B8 /* encoder.c in Sources */,
 				327DE6F312D68A1900D450B8 /* fft.c in Sources */,
 				327DE6F412D68A1900D450B8 /* gain_analysis.c in Sources */,

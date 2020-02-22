@@ -1,14 +1,16 @@
 /* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.in by autoheader.  */
 
+
 #ifndef LAME_CONFIG_H
 #define LAME_CONFIG_H
+
 
 /* debug define */
 /* #undef ABORTFP */
 
-/* enable VBR bitrate histogram */
-#define BRHIST 1
+/* Define if building universal (internal helper macro) */
+/* #undef AC_APPLE_UNIVERSAL_BUILD */
 
 /* Define to one of `_getb67', `GETB67', `getb67' for Cray-2 and Cray-YMP
    systems. This function is required for `alloca.c' support on those systems.
@@ -26,9 +28,6 @@
 
 /* double is faster than float on Alpha */
 /* #undef FLOAT */
-
-/* float instead of double */
-/* #undef FLOAT8 */
 
 /* Define to 1 if you have `alloca', as a function or macro. */
 #define HAVE_ALLOCA 1
@@ -53,7 +52,7 @@
 #define HAVE_GETTIMEOFDAY 1
 
 /* Define if you have the iconv() function and it works. */
-#define HAVE_ICONV 0
+#define HAVE_ICONV 1
 
 /* add ieee754_float32_t type */
 /* #undef HAVE_IEEE754_FLOAT32_T */
@@ -196,8 +195,8 @@
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
 
-/* Define to 1 if you have the <xmmintrin.h> header file. */
-/* #undef HAVE_XMMINTRIN_H */
+/* Define if SSE intrinsics work. */
+#define HAVE_XMMINTRIN_H 1
 
 /* Define as const if the declaration of iconv() needs const. */
 #define ICONV_CONST 
@@ -208,11 +207,11 @@
 /* set to 1 if you have libsndfile */
 /* #undef LIBSNDFILE */
 
+/* Define to the sub-directory where libtool stores uninstalled libraries. */
+#define LT_OBJDIR ".libs/"
+
 /* use MMX version of choose_table */
 /* #undef MMX_choose_table */
-
-/* no debug build */
-#define NDEBUG 1
 
 /* build without hooks for analyzer */
 /* #undef NOANALYSIS */
@@ -227,7 +226,7 @@
 #define PACKAGE_NAME "lame"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "lame 3.99.5"
+#define PACKAGE_STRING "lame 3.100"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "lame"
@@ -236,10 +235,7 @@
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "3.99.5"
-
-/* Define to 1 if the C compiler supports function prototypes. */
-#define PROTOTYPES 1
+#define PACKAGE_VERSION "3.100"
 
 /* The size of `double', as computed by sizeof. */
 #define SIZEOF_DOUBLE 8
@@ -251,11 +247,7 @@
 #define SIZEOF_INT 4
 
 /* The size of `long', as computed by sizeof. */
-#if __LP64__
-# define SIZEOF_LONG 8
-#else
-# define SIZEOF_LONG 4
-#endif
+#define SIZEOF_LONG 8
 
 /* The size of `long double', as computed by sizeof. */
 /* #undef SIZEOF_LONG_DOUBLE */
@@ -270,11 +262,7 @@
 #define SIZEOF_UNSIGNED_INT 4
 
 /* The size of `unsigned long', as computed by sizeof. */
-#if __LP64__
-# define SIZEOF_UNSIGNED_LONG 8
-#else
-# define SIZEOF_UNSIGNED_LONG 4
-#endif
+#define SIZEOF_UNSIGNED_LONG 8
 
 /* The size of `unsigned long long', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_LONG_LONG 8
@@ -302,12 +290,6 @@
 /* faster log implementation with less but enough precission */
 #define USE_FAST_LOG 1
 
-/* build with layer 1 decoding */
-/* #undef USE_LAYER_1 */
-
-/* build with layer 2 decoding */
-#define USE_LAYER_2 1
-
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE
 # define _ALL_SOURCE 1
@@ -331,7 +313,7 @@
 
 
 /* Version number of package */
-#define VERSION "3.99.5"
+#define VERSION "3.100"
 
 /* Define if using the dmalloc debugging malloc package */
 /* #undef WITH_DMALLOC */
@@ -346,6 +328,11 @@
 # ifndef WORDS_BIGENDIAN
 /* #  undef WORDS_BIGENDIAN */
 # endif
+#endif
+
+/* Enable large inode numbers on Mac OS X 10.5.  */
+#ifndef _DARWIN_USE_64_BIT_INODE
+# define _DARWIN_USE_64_BIT_INODE 1
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
@@ -369,9 +356,6 @@
 
 /* work around a glibc bug */
 /* #undef __NO_MATH_INLINES */
-
-/* Define like PROTOTYPES; this can be used by system headers. */
-#define __PROTOTYPES 1
 
 /* Define to empty if `const' does not conform to ANSI C. */
 /* #undef const */
