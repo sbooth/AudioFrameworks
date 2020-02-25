@@ -15,6 +15,9 @@ MUSEPACK_VERSION="r475"     # 2011-08-10, latest release as of 2020-02-25
 MUSICBRAINZ3_VERSION="3.0.3" # 2010-09-27, latest release as of 2020-02-25, unmaintained
 MUSICBRAINZ5_GIT_HASH="2adc507e79acec04abb8756e9e07319b980ca9df" # 5.1.0, 2014-11-13, latest release as of 2020-02-25
 NEON_VERSION="0.30.2"       # 2016-09-30, latest release as of 2020-02-25
+LIBXML2_VERSION="v2.9.10"   # 2019-10-30, latest release as of 2020-02-25
+#OPENSSL_VERSION="1_1_1d"    # 2019-09-10, latest release as of 2020-02-25
+OPENSSL_GIT_HASH="894da2fb7ed5d314ee5c2fc9fd2d9b8b74111596"    # 2.9.10, 2019-10-30, latest release as of 2020-02-25
 OFA1_VERSION="0.9.3"        # 2006-05-10, latest release as of 2020-02-25, unmaintained
 OPUS_VERSION="1.3"          # 2018-10-18, latest release as of 2020-02-25
 OPUSFILE_VERSION="0.11"     # 2018-09-18, latest release as of 2020-02-25
@@ -144,7 +147,10 @@ function clean
     rm -rf "musepack/musepack-src"
     rm -rf "musicbrainz3/libmusicbrainz-src"
     rm -rf "musicbrainz3/neon-src"
-    #rm -rf "musicbrainz5/libmusicbrainz-src"
+    rm -rf "musicbrainz5/libmusicbrainz-src"
+    rm -rf "musicbrainz5/libxml2-src"
+    rm -rf "musicbrainz5/openssl-src"
+    rm -rf "musicbrainz5/neon-src"
     rm -rf "ofa1/libofa-src"
     rm -rf "sndfile/libsndfile-src"
     rm -rf "speex/speex-src"
@@ -288,10 +294,26 @@ function fetch_musicbrainz3
 function fetch_musicbrainz5
 {
     _fetch_github_hash "musicbrainz5" \
-                       "musicbrainz5" \
+                       "libmusicbrainz" \
                        "metabrainz" \
                        "libmusicbrainz" \
                        "${MUSICBRAINZ5_GIT_HASH}"
+
+	_fetch_http "musicbrainz5" \
+	            "libxml2" \
+	            "${LIBXML2_VERSION}" \
+	            "https://gitlab.gnome.org/GNOME/libxml2/-/archive/${LIBXML2_VERSION}/libxml2-${LIBXML2_VERSION}.tar.bz2"
+
+    _fetch_github_hash "musicbrainz5" \
+                       "openssl" \
+                       "openssl" \
+                       "openssl" \
+                       "${OPENSSL_GIT_HASH}"
+
+	_fetch_http "musicbrainz5" \
+	            "neon" \
+	            "${NEON_VERSION}" \
+	            "http://www.webdav.org/neon/neon-${NEON_VERSION}.tar.gz"
 }
 
 function fetch_ofa1
@@ -419,7 +441,7 @@ fetch_mp4v2
 fetch_mpg123
 fetch_musepack
 fetch_musicbrainz3
-#fetch_musicbrainz5
+fetch_musicbrainz5
 fetch_ofa1
 fetch_ogg
 fetch_opus

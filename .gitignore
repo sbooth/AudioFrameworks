@@ -24,6 +24,10 @@ mpg123/mpg123-src
 musepack/musepack-src
 musicbrainz3/libmusicbrainz-src
 musicbrainz3/neon-src
+musicbrainz5/libmusicbrainz-src
+musicbrainz5/libxml2-src
+musicbrainz5/openssl-src
+musicbrainz5/neon-src
 ofa1/libofa-src
 shorten/shorten-src
 sndfile/libsndfile-src
