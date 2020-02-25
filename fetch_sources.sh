@@ -63,8 +63,8 @@ function _fetch_http_named
     VERSION=$4
     URL=$5
 
-    echo "Fetching ${DIRECTORY} (${VERSION}): $URL"
-
+    echo "Fetching ${DIRECTORY}: ${OUTPUT_NAME} (${VERSION}): $URL"
+    
     mkdir ${DIRECTORY} 2>/dev/null
     
     curl -sL "${URL}" | tar -xj -C "${DIRECTORY}"
@@ -93,7 +93,7 @@ function _fetch_http_named_xz
     VERSION=$4
     URL=$5
 
-    echo "Fetching ${DIRECTORY} (${VERSION}): $URL"
+    echo "Fetching ${DIRECTORY}: ${OUTPUT_NAME} (${VERSION}): $URL"
     
     mkdir ${DIRECTORY} 2>/dev/null
     
