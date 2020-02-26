@@ -1,13 +1,22 @@
-diff -ur libtta++-2.1/libtta.h libtta++-src/libtta.h
---- libtta++-2.1/libtta.h	2011-11-27 20:26:14.000000000 -0500
-+++ libtta++-src/libtta.h	2011-11-27 20:27:18.000000000 -0500
-@@ -18,7 +18,9 @@
- #include <stdio.h>
- #include <string.h>
- #include <stdlib.h> 
-+#if !defined(__APPLE__)
- #include <malloc.h> 
+--- libtta-cpp-2.3/libtta.cpp	2015-02-19 08:05:00.000000000 +0100
++++ libtta++-src/libtta.cpp	2020-02-26 19:16:19.000000000 +0100
+@@ -25,11 +25,19 @@
+ #define tta_malloc RMMalloc
+ #define tta_free RMFree
+ #else // GNUC
++#ifdef __APPLE__
++#define tta_memclear(__dest,__length) memset(__dest,0,__length)
++#define tta_memcpy(__dest,__source,__length) memcpy(__dest,__source,__length)
++#define tta_malloc(__length) malloc(__length)
++// Apple platform malloc() is 16-byte aligned by default.
++#define tta_free free
++#else
+ #define tta_memclear(__dest,__length) memset(__dest,0,__length)
+ #define tta_memcpy(__dest,__source,__length) memcpy(__dest,__source,__length)
+ #define tta_malloc(__length) aligned_alloc(16,__length)
+ #define tta_free free
+ #endif
 +#endif
- #include <stdexcept>
- 
- #ifdef CARIBBEAN
+ #else // MSVC
+ #define tta_memclear(__dest,__length) ZeroMemory(__dest,__length)
+ #define tta_memcpy(__dest,__source,__length) CopyMemory(__dest,__source,__length)

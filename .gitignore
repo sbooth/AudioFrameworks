@@ -33,7 +33,7 @@ shorten/shorten-src
 sndfile/libsndfile-src
 speex/speex-src
 taglib/taglib-src
-tta/libtta-c-src
+tta/libtta-src
 tta++/libtta++-src
 vorbis/libvorbis-src
 wavpack/wavpack-src

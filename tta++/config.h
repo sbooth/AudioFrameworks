@@ -1,5 +1,5 @@
 /* config.h.  Generated from config.h.in by configure.  */
-/* config.h.in.  Generated from configure.in by autoheader.  */
+/* config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Define if building for ARM */
 /* #undef CPU_ARM */
@@ -43,28 +43,36 @@
 #define HAVE_WRITE 1
 
 /* Name of package */
-#define PACKAGE "libtta++"
+#define PACKAGE "libtta-cpp"
 
 /* Define to the address where bug reports for this package should be sent. */
 #define PACKAGE_BUGREPORT "info@true-audio.com"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "libtta++"
+#define PACKAGE_NAME "libtta-cpp"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "libtta++ 2.1"
+#define PACKAGE_STRING "libtta-cpp 2.3"
 
 /* Define to the one symbol short name of this package. */
-#define PACKAGE_TARNAME "libtta--"
+#define PACKAGE_TARNAME "libtta-cpp"
+
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "2.1"
+#define PACKAGE_VERSION "2.3"
 
 /* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Version number of package */
-#define VERSION "2.1"
+#define VERSION "2.3"
+
+/* Enable large inode numbers on Mac OS X 10.5.  */
+#ifndef _DARWIN_USE_64_BIT_INODE
+# define _DARWIN_USE_64_BIT_INODE 1
+#endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */
 /* #undef _FILE_OFFSET_BITS */

@@ -23,8 +23,8 @@ OPUS_VERSION="1.3"          # 2018-10-18, latest release as of 2020-02-25
 OPUSFILE_VERSION="0.11"     # 2018-09-18, latest release as of 2020-02-25
 SNDFILE_VERSION="1.0.28"    # 2017-04-02, latest release as of 2020-02-25
 SPEEX_VERSION="1.2rc2"      # 2014-12-06, latest release as of 2020-02-25
-TTA_VERSION="c-2.3"         # 2015-02-20, latest release as of 2020-02-25
-TTA_PLUS_PLUS_VERSION="cpp-2.3" # 2015-02-20, latest release as of 2020-02-25
+TTA_VERSION="2.3"           # 2015-02-20, latest release as of 2020-02-25
+TTA_PLUS_PLUS_VERSION="2.3" # 2015-02-20, latest release as of 2020-02-25
 TAGLIB_GIT_HASH="e36a9cabb9882e61276161c23834d966d62073b7" # 1.11.1, 2016-10-24, latest release as of 2020-02-25
 VORBIS_VERSION="1.3.6"      # 2018-03-16, latest release as of 2020-02-25
 WAVPACK_VERSION="5.2.0"     # 2019-12-17, latest release as of 2020-02-25
@@ -155,7 +155,7 @@ function clean
     rm -rf "sndfile/libsndfile-src"
     rm -rf "speex/speex-src"
     rm -rf "taglib/taglib-src"
-    rm -rf "tta/libtta-c-src"
+    rm -rf "tta/libtta-src"
     rm -rf "tta++/libtta++-src"
     rm -rf "vorbis/libvorbis-src"
     rm -rf "wavpack/wavpack-src"
@@ -376,28 +376,29 @@ function fetch_taglib
 function fetch_tta
 {
     _fetch_http_named "tta" \
-                      "libtta-${TTA_VERSION}" \
-                      "libtta-c-src" \
+                      "libtta-c-${TTA_VERSION}" \
+                      "libtta-src" \
                       "${TTA_VERSION}" \
-                      "https://prdownloads.sourceforge.net/tta/libtta-${TTA_VERSION}.tar.gz"
+                      "https://prdownloads.sourceforge.net/tta/libtta-c-${TTA_VERSION}.tar.gz"
 
     # angry carriage return situation breaks `patch`.
     # `patch -l` doesn't resolve it, so..:
-    _fix_cr "tta/libtta-c-src/filter.h"
-    _fix_cr "tta/libtta-c-src/libtta.h"
-    _fix_cr "tta/libtta-c-src/libtta.c"
+    #_fix_cr "tta/libtta-c-src/filter.h"
+    #_fix_cr "tta/libtta-c-src/libtta.h"
+    #_fix_cr "tta/libtta-c-src/libtta.c"
 
-    _patch "tta" \
-           "tta.patch"
+    #_patch "tta" \
+    #       "tta.patch"
 }
 
 function fetch_tta_plus_plus
 {
-    _fetch_http "tta++" \
-                "libtta++" \
-                "${TTA_PLUS_PLUS_VERSION}" \
-                "https://prdownloads.sourceforge.net/tta/libtta++-${TTA_PLUS_PLUS_VERSION}.tar.gz"
-
+    _fetch_http_named "tta++" \
+                      "libtta-cpp-${TTA_PLUS_PLUS_VERSION}" \
+                      "libtta++-src" \
+                      "${TTA_PLUS_PLUS_VERSION}" \
+                      "https://sourceforge.net/projects/tta/files/tta/libtta%2B%2B/libtta-cpp-${TTA_PLUS_PLUS_VERSION}.tar.gz"
+    
     _patch "tta++" \
            "tta++.patch"
 }
