@@ -75,6 +75,7 @@
 		32B7E48812DA9F6A005B82C9 /* releasegroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 32B7E48712DA9F6A005B82C9 /* releasegroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32E6FF1A0DCE6D88006F9032 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E6FF190DCE6D88006F9032 /* config.h */; };
 		32EF036810689B27008BAF8B /* discid.h in Headers */ = {isa = PBXBuildFile; fileRef = 32EF036610689B27008BAF8B /* discid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DDB857023FAEAF4004759DE /* libboringssl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDB856F23FAEAF4004759DE /* libboringssl.tbd */; };
 		8CA360990D2F5D0F00F89E3B /* artist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CA3607F0D2F5D0F00F89E3B /* artist.cpp */; };
 		8CA3609A0D2F5D0F00F89E3B /* artistalias.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CA360800D2F5D0F00F89E3B /* artistalias.cpp */; };
 		8CA3609B0D2F5D0F00F89E3B /* disc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8CA360810D2F5D0F00F89E3B /* disc.cpp */; };
@@ -207,6 +208,7 @@
 		3DAAA9A2169B0B69005253B6 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		3DAAA9A3169B0B69005253B6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		3DAAA9A4169B0B69005253B6 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		3DDB856F23FAEAF4004759DE /* libboringssl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libboringssl.tbd; path = usr/lib/libboringssl.tbd; sourceTree = SDKROOT; };
 		8CA3607F0D2F5D0F00F89E3B /* artist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = artist.cpp; path = "libmusicbrainz-src/src/artist.cpp"; sourceTree = "<group>"; };
 		8CA360800D2F5D0F00F89E3B /* artistalias.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = artistalias.cpp; path = "libmusicbrainz-src/src/artistalias.cpp"; sourceTree = "<group>"; };
 		8CA360810D2F5D0F00F89E3B /* disc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = disc.cpp; path = "libmusicbrainz-src/src/disc.cpp"; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDB857023FAEAF4004759DE /* libboringssl.tbd in Frameworks */,
 				3200937B105D744D0055BE17 /* IOKit.framework in Frameworks */,
 				3200942E105D746C0055BE17 /* CoreFoundation.framework in Frameworks */,
 			);
@@ -297,6 +300,7 @@
 				089C1665FE841158C02AAC07 /* Resources */,
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DDFF38A45A11DB9C8B /* Products */,
+				3DDB856E23FAEAF4004759DE /* Frameworks */,
 			);
 			name = musicbrainz3;
 			sourceTree = "<group>";
@@ -473,6 +477,14 @@
 			);
 			name = Configs;
 			path = ../Configs;
+			sourceTree = "<group>";
+		};
+		3DDB856E23FAEAF4004759DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DDB856F23FAEAF4004759DE /* libboringssl.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -707,8 +719,6 @@
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = (
-					"-lssl",
-					"-lcrypto",
 					"-lz",
 					"-lgssapi_krb5",
 					"-lkrb5",
@@ -741,8 +751,6 @@
 				LIBRARY_STYLE = DYNAMIC;
 				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = (
-					"-lssl",
-					"-lcrypto",
 					"-lz",
 					"-lgssapi_krb5",
 					"-lkrb5",
