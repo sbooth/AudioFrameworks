@@ -1,3 +1,5 @@
+## Please use https://github.com/sbooth/AudioXCFrameworks instead
+
 Audio Frameworks for Mac OS X
 =============================
 
